@@ -16,7 +16,7 @@ http://fl2.moveonjoy.com/NICK_MUSIC/index.m3u8
 #EXTINF:-1 tvg-id="403847" tvg-name="NickToons USA (East Coast)" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true" group-title="TV Channels",NickToons USA (East Coast)
 http://fl1.moveonjoy.com/NICKTOONS/index.m3u8
 #EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network USA (East Coast)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cartoon-network-us.png" group-title="TV Channels",Cartoon Network USA (East Coast)
-https://fl2.moveonjoy.com/CARTOON_NETWORK/index.m3u8
+https://84.17.40.25/CARTOON_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="403576" tvg-name="Boomerang USA (East Coast)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/boomerang-us.png" group-title="TV Channels",Boomerang USA (East Coast)
 http://fl3.moveonjoy.com/BOOMERANG/index.m3u8
 #EXTINF:-1 tvg-name="Trolls (2016)" group-title="Movies", Trolls (2016) 
