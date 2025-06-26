@@ -31,6 +31,8 @@ http://192.168.1.74:8096/Videos/93c53c95b7ccd081f35104accae63dc4/stream?api_key=
 http://192.168.1.74:8096/Videos/05da4d04ce9f31129f3167ea609cc1e1/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
 #EXTINF:-1 tvg-name="Sing (2016)" group-title="Movies", Sing (2016)
 http://192.168.1.74:8096/Videos/7d23da93ad606f14a085cc96ed21b694/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 tvg-name="Sing 2 (2021)" group-title="Movies", Sing 2 (2021)
+http://192.168.1.74:8096/Videos/8e6d117beec041c7babb1c425f2bbc2a/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
 #EXTINF:-1 tvg-name="Snow White (2025)" group-title="Movies", Snow White (2025)
 http://192.168.1.74:8096/Videos/b83778a7e7c967d7adea27ee4b9595c4/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
 #EXTINF:-1 tvg-name="A Minecraft Movie (2025)" group-title="Movies", A Minecraft Movie (2025)
@@ -54,4 +56,4 @@ http://192.168.1.74:8096/Videos/4e309260544be9ad082813c900dfc090/stream?api_key=
 #EXTINF:-1 tvg-name="Inside Out (2015)" group-title="Movies", Inside Out (2015)
 http://192.168.1.74:8096/Videos/ddd3e29ee26eb670ae86649e3f5fb6e5/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
 #EXTINF:-1 tvg-name="Inside Out 2 (2024)" group-title="Movies", Inside Out 2 (2024)
-http://192.168.1.74:8096/Videos/2102cb2e88d8fa6944b0d17dfc1d4f36/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+http://192.168.1.74:8096/Videos/2102cb2e88d8fa6944b0d17dfc1d4f36/stream?api_key=ee9ff7bf382d4a478ce448048e89
