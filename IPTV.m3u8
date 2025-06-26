@@ -1,0 +1,55 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="TV Channels",Disney Channel USA (East Coast)
+http://38.96.178.201/live/Disney/index.m3u8
+#EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png" group-title="TV Channels",Disney Junior USA (East Coast)
+http://fl2.moveonjoy.com/DISNEY_JR/index.m3u8
+#EXTINF:-1 tvg-id="403837" tvg-name="Disney XD USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18279_dark_360w_270h.png" group-title="TV Channels",Disney XD USA (East Coast)
+http://38.96.178.201:80/live/DisneyXD/index.m3u8
+#EXTINF:-1 tvg-id="403794" tvg-name="Freeform USA (East Coast)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="TV Channels", Freeform USA (East Coast)
+http://fl2.moveonjoy.com/FREE_FORM/index.m3u8
+#EXTINF:-1 tvg-id="403620" tvg-name="Nickelodeon USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11006_dark_360w_270h.png" group-title="TV Channels",Nickelodeon USA (East Coast)
+http://fl1.moveonjoy.com/NICKELODEON/index.m3u8
+#EXTINF:-1 tvg-id="403655" tvg-name="Nick Jr. USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png" group-title="TV Channels",Nick Jr. USA (East Coast)
+http://fl2.moveonjoy.com/NICK_JR/index.m3u8
+#EXTINF:-1 tvg-id="8359" tvg-name="NickMusic USA (East Coast)" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-music-us.png?raw=true" group-title="TV Channels",NickMusic USA (East Coast)
+http://fl2.moveonjoy.com/NICK_MUSIC/index.m3u8
+#EXTINF:-1 tvg-id="403847" tvg-name="NickToons USA (East Coast)" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true" group-title="TV Channels",NickToons USA (East Coast)
+http://fl1.moveonjoy.com/NICKTOONS/index.m3u8
+#EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network USA (East Coast)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cartoon-network-us.png" group-title="TV Channels",Cartoon Network USA (East Coast)
+https://fl2.moveonjoy.com/CARTOON_NETWORK/index.m3u8
+#EXTINF:-1 tvg-id="403576" tvg-name="Boomerang USA (East Coast)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/boomerang-us.png" group-title="TV Channels",Boomerang USA (East Coast)
+http://fl3.moveonjoy.com/BOOMERANG/index.m3u8
+#EXTINF:-1 group-title="Movies", Trolls (2016) 
+http://192.168.1.74:8096/Videos/9f6540b84f517608778d7eb7ff56d426/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Trolls World Tour (2020)
+http://192.168.1.74:8096/Videos/d170e12059694ed47b621c66ba37b45a/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Trolls Band Together (2023)
+http://192.168.1.74:8096/Videos/279354600f03d946fd9377069adb0952/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Moana (2016)
+http://192.168.1.74:8096/Videos/8e88cf5f60b21702013002c360203f99/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Moana 2 (2024)
+http://192.168.1.74:8096/Videos/05da4d04ce9f31129f3167ea609cc1e1/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Sing (2016)
+http://192.168.1.74:8096/Videos/9718d8d682d9bc9042c7dd0a82b3bfc4/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Snow White (2025)
+http://192.168.1.74:8096/Videos/d96f91ccda4d7fd6ae894fc9c81c3eca/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", A Minecraft Movie (2025) 
+http://192.168.1.74:8096/Videos/83ecadc089ca6be16c7095700d8932d6/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Z-O-M-B-I-E-S 2 (2020)
+http://192.168.1.74:8096/Videos/c5e40837e66ec269d6fbcac90bb1790c/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Z-O-M-B-I-E-S 3 (2022)
+http://192.168.1.74:8096/Videos/087f22d44b13fec89fb5e2bb02f4b4fb/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Paddington in Peru (2024)
+http://192.168.1.74:8096/Videos/c94d6ecf057715551327be2814e4cc3a/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Descendants (2015)
+http://192.168.1.74:8096/Videos/3d8482c303a6312ab9d91fddd6fc97bc/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Descendants 2 (2017)
+http://192.168.1.74:8096/Videos/61ede3ce695bd211715a8381bdd1a569/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Descendants 3 (2019)
+http://192.168.1.74:8096/Videos/56d2011492471c34781b7e1209a54df4/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Descendants: The Rise of Red (2024)
+http://192.168.1.74:8096/Videos/2ce40c14faa6595528d10856eb39f692/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Lilo & Stitch (2002)
+http://192.168.1.74:8096/Videos/c32b86d2083605855e14d6617fd0f64f/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
+#EXTINF:-1 group-title="Movies", Inside Out (2015)
+http://192.168.1.74:8096/Videos/ec95f5e59b389f4f29dffa2d0bd81ad4/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
