@@ -1,3 +1,4 @@
+#EXTM3U
 #EXTINF:-1 tvg-name="Aladdin (2019)" group-title="Movies", Aladdin (2019)
 http://192.168.1.74:8096/Videos/d07cd42a780ff8fc110d3c355a45e295/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
 #EXTINF:-1 tvg-name="Descendants (2015)" group-title="Movies", Descendants (2015)
