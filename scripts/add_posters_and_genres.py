@@ -8,7 +8,7 @@ import json
 API_KEY = os.environ['TMDB_API_KEY']
 
 # Channels to process
-TARGET_CHANNELS = ["403788", "403674", "403837", "403794", "403620", "403655", "8359", "403847", "403461", "403576"]  # Add your channel IDs here
+TARGET_CHANNELS = ["403788", "403674", "403837", "403794", "403620", "403655", "8359", "403847", "403461", "403576"]
 
 # TMDb URLs
 TMDB_SEARCH_MOVIE_URL = "https://api.themoviedb.org/3/search/movie"
@@ -19,6 +19,11 @@ TMDB_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
 INPUT_FILE = "epg.xml"
 OUTPUT_FILE = "epg_updated.xml"
 CACHE_FILE = "poster_genre_cache.json"
+
+# Requests header
+HEADERS = {
+    'User-Agent': 'EPGPosterBot/1.0'
+}
 
 # Load or create poster cache
 if os.path.exists(CACHE_FILE):
@@ -35,31 +40,38 @@ def search_tmdb(query):
     print(f"🔍 Searching TMDb for: {query}")
     result_data = {'landscape': None, 'portrait': None, 'genres': []}
 
-    # Search TV shows first
-    response = requests.get(TMDB_SEARCH_TV_URL, params={"api_key": API_KEY, "query": query})
-    results = response.json().get('results', [])
-    if results:
-        result = results[0]
-        if result.get('backdrop_path'):
-            result_data['landscape'] = TMDB_IMAGE_URL + result['backdrop_path']
-        if result.get('poster_path'):
-            result_data['portrait'] = TMDB_IMAGE_URL + result['poster_path']
-        result_data['genres'] = get_genres(result.get('id'), content_type='tv')
-        poster_cache[query] = result_data
-        return result_data
+    try:
+        response = requests.get(TMDB_SEARCH_TV_URL, params={"api_key": API_KEY, "query": query}, headers=HEADERS)
+        response.raise_for_status()
+        results = response.json().get('results', [])
 
-    # If not found as TV Show, try searching Movies
-    response = requests.get(TMDB_SEARCH_MOVIE_URL, params={"api_key": API_KEY, "query": query})
-    results = response.json().get('results', [])
-    if results:
-        result = results[0]
-        if result.get('backdrop_path'):
-            result_data['landscape'] = TMDB_IMAGE_URL + result['backdrop_path']
-        if result.get('poster_path'):
-            result_data['portrait'] = TMDB_IMAGE_URL + result['poster_path']
-        result_data['genres'] = get_genres(result.get('id'), content_type='movie')
-        poster_cache[query] = result_data
-        return result_data
+        if results:
+            result = results[0]
+            if result.get('backdrop_path'):
+                result_data['landscape'] = TMDB_IMAGE_URL + result['backdrop_path']
+            if result.get('poster_path'):
+                result_data['portrait'] = TMDB_IMAGE_URL + result['poster_path']
+            result_data['genres'] = get_genres(result.get('id'), content_type='tv')
+            poster_cache[query] = result_data
+            return result_data
+
+        # If not found as TV Show, try searching Movies
+        response = requests.get(TMDB_SEARCH_MOVIE_URL, params={"api_key": API_KEY, "query": query}, headers=HEADERS)
+        response.raise_for_status()
+        results = response.json().get('results', [])
+
+        if results:
+            result = results[0]
+            if result.get('backdrop_path'):
+                result_data['landscape'] = TMDB_IMAGE_URL + result['backdrop_path']
+            if result.get('poster_path'):
+                result_data['portrait'] = TMDB_IMAGE_URL + result['poster_path']
+            result_data['genres'] = get_genres(result.get('id'), content_type='movie')
+            poster_cache[query] = result_data
+            return result_data
+
+    except Exception as e:
+        print(f"❌ TMDb request failed: {e}")
 
     poster_cache[query] = result_data
     return result_data
@@ -68,11 +80,14 @@ def get_genres(content_id, content_type='tv'):
     if content_id is None:
         return []
     url = f"https://api.themoviedb.org/3/{content_type}/{content_id}"
-    response = requests.get(url, params={"api_key": API_KEY})
-    if response.status_code != 200:
+    try:
+        response = requests.get(url, params={"api_key": API_KEY}, headers=HEADERS)
+        response.raise_for_status()
+        genres = response.json().get('genres', [])
+        return [genre['name'] for genre in genres]
+    except Exception as e:
+        print(f"❌ Failed to fetch genres: {e}")
         return []
-    genres = response.json().get('genres', [])
-    return [genre['name'] for genre in genres]
 
 def add_posters_and_genres_to_epg(input_file, output_file):
     tree = ET.parse(input_file)
@@ -90,7 +105,6 @@ def add_posters_and_genres_to_epg(input_file, output_file):
             title = title_element.text
             print(f"➡️ [{processed_count}/{total_programmes}] Processing: {title}")
 
-            icon_element = programme.find('icon')
             result_data = search_tmdb(title)
 
             if result_data['landscape']:
