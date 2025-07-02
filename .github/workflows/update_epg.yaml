@@ -24,6 +24,12 @@ jobs:
       env:
         TMDB_API_KEY: 3c837d95cc9bd986bf230d9e12ba222a
 
+    - name: Replace old EPG file
+      run: mv epg_updated.xml epg.xml
+
+    - name: Generate Genres File
+      run: python3 scripts/generate_genres.py
+
     - name: Finalize update
       run: |
         mv epg_updated.xml epg.xml
