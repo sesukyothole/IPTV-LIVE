@@ -18,6 +18,9 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Install Python Dependencies
+        run: pip install requests
+
       - name: Download latest EPG
         run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
 
