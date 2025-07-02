@@ -2,91 +2,87 @@ import xml.etree.ElementTree as ET
 import requests
 import os
 import time
-import json
 
-# Load TMDb API Key from GitHub Secrets
 API_KEY = os.environ['TMDB_API_KEY']
-IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500'
 
-# Channels you want to process
-target_channels = {'403788', '403674', '403837', '403794', '403620', '403655', '8359', '403847', '403461', '403576'}  # Add your channel IDs here
+# TMDb API Base URLs
+SEARCH_MOVIE_URL = 'https://api.themoviedb.org/3/search/movie'
+SEARCH_TV_URL = 'https://api.themoviedb.org/3/search/tv'
+IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w780'  # Landscape resolution
 
-# Load EPG XML
-tree = ET.parse('epg.xml')
-root = tree.getroot()
-
-# Caching to avoid duplicate TMDb requests
-cache = {}
-
-# Load cache from file if exists
-if os.path.exists('poster_cache.json'):
-    with open('poster_cache.json', 'r') as f:
-        cache = json.load(f)
+# Cache to avoid hitting the API for the same title
+poster_cache = {}
 
 def search_tmdb(title):
-    if title in cache:
-        return cache[title]
+    """Search for a poster from TMDb (prefers backdrop, fallback to poster)"""
+    if title in poster_cache:
+        return poster_cache[title]
 
-    print(f'Searching TMDb for: {title}')
+    print(f"Searching TMDb for: {title}")
 
-    # Try TV first
-    response = requests.get(f'https://api.themoviedb.org/3/search/tv', params={'api_key': API_KEY, 'query': title})
+    # Try TV Show first
+    response = requests.get(SEARCH_TV_URL, params={'api_key': API_KEY, 'query': title})
     data = response.json()
 
-    if data.get('results'):
-        poster_path = data['results'][0].get('poster_path')
-        if poster_path:
-            poster_url = f'{IMAGE_BASE_URL}{poster_path}'
-            cache[title] = poster_url
-            time.sleep(0.25)  # Respect TMDb rate limits
-            return poster_url
+    if data['results']:
+        result = data['results'][0]
+        poster_url = None
+        if result.get('backdrop_path'):
+            poster_url = IMAGE_BASE_URL + result['backdrop_path']
+        elif result.get('poster_path'):
+            poster_url = IMAGE_BASE_URL + result['poster_path']
 
-    # Try Movie if TV not found
-    response = requests.get(f'https://api.themoviedb.org/3/search/movie', params={'api_key': API_KEY, 'query': title})
+        poster_cache[title] = poster_url
+        return poster_url
+
+    # If not found as TV Show, try as Movie
+    response = requests.get(SEARCH_MOVIE_URL, params={'api_key': API_KEY, 'query': title})
     data = response.json()
 
-    if data.get('results'):
-        poster_path = data['results'][0].get('poster_path')
-        if poster_path:
-            poster_url = f'{IMAGE_BASE_URL}{poster_path}'
-            cache[title] = poster_url
-            time.sleep(0.25)
-            return poster_url
+    if data['results']:
+        result = data['results'][0]
+        poster_url = None
+        if result.get('backdrop_path'):
+            poster_url = IMAGE_BASE_URL + result['backdrop_path']
+        elif result.get('poster_path'):
+            poster_url = IMAGE_BASE_URL + result['poster_path']
 
-    # If not found
-    cache[title] = None
+        poster_cache[title] = poster_url
+        return poster_url
+
+    # If nothing found, return None
+    poster_cache[title] = None
     return None
 
-# Process each programme
-for programme in root.findall('programme'):
-    channel_id = programme.get('channel')
-    if channel_id not in target_channels:
-        continue
+def add_posters_to_epg(epg_file, output_file):
+    tree = ET.parse(epg_file)
+    root = tree.getroot()
 
-    title_element = programme.find('title')
-    if title_element is None:
-        continue
+    for programme in root.findall('programme'):
+        title_elem = programme.find('title')
+        if title_elem is not None:
+            title = title_elem.text
+            poster_url = search_tmdb(title)
 
-    title = title_element.text
-    if not title:
-        continue
+            if poster_url:
+                # Add poster to programme
+                icon_elem = ET.Element('icon')
+                icon_elem.set('src', poster_url)
+                programme.append(icon_elem)
 
-    poster_url = search_tmdb(title)
+            # Optional: wait 250ms between requests to be nice to the API
+            time.sleep(0.25)
 
-    if poster_url:
-        # Add <icon> to the programme
-        icon_element = ET.Element('icon')
-        icon_element.set('src', poster_url)
-        programme.append(icon_element)
-        print(f'Poster added: {title}')
-    else:
-        print(f'Poster not found: {title}')
+    tree.write(output_file, encoding='utf-8', xml_declaration=True)
+    print(f"✅ Posters added! Updated EPG saved as: {output_file}")
 
-# Save updated XML
-tree.write('epg_updated.xml', encoding='utf-8')
+if __name__ == '__main__':
+    import sys
+    if len(sys.argv) != 3:
+        print("Usage: python add_posters.py input_epg.xml output_epg.xml")
+        exit(1)
 
-# Save cache to speed up future runs
-with open('poster_cache.json', 'w') as f:
-    json.dump(cache, f)
+    input_epg = sys.argv[1]
+    output_epg = sys.argv[2]
 
-print('EPG updated successfully.')
+    add_posters_to_epg(input_epg, output_epg)
