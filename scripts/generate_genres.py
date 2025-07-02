@@ -16,7 +16,7 @@ def extract_unique_genres(epg_file):
         for category in programme.findall('category'):
             genre = category.text.strip()
             if genre:
-                unique_genres.add(genre)
+                unique_genres.add(genre.lower().capitalize())
 
     return sorted(list(unique_genres))
 
