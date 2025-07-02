@@ -29,10 +29,11 @@ else:
 
 def search_tmdb(query):
     if query in poster_cache:
-        print(f"Cache hit for {query}")
+        print(f"⚡ Cache hit for: {query}")
         return poster_cache[query]
 
-    print(f"Searching TMDb for {query}")
+    print(f"🔍 Searching TMDb for: {query}")
+
     # Search TV shows first
     response = requests.get(TMDB_SEARCH_TV_URL, params={"api_key": API_KEY, "query": query})
     results = response.json().get('results', [])
@@ -69,32 +70,38 @@ def add_posters_to_epg(input_file, output_file):
     tree = ET.parse(input_file)
     root = tree.getroot()
 
+    total_programmes = len(root.findall('programme'))
+    processed_count = 0
+
     for programme in root.findall('programme'):
         channel_id = programme.get('channel')
         title_element = programme.find('title')
 
         if channel_id in TARGET_CHANNELS and title_element is not None:
+            processed_count += 1
             title = title_element.text
-            print(f"Processing: {title}")
+            print(f"➡️ [{processed_count}/{total_programmes}] Processing: {title}")
 
             icon_element = programme.find('icon')
             if icon_element is None:
                 poster_url = search_tmdb(title)
+
                 if poster_url:
                     icon = ET.SubElement(programme, 'icon')
                     icon.set('src', poster_url)
-                    print(f"Poster added: {poster_url}")
+                    print(f"✅ Poster added for: {title} → {poster_url}")
                 else:
-                    print(f"No poster found for: {title}")
+                    print(f"❌ No poster found for: {title}")
 
-                time.sleep(0.5)  # Rate limit protection
+                time.sleep(0.5)  # TMDb rate limit protection
 
     tree.write(output_file, encoding='utf-8', xml_declaration=True)
-    print(f"EPG updated and saved to {output_file}")
+    print(f"\n✅ EPG updated and saved to {output_file}")
 
     # Save updated poster cache
     with open(CACHE_FILE, 'w') as f:
         json.dump(poster_cache, f)
+    print("✅ Poster cache saved successfully!")
 
 if __name__ == "__main__":
     add_posters_to_epg(INPUT_FILE, OUTPUT_FILE)
