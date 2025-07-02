@@ -1,16 +1,39 @@
-# Add this under your existing "run" steps (after the EPG update is complete)
-- name: Generate Genres File
-  run: python3 scripts/generate_genres.py
+import xml.etree.ElementTree as ET
 
-# This will move the new genres.xml to the root (if it's not already there)
-- name: Move Genres File
-  run: mv genres.xml genres.xml
+# Input EPG file
+EPG_FILE = "epg.xml"
 
-# This will commit the updated EPG and Genres files together
-- name: Commit and Push EPG and Genres
-  run: |
-    git config user.name "github-actions[bot]"
-    git config user.email "github-actions[bot]@users.noreply.github.com"
-    git add epg.xml genres.xml
-    git diff-index --quiet HEAD || git commit -m "Daily EPG and Genres Update"
-    git push
+# Output Genres file for Kodi
+GENRES_FILE = "genres.xml"
+
+def extract_unique_genres(epg_file):
+    tree = ET.parse(epg_file)
+    root = tree.getroot()
+
+    unique_genres = set()
+
+    for programme in root.findall('programme'):
+        for category in programme.findall('category'):
+            genre = category.text.strip()
+            if genre:
+                unique_genres.add(genre)
+
+    return sorted(list(unique_genres))
+
+def create_genres_xml(genres, output_file):
+    root = ET.Element('genres')
+
+    genre_id = 1
+    for genre in genres:
+        genre_element = ET.SubElement(root, 'genre')
+        genre_element.set('id', str(genre_id))
+        genre_element.set('name', genre)
+        genre_id += 1
+
+    tree = ET.ElementTree(root)
+    tree.write(output_file, encoding='utf-8', xml_declaration=True)
+    print(f"✅ Genres file successfully created: {output_file}")
+
+if __name__ == "__main__":
+    genres = extract_unique_genres(EPG_FILE)
+    create_genres_xml(genres, GENRES_FILE)
