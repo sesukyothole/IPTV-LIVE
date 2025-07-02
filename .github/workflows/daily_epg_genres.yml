@@ -39,4 +39,3 @@ jobs:
           git add epg.xml genres.xml
           git diff-index --quiet HEAD || git commit -m "Daily EPG and Genres Update"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/gtvservices5/M3U8-IPTV-EPG.git
-
