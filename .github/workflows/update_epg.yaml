@@ -31,4 +31,4 @@ jobs:
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git add epg.xml
         git diff-index --quiet HEAD || git commit -m "Daily EPG Update with Posters"
-        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/gtvservices5/EPG.git
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/gtvservices5/M3U8-IPTV-EPG.git
