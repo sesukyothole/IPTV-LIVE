@@ -85,23 +85,29 @@ async def process_programme(session, programme, idx, total):
 
         result_data = await search_tmdb(session, title)
 
+        added_something = False
+
         if result_data['landscape']:
             icon_landscape = ET.SubElement(programme, 'icon')
             icon_landscape.set('src', result_data['landscape'])
             print(f"✅ Landscape poster added: {result_data['landscape']}")
+            added_something = True
 
         if result_data['portrait']:
             icon_portrait = ET.SubElement(programme, 'icon')
             icon_portrait.set('src', result_data['portrait'])
             print(f"✅ Portrait poster added: {result_data['portrait']}")
+            added_something = True
 
         if result_data['genres']:
             for genre in result_data['genres']:
                 category = ET.SubElement(programme, 'category')
                 category.text = genre
             print(f"🎯 Genres added: {', '.join(result_data['genres'])}")
-        else:
-            print(f"❌ No genres found for: {title}")
+            added_something = True
+
+        if not added_something:
+            print(f"❌ No poster or genre found for: {title}")
 
 async def main():
     tree = ET.parse(INPUT_FILE)
