@@ -8,6 +8,8 @@ API_KEY = os.environ['TMDB_API_KEY']
 
 TARGET_CHANNELS = ["403788", "403674", "403837", "403794", "403620", "403655", "8359", "403847", "403461", "403576"]
 
+CHANNEL_LOGOS = ["403788":"http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png", "403674":"http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png", "403837":"http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18279_dark_360w_270h.png", "403794":"https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png", "403620":"http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11006_dark_360w_270h.png", "403655":"http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png", "8359":"https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-music-us.png?raw=true", "403847":"https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true", "403461":"https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cartoon-network-us.png", "403576":"https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/boomerang-us.png"]
+
 TMDB_SEARCH_MOVIE_URL = "https://api.themoviedb.org/3/search/movie"
 TMDB_SEARCH_TV_URL = "https://api.themoviedb.org/3/search/tv"
 TMDB_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
