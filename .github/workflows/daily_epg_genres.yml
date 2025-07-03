@@ -2,7 +2,7 @@ name: Daily EPG and Genres Update
 
 on:
   schedule:
-    - cron: '0 4 * * *'
+    - cron: '0 4 * * *'  # Runs daily at 04:00 UTC
   workflow_dispatch:
 
 jobs:
@@ -32,7 +32,7 @@ jobs:
       - name: Replace old EPG
         run: mv epg_updated.xml epg.xml
 
-      - name: Generate Kodi Genres File with Colors
+      - name: Generate Color-Coded Genres File
         run: python3 scripts/generate_genres.py
 
       - name: Commit and Push Updated Files
@@ -40,5 +40,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add epg.xml genres.xml
-          git diff-index --quiet HEAD || git commit -m "Daily EPG and Genres Update"
+          git diff-index --quiet HEAD || git commit -m "Daily EPG and Color-Coded Genres Update"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/gtvservices5/M3U8-IPTV-EPG.git
