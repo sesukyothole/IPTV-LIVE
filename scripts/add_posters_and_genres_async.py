@@ -1,6 +1,5 @@
 import asyncio
 import aiohttp
-import async_timeout
 import xml.etree.ElementTree as ET
 import os
 import json
@@ -24,17 +23,20 @@ if os.path.exists(CACHE_FILE):
 else:
     poster_cache = {}
 
-semaphore = asyncio.Semaphore(20)  # max 20 concurrent requests (adjust as needed)
+semaphore = asyncio.Semaphore(20)  # Limit to 20 concurrent requests
 
 async def fetch_json(session, url, params):
     async with semaphore:
-        with async_timeout.timeout(10):
-            async with session.get(url, params=params) as response:
+        try:
+            async with session.get(url, params=params, timeout=aiohttp.ClientTimeout(total=10)) as response:
                 if response.status == 200:
                     return await response.json()
                 else:
                     print(f"❌ TMDb API error: {response.status} for {url} with {params}")
                     return None
+        except asyncio.TimeoutError:
+            print(f"⏰ Request timed out for: {url} with {params}")
+            return None
 
 async def get_genres(session, content_id, content_type):
     if content_id is None:
@@ -48,10 +50,9 @@ async def get_genres(session, content_id, content_type):
 
 async def search_tmdb(session, query):
     if query in poster_cache:
-        # print(f"⚡ Cache hit for: {query}")
         return poster_cache[query]
 
-    # Search TV shows first
+    # Search TV Shows
     data = await fetch_json(session, TMDB_SEARCH_TV_URL, {"api_key": API_KEY, "query": query})
     if data and data.get('results'):
         result = data['results'][0]
@@ -61,7 +62,7 @@ async def search_tmdb(session, query):
         poster_cache[query] = {'landscape': landscape, 'portrait': portrait, 'genres': genres}
         return poster_cache[query]
 
-    # Search movies if no TV shows found
+    # Search Movies
     data = await fetch_json(session, TMDB_SEARCH_MOVIE_URL, {"api_key": API_KEY, "query": query})
     if data and data.get('results'):
         result = data['results'][0]
@@ -115,13 +116,11 @@ async def main():
             task = process_programme(session, programme, idx, total_programmes)
             tasks.append(task)
 
-        # Run tasks with limited concurrency using gather
         await asyncio.gather(*tasks)
 
     tree.write(OUTPUT_FILE, encoding='utf-8', xml_declaration=True)
     print(f"\n✅ EPG updated and saved to {OUTPUT_FILE}")
 
-    # Save updated poster cache
     with open(CACHE_FILE, 'w') as f:
         json.dump(poster_cache, f)
     print("✅ Poster and genre cache saved successfully!")
