@@ -24,6 +24,9 @@ jobs:
       - name: Download latest EPG
         run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
 
+      - name: Set working directory to scripts
+        run: cd scripts
+        
       - name: Enrich EPG with Posters and Embedded Genres (async)
         run: python3 scripts/add_posters_genres_logos_progress_async.py
         env:
