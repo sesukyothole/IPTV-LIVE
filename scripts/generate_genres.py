@@ -1,44 +1,62 @@
-name: Daily EPG and Genres Update
+import xml.etree.ElementTree as ET
 
-on:
-  schedule:
-    - cron: '0 4 * * *'  # Runs daily at 04:00 UTC
-  workflow_dispatch:      # Allows manual run from GitHub
+# Define your genre colors (you can customize these)
+GENRE_COLOR_MAP = {
+    "Animation": "FF33CCFF",
+    "Comedy": "FFFFFF00",
+    "Drama": "FFFF9900",
+    "Action": "FFFF0000",
+    "Adventure": "FFCC00CC",
+    "Family": "FF00FF00",
+    "Fantasy": "FF9900FF",
+    "Science Fiction": "FF00FFFF",
+    "Music": "FFFF66FF",
+    "Reality": "FF66FF66",
+    "Documentary": "FF999999",
+    "Horror": "FFFF3300",
+    "Mystery": "FF6600CC",
+    "Romance": "FFFF99CC",
+    "TV Movie": "FF00CCCC",
+    "Crime": "FFCC0000",
+    "Thriller": "FF660000",
+    "War": "FFCC6666",
+    "Western": "FF996633",
+    "History": "FF3333FF",
+    "Sport": "FF33FF33",
+}
 
-jobs:
-  update_epg_and_genres:
-    runs-on: ubuntu-latest
+DEFAULT_COLOR = "FFCCCCCC"  # Grey for unknown genres
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+# File to process
+EPG_FILE = "epg.xml"
+OUTPUT_FILE = "genres.xml"
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
+def extract_genres_from_epg(epg_file):
+    tree = ET.parse(epg_file)
+    root = tree.getroot()
 
-      - name: Install required packages
-        run: pip install requests
+    genres_found = set()
 
-      - name: Download latest EPG
-        run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
+    for programme in root.findall('programme'):
+        for category in programme.findall('category'):
+            if category.text:
+                genres_found.add(category.text.strip())
 
-      - name: Enrich EPG with Posters and Embedded Genres
-        run: python3 scripts/add_posters_and_genres.py epg.xml epg_updated.xml
-        env:
-          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+    return genres_found
 
-      - name: Replace old EPG
-        run: mv epg_updated.xml epg.xml
+def generate_genres_file(epg_file, output_file):
+    genres_in_epg = extract_genres_from_epg(epg_file)
 
-      - name: Generate Kodi Genres File with Colors
-        run: python3 scripts/generate_genres.py
+    root = ET.Element('genres')
 
-      - name: Commit and Push Updated Files
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add epg.xml genres.xml
-          git diff-index --quiet HEAD || git commit -m "Daily EPG and Genres Update"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/gtvservices5/M3U8-IPTV-EPG.git
+    for genre in sorted(genres_in_epg):
+        genre_element = ET.SubElement(root, 'genre')
+        genre_element.set('name', genre)
+        genre_element.set('color', GENRE_COLOR_MAP.get(genre, DEFAULT_COLOR))
+
+    tree = ET.ElementTree(root)
+    tree.write(output_file, encoding='utf-8', xml_declaration=True)
+    print(f"✅ Merged genres and colors written to {output_file}")
+
+if __name__ == "__main__":
+    generate_genres_file(EPG_FILE, OUTPUT_FILE)
