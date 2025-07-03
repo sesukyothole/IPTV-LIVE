@@ -1,39 +1,44 @@
-import xml.etree.ElementTree as ET
+name: Daily EPG and Genres Update
 
-# Input EPG file
-EPG_FILE = "epg.xml"
+on:
+  schedule:
+    - cron: '0 4 * * *'  # Runs daily at 04:00 UTC
+  workflow_dispatch:      # Allows manual run from GitHub
 
-# Output Genres file for Kodi
-GENRES_FILE = "genres.xml"
+jobs:
+  update_epg_and_genres:
+    runs-on: ubuntu-latest
 
-def extract_unique_genres(epg_file):
-    tree = ET.parse(epg_file)
-    root = tree.getroot()
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    unique_genres = set()
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-    for programme in root.findall('programme'):
-        for category in programme.findall('category'):
-            genre = category.text.strip()
-            if genre:
-                unique_genres.add(genre.lower().capitalize())
+      - name: Install required packages
+        run: pip install requests
 
-    return sorted(list(unique_genres))
+      - name: Download latest EPG
+        run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
 
-def create_genres_xml(genres, output_file):
-    root = ET.Element('genres')
+      - name: Enrich EPG with Posters and Embedded Genres
+        run: python3 scripts/add_posters_and_genres.py epg.xml epg_updated.xml
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
 
-    genre_id = 1
-    for genre in genres:
-        genre_element = ET.SubElement(root, 'genre')
-        genre_element.set('id', str(genre_id))
-        genre_element.set('name', genre)
-        genre_id += 1
+      - name: Replace old EPG
+        run: mv epg_updated.xml epg.xml
 
-    tree = ET.ElementTree(root)
-    tree.write(output_file, encoding='utf-8', xml_declaration=True)
-    print(f"✅ Genres file successfully created: {output_file}")
+      - name: Generate Kodi Genres File with Colors
+        run: python3 scripts/generate_genres.py
 
-if __name__ == "__main__":
-    genres = extract_unique_genres(EPG_FILE)
-    create_genres_xml(genres, GENRES_FILE)
+      - name: Commit and Push Updated Files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add epg.xml genres.xml
+          git diff-index --quiet HEAD || git commit -m "Daily EPG and Genres Update"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/gtvservices5/M3U8-IPTV-EPG.git
