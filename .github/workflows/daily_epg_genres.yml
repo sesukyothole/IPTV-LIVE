@@ -3,7 +3,7 @@ name: Daily EPG and Genres Update
 on:
   schedule:
     - cron: '0 4 * * *'  # Runs daily at 04:00 UTC
-  workflow_dispatch:      # Allows manual run from GitHub
+  workflow_dispatch:
 
 jobs:
   update_epg_and_genres:
@@ -18,23 +18,24 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install required packages
-        run: pip install requests
+      - name: Install dependencies
+        run: |
+          pip install aiohttp async_timeout
 
       - name: Download latest EPG
         run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
 
-      - name: Enrich EPG with Posters and Embedded Genres
-        run: python3 scripts/add_posters_and_genres.py epg.xml epg_updated.xml
+      - name: Enrich EPG with Posters and Embedded Genres (async)
+        run: python3 scripts/add_posters_and_genres_async.py epg.xml epg_updated.xml
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
 
       - name: Replace old EPG
         run: mv epg_updated.xml epg.xml
 
-      - name: Generate Kodi Genres File
+      - name: Generate Kodi Genres File with Colors
         run: python3 scripts/generate_genres.py
-        
+
       - name: Commit and Push Updated Files
         run: |
           git config user.name "github-actions[bot]"
