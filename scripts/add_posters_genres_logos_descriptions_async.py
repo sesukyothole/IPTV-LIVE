@@ -5,19 +5,19 @@ import xml.etree.ElementTree as ET
 import os
 import json
 
-# TMDb API
-TMDB_API_KEY = os.environ.get('TMDB_API_KEY')
+# TMDb API Key
+TMDB_API_KEY = os.environ.get("TMDB_API_KEY")
 TMDB_BASE = "https://api.themoviedb.org/3"
 TMDB_IMAGE = "https://image.tmdb.org/t/p/w500"
 
-# Target channels (your 10 specific ones)
+# Target channels (customize your list here)
 TARGET_CHANNELS = [
     "403788", "403674", "403837", "403794", "403620",
     "403655", "8359", "403847", "403461", "403576"
 ]
 
 # Cache file
-CACHE_FILE = "poster_genre_rating_cache.json"
+CACHE_FILE = "poster_genre_description_cache.json"
 if os.path.exists(CACHE_FILE):
     with open(CACHE_FILE, "r") as f:
         CACHE = json.load(f)
@@ -33,7 +33,7 @@ async def fetch_json(session, url, params):
                     return {}
                 return await response.json()
     except Exception as e:
-        print(f"❌ Fetch error: {e}")
+        print(f"❌ Error fetching: {e}")
         return {}
 
 async def search_tmdb(session, title):
@@ -41,44 +41,33 @@ async def search_tmdb(session, title):
         return CACHE[title]
 
     print(f"🔍 Searching TMDb for: {title}")
-    result = {"poster": None, "genres": [], "rating": "N/A"}
+    result = {"poster": None, "genres": [], "description": None}
 
-    # TV Show search
+    # TV Show
     tv = await fetch_json(session, f"{TMDB_BASE}/search/tv", {"api_key": TMDB_API_KEY, "query": title})
     if tv.get("results"):
         show = tv["results"][0]
         result["poster"] = TMDB_IMAGE + show["poster_path"] if show.get("poster_path") else None
+        result["description"] = show.get("overview")
 
-        # Genres
-        detail = await fetch_json(session, f"{TMDB_BASE}/tv/{show['id']}", {"api_key": TMDB_API_KEY})
-        result["genres"] = [g["name"] for g in detail.get("genres", [])]
+        # Fetch genres
+        details = await fetch_json(session, f"{TMDB_BASE}/tv/{show['id']}", {"api_key": TMDB_API_KEY})
+        result["genres"] = [g["name"] for g in details.get("genres", [])]
 
-        # Age rating
-        ratings = await fetch_json(session, f"{TMDB_BASE}/tv/{show['id']}/content_ratings", {"api_key": TMDB_API_KEY})
-        for r in ratings.get("results", []):
-            if r.get("iso_3166_1") == "US":
-                result["rating"] = r.get("rating", "N/A")
         CACHE[title] = result
         return result
 
-    # Movie search
+    # Movie fallback
     movie = await fetch_json(session, f"{TMDB_BASE}/search/movie", {"api_key": TMDB_API_KEY, "query": title})
     if movie.get("results"):
         m = movie["results"][0]
         result["poster"] = TMDB_IMAGE + m["poster_path"] if m.get("poster_path") else None
+        result["description"] = m.get("overview")
 
-        # Genres
-        detail = await fetch_json(session, f"{TMDB_BASE}/movie/{m['id']}", {"api_key": TMDB_API_KEY})
-        result["genres"] = [g["name"] for g in detail.get("genres", [])]
+        # Fetch genres
+        details = await fetch_json(session, f"{TMDB_BASE}/movie/{m['id']}", {"api_key": TMDB_API_KEY})
+        result["genres"] = [g["name"] for g in details.get("genres", [])]
 
-        # Age rating
-        ratings = await fetch_json(session, f"{TMDB_BASE}/movie/{m['id']}/release_dates", {"api_key": TMDB_API_KEY})
-        for r in ratings.get("results", []):
-            if r.get("iso_3166_1") == "US":
-                for rel in r.get("release_dates", []):
-                    if rel.get("certification"):
-                        result["rating"] = rel["certification"]
-                        break
         CACHE[title] = result
         return result
 
@@ -103,48 +92,46 @@ async def process_programme(session, programme):
     if data["poster"]:
         icon = ET.SubElement(programme, "icon")
         icon.set("src", data["poster"])
-        print(f"✅ Poster added: {data['poster']}")
+        print(f"✅ Poster added")
     else:
-        print(f"⚠️ No poster for {title}")
+        print(f"⚠️ No poster")
 
     # Genres
     if data["genres"]:
         for genre in data["genres"]:
-            g = ET.SubElement(programme, "category")
-            g.text = genre
-        print(f"🎯 Genres added: {', '.join(data['genres'])}")
+            category = ET.SubElement(programme, "category")
+            category.text = genre
+        print(f"🎯 Genres: {', '.join(data['genres'])}")
     else:
-        print(f"⚠️ No genres for {title}")
+        print(f"⚠️ No genres")
 
-    # Age rating
-    rating = data.get("rating", "N/A")
-    if rating and rating != "N/A":
-        age = ET.SubElement(programme, "rating")
-        value = ET.SubElement(age, "value")
-        value.text = rating
-        print(f"🔞 Rating added: {rating}")
+    # Description
+    if data["description"]:
+        desc_el = programme.find("desc")
+        if desc_el is None:
+            desc_el = ET.SubElement(programme, "desc")
+        desc_el.text = data["description"]
+        print(f"📝 Description added")
     else:
-        print(f"⚠️ No rating for {title}")
+        print(f"⚠️ No description")
 
-async def enrich_epg(epg_path, output_path):
-    tree = ET.parse(epg_path)
+async def enrich_epg(input_file, output_file):
+    tree = ET.parse(input_file)
     root = tree.getroot()
     async with aiohttp.ClientSession() as session:
         tasks = [process_programme(session, p) for p in root.findall("programme")]
         await asyncio.gather(*tasks)
 
-    # Save output EPG
-    tree.write(output_path, encoding="utf-8", xml_declaration=True)
-    print(f"\n✅ EPG written to {output_path}")
+    tree.write(output_file, encoding="utf-8", xml_declaration=True)
+    print(f"\n✅ Enriched EPG saved to {output_file}")
 
-    # Save cache
     with open(CACHE_FILE, "w") as f:
         json.dump(CACHE, f)
-    print("💾 Cache updated.")
+    print("💾 Cache saved")
 
 if __name__ == "__main__":
     import sys
     if len(sys.argv) != 3:
-        print("Usage: python3 add_posters_genres_ratings_async.py epg.xml epg_updated.xml")
+        print("Usage: python3 add_posters_genres_descriptions_async.py epg.xml epg_updated.xml")
         exit(1)
     asyncio.run(enrich_epg(sys.argv[1], sys.argv[2]))
