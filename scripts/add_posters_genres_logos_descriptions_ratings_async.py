@@ -63,7 +63,6 @@ async def search_tmdb(session, title):
         print(f"⚡ Cache hit: {title}")
         return tmdb_cache[title]
 
-    print(f"🔍 Searching TMDb for: {title}")
     result = {
         "poster": None,
         "genres": [],
@@ -108,6 +107,7 @@ async def process_programme(session, programme):
 
     title = clean_title(title_elem.text or "")
     print(f"\n➡️ Processing: {title}")
+    print(f"🎬 Title: {title}")
 
     data = await search_tmdb(session, title)
 
@@ -142,7 +142,7 @@ async def process_programme(session, programme):
     else:
         print("🚫 No rating found")
 
-    await asyncio.sleep(0.25)  # Rate limiting
+    await asyncio.sleep(0.25)  # Respect rate limits
 
 async def enrich_epg():
     tree = ET.parse(INPUT_FILE)
