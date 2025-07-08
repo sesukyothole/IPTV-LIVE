@@ -1,56 +1,57 @@
 import asyncio
 import aiohttp
 import async_timeout
-import os
 import xml.etree.ElementTree as ET
+import os
+import time
 import json
+import sys
 
 API_KEY = os.environ['TMDB_API_KEY']
-INPUT_FILE = "epg.xml"
-OUTPUT_FILE = "epg_updated.xml"
+INPUT_FILE = sys.argv[1]
+OUTPUT_FILE = sys.argv[2]
 CACHE_FILE = "poster_genre_cache.json"
 
-TARGET_CHANNELS = [
-    "403788", "403674", "403837", "403794", "403620",
-    "403655", "8359", "403847", "403461", "403576"
-]
+TARGET_CHANNELS = ["403788", "403674", "403837", "403794", "403620", "403655", "8359", "403847", "403461", "403576"]
 
+# Channel Logos Map
 CHANNEL_LOGOS = {
-    "403788": "https://example.com/logos/disney_east.png",
-    "403674": "https://example.com/logos/nickelodeon.png",
-    "403837": "https://example.com/logos/cartoon_network.png",
-    "403794": "https://example.com/logos/boomerang.png",
-    "403620": "https://example.com/logos/disney_junior.png",
-    "403655": "https://example.com/logos/disney_channel.png",
-    "8359":    "https://example.com/logos/pbs_kids.png",
-    "403847": "https://example.com/logos/fx.png",
-    "403461": "https://example.com/logos/abc_family.png",
-    "403576": "https://example.com/logos/nicktoons.png"
+    "403788": "http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png",
+    "403674": "http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png",
+    "403837": "http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18279_dark_360w_270h.png",
+    "403794": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png",
+    "403620": "http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11006_dark_360w_270h.png",
+    "403655": "http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png",
+    "8359":   "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-music-us.png?raw=true",
+    "403847": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true",
+    "403461": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cartoon-network-us.png",
+    "403576": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/boomerang-us.png"
 }
 
-TMDB_SEARCH_TV = "https://api.themoviedb.org/3/search/tv"
-TMDB_SEARCH_MOVIE = "https://api.themoviedb.org/3/search/movie"
+TMDB_SEARCH_MOVIE_URL = "https://api.themoviedb.org/3/search/movie"
+TMDB_SEARCH_TV_URL = "https://api.themoviedb.org/3/search/tv"
 TMDB_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
+TMDB_DETAILS_URL = "https://api.themoviedb.org/3/{type}/{id}"
 
-# Load or create cache
+# Load poster+genre cache
 if os.path.exists(CACHE_FILE):
-    with open(CACHE_FILE, "r") as f:
+    with open(CACHE_FILE, 'r') as f:
         poster_cache = json.load(f)
 else:
     poster_cache = {}
 
 async def fetch_json(session, url, params):
     try:
-        async with async_timeout.timeout(10):
+        with async_timeout.timeout(10):
             async with session.get(url, params=params) as response:
                 return await response.json()
     except Exception:
         return {}
 
-async def get_genres(session, tmdb_id, content_type):
-    url = f"https://api.themoviedb.org/3/{content_type}/{tmdb_id}"
+async def get_genres(session, content_id, content_type='tv'):
+    url = TMDB_DETAILS_URL.format(type=content_type, id=content_id)
     data = await fetch_json(session, url, {"api_key": API_KEY})
-    return [genre['name'] for genre in data.get("genres", [])]
+    return [g['name'] for g in data.get('genres', [])] if data else []
 
 async def search_tmdb(session, query):
     if query in poster_cache:
@@ -58,68 +59,74 @@ async def search_tmdb(session, query):
 
     result_data = {'portrait': None, 'genres': []}
 
-    for endpoint, ctype in [(TMDB_SEARCH_TV, "tv"), (TMDB_SEARCH_MOVIE, "movie")]:
-        data = await fetch_json(session, endpoint, {"api_key": API_KEY, "query": query})
-        results = data.get("results", [])
-        if results:
-            item = results[0]
-            if item.get("poster_path"):
-                result_data['portrait'] = TMDB_IMAGE_URL + item["poster_path"]
-            result_data['genres'] = await get_genres(session, item["id"], ctype)
-            break
+    tv_data = await fetch_json(session, TMDB_SEARCH_TV_URL, {"api_key": API_KEY, "query": query})
+    if tv_data.get('results'):
+        tv = tv_data['results'][0]
+        result_data['portrait'] = TMDB_IMAGE_URL + tv.get('poster_path', '')
+        result_data['genres'] = await get_genres(session, tv['id'], 'tv')
+        poster_cache[query] = result_data
+        return result_data
+
+    movie_data = await fetch_json(session, TMDB_SEARCH_MOVIE_URL, {"api_key": API_KEY, "query": query})
+    if movie_data.get('results'):
+        movie = movie_data['results'][0]
+        result_data['portrait'] = TMDB_IMAGE_URL + movie.get('poster_path', '')
+        result_data['genres'] = await get_genres(session, movie['id'], 'movie')
+        poster_cache[query] = result_data
+        return result_data
 
     poster_cache[query] = result_data
     return result_data
 
 async def process_programme(session, programme, index, total):
-    channel_id = programme.get("channel")
-    title_el = programme.find("title")
-    if channel_id in TARGET_CHANNELS and title_el is not None:
-        title = title_el.text.strip()
-        print(f"➡️ [{index}/{total}] Processing: {title}")
-        result_data = await search_tmdb(session, title)
+    channel_id = programme.get('channel')
+    title_element = programme.find('title')
 
-        if result_data["portrait"]:
-            icon = ET.SubElement(programme, "icon")
-            icon.set("src", result_data["portrait"])
-            print(f"✅ Poster added: {result_data['portrait']}")
+    if channel_id not in TARGET_CHANNELS or title_element is None:
+        return
 
-        if result_data["genres"]:
-            for g in result_data["genres"]:
-                cat = ET.SubElement(programme, "category")
-                cat.text = g
-            print(f"🎯 Genres: {', '.join(result_data['genres'])}")
+    title = title_element.text
+    print(f"🔄 [{index}/{total}] Processing: {title}")
 
-async def add_posters_async():
+    result = await search_tmdb(session, title)
+
+    if result['portrait']:
+        ET.SubElement(programme, 'icon').set('src', result['portrait'])
+
+    for genre in result['genres']:
+        category = ET.SubElement(programme, 'category')
+        category.text = genre
+
+async def main():
     tree = ET.parse(INPUT_FILE)
     root = tree.getroot()
 
-    # Add logos to channel tags
-    for channel in root.findall("channel"):
-        cid = channel.get("id")
-        if cid in CHANNEL_LOGOS:
-            icon = channel.find("icon")
+    # Add logos to channel section
+    for channel in root.findall('channel'):
+        chan_id = channel.get('id')
+        if chan_id in CHANNEL_LOGOS:
+            icon = channel.find('icon')
             if icon is None:
-                icon = ET.SubElement(channel, "icon")
-            icon.set("src", CHANNEL_LOGOS[cid])
-            print(f"📺 Logo added for channel {cid}")
+                ET.SubElement(channel, 'icon').set('src', CHANNEL_LOGOS[chan_id])
+            else:
+                icon.set('src', CHANNEL_LOGOS[chan_id])
 
-    # Process programmes
-    programmes = root.findall("programme")
+    programmes = root.findall('programme')
     total = len(programmes)
+
     async with aiohttp.ClientSession() as session:
-        tasks = []
-        for i, programme in enumerate(programmes, start=1):
-            tasks.append(process_programme(session, programme, i, total))
+        tasks = [
+            process_programme(session, prog, idx + 1, total)
+            for idx, prog in enumerate(programmes)
+        ]
         await asyncio.gather(*tasks)
 
     tree.write(OUTPUT_FILE, encoding="utf-8", xml_declaration=True)
-    print(f"✅ Saved updated EPG to {OUTPUT_FILE}")
 
-    with open(CACHE_FILE, "w") as f:
+    with open(CACHE_FILE, 'w') as f:
         json.dump(poster_cache, f)
 
-    print("✅ Cache updated")
+    print(f"✅ EPG updated and saved to {OUTPUT_FILE}")
 
 if __name__ == "__main__":
-    asyncio.run(add_posters_async())
+    asyncio.run(main())
