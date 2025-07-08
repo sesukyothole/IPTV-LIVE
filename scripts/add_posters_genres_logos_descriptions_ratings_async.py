@@ -54,8 +54,8 @@ async def fetch_rating(session, content_id, media_type):
             if entry.get("iso_3166_1") == "US":
                 return entry.get("rating")
     return "N/A"
-
-def resolve_genres(genre_ids):
+    
+async def resolve_genres(genre_ids):
     return [GENRE_ID_MAP.get(gid, f"Genre {gid}") for gid in genre_ids]
 
 async def search_tmdb(session, title):
@@ -71,7 +71,10 @@ async def search_tmdb(session, title):
     tv_results = tv_resp.get("results", [])
     if tv_results:
         show = tv_results[0]
-        result_data["poster"] = TMDB_IMAGE_URL + show.get("poster_path", "")
+        poster_path = show.get("poster_path")
+        if poster_path:
+            result_data["poster"] = TMDB_IMAGE_URL + poster_path
+
         result_data["genres"] = resolve_genres(show.get("genre_ids", []))
         result_data["description"] = show.get("overview")
         result_data["rating"] = await fetch_rating(session, show["id"], "tv")
@@ -83,7 +86,10 @@ async def search_tmdb(session, title):
     mv_results = mv_resp.get("results", [])
     if mv_results:
         movie = mv_results[0]
-        result_data["poster"] = TMDB_IMAGE_URL + movie.get("poster_path", "")
+        poster_path = movie.get("poster_path")
+        if poster_path:
+            result_data["poster"] = TMDB_IMAGE_URL + poster_path
+
         result_data["genres"] = resolve_genres(movie.get("genre_ids", []))
         result_data["description"] = movie.get("overview")
         result_data["rating"] = await fetch_rating(session, movie["id"], "movie")
