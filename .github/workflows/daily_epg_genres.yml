@@ -19,12 +19,12 @@ jobs:
           python-version: '3.x'
 
       - name: 📦 Install dependencies
-        run: pip install aiohttp async_timeout lxml certifi charset-normalizer
+        run: pip install aiohttp async_timeout lxml
 
       - name: 🌐 Download latest EPG
         run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
 
-      - name: 🧠 Enrich EPG with Posters, Genres, and Logos (async)
+      - name: 🧠 Enrich EPG (async)
         run: python3 scripts/add_posters_genres_logos_ratings_async.py epg.xml epg_updated.xml
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
