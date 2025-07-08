@@ -1,4 +1,4 @@
-name: Daily EPG, Genres, Descriptions, and Ratings Update
+name: Daily EPG, Genres, Descriptions, Season and Episode Update
 
 on:
   schedule:
@@ -25,7 +25,7 @@ jobs:
         run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
 
       - name: 🧠 Enrich EPG (async)
-        run: python3 scripts/add_posters_genres_logos_descriptions_ratings_async.py epg.xml epg_updated.xml
+        run: python3 scripts/add_posters_genres_logos_descriptions_season_episode_async.py epg.xml epg_updated.xml
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
 
