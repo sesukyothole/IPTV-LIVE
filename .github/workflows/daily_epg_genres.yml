@@ -19,26 +19,28 @@ jobs:
           python-version: '3.x'
 
       - name: 📦 Install dependencies
-        run: pip install aiohttp async_timeout lxml
+        run: pip install aiohttp async_timeout lxml certifi charset-normalizer
 
       - name: 🌐 Download latest EPG
         run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
 
       - name: 🧠 Enrich EPG with Posters, Genres, and Logos (async)
-        run: python3 scripts/add_posters_genres_logos_async.py
+        run: python3 scripts/add_posters_genres_logos_async.py epg.xml epg_updated.xml
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
 
-      - name: 🛠️ Replace old EPG
+      - name: ⚒️ Replace old EPG
         run: mv epg_updated.xml epg.xml
 
       - name: 🎨 Generate Color-Coded Genres File
         run: python3 scripts/generate_genres.py
+        continue-on-error: true
 
       - name: 💾 Commit and Push Updates
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add epg.xml genres.xml
-          git diff-index --quiet HEAD || git commit -m "✅ Daily EPG and Genres Update"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/gtvservices5/M3U8-IPTV-EPG.git
+         git config user.name "github-actions[bot]"
+         git config user.email "github-actions[bot]@users.noreply.github.com"
+         git add epg.xml genres.xml
+         git diff-index --quiet HEAD || git commit -m "✅ Daily EPG and Genres Update"
+         git pull --rebase --autostash origin main
+         git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/gtvservices5/M3U8-IPTV-EPG.git
