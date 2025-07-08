@@ -4,7 +4,6 @@ import async_timeout
 import os
 import xml.etree.ElementTree as ET
 import json
-import time
 
 API_KEY = os.environ.get('TMDB_API_KEY')
 INPUT_FILE = 'epg.xml'
@@ -66,13 +65,11 @@ async def get_genres(session, tmdb_id, content_type='tv'):
 def extract_season_episode(programme):
     ep_node = programme.find('episode-num[@system="xmltv_ns"]')
     if ep_node is not None:
-        try:
-            parts = ep_node.text.split('.')
+        parts = ep_node.text.strip().split('.')
+        if len(parts) >= 2 and parts[0].isdigit() and parts[1].isdigit():
             season = int(parts[0]) + 1
             episode = int(parts[1]) + 1
             return f"S{season:02}E{episode:02}"
-        except:
-            return None
     return None
 
 async def process_programme(session, programme, index, total):
@@ -117,7 +114,7 @@ async def process_programme(session, programme, index, total):
     else:
         print("🚫 No episode info found")
 
-    await asyncio.sleep(0.3)  # slight delay to avoid API throttle
+    await asyncio.sleep(0.3)
 
 async def main():
     tree = ET.parse(INPUT_FILE)
