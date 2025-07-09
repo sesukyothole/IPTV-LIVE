@@ -31,9 +31,9 @@ TMDB_GENRE_MAP = {
     10767: "Talk", 10768: "War & Politics"
 }
 
-# Manual fixes
+# Manual TMDb ID fixes for ambiguous titles
 MANUAL_ID_OVERRIDES = {
-    "Disney's Jessie": {"type": "tv", "id": 38974},      
+    "Jessie": {"type": "tv", "id": 38974},      
     "Big City Greens": {"type": "tv", "id": 80587},         
     "Kiff": {"type": "tv", "id": 127706},                   
     "Zombies": {"type": "movie", "id": 483980},   
@@ -43,7 +43,7 @@ MANUAL_ID_OVERRIDES = {
     "Monsters, Inc.": {"type": "movie", "id": 585}
 }
 
-# Helper
+# TMDb helpers
 async def fetch_json(session, url, params):
     async with session.get(url, params=params) as response:
         return await response.json()
@@ -65,7 +65,7 @@ async def get_tv_rating(session, tv_id):
             return entry.get("rating", "Not Rated")
     return "Not Rated"
 
-# Search logic
+# TMDb Search
 async def search_tmdb(session, title):
     if title in MANUAL_ID_OVERRIDES:
         entry = MANUAL_ID_OVERRIDES[title]
@@ -127,7 +127,7 @@ async def search_tmdb(session, title):
 
     return None
 
-# Enrichment
+# Enrichment logic
 async def process_programme(session, programme):
     title_el = programme.find("title")
     channel = programme.get("channel")
@@ -173,18 +173,18 @@ async def process_programme(session, programme):
             value_el.text = data["rating"]
             print(f"🎞️ MPAA Rating added for {title}: {data['rating']}")
 
-        # Air date
+        # Year (as <date>)
         if data.get("year"):
             date_el = programme.find("date")
             if date_el is None:
                 date_el = ET.SubElement(programme, "date")
-            date_el.text = data["year"].replace("-", "")
-            print(f"📆 Date added for {title}: {date_el.text}")
+            date_el.text = data["year"][:4]
+            print(f"📆 Year added for {title}: {date_el.text}")
 
     except Exception as e:
         print(f"❌ Error processing {title}: {e}")
 
-# Entry
+# Main
 async def enrich_epg(input_file, output_file):
     tree = ET.parse(input_file)
     root = tree.getroot()
