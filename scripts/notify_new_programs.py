@@ -19,7 +19,7 @@ def parse_epg(epg_file):
                 "title": title_el.text.strip(),
                 "start": start,
                 "channel": channel,
-                "desc": desc_el.text.strip() if desc_el is not None else "",
+                "desc": desc_el.text.strip() if desc_el is not None and desc_el.text else "",
                 "categories": categories
             })
     return programmes
@@ -31,10 +31,11 @@ def classify_program(p):
     genres = p["categories"]
     if "movie" in genres or "tv movie" in genres:
         return "movie"
-    if "tv show" in genres or "kids" in genres or "animation" in genres or "series" in genres:
+    if "tv show" in genres or "series" in genres or "animation" in genres or "kids" in genres:
         return "tv"
-    # fallback using title patterns
-    if any(keyword in p["title"].lower() for keyword in ["movie", "film", ": the", ": a"]):
+    # fallback: title pattern
+    title_lower = p["title"].lower()
+    if any(kw in title_lower for kw in ["movie", "film", ": the", ": a"]):
         return "movie"
     return "tv"
 
