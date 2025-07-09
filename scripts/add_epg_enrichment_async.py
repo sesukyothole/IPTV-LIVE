@@ -4,12 +4,13 @@ import xml.etree.ElementTree as ET
 import os
 import sys
 
-# Target channel IDs to filter which programmes to enrich
+# Channel filtering
 TARGET_CHANNELS = {
     "403788", "403674", "403837", "403794", "403620",
     "403655", "8359", "403847", "403461", "403576"
 }
 
+# TMDb setup
 TMDB_API_KEY = os.getenv("TMDB_API_KEY") or (len(sys.argv) > 3 and sys.argv[3])
 if not TMDB_API_KEY:
     print("❌ TMDB_API_KEY is required as third argument or environment variable.")
@@ -18,38 +19,19 @@ if not TMDB_API_KEY:
 TMDB_BASE = "https://api.themoviedb.org/3"
 TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 
-# Map TMDb genre IDs to names
+# Genre ID → Name mapping
 TMDB_GENRE_MAP = {
-    28: "Action",
-    12: "Adventure",
-    16: "Animation",
-    35: "Comedy",
-    80: "Crime",
-    99: "Documentary",
-    18: "Drama",
-    10751: "Family",
-    14: "Fantasy",
-    36: "History",
-    27: "Horror",
-    10402: "Music",
-    9648: "Mystery",
-    10749: "Romance",
-    878: "Science Fiction",
-    10770: "TV Movie",
-    53: "Thriller",
-    10752: "War",
-    37: "Western",
-    10759: "Action & Adventure",
-    10762: "Kids",
-    10763: "News",
-    10764: "Reality",
-    10765: "Sci-Fi & Fantasy",
-    10766: "Soap",
-    10767: "Talk",
-    10768: "War & Politics"
+    28: "Action", 12: "Adventure", 16: "Animation", 35: "Comedy",
+    80: "Crime", 99: "Documentary", 18: "Drama", 10751: "Family",
+    14: "Fantasy", 36: "History", 27: "Horror", 10402: "Music",
+    9648: "Mystery", 10749: "Romance", 878: "Science Fiction",
+    10770: "TV Movie", 53: "Thriller", 10752: "War", 37: "Western",
+    10759: "Action & Adventure", 10762: "Kids", 10763: "News",
+    10764: "Reality", 10765: "Sci-Fi & Fantasy", 10766: "Soap",
+    10767: "Talk", 10768: "War & Politics"
 }
 
-# Manual TMDb ID overrides for exact matching of known tricky titles
+# Manual fixes
 MANUAL_ID_OVERRIDES = {
     "Disney's Jessie": {"type": "tv", "id": 38974},      
     "Big City Greens": {"type": "tv", "id": 80587},         
@@ -61,6 +43,7 @@ MANUAL_ID_OVERRIDES = {
     "Monsters, Inc.": {"type": "movie", "id": 585}
 }
 
+# Helper
 async def fetch_json(session, url, params):
     async with session.get(url, params=params) as response:
         return await response.json()
@@ -82,8 +65,8 @@ async def get_tv_rating(session, tv_id):
             return entry.get("rating", "Not Rated")
     return "Not Rated"
 
+# Search logic
 async def search_tmdb(session, title):
-    # Check manual ID overrides first
     if title in MANUAL_ID_OVERRIDES:
         entry = MANUAL_ID_OVERRIDES[title]
         id_type = entry["type"]
@@ -98,9 +81,10 @@ async def search_tmdb(session, title):
                 "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
                 "description": details.get("overview", "").strip(),
                 "genres": [str(gid) for gid in genres],
-                "rating": rating
+                "rating": rating,
+                "year": details.get("release_date", "")[:10]
             }
-        else:
+        else:  # tv
             details = await fetch_json(session, f"{TMDB_BASE}/tv/{id_value}", {"api_key": TMDB_API_KEY})
             rating = await get_tv_rating(session, id_value)
             genres = [g['id'] for g in details.get("genres", [])]
@@ -109,12 +93,12 @@ async def search_tmdb(session, title):
                 "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
                 "description": details.get("overview", "").strip(),
                 "genres": [str(gid) for gid in genres],
-                "rating": rating
+                "rating": rating,
+                "year": details.get("first_air_date", "")[:10]
             }
 
-    # Fallback to search by title (TV first, then movies)
+    # fallback search
     params = {"api_key": TMDB_API_KEY, "query": title}
-
     tv = await fetch_json(session, f"{TMDB_BASE}/search/tv", params)
     if tv.get("results"):
         details = tv["results"][0]
@@ -124,7 +108,8 @@ async def search_tmdb(session, title):
             "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
             "description": details.get("overview", "").strip(),
             "genres": [str(gid) for gid in details.get("genre_ids", [])],
-            "rating": rating
+            "rating": rating,
+            "year": details.get("first_air_date", "")[:10]
         }
 
     movie = await fetch_json(session, f"{TMDB_BASE}/search/movie", params)
@@ -136,15 +121,16 @@ async def search_tmdb(session, title):
             "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
             "description": details.get("overview", "").strip(),
             "genres": [str(gid) for gid in details.get("genre_ids", [])],
-            "rating": rating
+            "rating": rating,
+            "year": details.get("release_date", "")[:10]
         }
 
     return None
 
+# Enrichment
 async def process_programme(session, programme):
     title_el = programme.find("title")
     channel = programme.get("channel")
-
     if title_el is None or not channel or channel not in TARGET_CHANNELS:
         return
 
@@ -171,7 +157,7 @@ async def process_programme(session, programme):
             desc.text = data["description"]
             print(f"📝 Description added for {title}")
 
-        # Genres (convert genre IDs to names)
+        # Genres
         if data["genres"]:
             for gid_str in data["genres"]:
                 gid = int(gid_str)
@@ -187,9 +173,18 @@ async def process_programme(session, programme):
             value_el.text = data["rating"]
             print(f"🎞️ MPAA Rating added for {title}: {data['rating']}")
 
+        # Air date
+        if data.get("year"):
+            date_el = programme.find("date")
+            if date_el is None:
+                date_el = ET.SubElement(programme, "date")
+            date_el.text = data["year"].replace("-", "")
+            print(f"📆 Date added for {title}: {date_el.text}")
+
     except Exception as e:
         print(f"❌ Error processing {title}: {e}")
 
+# Entry
 async def enrich_epg(input_file, output_file):
     tree = ET.parse(input_file)
     root = tree.getroot()
