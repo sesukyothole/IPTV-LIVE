@@ -1,1 +1,64 @@
+name: 📡 Daily EPG Enrichment Update with TMDb Metadata
+
+on:
+  schedule:
+    - cron: '0 4 * * *'  # Runs daily at 04:00 UTC
+  workflow_dispatch:     # Allows manual run via GitHub UI
+
+jobs:
+  update_epg_and_notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: 📦 Install dependencies
+        run: pip install aiohttp
+
+      - name: 🕘 Backup yesterday's EPG (if available)
+        run: |
+          if [ -f epg.xml ]; then cp epg.xml epg_yesterday.xml; fi
+
+      - name: 🌐 Download latest EPG
+        run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
+
+      - name: 🧠 Enrich EPG
+        run: python3 scripts/enrich_epg_async.py epg.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
+
+      - name: ⚒️ Replace old EPG
+        run: mv epg_updated.xml epg.xml
+
+      - name: 🎨 Generate Genres
+        run: python3 scripts/generate_genres.py
+
+      - name: 🔎 Detect New Shows
+        run: |
+          if [ -f epg_yesterday.xml ]; then
+            python3 scripts/notify_new_shows.py epg_yesterday.xml epg.xml
+          else
+            echo "No previous EPG to compare." > new_shows_notification.txt
+          fi
+
+      - name: 📲 Send Pushbullet Notification to Redmi 13C
+        run: |
+          msg=$(head -n 1 new_shows_notification.txt)
+          curl -u ${{ secrets.PUSHBULLET_TOKEN }}: \
+               -X POST https://api.pushbullet.com/v2/pushes \
+               -H 'Content-Type: application/json' \
+               -d "{\"type\": \"note\", \"title\": \"📺 New Show Aired!\", \"body\": \"$msg\"}"
+
+      - name: 💾 Commit and Push Updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add epg.xml genres.xml new_shows_notification.txt
+          git diff-index --quiet HEAD || git commit -m "✅ Daily EPG + New Shows Notification"
+          git pull --rebase --autostash origin main
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
 
