@@ -51,11 +51,11 @@ TMDB_GENRE_MAP = {
 
 # Manual TMDb ID overrides for exact matching of known tricky titles
 MANUAL_ID_OVERRIDES = {
-    "Disney's Jessie": {"type": "tv", "id": 44006},         # Jessie (TV)
-    "Big City Greens": {"type": "tv", "id": 80338},         # Big City Greens
-    "Kiff": {"type": "tv", "id": 213413},                   # Kiff
-    "Disney's Zombies": {"type": "movie", "id": 500664},    # Zombies (2018)
-    "Bluey": {"type": "tv", "id": 75689}                    # Bluey (2018)
+    "Disney's Jessie": {"type": "tv", "id": 38974},         # Jessie (TV)
+    "Big City Greens": {"type": "tv", "id": 80587},         # Big City Greens
+    "Kiff": {"type": "tv", "id": 127706},                   # Kiff
+    "Zombies": {"type": "movie", "id": 483980},    # Zombies (2018)
+    "Bluey": {"type": "tv", "id": 82728}                    # Bluey (2018)
 }
 
 async def fetch_json(session, url, params):
