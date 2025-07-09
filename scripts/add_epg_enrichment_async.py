@@ -4,6 +4,8 @@ import xml.etree.ElementTree as ET
 import os
 import sys
 
+TARGET_CHANNELS = {"403788", "403674", "403837", "403794", "403620", "403655", "8359", "403847", "403461", "403576"}
+
 TMDB_API_KEY = os.getenv("TMDB_API_KEY") or (len(sys.argv) > 3 and sys.argv[3])
 if not TMDB_API_KEY:
     print("❌ TMDB_API_KEY is required as third argument or environment variable.")
