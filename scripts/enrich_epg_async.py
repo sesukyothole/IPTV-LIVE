@@ -3,6 +3,7 @@ import aiohttp
 import xml.etree.ElementTree as ET
 import sys
 import os
+from aiohttp import ClientTimeout
 
 TMDB_API_KEY = os.getenv("TMDB_API_KEY") or (len(sys.argv) > 3 and sys.argv[3])
 if not TMDB_API_KEY:
@@ -12,13 +13,13 @@ if not TMDB_API_KEY:
 TMDB_BASE = "https://api.themoviedb.org/3"
 TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 
-# ✅ Only enrich these channels
+# ✅ Target channels to enrich
 TARGET_CHANNELS = {
     "403788", "403674", "403837", "403794", "403620",
     "403655", "8359", "403847", "403461", "403576"
 }
 
-# ✅ Human-readable TMDb genre mapping
+# ✅ TMDb genre ID → name mapping
 TMDB_GENRE_MAPPING = {
     28: "Action", 12: "Adventure", 16: "Animation", 35: "Comedy", 80: "Crime",
     99: "Documentary", 18: "Drama", 10751: "Family", 14: "Fantasy", 36: "History",
@@ -28,7 +29,7 @@ TMDB_GENRE_MAPPING = {
     10766: "Soap", 10767: "Talk", 10768: "War & Politics"
 }
 
-# ✅ Manual TMDb ID overrides for accuracy
+# ✅ Manual TMDb ID overrides for common mismatches
 MANUAL_ID_OVERRIDES = {
     "Jessie": {"type": "tv", "id": 38974},
     "Big City Greens": {"type": "tv", "id": 80587},
@@ -81,17 +82,15 @@ async def fetch_tmdb_data(session, title):
             "year": (data.get("release_date") or data.get("first_air_date") or "")[:4]
         }
 
-    # No override → search
+    # No override: search TMDb
     params = {"api_key": TMDB_API_KEY, "query": title}
     movie = await fetch_json(session, f"{TMDB_BASE}/search/movie", params)
     if movie.get("results"):
-        details = movie["results"][0]
-        return await fetch_tmdb_data(session, details["title"])
+        return await fetch_tmdb_data(session, movie["results"][0]["title"])
 
     tv = await fetch_json(session, f"{TMDB_BASE}/search/tv", params)
     if tv.get("results"):
-        details = tv["results"][0]
-        return await fetch_tmdb_data(session, details["name"])
+        return await fetch_tmdb_data(session, tv["results"][0]["name"])
 
     return None
 
@@ -99,7 +98,7 @@ async def process_programme(session, programme):
     title_el = programme.find("title")
     channel = programme.get("channel")
 
-    if title_el is None or not channel or channel not in TARGET_CHANNELS:
+    if title_el is None or not title_el.text or not channel or channel not in TARGET_CHANNELS:
         return
 
     title_text = title_el.text.strip()
@@ -127,16 +126,19 @@ async def process_programme(session, programme):
             icon_el = ET.SubElement(programme, "icon")
             icon_el.set("src", data["poster"])
 
-        # Single genre
+        # Genre (only 1)
         if data["genres"]:
             cat_el = ET.SubElement(programme, "category")
             cat_el.text = data["genres"][0]
 
-        # MPAA/TV rating
+        # Rating
         if data["rating"]:
             rating_el = ET.SubElement(programme, "rating")
             value_el = ET.SubElement(rating_el, "value")
             value_el.text = data["rating"]
+
+        # Throttle to avoid hitting TMDb rate limit
+        await asyncio.sleep(0.25)
 
     except Exception as e:
         print(f"❌ Error processing {title_text}: {e}")
@@ -146,7 +148,8 @@ async def enrich_epg(input_file, output_file):
     root = tree.getroot()
     programmes = root.findall("programme")
 
-    async with aiohttp.ClientSession() as session:
+    timeout = ClientTimeout(total=10)
+    async with aiohttp.ClientSession(timeout=timeout) as session:
         await asyncio.gather(*(process_programme(session, p) for p in programmes))
 
     tree.write(output_file, encoding="utf-8", xml_declaration=True)
