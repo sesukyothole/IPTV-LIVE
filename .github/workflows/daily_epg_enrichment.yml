@@ -1,9 +1,9 @@
-name: Daily EPG Enrichment with IMDb + TMDb
+name: Daily EPG Enrichment with TMDb
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # Run daily at 04:00 UTC
-  workflow_dispatch:      # Manual trigger allowed
+    - cron: '0 4 * * *'  # Runs daily at 04:00 UTC
+  workflow_dispatch:      # Enables manual run from GitHub UI
 
 jobs:
   enrich_epg:
@@ -24,15 +24,11 @@ jobs:
       - name: 🌐 Download latest EPG
         run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
 
-      - name: 🎬 Step 1: Add IMDb IDs
+      - name: 🎨 Enrich EPG with TMDb Metadata
         run: |
-          python3 scripts/add_imdb_ids_async.py epg.xml epg_with_imdb.xml ${{ secrets.OMDB_API_KEY }}
+          python3 scripts/add_epg_enrichment_async.py epg.xml epg_final.xml ${{ secrets.TMDB_API_KEY }}
 
-      - name: 🎨 Step 2: Enrich EPG with Metadata
-        run: |
-          python3 scripts/add_epg_enrichment_async_imdb.py epg_with_imdb.xml epg_final.xml ${{ secrets.TMDB_API_KEY }}
-
-      - name: 🎨 Step 3: Generate Genres File (Optional)
+      - name: 🏷️ Generate Genres List (Optional)
         run: python3 scripts/generate_genres.py
         continue-on-error: true
 
@@ -42,6 +38,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add epg.xml genres.xml
-          git diff-index --quiet HEAD || git commit -m "✅ Daily IMDb + TMDb Enrichment"
+          git diff-index --quiet HEAD || git commit -m "✅ Daily EPG Enrichment with TMDb"
           git pull --rebase --autostash origin main
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.com/gtvservices5/M3U8-IPTV-EPG.git }}
