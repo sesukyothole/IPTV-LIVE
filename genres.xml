@@ -1,2 +1,2 @@
 <?xml version='1.0' encoding='utf-8'?>
-<genres />
+<genres><genre name="Action" color="#ffcc00" /><genre name="Action &amp; Adventure" color="#ffcc00" /><genre name="Adventure" color="#ffcc00" /><genre name="Animation" color="#ffcc00" /><genre name="Comedy" color="#ffcc00" /><genre name="Documentary" color="#ffcc00" /><genre name="Drama" color="#ffcc00" /><genre name="Family" color="#ffcc00" /><genre name="Fantasy" color="#ffcc00" /><genre name="Kids" color="#ffcc00" /><genre name="Music" color="#ffcc00" /><genre name="Mystery" color="#ffcc00" /><genre name="Reality" color="#ffcc00" /><genre name="Romance" color="#ffcc00" /><genre name="Sci-Fi &amp; Fantasy" color="#ffcc00" /><genre name="TV Movie" color="#ffcc00" /><genre name="Talk" color="#ffcc00" /></genres>
