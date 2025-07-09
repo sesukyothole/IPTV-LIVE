@@ -1,0 +1,45 @@
+name: 🔔 Notify New Airings
+
+on:
+  workflow_dispatch:    # ✅ Enables manual "Run workflow" button
+  schedule:
+    - cron: '0 4 * * *'  # 🕔 Runs daily at 04:00 UTC, after enrichment
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set Up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: 📦 Install Python Dependencies
+        run: |
+          pip install lxml requests
+
+      - name: 🆕 Detect New Shows
+        run: |
+          if [ -f epg_yesterday.xml ]; then
+            python3 scripts/notify_new_programs.py epg_yesterday.xml epg.xml
+          else
+            echo "No previous EPG to compare." > new_shows_notification.txt
+          fi
+
+      - name: 📲 Send Pushbullet Notification
+        run: python3 scripts/send_pushbullet_notification.py
+        env:
+          PUSHBULLET_TOKEN: ${{ secrets.PUSHBULLET_TOKEN }}
+
+      - name: ✅ Commit Notification Log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add new_shows_notification.txt
+          git diff --cached --quiet || git commit -m "📨 New show notification log"
+          git pull --rebase --autostash origin main
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
