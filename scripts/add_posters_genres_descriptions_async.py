@@ -15,34 +15,38 @@ TARGET_CHANNELS = [
 ]
 
 async def fetch_json(session, url, params):
-    async with session.get(url, params=params) as resp:
-        if resp.status == 200:
-            return await resp.json()
-        return {}
+    try:
+        async with session.get(url, params=params) as resp:
+            if resp.status == 200:
+                return await resp.json()
+    except Exception as e:
+        print(f"❌ Network error: {e}")
+    return {}
 
 async def search_tmdb(session, title):
-    # First try TV
     params = {"api_key": TMDB_API_KEY, "query": title}
-    data = await fetch_json(session, TMDB_SEARCH_TV, params)
-    if data.get("results"):
-        show = data["results"][0]
+
+    # Search TV shows first
+    tv_data = await fetch_json(session, TMDB_SEARCH_TV, params)
+    if tv_data.get("results"):
+        show = tv_data["results"][0]
         return {
             "poster": TMDB_IMAGE_BASE + show["poster_path"] if show.get("poster_path") else None,
-            "genres": [g for g in show.get("genre_ids", [])],  # IDs, not names, fallback logic
-            "overview": show.get("overview", "")
+            "overview": show.get("overview", ""),
+            "media_type": "TV Show"
         }
 
-    # Then try Movie
-    data = await fetch_json(session, TMDB_SEARCH_MOVIE, params)
-    if data.get("results"):
-        movie = data["results"][0]
+    # If not found, search Movies
+    movie_data = await fetch_json(session, TMDB_SEARCH_MOVIE, params)
+    if movie_data.get("results"):
+        movie = movie_data["results"][0]
         return {
             "poster": TMDB_IMAGE_BASE + movie["poster_path"] if movie.get("poster_path") else None,
-            "genres": [g for g in movie.get("genre_ids", [])],  # IDs, not names, fallback logic
-            "overview": movie.get("overview", "")
+            "overview": movie.get("overview", ""),
+            "media_type": "Movie"
         }
 
-    return {"poster": None, "genres": [], "overview": ""}
+    return {"poster": None, "overview": "", "media_type": "Unknown"}
 
 async def process_programme(session, programme, index, total):
     channel = programme.get("channel")
@@ -50,35 +54,34 @@ async def process_programme(session, programme, index, total):
     if title_el is None or channel not in TARGET_CHANNELS:
         return
 
-    title = title_el.text
-    print(f"[{index}/{total}] 🎬 Processing: {title}")
+    title = title_el.text.strip() if title_el.text else "Unknown Title"
+    print(f"\n[{index}/{total}] 🔍 Processing: {title}")
 
     data = await search_tmdb(session, title)
+    media_type = data["media_type"]
 
-    # Poster
+    success = True
+
     if data["poster"]:
         icon = ET.SubElement(programme, "icon")
         icon.set("src", data["poster"])
-        print("✅ Poster added")
+        print(f"✅ Poster added for {media_type}: {title}")
     else:
-        print("❌ No poster found")
+        print(f"❌ Failed adding poster for {media_type}: {title}")
+        success = False
 
-    # Overview (description)
     if data["overview"]:
         desc_el = ET.SubElement(programme, "desc")
         desc_el.text = data["overview"]
-        print("📝 Description added")
+        print(f"📝 Description added for {media_type}: {title}")
     else:
-        print("❌ No description found")
+        print(f"❌ Failed adding description for {media_type}: {title}")
+        success = False
 
-    # Genre
-    if data["genres"]:
-        for genre_name in data["genres"]:
-            cat = ET.SubElement(programme, "category")
-            cat.text = str(genre_name)
-        print("🏷️ Genres added")
+    if success:
+        print(f"🎯 Add Poster and Description for {media_type}: {title} ✅ COMPLETED")
     else:
-        print("❌ No genres found")
+        print(f"💥 Add Poster and Description for {media_type}: {title} ❌ FAILED")
 
 async def enrich_epg(input_file, output_file):
     tree = ET.parse(input_file)
@@ -87,16 +90,17 @@ async def enrich_epg(input_file, output_file):
     total = len(programmes)
 
     async with aiohttp.ClientSession() as session:
-        tasks = []
-        for i, programme in enumerate(programmes, 1):
-            tasks.append(process_programme(session, programme, i, total))
+        tasks = [
+            process_programme(session, programme, i + 1, total)
+            for i, programme in enumerate(programmes)
+        ]
         await asyncio.gather(*tasks)
 
     tree.write(output_file, encoding="utf-8", xml_declaration=True)
-    print(f"\n✅ EPG written to {output_file}")
+    print(f"\n✅ Final Output: {output_file}")
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python3 add_posters_genres_descriptions_async.py input.xml output.xml")
+        print("Usage: python3 add_posters_genres_descriptions_async.py epg.xml epg_updated.xml")
         sys.exit(1)
     asyncio.run(enrich_epg(sys.argv[1], sys.argv[2]))
