@@ -46,14 +46,10 @@ jobs:
           fi
 
       - name: 📲 Send Pushbullet Notification to Redmi 13C
-        run: |
-         msg=$(grep -m 1 "^- " new_shows_notification.txt)
-         curl -u ${{ secrets.PUSHBULLET_TOKEN }}: \
-         -X POST https://api.pushbullet.com/v2/pushes \
-         -H 'Content-Type: application/json' \
-         -d "{\"type\": \"note\", \"title\": \"📢 New Airings Detected\", \"body\": \"$msg\"}"
-
-
+        run: python3 scripts/send_pushbullet_notification.py
+        env:
+          PUSHBULLET_TOKEN: ${{ secrets.PUSHBULLET_TOKEN }}
+      
       - name: 💾 Commit and Push Updates
         run: |
          git config user.name "github-actions[bot]"
