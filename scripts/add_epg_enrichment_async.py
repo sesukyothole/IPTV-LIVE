@@ -57,7 +57,8 @@ MANUAL_ID_OVERRIDES = {
     "Zombies": {"type": "movie", "id": 483980},   
     "Bluey": {"type": "tv", "id": 82728},
     "Disney Jr's Ariel": {"type": "tv", "id": 228669},
-    "Gravity Falls": {"type": "tv", "id": 40075}
+    "Gravity Falls": {"type": "tv", "id": 40075},
+    "Monsters, Inc.": {"type": "movie", "id": 585}
 }
 
 async def fetch_json(session, url, params):
