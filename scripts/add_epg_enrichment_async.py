@@ -18,6 +18,46 @@ if not TMDB_API_KEY:
 TMDB_BASE = "https://api.themoviedb.org/3"
 TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 
+# Map TMDb genre IDs to names
+TMDB_GENRE_MAP = {
+    28: "Action",
+    12: "Adventure",
+    16: "Animation",
+    35: "Comedy",
+    80: "Crime",
+    99: "Documentary",
+    18: "Drama",
+    10751: "Family",
+    14: "Fantasy",
+    36: "History",
+    27: "Horror",
+    10402: "Music",
+    9648: "Mystery",
+    10749: "Romance",
+    878: "Science Fiction",
+    10770: "TV Movie",
+    53: "Thriller",
+    10752: "War",
+    37: "Western",
+    10759: "Action & Adventure",
+    10762: "Kids",
+    10763: "News",
+    10764: "Reality",
+    10765: "Sci-Fi & Fantasy",
+    10766: "Soap",
+    10767: "Talk",
+    10768: "War & Politics"
+}
+
+# Manual overrides to fix common mismatches by forcing better search titles
+MANUAL_TITLE_OVERRIDES = {
+    "Big City Greens": "Big City Greens (TV Series 2018)",
+    "Kiff": "Kiff (TV Series 2023)",
+    "Disney's Zombies": "Zombies (2018 film)",
+    "Bluey": "Bluey (TV Series 2018)",
+    "Disney's Jessie": "Jessie (TV Series 2011)"
+}
+
 async def fetch_json(session, url, params):
     async with session.get(url, params=params) as response:
         return await response.json()
@@ -40,25 +80,29 @@ async def get_tv_rating(session, tv_id):
     return "Not Rated"
 
 async def search_tmdb(session, title):
-    params = {"api_key": TMDB_API_KEY, "query": title}
-    movie = await fetch_json(session, f"{TMDB_BASE}/search/movie", params)
-    if movie.get("results"):
-        details = movie["results"][0]
-        rating = await get_movie_rating(session, details["id"])
-        return {
-            "title": details.get("title"),
-            "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
-            "description": details.get("overview", "").strip(),
-            "genres": [str(gid) for gid in details.get("genre_ids", [])],
-            "rating": rating
-        }
+    search_title = MANUAL_TITLE_OVERRIDES.get(title, title)
+    params = {"api_key": TMDB_API_KEY, "query": search_title}
 
+    # Search TV shows first
     tv = await fetch_json(session, f"{TMDB_BASE}/search/tv", params)
     if tv.get("results"):
         details = tv["results"][0]
         rating = await get_tv_rating(session, details["id"])
         return {
             "title": details.get("name"),
+            "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
+            "description": details.get("overview", "").strip(),
+            "genres": [str(gid) for gid in details.get("genre_ids", [])],
+            "rating": rating
+        }
+
+    # Then search movies
+    movie = await fetch_json(session, f"{TMDB_BASE}/search/movie", params)
+    if movie.get("results"):
+        details = movie["results"][0]
+        rating = await get_movie_rating(session, details["id"])
+        return {
+            "title": details.get("title"),
             "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
             "description": details.get("overview", "").strip(),
             "genres": [str(gid) for gid in details.get("genre_ids", [])],
@@ -97,11 +141,13 @@ async def process_programme(session, programme):
             desc.text = data["description"]
             print(f"📝 Description added for {title}")
 
-        # Genres
+        # Genres (use genre names, not IDs)
         if data["genres"]:
-            for g in data["genres"]:
+            for gid_str in data["genres"]:
+                gid = int(gid_str)
+                genre_name = TMDB_GENRE_MAP.get(gid, f"Unknown ({gid})")
                 genre_el = ET.SubElement(programme, "category")
-                genre_el.text = g
+                genre_el.text = genre_name
             print(f"🏷️ Genres added for {title}")
 
         # MPAA Rating
