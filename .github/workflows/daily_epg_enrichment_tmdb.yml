@@ -1,4 +1,4 @@
-name: Daily EPG Enrichment with TMDb
+name: Daily EPG Enrichment with TMDb Metadata
 
 on:
   schedule:
