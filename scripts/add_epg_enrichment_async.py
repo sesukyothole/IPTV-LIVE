@@ -1,14 +1,10 @@
 import asyncio
 import aiohttp
 import xml.etree.ElementTree as ET
-import os
 import sys
+import os
 
-TARGET_CHANNELS = {
-    "403788", "403674", "403837", "403794", "403620",
-    "403655", "8359", "403847", "403461", "403576"
-}
-
+# TMDb Setup
 TMDB_API_KEY = os.getenv("TMDB_API_KEY") or (len(sys.argv) > 3 and sys.argv[3])
 if not TMDB_API_KEY:
     print("❌ TMDB_API_KEY is required as third argument or environment variable.")
@@ -17,15 +13,18 @@ if not TMDB_API_KEY:
 TMDB_BASE = "https://api.themoviedb.org/3"
 TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 
-TMDB_GENRE_MAP = {
-    28: "Action", 12: "Adventure", 16: "Animation", 35: "Comedy",
-    80: "Crime", 99: "Documentary", 18: "Drama", 10751: "Family",
-    14: "Fantasy", 36: "History", 27: "Horror", 10402: "Music",
-    9648: "Mystery", 10749: "Romance", 878: "Science Fiction",
-    10770: "TV Movie", 53: "Thriller", 10752: "War", 37: "Western",
-    10759: "Action & Adventure", 10762: "Kids", 10763: "News",
-    10764: "Reality", 10765: "Sci-Fi & Fantasy", 10766: "Soap",
-    10767: "Talk", 10768: "War & Politics"
+# Only enrich these channels
+TARGET_CHANNELS = {
+    "403788", "403674", "403837", "403794", "403620",
+    "403655", "8359", "403847", "403461", "403576"
+}
+
+# TMDb Genre Mapping
+GENRE_MAP = {
+    16: "Animation", 35: "Comedy", 18: "Drama", 10751: "Family", 28: "Action",
+    12: "Adventure", 14: "Fantasy", 27: "Horror", 10765: "Sci-Fi & Fantasy",
+    10759: "Action & Adventure", 99: "Documentary", 10770: "TV Movie",
+    10762: "Kids", 10766: "Soap", 9648: "Mystery", 80: "Crime", 10402: "Music"
 }
 
 MANUAL_ID_OVERRIDES = {
@@ -40,145 +39,107 @@ MANUAL_ID_OVERRIDES = {
     "The Incredibles": {"type": "movie", "id": 9806}
 }
 
+# Sparkle TV expects age rating like this: "TV-PG" or "PG-13"
 async def fetch_json(session, url, params):
-    async with session.get(url, params=params) as response:
-        return await response.json()
+    async with session.get(url, params=params) as resp:
+        return await resp.json()
 
-async def get_rating(session, media_type, media_id):
-    if media_type == "movie":
-        data = await fetch_json(session, f"{TMDB_BASE}/movie/{media_id}/release_dates", {"api_key": TMDB_API_KEY})
-        for entry in data.get("results", []):
-            if entry["iso_3166_1"] == "US":
-                for rel in entry["release_dates"]:
-                    cert = rel.get("certification", "")
-                    if cert:
-                        return cert
-    else:
-        data = await fetch_json(session, f"{TMDB_BASE}/tv/{media_id}/content_ratings", {"api_key": TMDB_API_KEY})
-        for entry in data.get("results", []):
-            if entry["iso_3166_1"] == "US":
-                return entry.get("rating", "Not Rated")
-    return "Not Rated"
-
-async def get_credits(session, media_type, media_id):
-    data = await fetch_json(session, f"{TMDB_BASE}/{media_type}/{media_id}/credits", {"api_key": TMDB_API_KEY})
-    cast = [m["name"] for m in data.get("cast", [])[:5]]
-    directors = [c["name"] for c in data.get("crew", []) if c.get("job") == "Director"]
-    return cast, directors
-
-async def search_tmdb(session, title):
-    if title in MANUAL_ID_OVERRIDES:
-        info = MANUAL_ID_OVERRIDES[title]
-        media_type, media_id = info["type"], info["id"]
-        details = await fetch_json(session, f"{TMDB_BASE}/{media_type}/{media_id}", {"api_key": TMDB_API_KEY})
-        rating = await get_rating(session, media_type, media_id)
-        cast, directors = await get_credits(session, media_type, media_id)
-        genres = [g['id'] for g in details.get("genres", [])]
-
-        return {
-            "type": media_type,
-            "title": details.get("title") or details.get("name"),
-            "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
-            "description": details.get("overview", "").strip(),
-            "genres": [str(gid) for gid in genres],
-            "rating": rating,
-            "year": details.get("release_date") or details.get("first_air_date"),
-            "score": details.get("vote_average"),
-            "cast": cast,
-            "directors": directors
-        }
-
-    for media_type in ["tv", "movie"]:
-        search = await fetch_json(session, f"{TMDB_BASE}/search/{media_type}", {"api_key": TMDB_API_KEY, "query": title})
-        if search.get("results"):
-            details = search["results"][0]
-            rating = await get_rating(session, media_type, details["id"])
-            cast, directors = await get_credits(session, media_type, details["id"])
-
-            return {
-                "type": media_type,
-                "title": details.get("title") or details.get("name"),
-                "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
-                "description": details.get("overview", "").strip(),
-                "genres": [str(gid) for gid in details.get("genre_ids", [])],
-                "rating": rating,
-                "year": details.get("first_air_date") or details.get("release_date"),
-                "score": details.get("vote_average"),
-                "cast": cast,
-                "directors": directors
-            }
+async def get_movie_rating(session, movie_id):
+    data = await fetch_json(session, f"{TMDB_BASE}/movie/{movie_id}/release_dates", {"api_key": TMDB_API_KEY})
+    for entry in data.get("results", []):
+        if entry["iso_3166_1"] == "US":
+            for rel in entry["release_dates"]:
+                cert = rel.get("certification", "")
+                if cert:
+                    return cert
     return None
 
-async def process_programme(session, programme):
+async def get_tv_rating(session, tv_id):
+    data = await fetch_json(session, f"{TMDB_BASE}/tv/{tv_id}/content_ratings", {"api_key": TMDB_API_KEY})
+    for entry in data.get("results", []):
+        if entry["iso_3166_1"] == "US":
+            return entry.get("rating")
+    return None
+
+async def search_tmdb(session, title):
+    params = {"api_key": TMDB_API_KEY, "query": title}
+
+    # Try movie first
+    movie = await fetch_json(session, f"{TMDB_BASE}/search/movie", params)
+    if movie.get("results"):
+        m = movie["results"][0]
+        rating = await get_movie_rating(session, m["id"])
+        return {
+            "type": "movie",
+            "title": m.get("title"),
+            "poster": TMDB_IMAGE_BASE + m.get("poster_path") if m.get("poster_path") else None,
+            "description": m.get("overview", "").strip(),
+            "genres": [GENRE_MAP.get(gid) for gid in m.get("genre_ids", []) if GENRE_MAP.get(gid)],
+            "rating": rating
+        }
+
+    # Try TV show
+    tv = await fetch_json(session, f"{TMDB_BASE}/search/tv", params)
+    if tv.get("results"):
+        t = tv["results"][0]
+        rating = await get_tv_rating(session, t["id"])
+        return {
+            "type": "tv",
+            "title": t.get("name"),
+            "poster": TMDB_IMAGE_BASE + t.get("poster_path") if t.get("poster_path") else None,
+            "description": t.get("overview", "").strip(),
+            "genres": [GENRE_MAP.get(gid) for gid in t.get("genre_ids", []) if GENRE_MAP.get(gid)],
+            "rating": rating
+        }
+
+    return None
+
+async def enrich_programme(session, programme):
     title_el = programme.find("title")
+    if title_el is None:
+        return
     channel = programme.get("channel")
-    if title_el is None or not channel or channel not in TARGET_CHANNELS:
+    if channel not in TARGET_CHANNELS:
         return
 
     title = title_el.text.strip()
-    print(f"\n📺 Processing: {title}")
+    print(f"📺 Processing: {title}")
 
     try:
-        data = await search_tmdb(session, title)
-        if not data:
+        info = await search_tmdb(session, title)
+        if not info:
             print(f"❌ No match found for: {title}")
             return
 
-        if data["poster"]:
-            ET.SubElement(programme, "icon", src=data["poster"])
+        # Add poster
+        if info["poster"]:
+            ET.SubElement(programme, "icon", {"src": info["poster"]})
             print(f"🖼️ Poster added")
 
-        if data["description"]:
+        # Add description
+        if info["description"]:
             desc = programme.find("desc")
             if desc is None:
                 desc = ET.SubElement(programme, "desc")
-            desc.text = data["description"]
+            desc.text = info["description"]
             print(f"📝 Description added")
 
-        if data["genres"]:
-            for gid in data["genres"]:
-                genre_name = TMDB_GENRE_MAP.get(int(gid), f"Unknown ({gid})")
-                genre_el = ET.SubElement(programme, "category")
-                genre_el.text = genre_name
+        # Add genre
+        if info["genres"]:
+            for g in info["genres"]:
+                cat = ET.SubElement(programme, "category")
+                cat.text = g
             print(f"🏷️ Genres added")
 
-        if data["rating"]:
+        # Add rating in Sparkle format
+        if info["rating"]:
             rating_el = ET.SubElement(programme, "rating")
             value_el = ET.SubElement(rating_el, "value")
-            value_el.text = data["rating"]
-            print(f"🎞️ Rating added: {data['rating']}")
-
-        if data["year"]:
-            year = data["year"][:4]
-            date_el = programme.find("date")
-            if date_el is None:
-                date_el = ET.SubElement(programme, "date")
-            date_el.text = year
-            print(f"📆 Year added: {year}")
-
-        credits_el = programme.find("credits")
-        if credits_el is None:
-            credits_el = ET.SubElement(programme, "credits")
-
-        for actor in data["cast"]:
-            actor_el = ET.SubElement(credits_el, "actor")
-            actor_el.text = actor
-        if data["cast"]:
-            print(f"🎭 Cast added")
-
-        for director in data["directors"]:
-            dir_el = ET.SubElement(credits_el, "director")
-            dir_el.text = director
-        if data["directors"]:
-            print(f"🎬 Director(s) added")
-
-        if data["score"] is not None:
-            star_el = ET.SubElement(programme, "star-rating")
-            star_el.text = f"{data['score']:.1f}/10"
-            print(f"⭐ Score added: {data['score']:.1f}")
+            value_el.text = info["rating"]
+            print(f"🔞 Rating added: {info['rating']}")
 
     except Exception as e:
-        print(f"❌ Error processing {title}: {e}")
+        print(f"⚠️ Error processing {title}: {e}")
 
 async def enrich_epg(input_file, output_file):
     tree = ET.parse(input_file)
@@ -186,10 +147,10 @@ async def enrich_epg(input_file, output_file):
     programmes = root.findall("programme")
 
     async with aiohttp.ClientSession() as session:
-        await asyncio.gather(*(process_programme(session, p) for p in programmes))
+        await asyncio.gather(*(enrich_programme(session, p) for p in programmes))
 
     tree.write(output_file, encoding="utf-8", xml_declaration=True)
-    print(f"\n✅ EPG saved to {output_file}")
+    print(f"\n✅ Enriched EPG saved to {output_file}")
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
