@@ -4,30 +4,31 @@ import xml.etree.ElementTree as ET
 import sys
 import os
 
-# Environment TMDb API key
 TMDB_API_KEY = os.getenv("TMDB_API_KEY") or (len(sys.argv) > 3 and sys.argv[3])
 if not TMDB_API_KEY:
-    print("❌ TMDB_API_KEY is required as an environment variable or 3rd argument.")
+    print("❌ TMDB_API_KEY is required as third argument or environment variable.")
     sys.exit(1)
 
 TMDB_BASE = "https://api.themoviedb.org/3"
 TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 
-# Channels to enrich
+# ✅ Only enrich these channels
 TARGET_CHANNELS = {
     "403788", "403674", "403837", "403794", "403620",
     "403655", "8359", "403847", "403461", "403576"
 }
 
-# TMDb Genre Mapping
-GENRE_MAP = {
-    16: "Animation", 35: "Comedy", 18: "Drama", 10751: "Family", 28: "Action",
-    12: "Adventure", 14: "Fantasy", 27: "Horror", 10765: "Sci-Fi & Fantasy",
-    10759: "Action & Adventure", 99: "Documentary", 10770: "TV Movie",
-    10762: "Kids", 10766: "Soap", 9648: "Mystery", 80: "Crime", 10402: "Music"
+# ✅ Human-readable TMDb genre mapping
+TMDB_GENRE_MAPPING = {
+    28: "Action", 12: "Adventure", 16: "Animation", 35: "Comedy", 80: "Crime",
+    99: "Documentary", 18: "Drama", 10751: "Family", 14: "Fantasy", 36: "History",
+    27: "Horror", 10402: "Music", 9648: "Mystery", 10749: "Romance", 878: "Science Fiction",
+    10770: "TV Movie", 53: "Thriller", 10752: "War", 37: "Western", 10759: "Action & Adventure",
+    10762: "Kids", 10763: "News", 10764: "Reality", 10765: "Sci-Fi & Fantasy",
+    10766: "Soap", 10767: "Talk", 10768: "War & Politics"
 }
 
-# Manual TMDb ID Overrides
+# ✅ Manual TMDb ID overrides for accuracy
 MANUAL_ID_OVERRIDES = {
     "Jessie": {"type": "tv", "id": 38974},
     "Big City Greens": {"type": "tv", "id": 80587},
@@ -36,7 +37,7 @@ MANUAL_ID_OVERRIDES = {
     "Bluey": {"type": "tv", "id": 82728},
     "Disney Jr's Ariel": {"type": "tv", "id": 228669},
     "Gravity Falls": {"type": "tv", "id": 40075},
-    "Monsters, Inc.": {"type": "movie", "id":585},
+    "Monsters, Inc.": {"type": "movie", "id": 585},
     "The Incredibles": {"type": "movie", "id": 9806}
 }
 
@@ -61,89 +62,84 @@ async def get_tv_rating(session, tv_id):
             return entry.get("rating", "NR")
     return "NR"
 
-async def fetch_tmdb_data(session, media_type, tmdb_id):
-    url = f"{TMDB_BASE}/{media_type}/{tmdb_id}"
-    data = await fetch_json(session, url, {"api_key": TMDB_API_KEY})
+async def fetch_tmdb_data(session, title):
+    if title in MANUAL_ID_OVERRIDES:
+        override = MANUAL_ID_OVERRIDES[title]
+        tmdb_id = override["id"]
+        media_type = override["type"]
+        url = f"{TMDB_BASE}/{media_type}/{tmdb_id}"
+        params = {"api_key": TMDB_API_KEY}
+        data = await fetch_json(session, url, params)
 
-    rating = await (get_movie_rating(session, tmdb_id) if media_type == "movie" else get_tv_rating(session, tmdb_id))
+        rating = await (get_movie_rating(session, tmdb_id) if media_type == "movie" else get_tv_rating(session, tmdb_id))
+        return {
+            "title": data.get("title") or data.get("name"),
+            "overview": data.get("overview", "").strip(),
+            "poster": TMDB_IMAGE_BASE + (data.get("poster_path") or ""),
+            "genres": [TMDB_GENRE_MAPPING.get(g["id"]) for g in data.get("genres", []) if TMDB_GENRE_MAPPING.get(g["id"])],
+            "rating": rating,
+            "year": (data.get("release_date") or data.get("first_air_date") or "")[:4]
+        }
 
-    return {
-        "title": data.get("title") or data.get("name"),
-        "poster": TMDB_IMAGE_BASE + (data.get("poster_path") or ""),
-        "description": data.get("overview", "").strip(),
-        "genres": [g["name"] for g in data.get("genres", [])],
-        "rating": rating,
-        "year": (data.get("release_date") or data.get("first_air_date") or "0000")[:4]
-    }
-
-async def search_tmdb(session, title):
-    for override_title in MANUAL_ID_OVERRIDES:
-        if title.lower() == override_title.lower():
-            override = MANUAL_ID_OVERRIDES[override_title]
-            return await fetch_tmdb_data(session, override["type"], override["id"])
-
-    # Fallback search
+    # No override → search
     params = {"api_key": TMDB_API_KEY, "query": title}
     movie = await fetch_json(session, f"{TMDB_BASE}/search/movie", params)
     if movie.get("results"):
-        m = movie["results"][0]
-        return await fetch_tmdb_data(session, "movie", m["id"])
+        details = movie["results"][0]
+        return await fetch_tmdb_data(session, details["title"])
 
     tv = await fetch_json(session, f"{TMDB_BASE}/search/tv", params)
     if tv.get("results"):
-        t = tv["results"][0]
-        return await fetch_tmdb_data(session, "tv", t["id"])
+        details = tv["results"][0]
+        return await fetch_tmdb_data(session, details["name"])
 
     return None
 
 async def process_programme(session, programme):
     title_el = programme.find("title")
     channel = programme.get("channel")
+
     if title_el is None or not channel or channel not in TARGET_CHANNELS:
         return
 
-    title = title_el.text.strip()
-    print(f"🔍 Enriching: {title}")
+    title_text = title_el.text.strip()
+    print(f"📺 Processing: {title_text}")
 
     try:
-        data = await search_tmdb(session, title)
+        data = await fetch_tmdb_data(session, title_text)
         if not data:
-            print(f"❌ Not found: {title}")
+            print(f"❌ No data for: {title_text}")
             return
 
-        # Add poster
+        # Update title with year
+        if data["year"]:
+            title_el.text = f"{data['title']} ({data['year']})"
+
+        # Description
+        if data["overview"]:
+            desc_el = programme.find("desc")
+            if desc_el is None:
+                desc_el = ET.SubElement(programme, "desc")
+            desc_el.text = data["overview"]
+
+        # Poster
         if data["poster"]:
-            ET.SubElement(programme, "icon", src=data["poster"])
-            print("🖼️ Poster added")
+            icon_el = ET.SubElement(programme, "icon")
+            icon_el.set("src", data["poster"])
 
-        # Add description
-        if data["description"]:
-            desc = programme.find("desc")
-            if desc is None:
-                desc = ET.SubElement(programme, "desc")
-            desc.text = data["description"]
-            print("📝 Description added")
-
-        # Add genres
+        # Single genre
         if data["genres"]:
-            for g in data["genres"]:
-                cat = ET.SubElement(programme, "category")
-                cat.text = g
-            print("🏷️ Genres added")
+            cat_el = ET.SubElement(programme, "category")
+            cat_el.text = data["genres"][0]
 
-        # Add MPAA/TV rating
+        # MPAA/TV rating
         if data["rating"]:
             rating_el = ET.SubElement(programme, "rating")
-            ET.SubElement(rating_el, "value").text = data["rating"]
-            print(f"🎞️ Rating added: {data['rating']}")
-
-        # Add year to title (Sparkle will show as (YYYY))
-        if data["year"] and data["year"].isdigit():
-            title_el.text = f"{title} ({data['year']})"
-            print(f"📅 Year added: {data['year']}")
+            value_el = ET.SubElement(rating_el, "value")
+            value_el.text = data["rating"]
 
     except Exception as e:
-        print(f"⚠️ Error processing {title}: {e}")
+        print(f"❌ Error processing {title_text}: {e}")
 
 async def enrich_epg(input_file, output_file):
     tree = ET.parse(input_file)
@@ -158,7 +154,7 @@ async def enrich_epg(input_file, output_file):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: python3 enrich_epg_async.py epg.xml epg_updated.xml [TMDB_API_KEY]")
+        print("Usage: python3 enrich_epg.py epg.xml epg_updated.xml [TMDB_API_KEY]")
         sys.exit(1)
 
     asyncio.run(enrich_epg(sys.argv[1], sys.argv[2]))
