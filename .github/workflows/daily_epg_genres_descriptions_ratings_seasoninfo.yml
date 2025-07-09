@@ -19,7 +19,7 @@ jobs:
           python-version: '3.x'
 
       - name: 📦 Install dependencies
-        run: pip install aiohttp async_timeout lxml
+        run: pip install aiohttp lxml
 
       - name: 🌐 Download latest EPG
         run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
