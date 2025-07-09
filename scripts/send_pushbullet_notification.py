@@ -1,10 +1,11 @@
-import os
 import requests
+import os
+import sys
 
 def send_pushbullet_notification(token, title, body):
     url = "https://api.pushbullet.com/v2/pushes"
     headers = {
-        "Access-Token": token,
+        "Access-Token": token.strip(),  # Remove any newline issues
         "Content-Type": "application/json"
     }
     payload = {
@@ -12,27 +13,22 @@ def send_pushbullet_notification(token, title, body):
         "title": title,
         "body": body
     }
-
     response = requests.post(url, json=payload, headers=headers)
-    if response.status_code == 200:
-        print("✅ Pushbullet notification sent successfully.")
-    else:
-        print(f"❌ Failed to send notification. Status code: {response.status_code}")
-        print(response.text)
+    response.raise_for_status()
+    print("✅ Pushbullet notification sent.")
 
-def get_notification_body(file_path, max_lines=5):
+def load_summary(file_path="new_shows_notification.txt"):
     if not os.path.exists(file_path):
-        return "No new shows notification available."
+        return "No summary file found."
 
     with open(file_path, "r", encoding="utf-8") as f:
-        lines = [line.strip() for line in f.readlines() if line.strip()]
-        return "\n".join(lines[:max_lines])
+        return f.read().strip()
 
 if __name__ == "__main__":
     token = os.getenv("PUSHBULLET_TOKEN")
     if not token:
-        print("ℹ️ No PUSHBULLET_TOKEN set — skipping push.")
-        exit(0)
+        print("❌ PUSHBULLET_TOKEN environment variable is not set.")
+        sys.exit(1)
 
-    message = get_notification_body("new_shows_notification.txt")
-    send_pushbullet_notification(token, "📺 New Programs Detected", message)
+    message = load_summary()
+    send_pushbullet_notification(token, "📢 New Airings Detected", message)
