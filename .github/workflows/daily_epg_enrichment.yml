@@ -2,8 +2,8 @@ name: Daily EPG Enrichment with IMDb + TMDb
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # Runs daily at 04:00 UTC
-  workflow_dispatch:     # Allows manual trigger
+    - cron: '0 4 * * *'  # Run daily at 04:00 UTC
+  workflow_dispatch:      # Manual trigger allowed
 
 jobs:
   enrich_epg:
@@ -30,11 +30,10 @@ jobs:
 
       - name: 🎨 Step 2: Enrich EPG with Metadata
         run: |
-          python3 scripts/enrich_epg_async_imdb.py epg.xml epg_final.xml ${{ secrets.TMDB_API_KEY }}
+          python3 scripts/add_epg_enrichment_async_imdb.py epg_with_imdb.xml epg_final.xml ${{ secrets.TMDB_API_KEY }}
 
       - name: 🎨 Step 3: Generate Genres File (Optional)
-        run: |
-          python3 scripts/generate_genres.py
+        run: python3 scripts/generate_genres.py
         continue-on-error: true
 
       - name: 💾 Commit and Push
