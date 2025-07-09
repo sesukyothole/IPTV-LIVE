@@ -6,10 +6,15 @@ import xml.etree.ElementTree as ET
 
 TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 TMDB_BASE = "https://api.themoviedb.org/3"
-TMDB_IMAGE_URL = "https://image.tmdb.org/t/p/w342"  # Portrait posters
+TMDB_IMAGE_URL = "https://image.tmdb.org/t/p/w342"
 
 HEADERS = {"Accept": "application/json"}
-TARGET_CHANNELS = []  # Leave empty to apply to all channels
+
+# 🎯 Target channel IDs (as strings)
+TARGET_CHANNELS = {
+    "403788", "493674", "403837", "403794", "403620",
+    "403655", "8359", "403847", "403461", "403576"
+}
 
 ET.register_namespace('', "http://xmltv.org/xmltv")
 
@@ -46,26 +51,26 @@ async def search_tmdb(session, title):
     # Description
     result["description"] = show.get("overview", "No description")
 
-    # Genres
+    # Genres (by genre_ids only — mapping could be improved if needed)
     result["genres"] = show.get("genre_ids", [])
 
-    # Season/Episode
+    # Season/Episode (basic placeholder if title contains episode info)
     if "name" in show:
-        result["season_episode"] = f"S1E1"  # Placeholder unless real info is available
+        result["season_episode"] = "S1E1"
 
-    # Ratings
+    # Rating
     if tv_result:
-        rating_data = await fetch_json(session, f"{TMDB_BASE}/tv/{tmdb_id}/content_ratings", {"api_key": TMDB_API_KEY})
-        us_rating = next((r for r in rating_data.get("results", []) if r.get("iso_3166_1") == "US"), None)
-        if us_rating:
-            result["rating"] = us_rating.get("rating", "N/A")
+        ratings = await fetch_json(session, f"{TMDB_BASE}/tv/{tmdb_id}/content_ratings", {"api_key": TMDB_API_KEY})
+        us = next((r for r in ratings.get("results", []) if r.get("iso_3166_1") == "US"), None)
+        if us:
+            result["rating"] = us.get("rating", "N/A")
     elif movie_result:
         releases = await fetch_json(session, f"{TMDB_BASE}/movie/{tmdb_id}/release_dates", {"api_key": TMDB_API_KEY})
-        us_release = next((r for r in releases.get("results", []) if r.get("iso_3166_1") == "US"), None)
-        if us_release:
-            for rel in us_release.get("release_dates", []):
-                if rel.get("certification"):
-                    result["rating"] = rel["certification"]
+        us = next((r for r in releases.get("results", []) if r.get("iso_3166_1") == "US"), None)
+        if us:
+            for release in us.get("release_dates", []):
+                if release.get("certification"):
+                    result["rating"] = release["certification"]
                     break
 
     return result
@@ -73,48 +78,46 @@ async def search_tmdb(session, title):
 async def process_programme(session, programme):
     title_el = programme.find("title")
     channel = programme.get("channel", "")
-    if title_el is None or (TARGET_CHANNELS and channel not in TARGET_CHANNELS):
+
+    if title_el is None or channel not in TARGET_CHANNELS:
         return
 
     title = title_el.text
-    print(f"🔍 Processing: {title}")
+    print(f"🎬 Processing: {title} (Channel: {channel})")
 
     try:
         data = await search_tmdb(session, title)
 
         # Poster
         if data["poster"]:
-            icon_el = ET.SubElement(programme, "icon")
-            icon_el.set("src", data["poster"])
+            ET.SubElement(programme, "icon", {"src": data["poster"]})
             print(f"✅ Poster added for {title}")
         else:
             print(f"❌ Failed adding poster for {title}")
 
         # Description
         if data["description"]:
-            desc_el = ET.SubElement(programme, "desc")
-            desc_el.text = data["description"]
+            ET.SubElement(programme, "desc").text = data["description"]
             print(f"✅ Description added for {title}")
         else:
             print(f"❌ Failed adding description for {title}")
 
         # Genres
-        for genre in data["genres"]:
-            genre_el = ET.SubElement(programme, "category")
-            genre_el.text = str(genre)
-        print(f"✅ Genres added for {title}" if data["genres"] else f"❌ No genres for {title}")
+        if data["genres"]:
+            for genre in data["genres"]:
+                ET.SubElement(programme, "category").text = str(genre)
+            print(f"✅ Genres added for {title}")
+        else:
+            print(f"❌ No genres for {title}")
 
         # Rating
-        rating_el = ET.SubElement(programme, "rating")
-        value_el = ET.SubElement(rating_el, "value")
-        value_el.text = data["rating"]
+        ET.SubElement(ET.SubElement(programme, "rating"), "value").text = data["rating"]
         print(f"✅ Rating added for {title}: {data['rating']}")
 
         # Season/Episode
         if data["season_episode"]:
-            se_el = ET.SubElement(programme, "episode-num")
-            se_el.set("system", "onscreen")
-            se_el.text = data["season_episode"]
+            ep = ET.SubElement(programme, "episode-num", {"system": "onscreen"})
+            ep.text = data["season_episode"]
             print(f"✅ Season/Episode added for {title}: {data['season_episode']}")
         else:
             print(f"❌ No Season/Episode info for {title}")
@@ -122,7 +125,7 @@ async def process_programme(session, programme):
         print(f"🏁 Completed all tasks for {title}\n")
 
     except Exception as e:
-        print(f"❌ Exception while processing {title}: {str(e)}\n")
+        print(f"❌ Exception for {title}: {str(e)}\n")
 
 async def enrich_epg(input_file, output_file):
     tree = ET.parse(input_file)
@@ -133,7 +136,7 @@ async def enrich_epg(input_file, output_file):
         await asyncio.gather(*tasks)
 
     tree.write(output_file, encoding="utf-8", xml_declaration=True)
-    print(f"✅ EPG written to {output_file}")
+    print(f"📁 EPG written to {output_file}")
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
