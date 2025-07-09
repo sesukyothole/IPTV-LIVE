@@ -7,9 +7,8 @@ import os
 TMDB_API_KEY = sys.argv[3] if len(sys.argv) > 3 else os.environ.get("TMDB_API_KEY")
 TMDB_BASE = "https://api.themoviedb.org/3"
 TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
-
 HEADERS = {'Accept': 'application/json'}
-
+TARGET_CHANNELS = {"403788", "403674", "403837", "403794", "403620", "403655", "8359", "403847", "403461", "403576"}
 GENRE_MAP = {}  # Global genre name map for caching
 
 
