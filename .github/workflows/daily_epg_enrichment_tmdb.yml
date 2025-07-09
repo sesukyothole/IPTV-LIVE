@@ -46,7 +46,7 @@ jobs:
           fi
 
       - name: 📲 Send Pushbullet Notification to Redmi 13C
-        run: python3 scripts/send_pushbullet_notification.py
+        run: python3 scripts/notify_new_programs.py
         env:
           PUSHBULLET_TOKEN: ${{ secrets.PUSHBULLET_TOKEN }}
       
