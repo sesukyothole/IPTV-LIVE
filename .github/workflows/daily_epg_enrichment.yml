@@ -30,7 +30,7 @@ jobs:
 
       - name: 🎨 Step 2: Enrich EPG with Metadata
         run: |
-          python3 scripts/enrich_epg_async_imdb_filtered.py epg_with_imdb.xml epg_final.xml ${{ secrets.TMDB_API_KEY }}
+          python3 scripts/enrich_epg_async_imdb.py epg.xml epg_final.xml ${{ secrets.TMDB_API_KEY }}
 
       - name: 🎨 Step 3: Generate Genres File (Optional)
         run: |
