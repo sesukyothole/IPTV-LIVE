@@ -1,4 +1,4 @@
-name: Daily EPG, Genres, Descriptions, Ratings, and Season Info Update
+name: Daily EPG Enrichment Update
 
 on:
   schedule:
