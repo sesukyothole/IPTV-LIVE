@@ -2,62 +2,58 @@ name: 📡 Daily EPG Enrichment Update with TMDb Metadata
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # Runs daily at 04:00 UTC
-  workflow_dispatch:     # Allows manual run via GitHub UI
+    - cron: '0 4 * * *'   # Runs daily at 04:00 UTC
+  workflow_dispatch:      # Allows manual trigger from GitHub UI
 
 jobs:
-  update_epg_and_notify:
+  enrich-and-notify:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout repository
-        uses: actions/checkout@v4
+    - name: 📥 Checkout Repository
+      uses: actions/checkout@v4
 
-      - name: 🐍 Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
+    - name: 🐍 Set Up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
 
-      - name: 📦 Install dependencies
-        run: pip install aiohttp
+    - name: 📦 Install Python Dependencies
+      run: |
+        pip install aiohttp lxml requests
 
-      - name: 🕘 Backup yesterday's EPG (if available)
-        run: |
-          if [ -f epg.xml ]; then cp epg.xml epg_yesterday.xml; fi
+    - name: 🌐 Download Latest EPG
+      run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
 
-      - name: 🌐 Download latest EPG
-        run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
+    - name: 🧠 Step 1: Enrich EPG with Posters, Ratings, etc.
+      run: python3 scripts/add_epg_enrichment_async.py epg.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
 
-      - name: 🧠 Enrich EPG
-        run: python3 scripts/add_epg_enrichment_async.py epg.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
+    - name: 🧼 Step 2: Replace Old EPG with Enriched Version
+      run: |
+        cp epg.xml epg_yesterday.xml || true
+        mv epg_updated.xml epg.xml
 
-      - name: ⚒️ Replace old EPG
-        run: mv epg_updated.xml epg.xml
+    - name: 🎨 Step 3: Generate Genre List
+      run: python3 scripts/generate_genres.py
 
-      - name: 🎨 Generate Genres
-        run: python3 scripts/generate_genres.py
-      
-      - name: 📦 Install Python dependencies
-        run: pip install requests
-      
-      - name: 🔎 Detect New Shows
-        run: |
-          if [ -f epg_yesterday.xml ]; then
-            python3 scripts/notify_new_programs.py epg_yesterday.xml epg.xml
-          else
-            echo "No previous EPG to compare." > new_shows_notification.txt
-          fi
-              
-      - name: 📲 Send Pushbullet Notification to Redmi 13C
-        run: python3 scripts/notify_new_programs.py
-        env:
-          PUSHBULLET_TOKEN: ${{ secrets.PUSHBULLET_TOKEN }}
-      
-      - name: 💾 Commit and Push Updates
-        run: |
-         git config user.name "github-actions[bot]"
-         git config user.email "github-actions[bot]@users.noreply.github.com"
-         git add epg.xml genres.xml new_shows_notification.txt
-         git diff-index --quiet HEAD || git commit -m "✅ Daily EPG + New Shows Notification"
-         git pull --rebase --autostash origin main
-         git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+    - name: 🆕 Step 4: Detect New Shows
+      run: |
+        if [ -f epg_yesterday.xml ]; then
+          python3 scripts/notify_new_programs.py epg_yesterday.xml epg.xml
+        else
+          echo "No previous EPG to compare." > new_shows_notification.txt
+        fi
+
+    - name: 📲 Step 5: Send Pushbullet Notification to Redmi 13C
+      run: python3 scripts/send_pushbullet_notification.py
+      env:
+        PUSHBULLET_TOKEN: ${{ secrets.PUSHBULLET_TOKEN }}
+
+    - name: 💾 Step 6: Commit & Push Changes to GitHub
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add epg.xml epg_yesterday.xml genres.xml new_shows_notification.txt
+        git diff --cached --quiet || git commit -m "✅ Daily EPG Update with Notifications"
+        git pull --rebase --autostash origin main
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
