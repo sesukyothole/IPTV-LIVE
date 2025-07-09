@@ -1,64 +1,89 @@
-name: 📡 Daily EPG Enrichment Update with TMDb Metadata
+import xml.etree.ElementTree as ET
+import sys
+from datetime import datetime
 
-on:
-  schedule:
-    - cron: '0 4 * * *'  # Runs daily at 04:00 UTC
-  workflow_dispatch:     # Allows manual run via GitHub UI
+def parse_epg(epg_file):
+    tree = ET.parse(epg_file)
+    root = tree.getroot()
 
-jobs:
-  update_epg_and_notify:
-    runs-on: ubuntu-latest
+    programmes = []
+    for p in root.findall("programme"):
+        title_el = p.find("title")
+        start = p.get("start")
+        channel = p.get("channel")
+        desc_el = p.find("desc")
+        categories = [c.text.lower() for c in p.findall("category") if c.text]
 
-    steps:
-      - name: 📥 Checkout repository
-        uses: actions/checkout@v4
+        if title_el is not None:
+            programmes.append({
+                "title": title_el.text.strip(),
+                "start": start,
+                "channel": channel,
+                "desc": desc_el.text.strip() if desc_el is not None else "",
+                "categories": categories
+            })
+    return programmes
 
-      - name: 🐍 Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
+def get_unique_titles(programmes):
+    return set(p["title"] for p in programmes)
 
-      - name: 📦 Install dependencies
-        run: pip install aiohttp
+def classify_program(p):
+    genres = p["categories"]
+    if "movie" in genres or "tv movie" in genres:
+        return "movie"
+    if "tv show" in genres or "kids" in genres or "animation" in genres or "series" in genres:
+        return "tv"
+    # fallback using title patterns
+    if any(keyword in p["title"].lower() for keyword in ["movie", "film", ": the", ": a"]):
+        return "movie"
+    return "tv"
 
-      - name: 🕘 Backup yesterday's EPG (if available)
-        run: |
-          if [ -f epg.xml ]; then cp epg.xml epg_yesterday.xml; fi
+def format_time(ts):
+    try:
+        return datetime.strptime(ts[:12], "%Y%m%d%H%M").strftime("%Y-%m-%d %H:%M")
+    except:
+        return ts
 
-      - name: 🌐 Download latest EPG
-        run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
+def compare_epgs(epg_yesterday, epg_today):
+    old_programmes = parse_epg(epg_yesterday)
+    new_programmes = parse_epg(epg_today)
 
-      - name: 🧠 Enrich EPG
-        run: python3 scripts/enrich_epg_async.py epg.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
+    old_titles = get_unique_titles(old_programmes)
+    new_shows = [p for p in new_programmes if p["title"] not in old_titles]
 
-      - name: ⚒️ Replace old EPG
-        run: mv epg_updated.xml epg.xml
+    movies = [p for p in new_shows if classify_program(p) == "movie"]
+    tv_shows = [p for p in new_shows if classify_program(p) == "tv"]
+    return movies, tv_shows
 
-      - name: 🎨 Generate Genres
-        run: python3 scripts/generate_genres.py
+def save_notifications(movies, tv_shows, output_file="new_shows_notification.txt"):
+    with open(output_file, "w", encoding="utf-8") as f:
+        if not movies and not tv_shows:
+            f.write("🎉 No new programs aired today.\n")
+            print("✅ No new shows.")
+            return
 
-      - name: 🔎 Detect New Shows
-        run: |
-          if [ -f epg_yesterday.xml ]; then
-            python3 scripts/notify_new_shows.py epg_yesterday.xml epg.xml
-          else
-            echo "No previous EPG to compare." > new_shows_notification.txt
-          fi
+        if movies:
+            f.write("🎬 NEW MOVIES AIRED TODAY:\n\n")
+            for show in movies:
+                f.write(f"- {show['title']} on Channel {show['channel']} at {format_time(show['start'])}\n")
+                if show["desc"]:
+                    f.write(f"  📝 {show['desc']}\n")
+                f.write("\n")
 
-      - name: 📲 Send Pushbullet Notification to Redmi 13C
-        run: |
-          msg=$(head -n 1 new_shows_notification.txt)
-          curl -u ${{ secrets.PUSHBULLET_TOKEN }}: \
-               -X POST https://api.pushbullet.com/v2/pushes \
-               -H 'Content-Type: application/json' \
-               -d "{\"type\": \"note\", \"title\": \"📺 New Show Aired!\", \"body\": \"$msg\"}"
+        if tv_shows:
+            f.write("📺 NEW TV SHOWS AIRED TODAY:\n\n")
+            for show in tv_shows:
+                f.write(f"- {show['title']} on Channel {show['channel']} at {format_time(show['start'])}\n")
+                if show["desc"]:
+                    f.write(f"  📝 {show['desc']}\n")
+                f.write("\n")
 
-      - name: 💾 Commit and Push Updates
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add epg.xml genres.xml new_shows_notification.txt
-          git diff-index --quiet HEAD || git commit -m "✅ Daily EPG + New Shows Notification"
-          git pull --rebase --autostash origin main
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+    print(f"✅ Notification saved to {output_file}")
 
+if __name__ == "__main__":
+    if len(sys.argv) < 3:
+        print("Usage: python3 notify_new_shows.py epg_yesterday.xml epg.xml")
+        sys.exit(1)
+
+    movies, tv_shows = compare_epgs(sys.argv[1], sys.argv[2])
+    save_notifications(movies, tv_shows)
