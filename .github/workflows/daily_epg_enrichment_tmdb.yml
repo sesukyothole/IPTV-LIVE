@@ -40,7 +40,7 @@ jobs:
       - name: 🔎 Detect New Shows
         run: |
           if [ -f epg_yesterday.xml ]; then
-            python3 scripts/notify_new_shows.py epg_yesterday.xml epg.xml
+            python3 scripts/notify_new_programs.py epg_yesterday.xml epg.xml
           else
             echo "No previous EPG to compare." > new_shows_notification.txt
           fi
