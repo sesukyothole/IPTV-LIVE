@@ -86,7 +86,7 @@ async def search_tmdb(session, title, api_key):
 
 async def process_programme(session, programme):
     title_el = programme.find("title")
-    if not title_el:
+    if not title_el is None:
         return
 
     channel = programme.get("channel")
