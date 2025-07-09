@@ -26,7 +26,7 @@ jobs:
 
       - name: 🎨 Enrich EPG with TMDb Metadata
         run: |
-          python3 scripts/enrich_epg_async.py epg.xml epg_final.xml ${{ secrets.TMDB_API_KEY }}
+          python3 scripts/add_epg_enrichment_async.py epg.xml epg_final.xml ${{ secrets.TMDB_API_KEY }}
 
       - name: 🏷️ Generate Genres List (Optional)
         run: python3 scripts/generate_genres.py
