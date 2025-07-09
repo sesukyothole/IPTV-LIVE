@@ -51,11 +51,11 @@ TMDB_GENRE_MAP = {
 
 # Manual overrides to fix common mismatches by forcing better search titles
 MANUAL_TITLE_OVERRIDES = {
-    "Big City Greens": "Big City Greens (TV Series 2018)",
-    "Kiff": "Kiff (TV Series 2023)",
+    "Big City Greens": "Big City Greens 2018",
+    "Kiff": "Kiff 2023",
     "Zombies": "Z-O-M-B-I-E-S",
-    "Bluey": "Bluey (TV Series 2018)",
-    "Jessie": "Jessie (TV Series 2011)"
+    "Bluey": "Bluey 2018",
+    "Jessie": "Jessie 2011"
 }
 
 async def fetch_json(session, url, params):
