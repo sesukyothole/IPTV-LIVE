@@ -56,4 +56,5 @@ jobs:
         git add epg.xml epg_yesterday.xml genres.xml new_shows_notification.txt
         git diff --cached --quiet || git commit -m "✅ Daily EPG Update with Notifications"
         git pull --rebase --autostash origin main
+        git commit --allow-empty -m "🧪 Trigger manual workflow button"
         git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
