@@ -25,9 +25,7 @@ jobs:
         run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
 
       - name: 🧠 Enrich EPG (async)
-        run: python3 scripts/add_epg_enrichment_async.py epg.xml epg_updated.xml
-        env:
-          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: python3 scripts/add_epg_enrichment_async.py epg.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
 
       - name: ⚒️ Replace old EPG
         run: mv epg_updated.xml epg.xml
