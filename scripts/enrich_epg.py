@@ -5,7 +5,7 @@ import sys
 import os
 from aiohttp import ClientTimeout
 
-# Read TMDb API key from env or CLI
+# Load TMDb API Key
 TMDB_API_KEY = os.getenv("TMDB_API_KEY") or (len(sys.argv) > 3 and sys.argv[3])
 if not TMDB_API_KEY:
     print("❌ TMDB_API_KEY is required as third argument or environment variable.")
@@ -27,7 +27,7 @@ GENRE_MAP = {
     10402: "Music", 99: "Documentary"
 }
 
-# Manual TMDb overrides
+# Manual TMDb ID overrides
 MANUAL_ID_OVERRIDES = {
     "Jessie": {"type": "tv", "id": 38974},
     "Big City Greens": {"type": "tv", "id": 80587},
@@ -81,7 +81,7 @@ async def get_tmdb_data(session, title):
             "rating": rating
         }
 
-    # Try searching as movie first
+    # Try search (movie then TV)
     for mtype in ["movie", "tv"]:
         res = await fetch_json(session, f"{TMDB_BASE}/search/{mtype}", {"api_key": TMDB_API_KEY, "query": title})
         if res.get("results"):
@@ -89,11 +89,17 @@ async def get_tmdb_data(session, title):
             return await get_tmdb_data(session, match["title"] if mtype == "movie" else match["name"])
     return None
 
-# Modify <programme>
+# Process each <programme>
 async def process_programme(session, programme):
     title_el = programme.find("title")
-    if title_el is None or not title_el.text:
+    if title_el is None:
+        print("⚠️ Skipping: No <title> tag found")
         return
+
+    if not title_el.text or not title_el.text.strip():
+        print("⚠️ Skipping: Empty <title> text")
+        return
+
     channel = programme.get("channel")
     if channel not in TARGET_CHANNELS:
         return
@@ -131,11 +137,12 @@ async def process_programme(session, programme):
             val = ET.SubElement(rating_el, "value")
             val.text = data["rating"]
 
-        await asyncio.sleep(0.25)  # prevent rate-limiting
+        await asyncio.sleep(0.25)  # avoid rate limit
+
     except Exception as e:
         print(f"❌ Error processing {title}: {e}")
 
-# Entry point
+# Main function
 async def enrich_epg(input_file, output_file):
     tree = ET.parse(input_file)
     root = tree.getroot()
@@ -148,7 +155,7 @@ async def enrich_epg(input_file, output_file):
     tree.write(output_file, encoding="utf-8", xml_declaration=True)
     print(f"\n✅ Enriched EPG saved to {output_file}")
 
-# Run from command line
+# CLI entry point
 if __name__ == "__main__":
     if len(sys.argv) < 3:
         print("Usage: python3 enrich_epg.py epg.xml epg_updated.xml [TMDB_API_KEY]")
