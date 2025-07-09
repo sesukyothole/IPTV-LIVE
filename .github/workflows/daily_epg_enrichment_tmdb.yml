@@ -47,11 +47,12 @@ jobs:
 
       - name: 📲 Send Pushbullet Notification to Redmi 13C
         run: |
-          msg=$(head -n 1 new_shows_notification.txt)
-          curl -u ${{ secrets.PUSHBULLET_TOKEN }}: \
-               -X POST https://api.pushbullet.com/v2/pushes \
-               -H 'Content-Type: application/json' \
-               -d "{\"type\": \"note\", \"title\": \"📺 New Show Aired!\", \"body\": \"$msg\"}"
+         msg=$(grep -m 1 "^- " new_shows_notification.txt)
+         curl -u ${{ secrets.PUSHBULLET_TOKEN }}: \
+         -X POST https://api.pushbullet.com/v2/pushes \
+         -H 'Content-Type: application/json' \
+         -d "{\"type\": \"note\", \"title\": \"📢 New Airings Detected\", \"body\": \"$msg\"}"
+
 
       - name: 💾 Commit and Push Updates
         run: |
