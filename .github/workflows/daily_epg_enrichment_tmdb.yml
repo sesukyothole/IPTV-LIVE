@@ -44,7 +44,10 @@ jobs:
           else
             echo "No previous EPG to compare." > new_shows_notification.txt
           fi
-
+      
+      - name: 📦 Install Python dependencies
+        run: pip install requests
+        
       - name: 📲 Send Pushbullet Notification to Redmi 13C
         run: python3 scripts/notify_new_programs.py
         env:
