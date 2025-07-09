@@ -36,7 +36,7 @@ MANUAL_ID_OVERRIDES = {
     "Bluey": {"type": "tv", "id": 82728},
     "Disney Jr's Ariel": {"type": "tv", "id": 228669},
     "Gravity Falls": {"type": "tv", "id": 40075},
-    "Monsters, Inc.": {"type": "movie", "id": 585},
+    "Monsters, Inc.": {"type": "movie", "id":585},
     "The Incredibles": {"type": "movie", "id": 9806}
 }
 
