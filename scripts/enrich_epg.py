@@ -39,7 +39,8 @@ MANUAL_ID_OVERRIDES = {
     "Phineas and Ferb": {"type": "tv", "id": 1877},
     "The Amazing World of Gumball": {"type": "tv", "id": 37606},
     "Win or Lose": {"type": "tv", "id": 114500},
-    "Teen Titans Go!": {"type": "tv", "id": 45140}
+    "Teen Titans Go!": {"type": "tv", "id": 45140},
+    "Bob's Burgers": {"type": "tv", "id": 32726}
 }
 
 # Map TMDb genre IDs to names
