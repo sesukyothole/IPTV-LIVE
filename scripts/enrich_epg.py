@@ -35,7 +35,8 @@ MANUAL_ID_OVERRIDES = {
     "PAW Patrol": {"type": "tv", "id": 57532},
     "Rubble & Crew": {"type": "tv", "id": 214875},
     "Gabby's Dollhouse": {"type": "tv", "id": 111474},
-    "black-ish": {"type": "tv", "id": 61381}
+    "black-ish": {"type": "tv", "id": 61381},
+    "Phineas and Ferb": {"type": "tv", "id": 1877}
 }
 
 # Map TMDb genre IDs to names
