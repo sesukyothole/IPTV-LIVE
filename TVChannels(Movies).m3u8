@@ -1,24 +1,24 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="TV Channels",Disney Channel USA (East Coast)
-http://38.96.178.201/live/Disney/index.m3u8
+http://38.96.178.201/live/Disney/index.m3u8|User-Agent=Mozilla/5.0&Referer=http://localhost&Connection=keep-alive
 #EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png" group-title="TV Channels",Disney Junior USA (East Coast)
-http://fl2.moveonjoy.com/DISNEY_JR/index.m3u8
+http://fl2.moveonjoy.com/DISNEY_JR/index.m3u8|User-Agent=Mozilla/5.0&Referer=http://fl2.moveonjoy.com/
 #EXTINF:-1 tvg-id="403837" tvg-name="Disney XD USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18279_dark_360w_270h.png" group-title="TV Channels",Disney XD USA (East Coast)
-http://38.96.178.201:80/live/DisneyXD/index.m3u8
+http://38.96.178.201:80/live/DisneyXD/index.m3u8|User-Agent=Mozilla/5.0&Referer=http://localhost&Connection=keep-alive
 #EXTINF:-1 tvg-id="403794" tvg-name="Freeform USA (East Coast)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="TV Channels", Freeform USA (East Coast)
-http://fl2.moveonjoy.com/FREE_FORM/index.m3u8
+http://fl2.moveonjoy.com/FREE_FORM/index.m3u8|User-Agent=Mozilla/5.0&Referer=http://fl2.moveonjoy.com/
 #EXTINF:-1 tvg-id="403620" tvg-name="Nickelodeon USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11006_dark_360w_270h.png" group-title="TV Channels",Nickelodeon USA (East Coast)
-http://fl1.moveonjoy.com/NICKELODEON/index.m3u8
+http://fl1.moveonjoy.com/NICKELODEON/index.m3u8|User-Agent=Mozilla/5.0&Referer=http://fl1.moveonjoy.com/
 #EXTINF:-1 tvg-id="403655" tvg-name="Nick Jr. USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png" group-title="TV Channels",Nick Jr. USA (East Coast)
-http://fl2.moveonjoy.com/NICK_JR/index.m3u8
+http://fl2.moveonjoy.com/NICK_JR/index.m3u8|User-Agent=Mozilla/5.0&Referer=http://fl2.moveonjoy.com
 #EXTINF:-1 tvg-id="8359" tvg-name="NickMusic USA (East Coast)" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-music-us.png?raw=true" group-title="TV Channels",NickMusic USA (East Coast)
-http://fl2.moveonjoy.com/NICK_MUSIC/index.m3u8
+http://fl2.moveonjoy.com/NICK_MUSIC/index.m3u8|User-Agent=Mozilla/5.0&Referer=http://fl2.moveonjoy.com
 #EXTINF:-1 tvg-id="403847" tvg-name="NickToons USA (East Coast)" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true" group-title="TV Channels",NickToons USA (East Coast)
-http://fl1.moveonjoy.com/NICKTOONS/index.m3u8
+http://fl1.moveonjoy.com/NICKTOONS/index.m3u8|User-Agent=Mozilla/5.0&Referer=http://fl1.moveonjoy.com/
 #EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network USA (East Coast)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cartoon-network-us.png" group-title="TV Channels",Cartoon Network USA (East Coast)
-https://84.17.40.25/CARTOON_NETWORK/index.m3u8
+https://84.17.40.25/CARTOON_NETWORK/index.m3u8|User-Agent=Mozilla/5.0&Referer=http://localhost
 #EXTINF:-1 tvg-id="403576" tvg-name="Boomerang USA (East Coast)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/boomerang-us.png" group-title="TV Channels",Boomerang USA (East Coast)
-http://fl3.moveonjoy.com/BOOMERANG/index.m3u8
+http://fl3.moveonjoy.com/BOOMERANG/index.m3u8|User-Agent=Mozilla/5.0&Referer=http://fl3.moveonjoy.com/
 #EXTINF:-1 tvg-name="Aladdin (2019)" tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/ykUEbfpkf8d0w49pHh0AD2KrT52.jpg" group-title="Movies", Aladdin (2019)
 http://192.168.1.74:8096/Videos/d07cd42a780ff8fc110d3c355a45e295/stream?api_key=ee9ff7bf382d4a478ce448048e894e91
 #EXTINF:-1 tvg-name="Descendants (2015)" tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/65DkgHPSLVjgr6IYkpY9Aqqqid5.jpg" group-title="Movies", Descendants (2015)
