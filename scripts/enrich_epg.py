@@ -37,7 +37,8 @@ MANUAL_ID_OVERRIDES = {
     "Gabby's Dollhouse": {"type": "tv", "id": 111474},
     "black-ish": {"type": "tv", "id": 61381},
     "Phineas and Ferb": {"type": "tv", "id": 1877},
-    "The Amazing World of Gumball": {"type": "tv", "id": 37606}
+    "The Amazing World of Gumball": {"type": "tv", "id": 37606},
+    "Win or Lose": {"type": "tv", "id": 114500}
 }
 
 # Map TMDb genre IDs to names
