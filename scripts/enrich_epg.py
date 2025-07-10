@@ -30,7 +30,8 @@ MANUAL_ID_OVERRIDES = {
     "Gravity Falls": {"type": "tv", "id": 40075},
     "Monsters, Inc.": {"type": "movie", "id": 585},
     "The Incredibles": {"type": "movie", "id": 9806},
-    "Spongebob Squarepants": {"type": "tv", "id": 387}
+    "SpongeBob SquarePants": {"type": "tv", "id": 387},
+    "Peppa Pig": {"type": "tv", "id": 12225}
 }
 
 # Map TMDb genre IDs to names
