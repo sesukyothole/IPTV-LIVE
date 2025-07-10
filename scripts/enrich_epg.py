@@ -29,7 +29,8 @@ MANUAL_ID_OVERRIDES = {
     "Disney Jr's Ariel": {"type": "tv", "id": 228669},
     "Gravity Falls": {"type": "tv", "id": 40075},
     "Monsters, Inc.": {"type": "movie", "id": 585},
-    "The Incredibles": {"type": "movie", "id": 9806}
+    "The Incredibles": {"type": "movie", "id": 9806},
+    "Spongebob Squarepants": {"type": "tv", "id": 387}
 }
 
 # Map TMDb genre IDs to names
