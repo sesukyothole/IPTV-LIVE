@@ -31,7 +31,11 @@ MANUAL_ID_OVERRIDES = {
     "Monsters, Inc.": {"type": "movie", "id": 585},
     "The Incredibles": {"type": "movie", "id": 9806},
     "SpongeBob SquarePants": {"type": "tv", "id": 387},
-    "Peppa Pig": {"type": "tv", "id": 12225}
+    "Peppa Pig": {"type": "tv", "id": 12225},
+    "PAW Patrol": {"type": "tv", "id": 57532},
+    "Rubble & Crew": {"type": "tv", "id": 214875},
+    "Gabby's Dollhouse": {"type": "tv", "id": 111474},
+    "black-ish": {"type": "tv", "id": 61381}
 }
 
 # Map TMDb genre IDs to names
