@@ -41,7 +41,8 @@ MANUAL_ID_OVERRIDES = {
     "Win or Lose": {"type": "tv", "id": 114500},
     "Teen Titans Go!": {"type": "tv", "id": 45140},
     "Bob's Burgers": {"type": "tv", "id": 32726},
-    "Friends": {"type": "tv", "id": 1668}
+    "Friends": {"type": "tv", "id": 1668},
+    "Primos": {"type": "tv", "id": 204139}
 }
 
 # Map TMDb genre IDs to names
