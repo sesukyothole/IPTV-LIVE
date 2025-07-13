@@ -15,5 +15,5 @@ https://fl3.moveonjoy.com/NICK_JR/index.m3u8
 https://fl3.moveonjoy.com/NICK_MUSIC/index.m3u8
 #EXTINF:-1 tvg-id="403847" tvg-name="NickToons USA (East Coast)" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true" group-title="TV Channels",NickToons USA (East Coast)
 http://fl1.moveonjoy.com/NICKTOONS/index.m3u8
-EXTINF:-1 tvg-id="403576" tvg-name="Boomerang USA (East Coast)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/boomerang-us.png" group-title="TV Channels",Boomerang USA (East Coast)
+#EXTINF:-1 tvg-id="403576" tvg-name="Boomerang USA (East Coast)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/boomerang-us.png" group-title="TV Channels",Boomerang USA (East Coast)
 http://fl3.moveonjoy.com/BOOMERANG/index.m3u8|User-Agent=Mozilla/5.0
