@@ -1,10 +1,10 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="TV Channels",Disney Channel USA (East Coast)
-http://38.96.178.201/live/Disney/index.m3u8|User-Agent=Mozilla/5.0
+https://fl5.moveonjoy.com/DISNEY/index.m3u8
 #EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png" group-title="TV Channels",Disney Junior USA (East Coast)
-http://fl2.moveonjoy.com/DISNEY_JR/index.m3u8|User-Agent=Mozilla/5.0
+https://fl3.moveonjoy.com/DISNEY_JR/index.m3u8
 #EXTINF:-1 tvg-id="403837" tvg-name="Disney XD USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18279_dark_360w_270h.png" group-title="TV Channels",Disney XD USA (East Coast)
-http://38.96.178.201:80/live/DisneyXD/index.m3u8|User-Agent=Mozilla/5.0
+https://fl3.moveonjoy.com/DISNEY_XD/index.m3u8
 #EXTINF:-1 tvg-id="403794" tvg-name="Freeform USA (East Coast)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="TV Channels", Freeform USA (East Coast)
 http://fl2.moveonjoy.com/FREE_FORM/index.m3u8|User-Agent=Mozilla/5.0
 #EXTINF:-1 tvg-id="403620" tvg-name="Nickelodeon USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11006_dark_360w_270h.png" group-title="TV Channels",Nickelodeon USA (East Coast)
