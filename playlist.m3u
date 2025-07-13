@@ -7,8 +7,10 @@ https://fl3.moveonjoy.com/DISNEY_JR/index.m3u8
 https://fl3.moveonjoy.com/DISNEY_XD/index.m3u8
 #EXTINF:-1 tvg-id="403794" tvg-name="Freeform USA (East Coast)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="TV Channels", Freeform USA (East Coast)
 https://fl3.moveonjoy.com/FREE_FORM/index.m3u8
-#EXTINF:-1 tvg-id="403620" tvg-name="Nickelodeon USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11006_dark_360w_270h.png" group-title="TV Channels",Nickelodeon USA (East Coast)
-http://fl1.moveonjoy.com/NICKELODEON/index.m3u8|User-Agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="403620" tvg-logo="https://i.imgur.com/E84jnP8.png" group-title="Kids",Nickelodeon
+http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
+#EXTINF:-1 tvg-id="403772" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/TeenNick_2019_logo.svg/512px-TeenNick_2019_logo.svg.png" group-title="Kids",TeenNick
+https://fl3.moveonjoy.com/Teen_Nick/index.m3u8
 #EXTINF:-1 tvg-id="403655" tvg-name="Nick Jr. USA (East Coast)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png" group-title="TV Channels",Nick Jr. USA (East Coast)
 https://fl3.moveonjoy.com/NICK_JR/index.m3u8
 #EXTINF:-1 tvg-id="8359" tvg-name="NickMusic USA (East Coast)" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-music-us.png?raw=true" group-title="TV Channels",NickMusic USA (East Coast)
