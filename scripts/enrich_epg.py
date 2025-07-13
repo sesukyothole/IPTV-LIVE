@@ -16,7 +16,7 @@ TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 # Only enrich these channels
 TARGET_CHANNELS = {
     "403788", "403674", "403837", "403794", "403620",
-    "403655", "8359", "403847", "403461", "403576"
+    "403655", "8359", "403847", "403576"
 }
 
 # Manual TMDb ID overrides
