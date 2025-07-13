@@ -40,7 +40,9 @@ MANUAL_ID_OVERRIDES = {
     "Win or Lose": {"type": "tv", "id": 114500},
     "Friends": {"type": "tv", "id": 1668},
     "Primos": {"type": "tv", "id": 204139},
-    "DuckTales": {"type": "tv", "id": 72350}
+    "DuckTales": {"type": "tv", "id": 72350},
+    "Mulan": {"type": "movie", "id": 337401},
+    "Moana": {"type": "movie", "id": 277834}
 }
 
 # Map TMDb genre IDs to names
