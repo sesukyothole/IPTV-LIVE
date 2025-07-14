@@ -17,8 +17,7 @@ TARGET_CHANNELS = {
     "403655", "8359", "403847", "403772", "403576"
 }
 
-# Manual TMDb ID overrides
-MANUAL_ID_OVERRIDES = {
+if title in MANUAL_ID_OVERRIDES = {
     "Jessie": {"type": "tv", "id": 38974},
     "Big City Greens": {"type": "tv", "id": 80587},
     "Kiff": {"type": "tv", "id": 127706},
