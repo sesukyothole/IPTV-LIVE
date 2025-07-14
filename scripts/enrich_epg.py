@@ -14,7 +14,7 @@ TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 
 TARGET_CHANNELS = {
     "403788", "403674", "403837", "403794", "403620",
-    "403655", "8359", "403847", "403461", "403576"
+    "403655", "8359", "403847", "403772", "403576"
 }
 
 # Manual TMDb ID overrides
@@ -40,7 +40,8 @@ MANUAL_ID_OVERRIDES = {
     "Primos": {"type": "tv", "id": 204139},
     "DuckTales": {"type": "tv", "id": 72350},
     "Mulan": {"type": "movie", "id": 337401},
-    "Moana": {"type": "movie", "id": 277834}
+    "Moana": {"type": "movie", "id": 277834},
+    "Primos": {"type": "tv", "id": 204139}
 }
 
 TMDB_GENRES = {
