@@ -40,8 +40,7 @@ MANUAL_ID_OVERRIDES = {
     "Primos": {"type": "tv", "id": 204139},
     "DuckTales": {"type": "tv", "id": 72350},
     "Mulan": {"type": "movie", "id": 337401},
-    "Moana": {"type": "movie", "id": 277834},
-    "Primos": {"type": "tv", "id": 204139}
+    "Moana": {"type": "movie", "id": 277834}
 }
 
 TMDB_GENRES = {
