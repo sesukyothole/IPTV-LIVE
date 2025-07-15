@@ -42,7 +42,8 @@ MANUAL_ID_OVERRIDES = {
     "Mulan": {"type": "movie", "id": 337401},
     "Moana": {"type": "movie", "id": 277834},
     "Modern Family": {"type": "tv", "id": 1421},
-    "Henry Danger": {"type": "tv", "id": 61852}
+    "Henry Danger": {"type": "tv", "id": 61852},
+    "The Really Loud House": {"type": "tv", "id": 211779}
 }
 
 TMDB_GENRES = {
