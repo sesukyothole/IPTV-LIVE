@@ -11,7 +11,7 @@ http://192.168.1.74:8096/Videos/864a964dd2c69a8fc03da8b97dbd6f08/stream?api_key=
 http://192.168.1.74:8096/Videos/424be15611697c13e6a1930d42c54cec/stream?api_key=58b6ba2a3e634e549dd1895e53728817
 #EXTINF:6360 tvg-logo="https://image.tmdb.org/t/p/original/vsQwhLdEsmkfP3qICHf4J2YxdFx.jpg" group-title="Descendants Franchise", Descendants 3 (2019)
 http://192.168.1.74:8096/Videos/055685d2602dbc89b49bb856691a469d/stream?api_key=58b6ba2a3e634e549dd1895e53728817
-#EXTINF:5520 tvg-logo="https://image.tmdb.org/t/p/original/mc2vTEVv21uxKucjEDb5c87exkL.jpg" group-title="Descendants Franchise", Descendants 4: The Rise of Red (2024)
+#EXTINF:5520 tvg-logo="https://image.tmdb.org/t/p/original/mc2vTEVv21uxKucjEDb5c87exkL.jpg" group-title="Descendants Franchise", Descendants: The Rise of Red (2024)
 http://192.168.1.74:8096/Videos/b85c1d3458a3b1ad94d7e8b189b0dae9/stream?api_key=58b6ba2a3e634e549dd1895e53728817
 #EXTINF:6720 tvg-logo="https://image.tmdb.org/t/p/original/dDDdiz2b9a1o9jqPr0Mg3Jw15GM.jpg", Dumbo (2019)
 http://192.168.1.74:8096/Videos/608d3cd15cce863950e86276c370480b/stream?api_key=58b6ba2a3e634e549dd1895e53728817
@@ -31,7 +31,7 @@ http://192.168.1.74:8096/Videos/49c9f973f8cbdc62829a752c68580443/stream?api_key=
 http://192.168.1.74:8096/Videos/a7992c14f132cbd0338cd358aa628e5a/stream?api_key=58b6ba2a3e634e549dd1895e53728817
 #EXTINF:6000 tvg-logo="https://image.tmdb.org/t/p/original/rMrfAeUa0KL1EVuPzcq9LpsKPE4.jpg" group-title="Moana Franchise", Moana 2 (2024)
 http://192.168.1.74:8096/Videos/8c8f412f98a8c70380c37eb4adb3ee94/stream?api_key=58b6ba2a3e634e549dd1895e53728817
-#EXTINF:7320 tvg-logo="https://image.tmdb.org/t/p/original/klXVlcNFq3TnQ8AKCkGM9WMkxyu.jpg" group-title="The Lion King Franchise", Mufasa The Lion King (2024)
+#EXTINF:7320 tvg-logo="https://image.tmdb.org/t/p/original/klXVlcNFq3TnQ8AKCkGM9WMkxyu.jpg" group-title="The Lion King Franchise", Mufasa: The Lion King (2024)
 http://192.168.1.74:8096/Videos/d5517eb1c01f57a25b661efd953f2e5c/stream?api_key=58b6ba2a3e634e549dd1895e53728817
 #EXTINF:6360 tvg-logo="https://image.tmdb.org/t/p/original/vF6IPaY1pjoJHcVfBUR8iZGmlUs.jpg", Paddington in Peru (2024)
 http://192.168.1.74:8096/Videos/2261224e8d41d6ccafd27cc68a23e681/stream?api_key=58b6ba2a3e634e549dd1895e53728817
