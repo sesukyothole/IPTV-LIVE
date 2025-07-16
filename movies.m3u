@@ -1,0 +1,59 @@
+#EXTM3U
+#EXTINF:7680 tvg-logo="https://image.tmdb.org/t/p/original/p3laucrKVQo6tLosJMMNPeMBCXi.jpg", Aladdin (2019)
+http://192.168.1.74:8096/Videos/d07cd42a780ff8fc110d3c355a45e295/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:7740 tvg-logo="https://image.tmdb.org/t/p/original/mRgpZvbRgvneY6qKbg44mREbYka.jpg", Beauty and the Beast (2017)
+http://192.168.1.74:8096/Videos/74beaa878ee5e11b469559c087636c08/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:6300 tvg-logo="https://image.tmdb.org/t/p/original/vWdndPq6qEoaXIwedoSDuSPFrH0.jpg", Cinderella (2015)
+http://192.168.1.74:8096/Videos/99414fb3a6f3b24f00da8135c88e31c5/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:6720 tvg-logo="https://image.tmdb.org/t/p/original/9yADG2wdItXw0f7oFvIa4HBU2lZ.jpg" group-title="Descendants Franchise", Descendants (2015)
+http://192.168.1.74:8096/Videos/864a964dd2c69a8fc03da8b97dbd6f08/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:6720 tvg-logo="https://image.tmdb.org/t/p/original/aBaVVnpD5EbPfsSKNC8MF0XlsdB.jpg" group-title="Descendants Franchise", Descendants 2 (2017)
+http://192.168.1.74:8096/Videos/424be15611697c13e6a1930d42c54cec/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:6360 tvg-logo="https://image.tmdb.org/t/p/original/vsQwhLdEsmkfP3qICHf4J2YxdFx.jpg" group-title="Descendants Franchise", Descendants 3 (2019)
+http://192.168.1.74:8096/Videos/055685d2602dbc89b49bb856691a469d/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:5520 tvg-logo="https://image.tmdb.org/t/p/original/mc2vTEVv21uxKucjEDb5c87exkL.jpg" group-title="Descendants Franchise", Descendants 4: The Rise of Red (2024)
+http://192.168.1.74:8096/Videos/b85c1d3458a3b1ad94d7e8b189b0dae9/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:6720 tvg-logo="https://image.tmdb.org/t/p/original/dDDdiz2b9a1o9jqPr0Mg3Jw15GM.jpg", Dumbo (2019)
+http://192.168.1.74:8096/Videos/608d3cd15cce863950e86276c370480b/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:5700 tvg-logo="https://image.tmdb.org/t/p/original/9dSyguWPrYKqRGPKlF955M5kKGN.jpg" group-title="Inside Out Franchise", Inside Out (2015)
+http://192.168.1.74:8096/Videos/569dbc6c384eb96e90b8afa335e51845/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:5760 tvg-logo="https://image.tmdb.org/t/p/original/e5zGobWxJsUVikspN5JVWwKNmA6.jpg" group-title="Inside Out Franchise", Inside Out 2 (2024)
+http://192.168.1.74:8096/Videos/0bfb5231c4d2e1adc18f952e6cffdd23/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:5100 tvg-logo="https://image.tmdb.org/t/p/original/53qC58IeMpg8NprzVs9CbY1HpmT.jpg", Lilo and Stitch (2002)
+http://192.168.1.74:8096/Videos/82ec98e3371ceacf398601a95c542e34/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:7080 tvg-logo="https://image.tmdb.org/t/p/original/pHNiDTij7D3gP8BZqTeM7IA2Tka.jpg" group-title="The Lion King Franchise", The Lion King (2019)
+http://192.168.1.74:8096/Videos/01479ca9279b0e28a83af94f1273deed/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:8100 tvg-logo="https://image.tmdb.org/t/p/original/q1l20kUMfrXvr2w6rwiyydLYNg6.jpg", The Little Mermaid (2023)
+http://192.168.1.74:8096/Videos/25e426b3436b4435bd2d11b037c882b5/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:6060 tvg-logo="https://image.tmdb.org/t/p/original/vdprV0mY4s7ZY6zi6S74oak5Ai8.jpg", A Minecraft Movie (2025)
+http://192.168.1.74:8096/Videos/49c9f973f8cbdc62829a752c68580443/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:6420 tvg-logo="https://image.tmdb.org/t/p/original/kNAANuEyhDu5g4c5p0gcMFLhV0k.jpg" group-title="Moana Franchise", Moana (2016)
+http://192.168.1.74:8096/Videos/a7992c14f132cbd0338cd358aa628e5a/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:6000 tvg-logo="https://image.tmdb.org/t/p/original/rMrfAeUa0KL1EVuPzcq9LpsKPE4.jpg" group-title="Moana Franchise", Moana 2 (2024)
+http://192.168.1.74:8096/Videos/8c8f412f98a8c70380c37eb4adb3ee94/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:7320 tvg-logo="https://image.tmdb.org/t/p/original/klXVlcNFq3TnQ8AKCkGM9WMkxyu.jpg" group-title="The Lion King Franchise", Mufasa The Lion King (2024)
+http://192.168.1.74:8096/Videos/d5517eb1c01f57a25b661efd953f2e5c/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:6360 tvg-logo="https://image.tmdb.org/t/p/original/vF6IPaY1pjoJHcVfBUR8iZGmlUs.jpg", Paddington in Peru (2024)
+http://192.168.1.74:8096/Videos/2261224e8d41d6ccafd27cc68a23e681/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:6480 tvg-logo="https://image.tmdb.org/t/p/original/qI5mnNRs0Su7yDI6GbsxevZlV48.jpg" group-title="Sing Franchise", Sing (2016)
+http://192.168.1.74:8096/Videos/032c1f93fe269f152686f54751ca78ae/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:6600 tvg-logo="https://image.tmdb.org/t/p/original/nyAosW1asxbdAijpi5Csbquu9Cq.jpg" group-title="Sing Franchise", Sing 2 (2021)
+http://192.168.1.74:8096/Videos/4e1c8ba5543cac911b58f100f79be36d/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:6660 tvg-logo="https://image.tmdb.org/t/p/original/nL59ebET8eMDdwHwW0Ze6Kx4FxB.jpg", Snow White (2025)
+http://192.168.1.74:8096/Videos/bbbebe9f42e78b75d5627576d149c7e9/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:5520 tvg-logo="https://image.tmdb.org/t/p/original/u4SDPknBWEEOCzPJvL0NwApkQSR.jpg", The Super Mario Bros Movie (2023)
+http://192.168.1.74:8096/Videos/9f736b3e286ecce91a1f67afe571e056/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:5520 tvg-logo="https://image.tmdb.org/t/p/original/mVS30PQuN24MdVaH5ZKHyJdVHuZ.jpg" group-title="Trolls Franchise", Trolls (2016)
+http://192.168.1.74:8096/Videos/9bf1a37e46792f8fa5241e5a3ca5663a/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:5460 tvg-logo="https://image.tmdb.org/t/p/original/nHE2VcSsCxhoG6SrBpDzmZoOmcx.jpg" group-title="Trolls Franchise", Trolls World Tour (2020)
+http://192.168.1.74:8096/Videos/bfcb92bc7a90f1fa7ffd8a786f6cbee1/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:5460 tvg-logo="https://image.tmdb.org/t/p/original/c6msiFybhohrgaBYxfR5gyDkn6L.jpg" group-title="Trolls Franchise", Trolls Band Together (2023)
+http://192.168.1.74:8096/Videos/4e16d597f25622013e5679eb2c69c05b/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:5640 tvg-logo="https://image.tmdb.org/t/p/original/iDnO5JXlRCfT8GuDlMXmaJZ5qoh.jpg" group-title="Zombies Franchise", Zombies (2018)
+http://192.168.1.74:8096/Videos/7e67a3bd1129b5ce085ef0a8e7de8c3e/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:5040 tvg-logo="https://image.tmdb.org/t/p/original/slLeIprfFePIsD5FcsWpuddJgCE.jpg" group-title="Zombies Franchise", Zombies 2 (2020)
+http://192.168.1.74:8096/Videos/a3990ee4b6783b54f34e566d98a4fb50/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:5280 tvg-logo="https://image.tmdb.org/t/p/original/cLX9xvJgBz9dvfCrLrufsw5E82A.jpg" group-title="Zombies Franchise", Zombies 3 (2022)
+http://192.168.1.74:8096/Videos/87ac30dc7f421cf2912a116a18ddc23b/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:5160 tvg-logo="https://image.tmdb.org/t/p/original/2RIjnBMQqyrTrN7NrHt0fKZlIyN.jpg" group-title="Zombies Franchise", Zombies 4: Dawn of the Vampires (2025)
+http://192.168.1.74:8096/Videos/ca7e6ecef94ef8810c41136a37479d23/stream?api_key=58b6ba2a3e634e549dd1895e53728817
