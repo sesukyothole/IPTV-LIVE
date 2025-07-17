@@ -30,7 +30,9 @@ jobs:
         run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
 
       - name: 🧠 Enrich EPG with TMDb Info
-        run: python3 scripts/enrich_epg.py epg.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
+        env:
+          TMDB_API_KEY: $ {{ secrets.TMDB_API_KEY }}
+        run: python3 scripts/enrich_epg.py epg.xml epg_updated.xml
 
       - name: 💾 Replace Old EPG
         run: |
