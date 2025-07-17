@@ -32,8 +32,7 @@ jobs:
           python scripts/enrich_epg.py epg.xml epg_updated.xml \
             --async \
             --landscape-only \
-            --language en \
-            --target-channels 403788 403674 403837 403794 403620 403772 403655 403847 403576
+            --language en
 
       - name: Debug - List XML Files After Enrichment
         run: ls -lh *.xml
