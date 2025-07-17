@@ -20,7 +20,7 @@ jobs:
 
       - name: 📦 Install Python Dependencies
         run: |
-          pip install aiohttp lxml
+          pip install requests
 
       - name: 🌐 Download Latest EPG
         run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
