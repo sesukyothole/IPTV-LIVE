@@ -1,16 +1,16 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="TV Channels",Disney Channel
-https://fl5.moveonjoy.com/DISNEY/index.m3u8
+https://tvpass.org/live/DisneyChannelEast/hd|Referer=https://tvpass.org/
 #EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png" group-title="TV Channels",Disney Junior
-https://fl3.moveonjoy.com/DISNEY_JR/index.m3u8
+https://tvpass.org/live/DisneyJuniorEast/hd|Referer=https://tvpass.org/
 #EXTINF:-1 tvg-id="403837" tvg-name="Disney XD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18279_dark_360w_270h.png" group-title="TV Channels",Disney XD
 https://tvpass.org/live/DisneyXDEast/hd|Referer=https://tvpass.org/
 #EXTINF:-1 tvg-id="403794" tvg-name="Freeform" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="TV Channels",Freeform
-https://fl3.moveonjoy.com/FREE_FORM/index.m3u8
+https://tvpass.org/live/FreeformEast/hd|Referer=https://tvpass.org/
 #EXTINF:-1 tvg-id="403620" tvg-name="Nickelodeon" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="TV Channels",Nickelodeon
-http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
+https://tvpass.org/live/NickelodeonEast/hd|Referer=https://tvpass.org/
 #EXTINF:-1 tvg-id="403772" tvg-name="TeenNick" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/TeenNick_2019_logo.svg/512px-TeenNick_2019_logo.svg.png" group-title="TV Channels",TeenNick
-https://fl3.moveonjoy.com/Teen_Nick/index.m3u8
+https://tvpass.org/live/TeenNickEast/hd|Referer=https://tvpass.org/
 #EXTINF:-1 tvg-id="403655" tvg-name="Nick Jr." tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png" group-title="TV Channels",Nick Jr.
 https://fl3.moveonjoy.com/NICK_JR/index.m3u8
 #EXTINF:-1 tvg-id="8359" tvg-name="NickMusic" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-music-us.png?raw=true" group-title="TV Channels",NickMusic
