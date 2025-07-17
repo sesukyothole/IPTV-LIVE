@@ -1,11 +1,14 @@
 import asyncio
-import aiohttp
-import xml.etree.ElementTree as ET
+import httpx
+import os
 
-# === TMDb API Key ===
-TMDB_API_KEY = "your_tmdb_api_key_here"  # <-- replace this with your actual key
+TMDB_API_KEY = os.environ["TMDB_API_KEY"]
 
-# === Manual TMDb Overrides ===
+TARGET_CHANNEL_IDS = [
+    403788, 403674, 403837, 403794, 403620,
+    403772, 403655, 403847, 403576
+]
+
 MANUAL_ID_OVERRIDES = {
     "Jessie": {"type": "tv", "id": 38974},
     "Big City Greens": {"type": "tv", "id": 80587},
@@ -34,65 +37,48 @@ MANUAL_ID_OVERRIDES = {
     "The Really Loud House": {"type": "tv", "id": 211779}
 }
 
-
-async def fetch_tmdb_info(session, title):
-    override = MANUAL_ID_OVERRIDES.get(title)
-    if not override:
-        return None
-
-    media_type = override["type"]
-    media_id = override["id"]
-    url = f"https://api.themoviedb.org/3/{media_type}/{media_id}?api_key={TMDB_API_KEY}&language=en-US"
-
+async def fetch_tmdb_poster(client, title, override=None):
     try:
-        async with session.get(url) as response:
-            if response.status == 200:
-                return await response.json()
-            else:
-                print(f"TMDb API error for '{title}': Status {response.status}")
+        if override:
+            tmdb_type = override["type"]
+            tmdb_id = override["id"]
+            url = f"https://api.themoviedb.org/3/{tmdb_type}/{tmdb_id}?api_key={TMDB_API_KEY}&language=en-US"
+        else:
+            url = f"https://api.themoviedb.org/3/search/multi?api_key={TMDB_API_KEY}&language=en-US&query={title}"
+
+        resp = await client.get(url)
+        resp.raise_for_status()
+        data = resp.json()
+
+        result = data if override else data["results"][0] if data["results"] else None
+        if not result:
+            return title, None
+
+        backdrop_path = result.get("backdrop_path")
+        poster_path = result.get("poster_path")
+        if backdrop_path:
+            return title, f"https://image.tmdb.org/t/p/w780{backdrop_path}"
+        elif poster_path and result.get("poster_path_width", 0) > result.get("poster_path_height", 0):
+            return title, f"https://image.tmdb.org/t/p/w780{poster_path}"
+        return title, None
     except Exception as e:
-        print(f"Request error for '{title}': {e}")
-    return None
+        return title, None
 
+async def main():
+    titles = list(MANUAL_ID_OVERRIDES.keys())
+    async with httpx.AsyncClient() as client:
+        tasks = []
+        for title in titles:
+            override = MANUAL_ID_OVERRIDES.get(title)
+            tasks.append(fetch_tmdb_poster(client, title, override))
 
-async def enrich_program(session, programme):
-    title_elem = programme.find("title")
-    if title_elem is None:
-        return
+        results = await asyncio.gather(*tasks)
 
-    title = title_elem.text
-    info = await fetch_tmdb_info(session, title)
-    if not info:
-        return
-
-    desc = info.get("overview")
-    poster = info.get("poster_path")
-    if desc:
-        desc_elem = ET.SubElement(programme, "desc", lang="en")
-        desc_elem.text = desc
-    if poster:
-        icon_elem = ET.SubElement(programme, "icon", src=f"https://image.tmdb.org/t/p/w500{poster}")
-
-
-async def main(epg_input, epg_output):
-    tree = ET.parse(epg_input)
-    root = tree.getroot()
-
-    async with aiohttp.ClientSession() as session:
-        tasks = [enrich_program(session, p) for p in root.findall("programme")]
-        await asyncio.gather(*tasks)
-
-    tree.write(epg_output, encoding="utf-8", xml_declaration=True)
-
+    for title, url in results:
+        if url:
+            print(f"{title}: {url}")
+        else:
+            print(f"{title}: No landscape poster found")
 
 if __name__ == "__main__":
-    import sys
-
-    if len(sys.argv) != 3:
-        print("Usage: python3 enrich_epg.py <input.xml> <output.xml>")
-        sys.exit(1)
-
-    input_file = sys.argv[1]
-    output_file = sys.argv[2]
-
-    asyncio.run(main(input_file, output_file))
+    asyncio.run(main())
