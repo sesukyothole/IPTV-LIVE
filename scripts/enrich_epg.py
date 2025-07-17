@@ -3,74 +3,104 @@ import asyncio
 import aiohttp
 import xml.etree.ElementTree as ET
 import os
+from typing import List
 
 TMDB_API_KEY = os.getenv("TMDB_API_KEY")
-TMDB_BASE_URL = "https://api.themoviedb.org/3"
-TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w780"  # Landscape poster size
+TMDB_SEARCH_URL = "https://api.themoviedb.org/3/search/multi"
+TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w1280"
 
-HEADERS = {
-    "Authorization": f"Bearer {TMDB_API_KEY}",
-    "Content-Type": "application/json;charset=utf-8",
-}
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("input_file", help="Input EPG XML file")
+    parser.add_argument("output_file", help="Output EPG XML file")
+    parser.add_argument("--async", dest="use_async", action="store_true", help="Use async fetching")
+    parser.add_argument("--landscape-only", action="store_true", help="Only use landscape (backdrop) images")
+    parser.add_argument("--language", default="en", help="TMDb language (default: en)")
+    parser.add_argument("--target-channels", nargs="+", help="Only update programs from these channel IDs")
+    return parser.parse_args()
 
-async def fetch_tmdb_poster(session, title, language):
-    query_url = f"{TMDB_BASE_URL}/search/movie?query={title}&language={language}"
+async def fetch_poster(session, title, language, landscape_only):
+    params = {
+        "api_key": TMDB_API_KEY,
+        "query": title,
+        "language": language
+    }
+    async with session.get(TMDB_SEARCH_URL, params=params) as resp:
+        data = await resp.json()
+        for result in data.get("results", []):
+            if landscape_only and result.get("backdrop_path"):
+                return TMDB_IMAGE_BASE + result["backdrop_path"]
+            elif not landscape_only and result.get("poster_path"):
+                return TMDB_IMAGE_BASE + result["poster_path"]
+        return None
 
-    async with session.get(query_url) as response:
-        if response.status != 200:
-            return None
-        data = await response.json()
-        results = data.get("results", [])
-        if results:
-            backdrop_path = results[0].get("backdrop_path")
-            return f"{TMDB_IMAGE_BASE}{backdrop_path}" if backdrop_path else None
-    return None
-
-async def enrich_programme(programme, session, language):
-    title_elem = programme.find("title")
-    if title_elem is None or not title_elem.text:
-        return
-
-    title = title_elem.text.strip()
-    poster_url = await fetch_tmdb_poster(session, title, language)
-
-    if poster_url:
-        icon_elem = programme.find("icon")
-        if icon_elem is None:
-            icon_elem = ET.SubElement(programme, "icon")
-        icon_elem.set("src", poster_url)
-
-async def enrich_epg(input_file, output_file, language, target_channels):
-    tree = ET.parse(input_file)
-    root = tree.getroot()
-
-    async with aiohttp.ClientSession(headers=HEADERS) as session:
+async def enrich_programs(programs: List[ET.Element], language: str, landscape_only: bool):
+    async with aiohttp.ClientSession() as session:
         tasks = []
+        for prog in programs:
+            title_elem = prog.find("title")
+            if title_elem is not None:
+                title = title_elem.text
+                tasks.append(fetch_poster(session, title, language, landscape_only))
+            else:
+                tasks.append(asyncio.sleep(0))  # placeholder
+        posters = await asyncio.gather(*tasks)
 
-        for programme in root.findall("programme"):
-            channel = programme.get("channel")
-            if channel and int(channel) in target_channels:
-                tasks.append(enrich_programme(programme, session, language))
+        for prog, poster_url in zip(programs, posters):
+            if poster_url:
+                # Remove old icon
+                for old_icon in prog.findall("icon"):
+                    prog.remove(old_icon)
+                ET.SubElement(prog, "icon", {"src": poster_url})
 
-        await asyncio.gather(*tasks)
-
-    tree.write(output_file, encoding="utf-8", xml_declaration=True)
+def enrich_sync(programs: List[ET.Element], language: str, landscape_only: bool):
+    import requests
+    for prog in programs:
+        title_elem = prog.find("title")
+        if title_elem is None:
+            continue
+        title = title_elem.text
+        params = {
+            "api_key": TMDB_API_KEY,
+            "query": title,
+            "language": language
+        }
+        resp = requests.get(TMDB_SEARCH_URL, params=params)
+        if resp.status_code == 200:
+            data = resp.json()
+            poster_url = None
+            for result in data.get("results", []):
+                if landscape_only and result.get("backdrop_path"):
+                    poster_url = TMDB_IMAGE_BASE + result["backdrop_path"]
+                    break
+                elif not landscape_only and result.get("poster_path"):
+                    poster_url = TMDB_IMAGE_BASE + result["poster_path"]
+                    break
+            if poster_url:
+                for old_icon in prog.findall("icon"):
+                    prog.remove(old_icon)
+                ET.SubElement(prog, "icon", {"src": poster_url})
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("input_file")
-    parser.add_argument("output_file")
-    parser.add_argument("--async", action="store_true", dest="use_async", help="Use async mode")
-    parser.add_argument("--landscape-only", action="store_true", help="Only use landscape posters")
-    parser.add_argument("--language", default="en", help="Language code for TMDb")
-    parser.add_argument("--target-channels", nargs="+", type=int, default=[], help="Channel IDs to target")
+    args = parse_args()
 
-    args = parser.parse_args()
+    tree = ET.parse(args.input_file)
+    root = tree.getroot()
 
-    if not TMDB_API_KEY:
-        raise EnvironmentError("TMDB_API_KEY is not set")
+    if args.target_channels:
+        allowed_channels = set(args.target_channels)
+        programs = [prog for prog in root.findall("programme")
+                    if prog.get("channel") in allowed_channels]
+    else:
+        programs = root.findall("programme")
 
-    asyncio.run(enrich_epg(args.input_file, args.output_file, args.language, args.target_channels))
+    if args.use_async:
+        asyncio.run(enrich_programs(programs, args.language, args.landscape_only))
+    else:
+        enrich_sync(programs, args.language, args.landscape_only)
+
+    tree.write(args.output_file, encoding="utf-8", xml_declaration=True)
+    print(f"Enriched EPG saved to {args.output_file}")
 
 if __name__ == "__main__":
     main()
