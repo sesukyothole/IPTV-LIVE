@@ -1,11 +1,9 @@
-name: Daily EPG Enrichment
+name: Daily EPG Enrichment 
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'epg.xml'
-      - 'scripts/enrich_epg.py'
+  schedule:
+    - cron: '0 2 * * *' # Runs daily at 2 AM UTC
 
 jobs:
   enrich-epg:
@@ -13,31 +11,26 @@ jobs:
 
     env:
       TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-      pythonLocation: /opt/hostedtoolcache/Python/3.13.5/x64
-      PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib/pkgconfig
-      Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
-      Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
-      Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
-      LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Set up Python 3.13.5
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.13.5
+          python-version: '3.11'  # You can adjust the version if needed
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install aiohttp lxml requests
+          pip install httpx lxml  # Add other dependencies if needed
 
-      - name: Backup existing EPG
-        run: cp epg.xml epg_yesterday.xml || true
+      - name: Backup previous EPG
+        run: |
+          cp epg.xml epg_yesterday.xml || true
 
-      - name: Run enrich_epg.py
+      - name: Run enrich_epg.py script
         run: |
           python scripts/enrich_epg.py epg.xml epg_updated.xml \
             --async \
@@ -45,12 +38,6 @@ jobs:
             --language en \
             --target-channels 403788 403674 403837 403794 403620 403772 403655 403847 403576
 
-      - name: Replace original EPG if enriched file exists
+      - name: Replace old EPG file
         run: |
-          if [ -f epg_updated.xml ]; then
-            mv epg_updated.xml epg.xml
-            echo "✅ EPG updated successfully."
-          else
-            echo "⚠️ epg_updated.xml not found. Enrichment may have failed."
-            exit 1
-          fi
+          mv epg_updated.xml epg.xml
