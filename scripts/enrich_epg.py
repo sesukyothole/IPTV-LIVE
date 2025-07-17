@@ -1,9 +1,11 @@
-import os
-import aiohttp
 import asyncio
+import aiohttp
 import xml.etree.ElementTree as ET
 
-# Manual TMDb overrides
+# === TMDb API Key ===
+TMDB_API_KEY = "your_tmdb_api_key_here"  # <-- replace this with your actual key
+
+# === Manual TMDb Overrides ===
 MANUAL_ID_OVERRIDES = {
     "Jessie": {"type": "tv", "id": 38974},
     "Big City Greens": {"type": "tv", "id": 80587},
@@ -32,86 +34,65 @@ MANUAL_ID_OVERRIDES = {
     "The Really Loud House": {"type": "tv", "id": 211779}
 }
 
-TMDB_API_KEY = os.getenv("TMDB_API_KEY")
-TMDB_BASE = "https://api.themoviedb.org/3"
-TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w780"
 
-HEADERS = {"Authorization": f"Bearer {TMDB_API_KEY}"}
+async def fetch_tmdb_info(session, title):
+    override = MANUAL_ID_OVERRIDES.get(title)
+    if not override:
+        return None
 
+    media_type = override["type"]
+    media_id = override["id"]
+    url = f"https://api.themoviedb.org/3/{media_type}/{media_id}?api_key={TMDB_API_KEY}&language=en-US"
 
-async def fetch_tmdb_data(session, title):
-    if title in MANUAL_ID_OVERRIDES:
-        media = MANUAL_ID_OVERRIDES[title]
-        url = f"{TMDB_BASE}/{media['type']}/{media['id']}?language=en-US&append_to_response=images"
-    else:
-        search_url = f"{TMDB_BASE}/search/multi?query={title}&language=en-US"
-        async with session.get(search_url, headers=HEADERS) as resp:
-            result = await resp.json()
-            if not result["results"]:
-                return None
-            item = result["results"][0]
-            media_type = item["media_type"]
-            tmdb_id = item["id"]
-            url = f"{TMDB_BASE}/{media_type}/{tmdb_id}?language=en-US&append_to_response=images"
-
-    async with session.get(url, headers=HEADERS) as resp:
-        if resp.status != 200:
-            return None
-        return await resp.json()
-
-
-def get_landscape_image(data):
-    backdrops = data.get("images", {}).get("backdrops", [])
-    for img in backdrops:
-        if img.get("iso_639_1") == "en":
-            return TMDB_IMAGE_BASE + img["file_path"]
-    if backdrops:
-        return TMDB_IMAGE_BASE + backdrops[0]["file_path"]
+    try:
+        async with session.get(url) as response:
+            if response.status == 200:
+                return await response.json()
+            else:
+                print(f"TMDb API error for '{title}': Status {response.status}")
+    except Exception as e:
+        print(f"Request error for '{title}': {e}")
     return None
 
 
-async def enrich_channel_icon(session, channel):
-    display_name = channel.find("display-name")
-    if display_name is None:
+async def enrich_program(session, programme):
+    title_elem = programme.find("title")
+    if title_elem is None:
         return
 
-    title = display_name.text
-    data = await fetch_tmdb_data(session, title)
-    if data is None:
+    title = title_elem.text
+    info = await fetch_tmdb_info(session, title)
+    if not info:
         return
 
-    image_url = get_landscape_image(data)
-    if image_url is None:
-        return
-
-    icon = channel.find("icon")
-    if icon is not None:
-        channel.remove(icon)
-
-    ET.SubElement(channel, "icon", attrib={"src": image_url})
+    desc = info.get("overview")
+    poster = info.get("poster_path")
+    if desc:
+        desc_elem = ET.SubElement(programme, "desc", lang="en")
+        desc_elem.text = desc
+    if poster:
+        icon_elem = ET.SubElement(programme, "icon", src=f"https://image.tmdb.org/t/p/w500{poster}")
 
 
-async def process_epg(epg_path, output_path):
-    tree = ET.parse(epg_path)
+async def main(epg_input, epg_output):
+    tree = ET.parse(epg_input)
     root = tree.getroot()
 
     async with aiohttp.ClientSession() as session:
-        tasks = [
-            enrich_channel_icon(session, channel)
-            for channel in root.findall("channel")
-        ]
+        tasks = [enrich_program(session, p) for p in root.findall("programme")]
         await asyncio.gather(*tasks)
 
-    tree.write(output_path, encoding="utf-8", xml_declaration=True)
+    tree.write(epg_output, encoding="utf-8", xml_declaration=True)
 
 
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) < 3:
-        print("Usage: python enrich_epg.py <input.xml> <output.xml>")
-        exit(1)
+
+    if len(sys.argv) != 3:
+        print("Usage: python3 enrich_epg.py <input.xml> <output.xml>")
+        sys.exit(1)
 
     input_file = sys.argv[1]
     output_file = sys.argv[2]
 
-    asyncio.run(process_epg(input_file, output_file))
+    asyncio.run(main(input_file, output_file))
