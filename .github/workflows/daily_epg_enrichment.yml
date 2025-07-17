@@ -22,7 +22,7 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install --upgrade pip
-          pip install httpx xmltodict requests
+          pip install aiohttp
 
       - name: Debug - List Initial XML Files
         run: ls -lh *.xml
