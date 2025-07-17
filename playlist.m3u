@@ -12,10 +12,8 @@ https://tvpass.org/live/NickelodeonEast/hd|Referer=https://tvpass.org/
 #EXTINF:-1 tvg-id="403772" tvg-name="TeenNick" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/TeenNick_2019_logo.svg/512px-TeenNick_2019_logo.svg.png" group-title="TV Channels",TeenNick
 https://tvpass.org/live/TeenNickEast/hd|Referer=https://tvpass.org/
 #EXTINF:-1 tvg-id="403655" tvg-name="Nick Jr." tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png" group-title="TV Channels",Nick Jr.
-https://fl3.moveonjoy.com/NICK_JR/index.m3u8
-#EXTINF:-1 tvg-id="8359" tvg-name="NickMusic" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-music-us.png?raw=true" group-title="TV Channels",NickMusic
-https://fl3.moveonjoy.com/NICK_MUSIC/index.m3u8
+https://tvpass.org/live/NickJrEast/hd|Referer=https://tvpass.org/
 #EXTINF:-1 tvg-id="403847" tvg-name="NickToons" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true" group-title="TV Channels",NickToons
-http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/654ca7f92c1d3300086b608c/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=2c7b6610-35fc-11ef-a031-2b5d494037a2&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=359ee837-a829-4fe0-9d99-8dc36018ced2
+https://tvpass.org/live/NicktoonsEast/hd|Referer=https://tvpass.org/
 #EXTINF:-1 tvg-id="403576" tvg-name="Boomerang" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/boomerang-us.png" group-title="TV Channels",Boomerang
-http://fl3.moveonjoy.com/BOOMERANG/index.m3u8
+https://tvpass.org/live/Boomerang/hd|Referer=https://tvpass.org/
