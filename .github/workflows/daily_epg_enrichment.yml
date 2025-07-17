@@ -1,16 +1,15 @@
-name: Daily EPG Enrichment 
+name: Update EPG
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
   schedule:
-    - cron: '0 2 * * *' # Runs daily at 2 AM UTC
+    - cron: "0 */12 * * *"
 
 jobs:
-  enrich-epg:
+  update-epg:
     runs-on: ubuntu-latest
-
-    env:
-      TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
 
     steps:
       - name: Checkout repository
@@ -19,25 +18,33 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'  # You can adjust the version if needed
+          python-version: '3.11'
 
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install httpx lxml  # Add other dependencies if needed
+          pip install -r requirements.txt
 
-      - name: Backup previous EPG
-        run: |
-          cp epg.xml epg_yesterday.xml || true
+      - name: Copy old EPG if exists
+        run: cp epg.xml epg_yesterday.xml || true
 
-      - name: Run enrich_epg.py script
+      - name: Enrich EPG
         run: |
           python scripts/enrich_epg.py epg.xml epg_updated.xml \
             --async \
             --landscape-only \
             --language en \
             --target-channels 403788 403674 403837 403794 403620 403772 403655 403847 403576
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
 
-      - name: Replace old EPG file
+      - name: Replace EPG
+        run: mv epg_updated.xml epg.xml
+
+      - name: Commit and push changes
         run: |
-          mv epg_updated.xml epg.xml
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add epg.xml epg_yesterday.xml
+          git commit -m "Update EPG on $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+          git push
