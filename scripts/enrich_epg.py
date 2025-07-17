@@ -1,14 +1,9 @@
 import os
-import json
-import requests
-from dotenv import load_dotenv
+import aiohttp
+import asyncio
+import xml.etree.ElementTree as ET
 
-load_dotenv()
-
-TMDB_API_KEY = os.getenv("TMDB_API_KEY")
-if not TMDB_API_KEY:
-    raise ValueError("TMDB_API_KEY not found in environment variables")
-
+# Manual TMDb overrides
 MANUAL_ID_OVERRIDES = {
     "Jessie": {"type": "tv", "id": 38974},
     "Big City Greens": {"type": "tv", "id": 80587},
@@ -37,66 +32,86 @@ MANUAL_ID_OVERRIDES = {
     "The Really Loud House": {"type": "tv", "id": 211779}
 }
 
-def get_tmdb_data(title):
+TMDB_API_KEY = os.getenv("TMDB_API_KEY")
+TMDB_BASE = "https://api.themoviedb.org/3"
+TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w780"
+
+HEADERS = {"Authorization": f"Bearer {TMDB_API_KEY}"}
+
+
+async def fetch_tmdb_data(session, title):
     if title in MANUAL_ID_OVERRIDES:
-        tmdb_type = MANUAL_ID_OVERRIDES[title]['type']
-        tmdb_id = MANUAL_ID_OVERRIDES[title]['id']
+        media = MANUAL_ID_OVERRIDES[title]
+        url = f"{TMDB_BASE}/{media['type']}/{media['id']}?language=en-US&append_to_response=images"
     else:
-        search_url = f"https://api.themoviedb.org/3/search/multi?api_key={TMDB_API_KEY}&language=en-US&query={title}"
-        response = requests.get(search_url)
-        if response.status_code != 200:
-            print(f"Search failed for {title}")
+        search_url = f"{TMDB_BASE}/search/multi?query={title}&language=en-US"
+        async with session.get(search_url, headers=HEADERS) as resp:
+            result = await resp.json()
+            if not result["results"]:
+                return None
+            item = result["results"][0]
+            media_type = item["media_type"]
+            tmdb_id = item["id"]
+            url = f"{TMDB_BASE}/{media_type}/{tmdb_id}?language=en-US&append_to_response=images"
+
+    async with session.get(url, headers=HEADERS) as resp:
+        if resp.status != 200:
             return None
-        results = response.json().get("results", [])
-        if not results:
-            print(f"No results found for {title}")
-            return None
-        best_match = results[0]
-        tmdb_type = best_match.get("media_type", "movie")
-        tmdb_id = best_match.get("id")
+        return await resp.json()
 
-    details_url = f"https://api.themoviedb.org/3/{tmdb_type}/{tmdb_id}?api_key={TMDB_API_KEY}&language=en-US"
-    details = requests.get(details_url).json()
 
-    images_url = f"https://api.themoviedb.org/3/{tmdb_type}/{tmdb_id}/images?api_key={TMDB_API_KEY}&include_image_language=en,null"
-    images = requests.get(images_url).json()
-    backdrops = images.get("backdrops", [])
-
-    landscape = None
+def get_landscape_image(data):
+    backdrops = data.get("images", {}).get("backdrops", [])
+    for img in backdrops:
+        if img.get("iso_639_1") == "en":
+            return TMDB_IMAGE_BASE + img["file_path"]
     if backdrops:
-        # Choose the highest rated or first backdrop
-        backdrop = sorted(backdrops, key=lambda x: x.get("vote_average", 0), reverse=True)[0]
-        landscape = f"https://image.tmdb.org/t/p/w780{backdrop['file_path']}"
+        return TMDB_IMAGE_BASE + backdrops[0]["file_path"]
+    return None
 
-    return {
-        "title": details.get("name") or details.get("title") or title,
-        "description": details.get("overview", ""),
-        "landscape": landscape
-    }
 
-def enrich_epg(epg_path, output_path):
-    with open(epg_path, "r", encoding="utf-8") as f:
-        epg = json.load(f)
+async def enrich_channel_icon(session, channel):
+    display_name = channel.find("display-name")
+    if display_name is None:
+        return
 
-    for program in epg.get("programs", []):
-        title = program.get("title")
-        if not title:
-            continue
+    title = display_name.text
+    data = await fetch_tmdb_data(session, title)
+    if data is None:
+        return
 
-        print(f"Enriching: {title}")
-        tmdb_data = get_tmdb_data(title)
-        if not tmdb_data:
-            continue
+    image_url = get_landscape_image(data)
+    if image_url is None:
+        return
 
-        program["title"] = tmdb_data["title"]
-        program["desc"] = tmdb_data["description"]
-        if tmdb_data["landscape"]:
-            program["icon"] = tmdb_data["landscape"]
+    icon = channel.find("icon")
+    if icon is not None:
+        channel.remove(icon)
 
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(epg, f, indent=2, ensure_ascii=False)
+    ET.SubElement(channel, "icon", attrib={"src": image_url})
 
-    print(f"EPG enrichment completed. Output saved to {output_path}")
+
+async def process_epg(epg_path, output_path):
+    tree = ET.parse(epg_path)
+    root = tree.getroot()
+
+    async with aiohttp.ClientSession() as session:
+        tasks = [
+            enrich_channel_icon(session, channel)
+            for channel in root.findall("channel")
+        ]
+        await asyncio.gather(*tasks)
+
+    tree.write(output_path, encoding="utf-8", xml_declaration=True)
+
 
 if __name__ == "__main__":
-    enrich_epg("guide.json", "guide_enriched.json")
+    import sys
+    if len(sys.argv) < 3:
+        print("Usage: python enrich_epg.py <input.xml> <output.xml>")
+        exit(1)
+
+    input_file = sys.argv[1]
+    output_file = sys.argv[2]
+
+    asyncio.run(process_epg(input_file, output_file))
