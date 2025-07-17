@@ -1,18 +1,19 @@
-name: Update EPG
+name: Enrich EPG
 
 on:
   push:
-    branches:
-      - main
-  schedule:
-    - cron: "0 */12 * * *"
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  update-epg:
+  enrich:
     runs-on: ubuntu-latest
 
+    env:
+      TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -23,28 +24,15 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install httpx lxml aiohttp tmdbsimple
 
-      - name: Copy old EPG if exists
-        run: cp epg.xml epg_yesterday.xml || true
-
-      - name: Enrich EPG
+      - name: Enrich EPG XML
         run: |
           python scripts/enrich_epg.py epg.xml epg_updated.xml \
             --async \
             --landscape-only \
             --language en \
             --target-channels 403788 403674 403837 403794 403620 403772 403655 403847 403576
-        env:
-          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
 
-      - name: Replace EPG
+      - name: Replace old EPG
         run: mv epg_updated.xml epg.xml
-
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add epg.xml epg_yesterday.xml
-          git commit -m "Update EPG on $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
-          git push
