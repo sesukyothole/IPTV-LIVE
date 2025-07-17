@@ -28,7 +28,13 @@ jobs:
 
       - name: Enrich EPG XML
         run: |
-          python scripts/enrich_epg.py epg.xml epg_updated.xm
+          python scripts/enrich_epg.py epg.xml epg_updated.xml
       
       - name: Replace old EPG
-        run: mv epg_updated.xml epg.xml
+        run: |
+          if [ -f epg_updated.xml ]; then
+            mv epg_updated.xml epg.xml
+         else
+          echo "⚠️ epg_updated.xml not found 
+— skipping replacement."
+    fi
