@@ -1,52 +1,56 @@
-name: 📡 Daily EPG Enrichment
+name: Daily EPG Enrichment
 
 on:
-  workflow_dispatch:    # ✅ Enables "Run workflow" button in GitHub UI
-  schedule:
-    - cron: '0 4 * * *'  # 🕓 Runs daily at 04:00 UTC
+  workflow_dispatch:
+  push:
+    paths:
+      - 'epg.xml'
+      - 'scripts/enrich_epg.py'
 
 jobs:
   enrich-epg:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: 📥 Checkout Repository
-        uses: actions/checkout@v4
+    env:
+      TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+      pythonLocation: /opt/hostedtoolcache/Python/3.13.5/x64
+      PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib/pkgconfig
+      Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+      Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+      Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.5/x64
+      LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.5/x64/lib
 
-      - name: 🐍 Set Up Python
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.13.5
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: 3.13.5
 
-      - name: 📦 Install Python Dependencies
+      - name: Install dependencies
         run: |
-          pip install aiohttp
+          python -m pip install --upgrade pip
+          pip install aiohttp lxml requests
 
-      - name: 📥 Install Dependencies
+      - name: Backup existing EPG
+        run: cp epg.xml epg_yesterday.xml || true
+
+      - name: Run enrich_epg.py
         run: |
-          pip install httpx
+          python scripts/enrich_epg.py epg.xml epg_updated.xml \
+            --async \
+            --landscape-only \
+            --language en \
+            --target-channels 403788 403674 403837 403794 403620 403772 403655 403847 403576
 
-      - name: 🌐 Download Latest EPG
-        run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
-
-      - name: 🧠 Enrich EPG with TMDb Info
-        env:
-          TMDB_API_KEY: $ {{ secrets.TMDB_API_KEY }}
-        run: python3 scripts/enrich_epg.py epg.xml epg_updated.xml
-
-      - name: 💾 Replace Old EPG
+      - name: Replace original EPG if enriched file exists
         run: |
-          cp epg.xml epg_yesterday.xml || true
-          mv epg_updated.xml epg.xml
-
-      - name: 🎨 Generate Genre List
-        run: python3 scripts/generate_genres.py
-
-      - name: ✅ Commit & Push Changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add epg.xml epg_yesterday.xml genres.xml
-          git diff --cached --quiet || git commit -m "✅ Daily EPG Enrichment"
-          git pull --rebase --autostash origin main
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          if [ -f epg_updated.xml ]; then
+            mv epg_updated.xml epg.xml
+            echo "✅ EPG updated successfully."
+          else
+            echo "⚠️ epg_updated.xml not found. Enrichment may have failed."
+            exit 1
+          fi
