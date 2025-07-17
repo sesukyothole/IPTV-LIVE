@@ -28,11 +28,7 @@ jobs:
 
       - name: Enrich EPG XML
         run: |
-          python scripts/enrich_epg.py epg.xml epg_updated.xml \
-            --async \
-            --landscape-only \
-            --language en \
-            --target-channels 403788 403674 403837 403794 403620 403772 403655 403847 403576
-
+          python scripts/enrich_epg.py epg.xml epg_updated.xm
+      
       - name: Replace old EPG
         run: mv epg_updated.xml epg.xml
