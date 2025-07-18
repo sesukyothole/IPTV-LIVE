@@ -14,7 +14,7 @@ TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 
 TARGET_CHANNELS = {
     "403788", "403674", "403837", "403794", "403620",
-    "403655", "8359", "403847", "403772", "403576"
+    "403655", "403847", "403772", "403576"
 }
 
 # Manual TMDb overrides
@@ -216,7 +216,7 @@ async def enrich_epg(input_file, output_file):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: python3 enrich_epg_async.py epg.xml epg_updated.xml [TMDB_API_KEY]")
+        print("Usage: python3 enrich_epg_async.py guide.xml epg_updated.xml [TMDB_API_KEY]")
         sys.exit(1)
 
     asyncio.run(enrich_epg(sys.argv[1], sys.argv[2]))
