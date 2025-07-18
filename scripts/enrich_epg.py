@@ -1,89 +1,94 @@
-import argparse
 import asyncio
-import aiohttp
-import xml.etree.ElementTree as ET
 import logging
 import os
+import xml.etree.ElementTree as ET
+from aiohttp import ClientSession
+import yaml
+
+# --- Configuration ---
+CONFIG_FILE = "enrich_epg_config.yml"
+
+# --- Logging ---
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+logger = logging.getLogger("enrich_epg")
+
+# --- Load Config ---
+if os.path.exists(CONFIG_FILE):
+    with open(CONFIG_FILE, "r") as f:
+        config = yaml.safe_load(f)
+else:
+    logger.warning(f"No {CONFIG_FILE} found, using hardcoded values.")
+    config = {
+        "input_file": "epg.xml",
+        "output_file": "epg_enriched.xml",
+        "language": "en",
+        "target_channels": [
+            "403788", "403674", "403837", "403794",
+            "403620", "403772", "403655", "403847", "403576"
+        ],
+        "landscape_only": True
+    }
 
 TMDB_API_KEY = os.getenv("TMDB_API_KEY")
-TMDB_SEARCH_URL = "https://api.themoviedb.org/3/search/multi"
-TMDB_IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500"
+if not TMDB_API_KEY:
+    raise EnvironmentError("TMDB_API_KEY environment variable not set.")
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+BASE_TMDB_SEARCH = "https://api.themoviedb.org/3/search/multi"
+BASE_TMDB_IMAGE = "https://image.tmdb.org/t/p/w780"
 
-
-async def fetch_tmdb_info(session, title, language):
+# --- Async Fetch Poster ---
+async def fetch_poster(title, session, language="en", landscape_only=True):
     params = {
         "api_key": TMDB_API_KEY,
         "query": title,
-        "language": language,
+        "language": language
     }
-    async with session.get(TMDB_SEARCH_URL, params=params) as response:
-        if response.status != 200:
-            logging.warning(f"TMDb search failed for '{title}' with status {response.status}")
+    async with session.get(BASE_TMDB_SEARCH, params=params) as resp:
+        if resp.status != 200:
+            logger.warning(f"Failed to fetch TMDb data for {title} (status {resp.status})")
             return None
-        data = await response.json()
-        if not data["results"]:
-            return None
-        for result in data["results"]:
-            if result.get("backdrop_path"):
-                return TMDB_IMAGE_BASE_URL + result["backdrop_path"]
+
+        data = await resp.json()
+        results = data.get("results", [])
+        for item in results:
+            backdrop = item.get("backdrop_path")
+            if backdrop and landscape_only:
+                logger.info(f"Found landscape poster for {title}")
+                return BASE_TMDB_IMAGE + backdrop
         return None
 
+# --- Main Processing ---
+async def enrich_epg():
+    input_file = config["input_file"]
+    output_file = config["output_file"]
+    language = config.get("language", "en")
+    landscape_only = config.get("landscape_only", True)
+    target_channels = config.get("target_channels", [])
 
-async def enrich_programme(programme, session, language, landscape_only):
-    title_elem = programme.find("title")
-    if title_elem is None or not title_elem.text:
-        return
-
-    title = title_elem.text
-    existing_icon = programme.find("icon")
-    if existing_icon is not None:
-        return  # Skip if icon already exists
-
-    logging.info(f"Looking up: {title}")
-    image_url = await fetch_tmdb_info(session, title, language)
-    if image_url:
-        if landscape_only:
-            # We only want landscape images, assume w500 backdrop is landscape
-            icon = ET.SubElement(programme, "icon")
-            icon.set("src", image_url)
-            logging.info(f"Added poster for: {title}")
-        else:
-            logging.info(f"Image found but not adding due to landscape_only={landscape_only}")
-    else:
-        logging.warning(f"No image found for: {title}")
-
-
-async def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("input_file", help="Input EPG XML file")
-    parser.add_argument("output_file", help="Output enriched EPG XML file")
-    parser.add_argument("--language", default="en", help="TMDb language (default: en)")
-    parser.add_argument("--target-channels", nargs="*", help="List of channel IDs to enrich")
-    parser.add_argument("--landscape-only", action="store_true", help="Only use landscape (backdrop) posters")
-    parser.add_argument("--async", dest="use_async", action="store_true", help="Enable async mode")
-    args = parser.parse_args()
-
-    logging.info("Parsing XML...")
-    tree = ET.parse(args.input_file)
+    logger.info(f"Parsing EPG from {input_file}")
+    tree = ET.parse(input_file)
     root = tree.getroot()
 
-    programmes = root.findall("programme")
-    if args.target_channels:
-        programmes = [p for p in programmes if p.get("channel") in args.target_channels]
+    async with ClientSession() as session:
+        for programme in root.findall("programme"):
+            channel = programme.attrib.get("channel", "")
+            if target_channels and channel not in target_channels:
+                continue
 
-    async with aiohttp.ClientSession() as session:
-        tasks = [
-            enrich_programme(p, session, args.language, args.landscape_only)
-            for p in programmes
-        ]
-        await asyncio.gather(*tasks)
+            title_el = programme.find("title")
+            if title_el is None:
+                continue
+            title = title_el.text
+            logger.info(f"Processing: {title} (Channel {channel})")
 
-    logging.info(f"Writing enriched EPG to {args.output_file}...")
-    tree.write(args.output_file, encoding="utf-8", xml_declaration=True)
-    logging.info("Done.")
+            poster_url = await fetch_poster(title, session, language, landscape_only)
+            if poster_url:
+                icon_el = ET.Element("icon")
+                icon_el.attrib["src"] = poster_url
+                programme.append(icon_el)
 
+    logger.info(f"Writing enriched EPG to {output_file}")
+    tree.write(output_file, encoding="utf-8", xml_declaration=True)
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(enrich_epg())
