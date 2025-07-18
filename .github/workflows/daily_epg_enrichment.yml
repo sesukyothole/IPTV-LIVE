@@ -1,50 +1,32 @@
-name: Enrich and Replace EPG
+name: Enrich EPG
 
 on:
   workflow_dispatch:
 
 jobs:
-  enrich_epg:
+  enrich-epg:
     runs-on: ubuntu-latest
 
     env:
       TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+      EPG_LANGUAGE: en
+      LANDSCAPE_ONLY: true
+      TARGET_CHANNELS: "403788,403674,403837,403794,403620,403772,403655,403847,403576"
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.11
+          python-version: "3.11"
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
-          pip install --upgrade pip
-          pip install aiohttp tqdm
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: Debug - List Initial XML Files
-        run: ls -lh *.xml
-
-      - name: Enrich EPG XML
+      - name: Run enrich_epg.py
         run: |
-          python scripts/enrich_epg.py epg.xml epg_updated.xml \
-            --async \
-            --landscape-only \
-            --language en
-
-      - name: Debug - List XML Files After Enrichment
-        run: ls -lh *.xml
-
-      - name: Replace old EPG (if enrichment was successful)
-        run: |
-          if [ -f epg_updated.xml ]; then
-            mv epg_updated.xml epg.xml
-            echo "✅ Replaced epg.xml with enriched version."
-          else
-            echo "⚠️ epg_updated.xml not found. Skipping replacement."
-          fi
-
-      - name: Final Debug - List Files After Replacement
-        run: ls -lh *.xml
+          python enrich_epg.py epg.xml enriched_epg.xml
