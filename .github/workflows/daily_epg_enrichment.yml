@@ -3,7 +3,7 @@ name: 📡 Daily EPG Enrichment
 on:
   workflow_dispatch:    # ✅ Enables "Run workflow" button in GitHub UI
   schedule:
-    - cron: '0 4 * * *'  # 🕓 Runs daily at 04:00 UTC
+    - cron: '0 */6 * * *'  # 🕓 Runs daily at 04:00 UTC
 
 jobs:
   enrich-epg:
