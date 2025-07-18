@@ -1,32 +1,30 @@
 name: Enrich EPG
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: '0 4 * * *'  # Runs daily at 4:00 AM UTC (12:00 AM EDT)
+  workflow_dispatch:      # Allows manual triggering from GitHub
 
 jobs:
-  enrich-epg:
+  enrich_epg:
     runs-on: ubuntu-latest
-
     env:
       TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
       EPG_LANGUAGE: en
       LANDSCAPE_ONLY: true
-      TARGET_CHANNELS: "403788,403674,403837,403794,403620,403772,403655,403847,403576"
+      TARGET_CHANNELS: 403788,403674,403837,403794,403620,403772,403655,403847,403576
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: 3.11
 
-      - name: Install dependencies with pip
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests lxml xmltodict tqdm python-dotenv aiohttp PyYAML
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-      - name: Run enrich_epg.py
-        run: |
-          python scripts/enrich_epg.py epg.xml enriched_epg.xml
+      - name: Run enrichment script
+        run: python scripts/enrich_epg.py
