@@ -22,8 +22,8 @@ jobs:
         run: |
           pip install aiohttp aiofiles xmltodict tqdm tmdbsimple
 
-      - name: 🌐 Download Latest EPG
-        run: curl -o guide.xml https://epg.pw/xmltv/epg_US.xml
+      - name: 📡 Generate EPG
+        run: python3 scripts/fetch_epg.py
 
       - name: 🧠 Enrich EPG with TMDb Info
         run: python3 scripts/enrich_epg.py guide.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
