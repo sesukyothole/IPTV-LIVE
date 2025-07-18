@@ -20,7 +20,7 @@ jobs:
 
       - name: 📦 Install Python Dependencies
         run: |
-          pip install aiohttp lxml
+          pip install aiohttp aiofiles xmltodict tqdm tmdbsimple
 
       - name: 🌐 Download Latest EPG
         run: curl -o guide.xml https://epg.pw/xmltv/epg_US.xml
