@@ -34,7 +34,7 @@ jobs:
           mv epg_updated.xml guide.xml
 
       - name: 🎨 Generate Genre List
-        run: python3 scripts/generate_genres.py
+        run: python3 scripts/generate_genres.py guide.xml
 
       - name: ✅ Commit & Push Changes
         run: |
