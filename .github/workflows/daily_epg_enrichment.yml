@@ -20,7 +20,7 @@ jobs:
 
       - name: 📦 Install Python Dependencies
         run: |
-          pip install aiohttp aiofiles xmltodict tqdm tmdbsimple
+          pip install aiohttp aiofiles xmltodict tqdm tmdbsimple requests
 
       - name: 📡 Generate EPG
         run: python3 scripts/fetch_epg.py
