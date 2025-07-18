@@ -5,7 +5,7 @@ from datetime import datetime
 
 # === CONFIG ===
 EPG_URL = "https://epg.pw/xmltv/epg_US.xml"  # Your source EPG URL
-OUTPUT_FILE = "guide.xml"
+OUTPUT_FILE = "epg.xml"
 BACKUP_FILE = f"guide_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xml"
 
 # === FUNCTIONALITY ===
