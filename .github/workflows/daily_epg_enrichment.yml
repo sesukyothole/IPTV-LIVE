@@ -30,7 +30,7 @@ jobs:
 
       - name: 💾 Replace Old EPG
         run: |
-          cp epg.xml epg_yesterday.xml || true
+          cp guide.xml epg_yesterday.xml || true
           mv epg_updated.xml guide.xml
 
       - name: 🎨 Generate Genre List
