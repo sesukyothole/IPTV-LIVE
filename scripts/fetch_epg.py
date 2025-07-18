@@ -1,12 +1,32 @@
 import requests
+import shutil
+import os
+from datetime import datetime
 
-EPG_URL = "https://epg.pw/xmltv/epg_US.xml"
+# === CONFIG ===
+EPG_URL = "https://epg.pw/xmltv/epg_US.xml"  # Your source EPG URL
+OUTPUT_FILE = "guide.xml"
+BACKUP_FILE = f"guide_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xml"
 
-response = requests.get(EPG_URL)
-if response.status_code == 200:
-    with open("guide.xml", "wb") as f:
-        f.write(response.content)
-    print("✅ guide.xml generated successfully")
-else:
-    print("❌ Failed to download EPG:", response.status_code)
-    exit(1)
+# === FUNCTIONALITY ===
+
+def fetch_epg(url, output_file, backup=True):
+    try:
+        print(f"[INFO] Downloading EPG from: {url}")
+        response = requests.get(url, timeout=15)
+        response.raise_for_status()
+
+        # Backup current file if exists
+        if os.path.exists(output_file) and backup:
+            shutil.copyfile(output_file, BACKUP_FILE)
+            print(f"[INFO] Backup created: {BACKUP_FILE}")
+
+        # Write new EPG
+        with open(output_file, 'wb') as f:
+            f.write(response.content)
+        print(f"[SUCCESS] EPG saved to: {output_file}")
+    except Exception as e:
+        print(f"[ERROR] Failed to fetch EPG: {e}")
+
+if __name__ == "__main__":
+    fetch_epg(EPG_URL, OUTPUT_FILE)
