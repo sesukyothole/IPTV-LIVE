@@ -26,12 +26,12 @@ jobs:
         run: python3 scripts/fetch_epg.py
 
       - name: 🧠 Enrich EPG with TMDb Info
-        run: python3 scripts/enrich_epg.py guide.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
+        run: python3 scripts/enrich_epg.py epg.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
 
       - name: 💾 Replace Old EPG
         run: |
-          cp guide.xml epg_yesterday.xml || true
-          mv epg_updated.xml guide.xml
+          cp epg.xml epg_yesterday.xml || true
+          mv epg_updated.xml epg.xml
 
       - name: 🎨 Generate Genre List
         run: python3 scripts/generate_genres.py guide.xml
