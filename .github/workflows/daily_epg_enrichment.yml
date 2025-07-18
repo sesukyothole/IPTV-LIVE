@@ -23,15 +23,15 @@ jobs:
           pip install aiohttp lxml
 
       - name: 🌐 Download Latest EPG
-        run: curl -o epg.xml https://epg.pw/xmltv/epg_US.xml
+        run: curl -o guide.xml https://epg.pw/xmltv/epg_US.xml
 
       - name: 🧠 Enrich EPG with TMDb Info
-        run: python3 scripts/enrich_epg.py epg.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
+        run: python3 scripts/enrich_epg.py guide.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
 
       - name: 💾 Replace Old EPG
         run: |
           cp epg.xml epg_yesterday.xml || true
-          mv epg_updated.xml epg.xml
+          mv epg_updated.xml guide.xml
 
       - name: 🎨 Generate Genre List
         run: python3 scripts/generate_genres.py
