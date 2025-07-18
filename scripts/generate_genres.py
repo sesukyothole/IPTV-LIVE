@@ -30,7 +30,7 @@ def generate_genres_xml(genres, output_file):
     print(f"✅ genres.xml generated with {len(genres)} genres")
 
 if __name__ == "__main__":
-    input_epg = "epg.xml"
+    input_epg = "guide.xml"
     output_genres = "genres.xml"
 
     genres = extract_genres(input_epg)
