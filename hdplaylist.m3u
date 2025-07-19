@@ -1,7 +1,7 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Teens",Disney Channel
+#EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Teens",Disney Channel HD
 https://tvpass.org/live/DisneyChannelEast/hd|Referer=https://tvpass.org/
-#EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Kids",Disney Channel
+#EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Kids",Disney Channel HD
 https://tvpass.org/live/DisneyChannelEast/hd|Referer=https://tvpass.org/
 #EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png" group-title="Preschoolers",Disney Junior
 https://tvpass.org/live/DisneyJuniorEast/hd|Referer=https://tvpass.org/
