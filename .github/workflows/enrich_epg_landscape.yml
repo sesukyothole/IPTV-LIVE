@@ -1,46 +1,29 @@
-name: Enrich EPG Landscape
+name: 🧠 Enrich EPG with TMDb Metadata
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '0 3 * * *'  # Runs daily at 03:00 UTC
+    - cron: '15 10 * * *' # Every day at 10:15 UTC
+  workflow_dispatch:
 
 jobs:
-  enrich_epg_landscape:
+  enrich-epg:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false  # Required for manual push with GITHUB_TOKEN
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install required packages
+      - name: 📦 Install Dependencies
         run: |
-          python -m pip install --upgrade pip
           pip install aiohttp tqdm xmltodict
 
-      - name: Run enrich_epg_landscape.py
-        run: |
-          python scripts/enrich_epg_landscape.py
-
-      - name: Upload enriched EPG output
-        uses: actions/upload-artifact@v4
-        with:
-          name: enriched-epg-output
-          path: epg_enriched.xml
-
-      - name: Upload log file
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: enrich-log
-          path: scripts/enrich_epg_landscape.log
+      - name: 🚀 Run EPG Enrichment Script
+        run: python scripts/enrich_epg_landscape.py
 
       - name: ✅ Commit & Push Changes
         run: |
