@@ -1,24 +1,20 @@
 import asyncio
 import aiohttp
 import xml.etree.ElementTree as ET
-import xmltodict
-from tqdm.asyncio import tqdm
 import logging
-import time
+from datetime import datetime
+from tqdm import tqdm
+import xmltodict
 
-TMDB_API_KEY = "YOUR_TMDB_API_KEY_HERE"
-INPUT_EPG_FILE = "epg.xml"
-OUTPUT_EPG_FILE = "epg_enriched.xml"
-TMDB_SEARCH_URL = "https://api.themoviedb.org/3/search/tv"
-TMDB_IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w780"  # landscape size
+EPG_URL = "https://epg.pw/xmltv/epg_US.xml"
+OUTPUT_EPG = "epg.xml"
 
 TARGET_CHANNELS = {
     "403788", "403674", "403837", "403794", "403620",
-    "403655", "403847", "403772", "403576", "403926", 
+    "403655", "403847", "403772", "403576", "403926",
     "403461"
 }
 
-# Manual TMDb overrides
 MANUAL_ID_OVERRIDES = {
     "Jessie": {"type": "tv", "id": 38974},
     "Big City Greens": {"type": "tv", "id": 80587},
@@ -47,95 +43,63 @@ MANUAL_ID_OVERRIDES = {
     "The Really Loud House": {"type": "tv", "id": 211779}
 }
 
-# Setup logger
-logging.basicConfig(
-    filename='enrich_epg_landscape.log',
-    filemode='w',
-    format='%(asctime)s [%(levelname)s] %(message)s',
-    level=logging.INFO
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
-# Async TMDb request
-async def fetch_tmdb_data(session, title):
-    params = {
-        "api_key": TMDB_API_KEY,
-        "query": title,
-        "language": "en-US"
-    }
-    try:
-        async with session.get(TMDB_SEARCH_URL, params=params) as resp:
-            if resp.status == 200:
-                data = await resp.json()
-                if data.get("results"):
-                    return data["results"][0]  # Take top result
-            logging.warning(f"No result for '{title}'")
-    except Exception as e:
-        logging.error(f"TMDb request failed for '{title}': {e}")
+async def fetch_tmdb_data(session, name):
+    if name in MANUAL_ID_OVERRIDES:
+        media = MANUAL_ID_OVERRIDES[name]
+        tmdb_url = f"https://api.themoviedb.org/3/{media['type']}/{media['id']}?api_key=${{TMDB_API_KEY}}&language=en-US"
+        async with session.get(tmdb_url) as resp:
+            return await resp.json()
     return None
 
-# Enrichment task
-async def enrich_programme(session, programme):
-    title_elem = programme.find("title")
-    if title_elem is None:
+async def enrich_program(program, session):
+    title = program.get('title', {}).get('#text')
+    if not title:
         return
-
-    title = title_elem.text
     tmdb_data = await fetch_tmdb_data(session, title)
+    if tmdb_data:
+        if 'overview' in tmdb_data:
+            program['desc'] = {'@lang': 'en', '#text': tmdb_data['overview']}
+        if 'genres' in tmdb_data:
+            program['category'] = [{'@lang': 'en', '#text': g['name']} for g in tmdb_data['genres']]
+        if 'first_air_date' in tmdb_data or 'release_date' in tmdb_data:
+            date = tmdb_data.get('first_air_date') or tmdb_data.get('release_date')
+            program['date'] = date.split('-')[0]
+        if 'poster_path' in tmdb_data:
+            program['icon'] = {
+                '@src': f"https://image.tmdb.org/t/p/w500{tmdb_data['poster_path']}",
+                '@type': 'landscape'
+            }
+        if 'content_ratings' in tmdb_data and 'results' in tmdb_data['content_ratings']:
+            for rating in tmdb_data['content_ratings']['results']:
+                if rating['iso_3166_1'] == 'US':
+                    program['rating'] = {'@system': 'MPAA', 'value': rating['rating']}
+                    break
 
-    if not tmdb_data:
-        return
-
-    # Add poster
-    if 'backdrop_path' in tmdb_data and tmdb_data['backdrop_path']:
-        ET.SubElement(programme, "icon", {"src": TMDB_IMAGE_BASE_URL + tmdb_data['backdrop_path']})
-
-    # Add description
-    if 'overview' in tmdb_data:
-        desc = ET.SubElement(programme, "desc", {"lang": "en"})
-        desc.text = tmdb_data['overview']
-
-    # Add genre(s)
-    if 'genre_ids' in tmdb_data:
-        for genre in tmdb_data['genre_ids']:
-            genre_elem = ET.SubElement(programme, "category", {"lang": "en"})
-            genre_elem.text = str(genre)  # Or map to genre name if needed
-
-    # Add year
-    if 'first_air_date' in tmdb_data and tmdb_data['first_air_date']:
-        year = tmdb_data['first_air_date'].split("-")[0]
-        ET.SubElement(programme, "date").text = year
-
-    # Add age rating (optional, not always available)
-    if tmdb_data.get('adult') is not None:
-        rating = "TV-MA" if tmdb_data['adult'] else "TV-G"
-        rating_elem = ET.SubElement(programme, "rating", {"system": "MPAA"})
-        ET.SubElement(rating_elem, "value").text = rating
-
-    logging.info(f"Enriched: {title}")
-
-# Load EPG
-def load_epg(file_path):
-    tree = ET.parse(file_path)
-    return tree, tree.getroot()
-
-# Save EPG
-def save_epg(tree, file_path):
-    tree.write(file_path, encoding="utf-8", xml_declaration=True)
-    logging.info(f"Saved enriched EPG to {file_path}")
-
-# Main
 async def main():
-    logging.info("Starting enrichment process...")
-    start_time = time.time()
-
-    tree, root = load_epg(INPUT_EPG_FILE)
-    programmes = root.findall("programme")
-
+    logging.info("Fetching EPG XML...")
     async with aiohttp.ClientSession() as session:
-        await tqdm.gather(*(enrich_programme(session, p) for p in programmes))
+        async with session.get(EPG_URL) as resp:
+            epg_xml = await resp.text()
 
-    save_epg(tree, OUTPUT_EPG_FILE)
-    logging.info(f"Completed in {time.time() - start_time:.2f} seconds")
+    logging.info("Parsing EPG...")
+    epg_dict = xmltodict.parse(epg_xml)
+    programmes = epg_dict['tv']['programme']
 
-if __name__ == "__main__":
+    logging.info("Enriching programmes...")
+    enriched = 0
+    async with aiohttp.ClientSession() as session:
+        for prog in tqdm(programmes):
+            if prog['@channel'] in TARGET_CHANNELS:
+                await enrich_program(prog, session)
+                enriched += 1
+
+    logging.info(f"Enriched {enriched} programmes. Writing output to {OUTPUT_EPG}...")
+    with open(OUTPUT_EPG, 'w', encoding='utf-8') as f:
+        f.write(xmltodict.unparse(epg_dict, pretty=True))
+
+    logging.info("Done.")
+
+if __name__ == '__main__':
     asyncio.run(main())
