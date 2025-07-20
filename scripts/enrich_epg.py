@@ -62,7 +62,7 @@ async def get_details(session, content_type, content_id):
 
 async def get_credits(session, content_type, content_id):
     data = await fetch_json(session, f"{TMDB_BASE}/{content_type}/{content_id}/credits", {"api_key": TMDB_API_KEY})
-    cast = [member["name"] for member in data.get("cast", [])[:3]]
+    cast = [member["name"] for member in data.get("cast", [])]
     directors = [crew["name"] for crew in data.get("crew", []) if crew.get("job") == "Director"]
     return cast, directors[0] if directors else None
 
