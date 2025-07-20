@@ -27,7 +27,7 @@ jobs:
 
       - name: Run enrich_epg_landscape.py
         run: |
-          python enrich_epg_landscape.py
+          python scripts/enrich_epg_landscape.py
 
       - name: Upload enriched EPG output
         uses: actions/upload-artifact@v4
@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: enrich-log
-          path: enrich_epg_landscape.log
+          path: scripts/enrich_epg_landscape.log
 
       - name: ✅ Commit & Push Changes
         run: |
