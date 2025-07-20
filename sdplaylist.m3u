@@ -23,3 +23,7 @@ https://tvpass.org/live/NicktoonsEast/hd|Referer=https://tvpass.org/
 https://tvpass.org/live/Boomerang/sd|Referer=https://tvpass.org/
 #EXTINF:-1 tvg-id="403926" tvg-name="HBO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" group-title="Adults", HBO
 https://tvpass.org/live/HBOEast/sd|Referer=https://tvpass.org/
+#EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Kids", Cartoon Network
+https://tvpass.org/live/CartoonNetworkEast/sd|Referer=https://tvpass.org
+#EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Teens", Cartoon Network
+https://tvpass.org/live/CartoonNetworkEast/sd|Referer=https://tvpass.org
