@@ -14,7 +14,7 @@ TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 
 TARGET_CHANNELS = {
     "403788", "403674", "403837", "403794", "403620",
-    "403655", "403847", "403772", "403576", "403926", 
+    "403655", "403847", "403772", "403576", "403926",
     "403461"
 }
 
@@ -74,6 +74,12 @@ async def fetch_json(session, url, params):
 async def get_details(session, content_type, content_id):
     return await fetch_json(session, f"{TMDB_BASE}/{content_type}/{content_id}", {"api_key": TMDB_API_KEY})
 
+async def get_credits(session, content_type, content_id):
+    data = await fetch_json(session, f"{TMDB_BASE}/{content_type}/{content_id}/credits", {"api_key": TMDB_API_KEY})
+    cast = [member["name"] for member in data.get("cast", [])[:3]]  # Top 3
+    directors = [crew["name"] for crew in data.get("crew", []) if crew.get("job") == "Director"]
+    return cast, directors[0] if directors else None
+
 async def get_rating(session, content_type, content_id):
     endpoint = "release_dates" if content_type == "movie" else "content_ratings"
     data = await fetch_json(session, f"{TMDB_BASE}/{content_type}/{content_id}/{endpoint}", {"api_key": TMDB_API_KEY})
@@ -91,33 +97,36 @@ async def get_rating(session, content_type, content_id):
 
 async def search_tmdb(session, title):
     params = {"api_key": TMDB_API_KEY, "query": title}
-
-    # Try movie first
     movie_data = await fetch_json(session, f"{TMDB_BASE}/search/movie", params)
     if movie_data.get("results"):
         result = movie_data["results"][0]
         rating = await get_rating(session, "movie", result["id"])
+        cast, director = await get_credits(session, "movie", result["id"])
         return {
             "title": result.get("title"),
             "poster": TMDB_IMAGE_BASE + (result.get("poster_path") or ""),
             "description": result.get("overview", "").strip(),
             "genres": [TMDB_GENRES.get(gid) for gid in result.get("genre_ids", []) if TMDB_GENRES.get(gid)],
             "year": result.get("release_date", "")[:4],
-            "rating": rating
+            "rating": rating,
+            "cast": cast,
+            "director": director
         }
 
-    # Try TV show
     tv_data = await fetch_json(session, f"{TMDB_BASE}/search/tv", params)
     if tv_data.get("results"):
         result = tv_data["results"][0]
         rating = await get_rating(session, "tv", result["id"])
+        cast, director = await get_credits(session, "tv", result["id"])
         return {
             "title": result.get("name"),
             "poster": TMDB_IMAGE_BASE + (result.get("poster_path") or ""),
             "description": result.get("overview", "").strip(),
             "genres": [TMDB_GENRES.get(gid) for gid in result.get("genre_ids", []) if TMDB_GENRES.get(gid)],
             "year": result.get("first_air_date", "")[:4],
-            "rating": rating
+            "rating": rating,
+            "cast": cast,
+            "director": director
         }
 
     return None
@@ -133,18 +142,20 @@ async def process_programme(session, programme):
     print(f"\n📺 Processing: {title}")
 
     try:
-        # Check for manual override
         if title in MANUAL_ID_OVERRIDES:
             override = MANUAL_ID_OVERRIDES[title]
             details = await get_details(session, override["type"], override["id"])
             rating = await get_rating(session, override["type"], override["id"])
+            cast, director = await get_credits(session, override["type"], override["id"])
             data = {
                 "title": details.get("name") or details.get("title"),
                 "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
                 "description": details.get("overview", "").strip(),
                 "genres": [TMDB_GENRES.get(gid) for gid in [g["id"] for g in details.get("genres", [])] if TMDB_GENRES.get(gid)],
                 "year": (details.get("first_air_date") or details.get("release_date") or "")[:4],
-                "rating": rating
+                "rating": rating,
+                "cast": cast,
+                "director": director
             }
         else:
             data = await search_tmdb(session, title)
@@ -159,9 +170,6 @@ async def process_programme(session, programme):
             if icon is None:
                 icon = ET.SubElement(programme, "icon")
             icon.set("src", data["poster"])
-            print(f"🖼️ Poster added for {title}")
-        else:
-            print(f"⚠️ No poster found for {title}")
 
         # Description
         if data["description"]:
@@ -169,18 +177,12 @@ async def process_programme(session, programme):
             if desc is None:
                 desc = ET.SubElement(programme, "desc")
             desc.text = data["description"]
-            print(f"📝 Description added for {title}")
-        else:
-            print(f"⚠️ No description found for {title}")
 
         # Genres
         if data["genres"]:
             for g in data["genres"]:
                 genre_el = ET.SubElement(programme, "category")
                 genre_el.text = g
-            print(f"🏷️ Genres added for {title}")
-        else:
-            print(f"⚠️ No genres found for {title}")
 
         # Year
         if data["year"]:
@@ -188,18 +190,29 @@ async def process_programme(session, programme):
             if date_el is None:
                 date_el = ET.SubElement(programme, "date")
             date_el.text = data["year"]
-            print(f"📅 Year added for {title}")
-        else:
-            print(f"⚠️ No year found for {title}")
 
         # Rating
         if data["rating"]:
             rating_el = ET.SubElement(programme, "rating")
             value_el = ET.SubElement(rating_el, "value")
             value_el.text = data["rating"]
-            print(f"🎞️ Rating added for {title}: {data['rating']}")
-        else:
-            print(f"⚠️ No rating found for {title}")
+
+        # Cast
+        if data.get("cast"):
+            credits_el = programme.find("credits")
+            if credits_el is None:
+                credits_el = ET.SubElement(programme, "credits")
+            for actor in data["cast"]:
+                ET.SubElement(credits_el, "actor").text = actor
+
+        # Director
+        if data.get("director"):
+            credits_el = programme.find("credits")
+            if credits_el is None:
+                credits_el = ET.SubElement(programme, "credits")
+            ET.SubElement(credits_el, "director").text = data["director"]
+
+        print(f"✅ Done: {title}")
 
     except Exception as e:
         print(f"❌ Error processing {title}: {e}")
