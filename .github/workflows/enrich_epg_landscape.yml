@@ -27,7 +27,7 @@ jobs:
 
       - name: Run enrich_epg_landscape.py
         run: |
-          python enrich_epg_landscape.py enrich_epg_landscape_config.yml
+          python enrich_epg_landscape.py
 
       - name: Upload enriched EPG output
         uses: actions/upload-artifact@v4
