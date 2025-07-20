@@ -12,6 +12,41 @@ OUTPUT_EPG_FILE = "epg_enriched.xml"
 TMDB_SEARCH_URL = "https://api.themoviedb.org/3/search/tv"
 TMDB_IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w780"  # landscape size
 
+TARGET_CHANNELS = {
+    "403788", "403674", "403837", "403794", "403620",
+    "403655", "403847", "403772", "403576", "403926", 
+    "403461"
+}
+
+# Manual TMDb overrides
+MANUAL_ID_OVERRIDES = {
+    "Jessie": {"type": "tv", "id": 38974},
+    "Big City Greens": {"type": "tv", "id": 80587},
+    "Kiff": {"type": "tv", "id": 127706},
+    "Zombies": {"type": "movie", "id": 483980},
+    "Bluey": {"type": "tv", "id": 82728},
+    "Disney Jr's Ariel": {"type": "tv", "id": 228669},
+    "Gravity Falls": {"type": "tv", "id": 40075},
+    "Monsters, Inc.": {"type": "movie", "id": 585},
+    "The Incredibles": {"type": "movie", "id": 9806},
+    "SpongeBob SquarePants": {"type": "tv", "id": 387},
+    "Peppa Pig": {"type": "tv", "id": 12225},
+    "PAW Patrol": {"type": "tv", "id": 57532},
+    "Rubble & Crew": {"type": "tv", "id": 214875},
+    "Gabby's Dollhouse": {"type": "tv", "id": 111474},
+    "black-ish": {"type": "tv", "id": 61381},
+    "Phineas and Ferb": {"type": "tv", "id": 1877},
+    "Win or Lose": {"type": "tv", "id": 114500},
+    "Friends": {"type": "tv", "id": 1668},
+    "Primos": {"type": "tv", "id": 204139},
+    "DuckTales": {"type": "tv", "id": 72350},
+    "Mulan": {"type": "movie", "id": 337401},
+    "Moana": {"type": "movie", "id": 277834},
+    "Modern Family": {"type": "tv", "id": 1421},
+    "Henry Danger": {"type": "tv", "id": 61852},
+    "The Really Loud House": {"type": "tv", "id": 211779}
+}
+
 # Setup logger
 logging.basicConfig(
     filename='enrich_epg_landscape.log',
