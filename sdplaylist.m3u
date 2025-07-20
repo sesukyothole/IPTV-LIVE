@@ -1,29 +1,29 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Teens",Disney Channel
+EXTINF:-1 tvg-id="403788" tvg-name="🏰 Disney Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="🧑‍🤝‍🧑 Teens",🏰 Disney Channel
 https://tvpass.org/live/DisneyChannelEast/sd|Referer=https://tvpass.org/
-#EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Kids",Disney Channel
+#EXTINF:-1 tvg-id="403788" tvg-name="🏰 Disney Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="🧒 Kids",🏰 Disney Channel
 https://tvpass.org/live/DisneyChannelEast/sd|Referer=https://tvpass.org/
-#EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png" group-title="Preschoolers",Disney Junior
+#EXTINF:-1 tvg-id="403674" tvg-name="👶 Disney Junior" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png" group-title="👶 Preschoolers",👶 Disney Junior
 https://tvpass.org/live/DisneyJuniorEast/sd|Referer=https://tvpass.org/
-#EXTINF:-1 tvg-id="403837" tvg-name="Disney XD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18279_dark_360w_270h.png" group-title="Kids",Disney XD
+#EXTINF:-1 tvg-id="403837" tvg-name="🎇 Disney XD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18279_dark_360w_270h.png" group-title="🧒 Kids",🎇 Disney XD
 https://tvpass.org/live/DisneyXDEast/sd|Referer=https://tvpass.org/
-#EXTINF:-1 tvg-id="403794" tvg-name="Freeform" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="Teens",Freeform
+#EXTINF:-1 tvg-id="403794" tvg-name="🎬 Freeform" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="🧑‍🤝‍🧑 Teens",🎬 Freeform
 https://tvpass.org/live/FreeformEast/sd|Referer=https://tvpass.org/
-#EXTINF:-1 tvg-id="403620" tvg-name="Nickelodeon" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="Teens",Nickelodeon
+#EXTINF:-1 tvg-id="403620" tvg-name="🧑‍🤝‍🧑🧒🎞️ Nickelodeon" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="🧑‍🤝‍🧑 Teens",🧑‍🤝‍🧑🧒🎞️ Nickelodeon
 https://tvpass.org/live/NickelodeonEast/sd|Referer=https://tvpass.org/
-#EXTINF:-1 tvg-id="403620" tvg-name="Nickelodeon" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="Kids",Nickelodeon
+#EXTINF:-1 tvg-id="403620" tvg-name="🧑‍🤝‍🧑🧒🎞️ Nickelodeon" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="🧒 Kids",🧑‍🤝‍🧑🧒🎞️ Nickelodeon
 https://tvpass.org/live/NickelodeonEast/sd|Referer=https://tvpass.org/
-#EXTINF:-1 tvg-id="403772" tvg-name="TeenNick" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/TeenNick_2019_logo.svg/512px-TeenNick_2019_logo.svg.png" group-title="Teens",TeenNick
+#EXTINF:-1 tvg-id="403772" tvg-name="🧑‍🤝‍🧑🎞️ TeenNick" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/TeenNick_2019_logo.svg/512px-TeenNick_2019_logo.svg.png" group-title="Teens",🧑‍🤝‍🧑🎞️ TeenNick
 https://tvpass.org/live/TeenNickEast/sd|Referer=https://tvpass.org/
-#EXTINF:-1 tvg-id="403655" tvg-name="Nick Jr." tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png" group-title="Preschoolers",Nick Jr.
+#EXTINF:-1 tvg-id="403655" tvg-name="👶🎞️ Nick Jr." tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png" group-title="👶 Preschoolers",👶🎞️ Nick Jr.
 https://tvpass.org/live/NickJrEast/sd|Referer=https://tvpass.org/
-#EXTINF:-1 tvg-id="403847" tvg-name="NickToons" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true" group-title="Kids",NickToons
-https://tvpass.org/live/NicktoonsEast/hd|Referer=https://tvpass.org/
-#EXTINF:-1 tvg-id="403576" tvg-name="Boomerang" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/boomerang-us.png" group-title="Kids",Boomerang
+#EXTINF:-1 tvg-id="403847" tvg-name="🎞️ NickToons" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true" group-title="🧒 Kids",🎞️ NickToons
+https://tvpass.org/live/NicktoonsEast/sd|Referer=https://tvpass.org/
+#EXTINF:-1 tvg-id="403576" tvg-name="🎞️ Boomerang" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/boomerang-us.png" group-title="🧒 Kids",🎞️ Boomerang
 https://tvpass.org/live/Boomerang/sd|Referer=https://tvpass.org/
-#EXTINF:-1 tvg-id="403926" tvg-name="HBO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" group-title="Adults", HBO
+#EXTINF:-1 tvg-id="403926" tvg-name="📽️ HBO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" group-title="👨 Adults", 📽️ HBO
 https://tvpass.org/live/HBOEast/sd|Referer=https://tvpass.org/
-#EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Kids", Cartoon Network
+#EXTINF:-1 tvg-id="403461" tvg-name="🎞️ Cartoon Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="🧒 Kids", 🎞️ Cartoon Network
 https://tvpass.org/live/CartoonNetworkEast/sd|Referer=https://tvpass.org
-#EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Teens", Cartoon Network
+#EXTINF:-1 tvg-id="403461" tvg-name="🎞️ Cartoon Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="🧑‍🤝‍🧑 Teens", 🎞️ Cartoon Network
 https://tvpass.org/live/CartoonNetworkEast/sd|Referer=https://tvpass.org
