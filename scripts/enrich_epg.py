@@ -18,7 +18,6 @@ TARGET_CHANNELS = {
     "403461"
 }
 
-# Manual TMDb overrides
 MANUAL_ID_OVERRIDES = {
     "Jessie": {"type": "tv", "id": 38974},
     "Big City Greens": {"type": "tv", "id": 80587},
@@ -48,23 +47,10 @@ MANUAL_ID_OVERRIDES = {
 }
 
 TMDB_GENRES = {
-    16: "Animation",
-    35: "Comedy",
-    10751: "Family",
-    10762: "Kids",
-    18: "Drama",
-    28: "Action",
-    10759: "Adventure",
-    12: "Adventure",
-    14: "Fantasy",
-    27: "Horror",
-    10402: "Music",
-    9648: "Mystery",
-    878: "Sci-Fi",
-    10765: "Sci-Fi & Fantasy",
-    10766: "Soap",
-    10767: "Talk",
-    10768: "War & Politics"
+    16: "Animation", 35: "Comedy", 10751: "Family", 10762: "Kids", 18: "Drama",
+    28: "Action", 10759: "Adventure", 12: "Adventure", 14: "Fantasy", 27: "Horror",
+    10402: "Music", 9648: "Mystery", 878: "Sci-Fi", 10765: "Sci-Fi & Fantasy",
+    10766: "Soap", 10767: "Talk", 10768: "War & Politics"
 }
 
 async def fetch_json(session, url, params):
@@ -76,7 +62,7 @@ async def get_details(session, content_type, content_id):
 
 async def get_credits(session, content_type, content_id):
     data = await fetch_json(session, f"{TMDB_BASE}/{content_type}/{content_id}/credits", {"api_key": TMDB_API_KEY})
-    cast = [member["name"] for member in data.get("cast", [])[:3]]  # Top 3
+    cast = [member["name"] for member in data.get("cast", [])[:3]]
     directors = [crew["name"] for crew in data.get("crew", []) if crew.get("job") == "Director"]
     return cast, directors[0] if directors else None
 
@@ -164,25 +150,29 @@ async def process_programme(session, programme):
             print(f"❌ No match found for: {title}")
             return
 
-        # Poster
+        # Set poster
         if data["poster"]:
             icon = programme.find("icon")
             if icon is None:
                 icon = ET.SubElement(programme, "icon")
             icon.set("src", data["poster"])
 
-        # Description
-        if data["description"]:
-            desc = programme.find("desc")
-            if desc is None:
-                desc = ET.SubElement(programme, "desc")
-            desc.text = data["description"]
+        # Description with cast/director appended
+        desc = programme.find("desc")
+        if desc is None:
+            desc = ET.SubElement(programme, "desc")
+        desc_text = data["description"]
+        if data["director"] or data["cast"]:
+            desc_text += "\n\n"
+            if data["director"]:
+                desc_text += f"🎬 Director: {data['director']}\n"
+            if data["cast"]:
+                desc_text += f"🎭 Cast: {', '.join(data['cast'])}"
+        desc.text = desc_text
 
         # Genres
-        if data["genres"]:
-            for g in data["genres"]:
-                genre_el = ET.SubElement(programme, "category")
-                genre_el.text = g
+        for g in data["genres"]:
+            ET.SubElement(programme, "category").text = g
 
         # Year
         if data["year"]:
@@ -194,23 +184,17 @@ async def process_programme(session, programme):
         # Rating
         if data["rating"]:
             rating_el = ET.SubElement(programme, "rating")
-            value_el = ET.SubElement(rating_el, "value")
-            value_el.text = data["rating"]
+            ET.SubElement(rating_el, "value").text = data["rating"]
 
-        # Cast
-        if data.get("cast"):
+        # Credits (not used by Kodi, but kept)
+        if data["cast"] or data["director"]:
             credits_el = programme.find("credits")
             if credits_el is None:
                 credits_el = ET.SubElement(programme, "credits")
             for actor in data["cast"]:
                 ET.SubElement(credits_el, "actor").text = actor
-
-        # Director
-        if data.get("director"):
-            credits_el = programme.find("credits")
-            if credits_el is None:
-                credits_el = ET.SubElement(programme, "credits")
-            ET.SubElement(credits_el, "director").text = data["director"]
+            if data["director"]:
+                ET.SubElement(credits_el, "director").text = data["director"]
 
         print(f"✅ Done: {title}")
 
