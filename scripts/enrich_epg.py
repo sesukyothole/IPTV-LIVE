@@ -14,9 +14,9 @@ TMDB_BASE = "https://api.themoviedb.org/3"
 TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 
 TARGET_CHANNELS = {
-    "403788", "403674", "403837", "403794", "403620",
-    "403655", "403847", "403772", "403576", "403926",
-    "403461"
+    "Disney.-.Eastern.Feed.us", "Disney.Junior.USA.-.East.us", "Disney.XD.USA.-.Eastern.Feed.us", "Freeform.-.East.Feed.us", "Nickelodeon.USA.-.East.Feed.us",
+    "TeenNick.-.Eastern.us", "Nick.Jr..-.East.us", "Nicktoons.-.East.us", "Boomerang.us", "HBO.-.Eastern.Feed.us",
+    "AdultSwim.com.Cartoon.Network.us"
 }
 
 MANUAL_ID_OVERRIDES = {
