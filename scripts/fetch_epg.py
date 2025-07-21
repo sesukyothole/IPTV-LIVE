@@ -4,9 +4,7 @@ import os
 from datetime import datetime
 
 # === CONFIG ===
-EPG_URL = "- name: Download EPG XML
-  run: |
-    curl -L "https://dl.dropboxusercontent.com/scl/fi/nyucb2eh02jddrbfz94r7/epg_ripper_US1.xml?rlkey=vd32vbxaedz07sqyu27fuurqp&st=d57xq7" -o epg.xml # Your source EPG URL
+EPG_URL = "https://dl.dropboxusercontent.com/scl/fi/nyucb2eh02jddrbfz94r7/epg_ripper_US1.xml?rlkey=vd32vbxaedz07sqyu27fuurqp&st=d57xq7"
 OUTPUT_FILE = "epg.xml"
 BACKUP_FILE = f"guide_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xml"
 
