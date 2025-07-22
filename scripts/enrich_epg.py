@@ -3,11 +3,20 @@ import aiohttp
 import xml.etree.ElementTree as ET
 import sys
 import os
+import logging
 from datetime import datetime
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[logging.StreamHandler(sys.stdout)]
+)
+log = logging.getLogger(__name__)
 
 TMDB_API_KEY = os.getenv("TMDB_API_KEY") or (len(sys.argv) > 3 and sys.argv[3])
 if not TMDB_API_KEY:
-    print("❌ TMDB_API_KEY is required.", flush=True)
+    log.error("❌ TMDB_API_KEY is required.")
     sys.exit(1)
 
 TMDB_BASE = "https://api.themoviedb.org/3"
@@ -159,7 +168,7 @@ async def process_programme(session, programme):
         return
 
     title = title_el.text.strip()
-    print(f"\n📺 Processing: {title}", flush=True)
+    log.info(f"📺 Processing: {title}")
 
     start = programme.get("start")
     airdate_str = start[:8] if start else None
@@ -186,22 +195,19 @@ async def process_programme(session, programme):
             data = await search_tmdb(session, title)
 
         if not data:
-            print(f"❌ No match found for: {title}", flush=True)
+            log.warning(f"❌ No match found for: {title}")
             return
 
-        # Portrait
         if data["poster"]:
             icon = programme.find("icon")
             if icon is None:
                 icon = ET.SubElement(programme, "icon")
             icon.set("src", data["poster"])
 
-        # Landscape
         backdrop = await get_landscape_backdrop(session, data["type"], data["id"])
         if backdrop:
             ET.SubElement(programme, "icon", {"src": backdrop, "aspect": "landscape"})
 
-        # Description with cast/director
         desc = programme.find("desc")
         if desc is None:
             desc = ET.SubElement(programme, "desc")
@@ -214,23 +220,19 @@ async def process_programme(session, programme):
                 desc_text += f"🎭 Cast: {', '.join(data['cast'])}"
         desc.text = desc_text
 
-        # Genres
         for g in data["genres"]:
             ET.SubElement(programme, "category").text = g
 
-        # Year
         if data["year"]:
             date_el = programme.find("date")
             if date_el is None:
                 date_el = ET.SubElement(programme, "date")
             date_el.text = data["year"]
 
-        # Rating
         if data["rating"]:
             rating_el = ET.SubElement(programme, "rating")
             ET.SubElement(rating_el, "value").text = data["rating"]
 
-        # Credits
         if data["cast"] or data["director"]:
             credits_el = programme.find("credits")
             if credits_el is None:
@@ -240,7 +242,6 @@ async def process_programme(session, programme):
             if data["director"]:
                 ET.SubElement(credits_el, "director").text = data["director"]
 
-        # Episode info
         if data["type"] == "tv" and airdate_str:
             season, episode, ep_title = await get_episode_info(session, data["id"], airdate_str)
             if season and episode:
@@ -249,31 +250,31 @@ async def process_programme(session, programme):
             if ep_title:
                 ET.SubElement(programme, "sub-title").text = ep_title
 
-        print(f"✅ Done: {title}", flush=True)
+        log.info(f"✅ Done: {title}")
 
     except Exception as e:
-        print(f"❌ Error processing {title}: {e}", flush=True)
+        log.error(f"❌ Error processing {title}: {e}")
 
-async def enrich_epg(input_file, output_file):  
-    tree = ET.parse(input_file)  
-    root = tree.getroot()  
-    programmes = root.findall("programme")  
-  
+async def enrich_epg(input_file, output_file):
+    tree = ET.parse(input_file)
+    root = tree.getroot()
+    programmes = root.findall("programme")
+
     semaphore = asyncio.Semaphore(5)
 
-    async with aiohttp.ClientSession() as session:  
+    async with aiohttp.ClientSession() as session:
         async def sem_task(p):
             async with semaphore:
                 await process_programme(session, p)
 
-        await asyncio.gather(*(sem_task(p) for p in programmes))  
-  
-    tree.write(output_file, encoding="utf-8", xml_declaration=True)  
-    print(f"\n✅ Enriched EPG saved to {output_file}", flush=True)
+        await asyncio.gather(*(sem_task(p) for p in programmes))
+
+    tree.write(output_file, encoding="utf-8", xml_declaration=True)
+    log.info(f"\n✅ Enriched EPG saved to {output_file}")
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: python3 enrich_epg.py guide.xml epg_updated.xml [TMDB_API_KEY]", flush=True)
+        log.error("Usage: python3 enrich_epg.py guide.xml epg_updated.xml [TMDB_API_KEY]")
         sys.exit(1)
 
     asyncio.run(enrich_epg(sys.argv[1], sys.argv[2]))
