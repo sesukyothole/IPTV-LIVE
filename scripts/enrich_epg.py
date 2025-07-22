@@ -254,15 +254,21 @@ async def process_programme(session, programme):
     except Exception as e:
         print(f"❌ Error processing {title}: {e}", flush=True)
 
-async def enrich_epg(input_file, output_file):
-    tree = ET.parse(input_file)
-    root = tree.getroot()
-    programmes = root.findall("programme")
+async def enrich_epg(input_file, output_file):  
+    tree = ET.parse(input_file)  
+    root = tree.getroot()  
+    programmes = root.findall("programme")  
+  
+    semaphore = asyncio.Semaphore(5)
 
-    async with aiohttp.ClientSession() as session:
-        await asyncio.gather(*(process_programme(session, p) for p in programmes))
+    async with aiohttp.ClientSession() as session:  
+        async def sem_task(p):
+            async with semaphore:
+                await process_programme(session, p)
 
-    tree.write(output_file, encoding="utf-8", xml_declaration=True)
+        await asyncio.gather(*(sem_task(p) for p in programmes))  
+  
+    tree.write(output_file, encoding="utf-8", xml_declaration=True)  
     print(f"\n✅ Enriched EPG saved to {output_file}", flush=True)
 
 if __name__ == "__main__":
