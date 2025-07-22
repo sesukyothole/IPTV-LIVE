@@ -3,7 +3,7 @@ name: 📡 Daily EPG Enrichment
 on:
   workflow_dispatch:    # ✅ Enables "Run workflow" button in GitHub UI
   schedule:
-    - cron: '0 */6 * * *'  # 🕓 Runs daily at 04:00 UTC
+    - cron: '0 */6 * * *'  # 🕓 Runs every 6 hours
 
 jobs:
   enrich-epg:
@@ -22,8 +22,9 @@ jobs:
         run: |
           pip install aiohttp aiofiles xmltodict tqdm tmdbsimple requests
 
-      - name: 📡 Generate EPG
-        run: python3 scripts/fetch_epg.py
+      - name: 🌐 Download US EPG from epgshare01.online
+        run: |
+          curl -L -o epg.xml "https://epgshare01.online/epg/guideus.xml"
 
       - name: 🧠 Enrich EPG with TMDb Info
         run: python3 scripts/enrich_epg.py epg.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
@@ -34,7 +35,7 @@ jobs:
           mv epg_updated.xml epg.xml
 
       - name: 🎨 Generate Genre List
-        run: python3 scripts/generate_genres.py guide.xml
+        run: python3 scripts/generate_genres.py epg.xml
 
       - name: ✅ Commit & Push Changes
         run: |
