@@ -26,11 +26,11 @@ jobs:
         run: |
           curl -L -o epg.xml "https://epgshare01.online/epg/guideus.xml"
       
-      - name: Enable Unbuffered Python Logging
+      - name: 🛞 Enable Unbuffered Python Logging
         run: export PYTHONUNBUFFERED=1
 
       - name: 🧠 Enrich EPG with TMDb Info
-        run: python3 -u scripts/enrich_epg.py epg.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
+        run: python3 scripts/enrich_epg.py epg.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
 
       - name: 💾 Replace Old EPG
         run: |
