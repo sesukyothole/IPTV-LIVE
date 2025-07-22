@@ -7,14 +7,14 @@ from datetime import datetime
 
 TMDB_API_KEY = os.getenv("TMDB_API_KEY") or (len(sys.argv) > 3 and sys.argv[3])
 if not TMDB_API_KEY:
-    print("❌ TMDB_API_KEY is required.")
+    print("❌ TMDB_API_KEY is required.", flush=True)
     sys.exit(1)
 
 TMDB_BASE = "https://api.themoviedb.org/3"
 TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 
 TARGET_CHANNELS = {
-    "Disney.-.Eastern.Feed.us", "Disney.Junior.USA.-.East.us", "Disney.XD.USA.-.Eastern.Feed.us", "Freeform.-.East.Feed.us", "Nickelodeon.USA.-.East.Feed.us",
+    "Disney.-.Eastern.Feed.us", "Disney.Junior.USA.-.East.us", "Disney.XD.USA.-.Eastern.Feed.us", "Freeform.-.East.Feed.us", "Nickelodeon.USA.-.East.us",
     "TeenNick.-.Eastern.us", "Nick.Jr..-.East.us", "Nicktoons.-.East.us", "Boomerang.us", "HBO.-.Eastern.Feed.us",
     "AdultSwim.com.Cartoon.Network.us"
 }
@@ -159,7 +159,7 @@ async def process_programme(session, programme):
         return
 
     title = title_el.text.strip()
-    print(f"\n📺 Processing: {title}")
+    print(f"\n📺 Processing: {title}", flush=True)
 
     start = programme.get("start")
     airdate_str = start[:8] if start else None
@@ -186,7 +186,7 @@ async def process_programme(session, programme):
             data = await search_tmdb(session, title)
 
         if not data:
-            print(f"❌ No match found for: {title}")
+            print(f"❌ No match found for: {title}", flush=True)
             return
 
         # Portrait
@@ -249,10 +249,10 @@ async def process_programme(session, programme):
             if ep_title:
                 ET.SubElement(programme, "sub-title").text = ep_title
 
-        print(f"✅ Done: {title}")
+        print(f"✅ Done: {title}", flush=True)
 
     except Exception as e:
-        print(f"❌ Error processing {title}: {e}")
+        print(f"❌ Error processing {title}: {e}", flush=True)
 
 async def enrich_epg(input_file, output_file):
     tree = ET.parse(input_file)
@@ -263,11 +263,11 @@ async def enrich_epg(input_file, output_file):
         await asyncio.gather(*(process_programme(session, p) for p in programmes))
 
     tree.write(output_file, encoding="utf-8", xml_declaration=True)
-    print(f"\n✅ Enriched EPG saved to {output_file}")
+    print(f"\n✅ Enriched EPG saved to {output_file}", flush=True)
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: python3 enrich_epg_async.py guide.xml epg_updated.xml [TMDB_API_KEY]")
+        print("Usage: python3 enrich_epg.py guide.xml epg_updated.xml [TMDB_API_KEY]", flush=True)
         sys.exit(1)
 
     asyncio.run(enrich_epg(sys.argv[1], sys.argv[2]))
