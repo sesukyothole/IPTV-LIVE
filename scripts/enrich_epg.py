@@ -21,9 +21,8 @@ if not TMDB_API_KEY:
     sys.exit(1)
 
 TMDB_BASE = "https://api.themoviedb.org/3"
-TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w780"
+TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w780"  # Bigger size than w500
 
-# Channels and manual mappings
 TARGET_CHANNELS = {
     "Disney.-.Eastern.Feed.us", "Disney.Junior.USA.-.East.us", "Disney.XD.USA.-.Eastern.Feed.us",
     "Freeform.-.East.Feed.us", "Nickelodeon.USA.-.East.us", "TeenNick.-.Eastern.us",
@@ -66,7 +65,7 @@ TMDB_GENRES = {
     10766: "Soap", 10767: "Talk", 10768: "War & Politics"
 }
 
-# --- TMDb API Helpers ---
+# TMDb API Helpers
 
 async def fetch_json(session, url, params):
     async with session.get(url, params=params) as resp:
@@ -88,27 +87,11 @@ async def get_rating(session, content_type, content_id):
         if r.get("iso_3166_1") == "US":
             if content_type == "movie":
                 for rel in r.get("release_dates", []):
-                    cert = rel.get("certification")
-                    if cert:
-                        return cert
+                    if rel.get("certification"):
+                        return rel.get("certification")
             else:
                 return r.get("rating")
     return "Not Rated"
-
-async def get_landscape_backdrop(session, content_type, content_id):
-    data = await fetch_json(session, f"{TMDB_BASE}/{content_type}/{content_id}/images", {
-        "api_key": TMDB_API_KEY,
-        "include_image_language": "en,null"
-    })
-    # Prefer English
-    for img in data.get("backdrops", []):
-        if img.get("iso_639_1") == "en":
-            return TMDB_IMAGE_BASE + img["file_path"]
-    # Fallback to any
-    backdrops = data.get("backdrops", [])
-    if backdrops:
-        return TMDB_IMAGE_BASE + backdrops[0]["file_path"]
-    return None
 
 async def get_episode_info(session, tv_id, airdate_str):
     try:
@@ -125,7 +108,7 @@ async def get_episode_info(session, tv_id, airdate_str):
             break
     return None, None, None, None
 
-# --- Main Enrichment Logic ---
+# Main Enrichment Logic
 
 async def process_programme(session, programme):
     title_el = programme.find("title")
@@ -135,6 +118,7 @@ async def process_programme(session, programme):
 
     title = title_el.text.strip()
     log.info(f"📺 Processing: {title}")
+
     start = programme.get("start")
     airdate_str = start[:8] if start else None
 
@@ -146,6 +130,7 @@ async def process_programme(session, programme):
             cast, director = await get_credits(session, ovr["type"], ovr["id"])
             data = {
                 "title": details.get("name") or details.get("title"),
+                "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
                 "description": details.get("overview", "").strip(),
                 "genres": [TMDB_GENRES.get(g["id"]) for g in details.get("genres", []) if TMDB_GENRES.get(g["id"])],
                 "year": (details.get("first_air_date") or details.get("release_date") or "")[:4],
@@ -170,6 +155,7 @@ async def process_programme(session, programme):
             cast, director = await get_credits(session, content_type, content_id)
             data = {
                 "title": details.get("name") or details.get("title"),
+                "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
                 "description": details.get("overview", "").strip(),
                 "genres": [TMDB_GENRES.get(g["id"]) for g in details.get("genres", []) if TMDB_GENRES.get(g["id"])],
                 "year": (details.get("first_air_date") or details.get("release_date") or "")[:4],
@@ -180,10 +166,8 @@ async def process_programme(session, programme):
                 "type": content_type
             }
 
-        # Only landscape
-        backdrop = await get_landscape_backdrop(session, data["type"], data["id"])
-        if backdrop:
-            ET.SubElement(programme, "icon", {"src": backdrop, "aspect": "landscape"})
+        if data["poster"]:
+            ET.SubElement(programme, "icon", {"src": data["poster"]})
 
         desc_el = programme.find("desc") or ET.SubElement(programme, "desc")
         desc_text = data["description"]
@@ -230,7 +214,7 @@ async def process_programme(session, programme):
     except Exception as e:
         log.error(f"❌ Error processing {title}: {e}")
 
-# --- Runner ---
+# Runner
 
 async def enrich_epg(input_file, output_file):
     tree = ET.parse(input_file)
