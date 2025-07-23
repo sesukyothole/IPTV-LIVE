@@ -21,7 +21,7 @@ if not TMDB_API_KEY:
     sys.exit(1)
 
 TMDB_BASE = "https://api.themoviedb.org/3"
-TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
+TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w780"
 
 # Channels and manual mappings
 TARGET_CHANNELS = {
@@ -100,9 +100,14 @@ async def get_landscape_backdrop(session, content_type, content_id):
         "api_key": TMDB_API_KEY,
         "include_image_language": "en,null"
     })
+    # Prefer English
+    for img in data.get("backdrops", []):
+        if img.get("iso_639_1") == "en":
+            return TMDB_IMAGE_BASE + img["file_path"]
+    # Fallback to any
     backdrops = data.get("backdrops", [])
     if backdrops:
-        return "https://image.tmdb.org/t/p/w780" + backdrops[0]["file_path"]
+        return TMDB_IMAGE_BASE + backdrops[0]["file_path"]
     return None
 
 async def get_episode_info(session, tv_id, airdate_str):
@@ -130,7 +135,6 @@ async def process_programme(session, programme):
 
     title = title_el.text.strip()
     log.info(f"📺 Processing: {title}")
-
     start = programme.get("start")
     airdate_str = start[:8] if start else None
 
@@ -142,7 +146,6 @@ async def process_programme(session, programme):
             cast, director = await get_credits(session, ovr["type"], ovr["id"])
             data = {
                 "title": details.get("name") or details.get("title"),
-                "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
                 "description": details.get("overview", "").strip(),
                 "genres": [TMDB_GENRES.get(g["id"]) for g in details.get("genres", []) if TMDB_GENRES.get(g["id"])],
                 "year": (details.get("first_air_date") or details.get("release_date") or "")[:4],
@@ -153,7 +156,6 @@ async def process_programme(session, programme):
                 "type": ovr["type"]
             }
         else:
-            # Search both movie and TV
             search = await fetch_json(session, f"{TMDB_BASE}/search/multi", {
                 "api_key": TMDB_API_KEY, "query": title
             })
@@ -168,7 +170,6 @@ async def process_programme(session, programme):
             cast, director = await get_credits(session, content_type, content_id)
             data = {
                 "title": details.get("name") or details.get("title"),
-                "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
                 "description": details.get("overview", "").strip(),
                 "genres": [TMDB_GENRES.get(g["id"]) for g in details.get("genres", []) if TMDB_GENRES.get(g["id"])],
                 "year": (details.get("first_air_date") or details.get("release_date") or "")[:4],
@@ -179,14 +180,11 @@ async def process_programme(session, programme):
                 "type": content_type
             }
 
-        if data["poster"]:
-            ET.SubElement(programme, "icon", {"src": data["poster"]})
-
+        # Only landscape
         backdrop = await get_landscape_backdrop(session, data["type"], data["id"])
         if backdrop:
             ET.SubElement(programme, "icon", {"src": backdrop, "aspect": "landscape"})
 
-        # Description
         desc_el = programme.find("desc") or ET.SubElement(programme, "desc")
         desc_text = data["description"]
 
@@ -200,30 +198,26 @@ async def process_programme(session, programme):
             if ep_overview:
                 desc_text = ep_overview
 
-        # Append cast and director
         if data["director"] or data["cast"]:
             desc_text += "\n\n"
             if data["director"]:
                 desc_text += f"🎬 Director: {data['director']}\n"
             if data["cast"]:
                 desc_text += f"🎭 Cast: {', '.join(data['cast'][:6])}"
+
         desc_el.text = desc_text
 
-        # Genres
         for g in data["genres"]:
             ET.SubElement(programme, "category").text = g
 
-        # Year
         if data["year"]:
             date_el = programme.find("date") or ET.SubElement(programme, "date")
             date_el.text = data["year"]
 
-        # Age Rating
         if data["rating"]:
             rating_el = ET.SubElement(programme, "rating")
             ET.SubElement(rating_el, "value").text = data["rating"]
 
-        # Credits
         if data["cast"] or data["director"]:
             credits = programme.find("credits") or ET.SubElement(programme, "credits")
             if data["director"]:
@@ -243,7 +237,6 @@ async def enrich_epg(input_file, output_file):
     root = tree.getroot()
     programmes = root.findall("programme")
 
-    semaphore = asyncio.Semaphore(5)
     async with aiohttp.ClientSession() as session:
         await asyncio.gather(*[
             asyncio.create_task(process_programme(session, p)) for p in programmes
@@ -255,6 +248,6 @@ async def enrich_epg(input_file, output_file):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        log.error("Usage: python3 enrich_epg_landscape.py epg.xml enriched_epg.xml [TMDB_API_KEY]")
+        log.error("Usage: python3 enrich_epg.py epg.xml enriched_epg.xml [TMDB_API_KEY]")
         sys.exit(1)
     asyncio.run(enrich_epg(sys.argv[1], sys.argv[2]))
