@@ -5,6 +5,7 @@ import sys
 import os
 import logging
 from datetime import datetime
+from genre_colors import get_color_for_genre
 
 # Configure logging
 logging.basicConfig(
@@ -192,7 +193,11 @@ async def process_programme(session, programme):
         desc_el.text = desc_text
 
         for g in data["genres"]:
-            ET.SubElement(programme, "category").text = g
+            cat_el = ET.SubElement(programme, "category")
+            cat_el.text = g
+            color = get_color_for_genre(g)
+            cat_el.set("color", color)  # Optional attribute
+
 
         if data["year"]:
             date_el = programme.find("date") or ET.SubElement(programme, "date")
