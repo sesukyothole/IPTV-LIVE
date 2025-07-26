@@ -1,4 +1,4 @@
-📛: 📡 Daily EPG Enrichment
+name: 📡 Daily EPG Enrichment
 
 on:
   workflow_dispatch:    # ✅ Enables "Run workflow" button in GitHub UI
