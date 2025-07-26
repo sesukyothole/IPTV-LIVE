@@ -35,6 +35,7 @@ jobs:
 
       - name: 🎨 Generate Genre List
         run: python3 scripts/generate_genres.py epg.xml
+      
       - name: 🌈 Generate Genres Colors
       - run: python3 scripts/genre_colors.py epg.xml
 
