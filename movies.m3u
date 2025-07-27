@@ -32,7 +32,7 @@ http://192.168.1.74:8096/Videos/49c9f973f8cbdc62829a752c68580443/stream?api_key=
 #EXTINF:6420 tvg-logo="https://image.tmdb.org/t/p/original/kNAANuEyhDu5g4c5p0gcMFLhV0k.jpg" group-title="Moana Franchise", Moana (2016)
 http://192.168.1.74:8096/Videos/a7992c14f132cbd0338cd358aa628e5a/stream?api_key=58b6ba2a3e634e549dd1895e53728817
 #EXTINF:6000 tvg-logo="https://image.tmdb.org/t/p/original/rMrfAeUa0KL1EVuPzcq9LpsKPE4.jpg" group-title="Moana Franchise", Moana 2 (2024)
-http://192.168.1.74:8096/Videos/8c8f412f98a8c70380c37eb4adb3ee94/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+http://127.0.0.1:8096/Videos/8c8f412f98a8c70380c37eb4adb3ee94/stream?api_key=715f554f070a4ecb88f52bcd6472c348
 #EXTINF:7320 tvg-logo="https://image.tmdb.org/t/p/original/klXVlcNFq3TnQ8AKCkGM9WMkxyu.jpg" group-title="The Lion King Franchise", Mufasa: The Lion King (2024)
 http://192.168.1.74:8096/Videos/d5517eb1c01f57a25b661efd953f2e5c/stream?api_key=58b6ba2a3e634e549dd1895e53728817
 #EXTINF:6360 tvg-logo="https://image.tmdb.org/t/p/original/vF6IPaY1pjoJHcVfBUR8iZGmlUs.jpg", Paddington in Peru (2024)
