@@ -45,6 +45,8 @@ http://192.168.1.74:8096/Videos/4e1c8ba5543cac911b58f100f79be36d/stream?api_key=
 http://192.168.1.74:8096/Videos/bbbebe9f42e78b75d5627576d149c7e9/stream?api_key=58b6ba2a3e634e549dd1895e53728817
 #EXTINF:5520 tvg-logo="https://image.tmdb.org/t/p/original/u4SDPknBWEEOCzPJvL0NwApkQSR.jpg", The Super Mario Bros Movie (2023)
 http://192.168.1.74:8096/Videos/9f736b3e286ecce91a1f67afe571e056/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:7620 tvg-logo="https://image.tmdb.org/t/p/original/cb1h6cynMQHAqTVHkg6Xqyyt71P.jpg", Thunderbolts (2025)
+http://192.168.1.74:8096/Videos/5b0fc05cce634686fc01bc29b5d4322e/stream?api_key=58b6ba2a3e634e549dd1895e53728817
 #EXTINF:5520 tvg-logo="https://image.tmdb.org/t/p/original/mVS30PQuN24MdVaH5ZKHyJdVHuZ.jpg" group-title="Trolls Franchise", Trolls (2016)
 http://192.168.1.74:8096/Videos/9bf1a37e46792f8fa5241e5a3ca5663a/stream?api_key=58b6ba2a3e634e549dd1895e53728817
 #EXTINF:5460 tvg-logo="https://image.tmdb.org/t/p/original/nHE2VcSsCxhoG6SrBpDzmZoOmcx.jpg" group-title="Trolls Franchise", Trolls World Tour (2020)
