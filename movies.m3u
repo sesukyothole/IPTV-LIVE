@@ -23,7 +23,7 @@ http://192.168.1.74:8096/Videos/0bfb5231c4d2e1adc18f952e6cffdd23/stream?api_key=
 http://192.168.1.74:8096/Videos/82ec98e3371ceacf398601a95c542e34/stream?api_key=58b6ba2a3e634e549dd1895e53728817
 #EXTINF:6540 tvg-logo="https://image.tmdb.org/t/p/original/pZ7vlKJqaBaUGcJDBp08T1gJ0UB.jpg" group-title="Lilo and Stitch Franchise", Lilo and Stitch (2025)
 http://192.168.1.74:8096/Videos/55e14c82841330f4a56d6cfc6e612fce/stream?api_key=58b6ba2a3e634e549dd1895e53728817
-#EXTINF:7080 tvg-logo="https://image.tmdb.org/t/p/original/pHNiDTij7D3gP8BZqTeM7IA2Tka.jpg" group-title="The Lion King Franchise", The Lion King (2019)
+#EXTINF:7080 tvg-logo="https://image.tmdb.org/t/p/original/pHNiDTij7D3gP8BZqTeM7IA2Tka.jpg", The Lion King (2019)
 http://192.168.1.74:8096/Videos/01479ca9279b0e28a83af94f1273deed/stream?api_key=58b6ba2a3e634e549dd1895e53728817
 #EXTINF:8100 tvg-logo="https://image.tmdb.org/t/p/original/q1l20kUMfrXvr2w6rwiyydLYNg6.jpg", The Little Mermaid (2023)
 http://192.168.1.74:8096/Videos/25e426b3436b4435bd2d11b037c882b5/stream?api_key=58b6ba2a3e634e549dd1895e53728817
@@ -31,10 +31,8 @@ http://192.168.1.74:8096/Videos/25e426b3436b4435bd2d11b037c882b5/stream?api_key=
 http://192.168.1.74:8096/Videos/49c9f973f8cbdc62829a752c68580443/stream?api_key=58b6ba2a3e634e549dd1895e53728817
 #EXTINF:6420 tvg-logo="https://image.tmdb.org/t/p/original/kNAANuEyhDu5g4c5p0gcMFLhV0k.jpg" group-title="Moana Franchise", Moana (2016)
 http://192.168.1.74:8096/Videos/a7992c14f132cbd0338cd358aa628e5a/stream?api_key=58b6ba2a3e634e549dd1895e53728817
-#EXTINF:6000 tvg-logo="https://image.tmdb.org/t/p/original/rMrfAeUa0KL1EVuPzcq9LpsKPE4.jpg" group-title="Moana Franchise", Moana 2 (2024)
-http://127.0.0.1:8096/Videos/8c8f412f98a8c70380c37eb4adb3ee94/stream?api_key=715f554f070a4ecb88f52bcd6472c348
-#EXTINF:7320 tvg-logo="https://image.tmdb.org/t/p/original/klXVlcNFq3TnQ8AKCkGM9WMkxyu.jpg" group-title="The Lion King Franchise", Mufasa: The Lion King (2024)
-http://192.168.1.74:8096/Videos/d5517eb1c01f57a25b661efd953f2e5c/stream?api_key=58b6ba2a3e634e549dd1895e53728817
+#EXTINF:5580 tvg-logo="https://image.tmdb.org/t/p/original/rMrfAeUa0KL1EVuPzcq9LpsKPE4.jpg" group-title="Moana Franchise", Moana 2 (2024)
+http://192.168.1.74:8096/Videos/8c8f412f98a8c70380c37eb4adb3ee94/stream?api_key=58b6ba2a3e634e549dd1895e53728817
 #EXTINF:6360 tvg-logo="https://image.tmdb.org/t/p/original/vF6IPaY1pjoJHcVfBUR8iZGmlUs.jpg", Paddington in Peru (2024)
 http://192.168.1.74:8096/Videos/2261224e8d41d6ccafd27cc68a23e681/stream?api_key=58b6ba2a3e634e549dd1895e53728817
 #EXTINF:6480 tvg-logo="https://image.tmdb.org/t/p/original/qI5mnNRs0Su7yDI6GbsxevZlV48.jpg" group-title="Sing Franchise", Sing (2016)
