@@ -78,7 +78,7 @@ http://192.168.1.74:8096/Videos/0e9205d3212c8aa1d62dcd635551d080/stream?static=t
 #EXTINF:5100 tvg-logo="https://image.tmdb.org/t/p/original/53qC58IeMpg8NprzVs9CbY1HpmT.jpg" group-title="Lilo and Stitch Franchise", Lilo and Stitch (2002)
 http://192.168.1.74:8096/Videos/3be4bb96b24ed766584b6abeddf62ba5/stream?static=true&api_key=58b6ba2a3e634e549dd1895e53728817|Referer=http://192.168.1.74:8096
 #EXTINF:6540 tvg-logo="https://image.tmdb.org/t/p/original/pZ7vlKJqaBaUGcJDBp08T1gJ0UB.jpg" group-title="Lilo and Stitch Franchise", Lilo and Stitch (2025)
-http://192.168.1.74:8096/Videos/6858511b1681a60aaa2c51fb920bd071/stream?static=true&api_key=58b6ba2a3e634e549dd1895e53728817|Referer=http://192.168.1.74:8096
+http://192.168.1.74:8096/Videos/6858511b1681a60aaa2c51fb920bd071/stream?static=true&api_key=26eeffeddfec41c0ae4ee4fe85d045bb|Referer=http://192.168.1.74:8096
 #EXTINF:7080 tvg-logo="https://image.tmdb.org/t/p/original/pHNiDTij7D3gP8BZqTeM7IA2Tka.jpg", The Lion King (2019)
 http://192.168.1.74:8096/Videos/83418a37e4974e097da09f32b05fddf0/stream?static=true&api_key=58b6ba2a3e634e549dd1895e53728817|Referer=http://192.168.1.74:8096
 #EXTINF:8100 tvg-logo="https://image.tmdb.org/t/p/original/q1l20kUMfrXvr2w6rwiyydLYNg6.jpg", The Little Mermaid (2023)
