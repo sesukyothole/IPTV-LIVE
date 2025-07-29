@@ -1,0 +1,86 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="1. Disney Channel HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Teens",1. Disney Channel HD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/DisneyChannelEast/hd
+#EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="1. Disney Channel HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Kids",1. Disney Channel HD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/DisneyChannelEast/hd
+#EXTINF:-1 tvg-id="Disney.Junior.USA.-.East.us" tvg-name="2. Disney Junior HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png" group-title="Preschoolers",2. Disney Junior HD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/DisneyJuniorEast/hd
+#EXTINF:-1 tvg-id="Disney.XD.USA.-.Eastern.Feed.us" tvg-name="3. Disney XD HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18279_dark_360w_270h.png" group-title="Kids",3. Disney XD HD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/DisneyXDEast/hd
+#EXTINF:-1 tvg-id="Freeform.-.East.Feed.us" tvg-name="4. Freeform HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="Teens",4. Freeform HD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/FreeformEast/hd
+#EXTINF:-1 tvg-id="Nickelodeon.USA.-.East.Feed.us" tvg-name="5. Nickelodeon HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="Teens",5. Nickelodeon HD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/NickelodeonEast/hd
+#EXTINF:-1 tvg-id="Nickelodeon.USA.-.East.Feed.us" tvg-name="5. Nickelodeon HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="Kids",5. Nickelodeon HD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/NickelodeonEast/hd
+#EXTINF:-1 tvg-id="TeenNick.-.Eastern.us" tvg-name="6. TeenNick HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/TeenNick_2019_logo.svg/512px-TeenNick_2019_logo.svg.png" group-title="Teens",6. TeenNick HD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/TeenNickEast/hd
+#EXTINF:-1 tvg-id="Nick.Jr..-.East.us" tvg-name="7. Nick Jr. HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png" group-title="Preschoolers",7. Nick Jr. HD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/NickJrEast/hd
+#EXTINF:-1 tvg-id="Nicktoons.-.East.us" tvg-name="8. NickToons HD" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true" group-title="Kids",8. NickToons HD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/NicktoonsEast/hd
+#EXTINF:-1 tvg-id="Boomerang.us" tvg-name="9. Boomerang HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/boomerang-us.png" group-title="Kids",9. Boomerang HD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/Boomerang/hd
+#EXTINF:-1 tvg-id="HBO.-.Eastern.Feed.us" tvg-name="10. HBO HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" group-title="Adults",10. HBO HD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/HBOEast/hd
+#EXTINF:-1 tvg-id="AdultSwim.com.Cartoon.Network.us" tvg-name="11. Cartoon Network HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Kids",11. Cartoon Network HD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/CartoonNetworkEast/hd
+#EXTINF:-1 tvg-id="AdultSwim.com.Cartoon.Network.us" tvg-name="11. Cartoon Network HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Teens",11. Cartoon Network HD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/CartoonNetworkEast/hd
+#EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="12. Disney Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Teens",12. Disney Channel
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/DisneyChannelEast/sd
+#EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="12. Disney Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Teens",12. Disney Channel
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/DisneyChannelEast/sd
+#EXTINF:-1 tvg-id="Disney.Junior.USA.-.East.us" tvg-name="13. Disney Junior" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png" group-title="Preschoolers",13. Disney Junior
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/DisneyJuniorEast/sd
+#EXTINF:-1 tvg-id="Disney.XD.USA.-.Eastern.Feed.us" tvg-name="14. Disney XD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18279_dark_360w_270h.png" group-title="Kids",14. Disney XD
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/DisneyXDEast/sd
+#EXTINF:-1 tvg-id="Freeform.-.East.Feed.us" tvg-name="15. Freeform" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="Teens",15. Freeform
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/FreeformEast/sd
+#EXTINF:-1 tvg-id="Nickelodeon.USA.-.East.Feed.us" tvg-name="16. Nickelodeon" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="Teens",16. Nickelodeon
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/NickelodeonEast/sd
+#EXTINF:-1 tvg-id="Nickelodeon.USA.-.East.Feed.us" tvg-name="16. Nickelodeon" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="Teens",16. Nickelodeon
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/NickelodeonEast/sd
+#EXTINF:-1 tvg-id="TeenNick.-.Eastern.us" tvg-name="17. TeenNick" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/TeenNick_2019_logo.svg/512px-TeenNick_2019_logo.svg.png" group-title="Teens",17. TeenNick
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/TeenNickEast/sd
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+#EXTINF:-1 tvg-id="Nick.Jr..-.East.us" tvg-name="18. Nick Jr." tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png" group-title="Preschoolers",18. Nick Jr.
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/NickJrEast/sd
+#EXTINF:-1 tvg-id="Nicktoons.-.East.us" tvg-name="19. NickToons" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true" group-title="Kids",19. NickToons
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/NicktoonsEast/sd
+#EXTINF:-1 tvg-id="Boomerang.us" tvg-name="20. Boomerang" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/boomerang-us.png" group-title="Kids",20. Boomerang
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/Boomerang/sd
+#EXTINF:-1 tvg-id="HBO.-.Eastern.Feed.us" tvg-name="21. HBO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" group-title="Adults",21. HBO
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/HBOEast/sd
+#EXTINF:-1 tvg-id="AdultSwim.com.Cartoon.Network.us" tvg-name="22. Cartoon Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Kids",22. Cartoon Network
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/CartoonNetworkEast/sd
+#EXTINF:-1 tvg-id="AdultSwim.com.Cartoon.Network.us" tvg-name="22. Cartoon Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Kids",22. Cartoon Network
+#KODIPROP:stream_headers="referer=https://tvpass.org/"
+https://tvpass.org/live/CartoonNetworkEast/sd
