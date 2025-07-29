@@ -1,4 +1,4 @@
-#EXTM3U url-tvg="https://gtvservices5.github.io/M3U8-IPTV-EPG/epg.xml"
+#EXTM3U
 #EXTINF:7680 tvg-logo="https://image.tmdb.org/t/p/original/p3laucrKVQo6tLosJMMNPeMBCXi.jpg", Aladdin (2019)
 http://192.168.1.74:8096/Videos/1f4f40acecb7ce463cf640b8060b88e6/stream?static=true&api_key=58b6ba2a3e634e549dd1895e53728817|Referer=http://192.168.1.74:8096
 #EXTINF:7740 tvg-logo="https://image.tmdb.org/t/p/original/mRgpZvbRgvneY6qKbg44mREbYka.jpg", Beauty and the Beast (2017)
