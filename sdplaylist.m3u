@@ -1,4 +1,4 @@
-#EXTM3U
+#EXTM3U url-tvg="https://gtvservices5.github.io/M3U8-IPTV-EPG/epg.xml"
 #EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="1. Disney Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Teens",1. Disney Channel
 https://tvpass.org/live/DisneyChannelEast/sd|Referer=https://tvpass.org/
 #EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="1. Disney Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Teens",1. Disney Channel
