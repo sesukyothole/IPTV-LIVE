@@ -1,61 +1,61 @@
 #EXTM3U
 #EXTINF:7680 tvg-logo="https://image.tmdb.org/t/p/original/p3laucrKVQo6tLosJMMNPeMBCXi.jpg", Aladdin (2019)
-http://192.168.1.74:8096/Videos/12/Aladdin (2019).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/12/Aladdin (2019).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:7740 tvg-logo="https://image.tmdb.org/t/p/original/mRgpZvbRgvneY6qKbg44mREbYka.jpg", Beauty and the Beast (2017)
-http://192.168.1.74:8096/Videos/13/Beauty and the Beast (2017).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/13/Beauty and the Beast (2017).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:6300 tvg-logo="https://image.tmdb.org/t/p/original/vWdndPq6qEoaXIwedoSDuSPFrH0.jpg", Cinderella (2015)
-http://192.168.1.74:8096/Videos/14/Cinderella (2015).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/14/Cinderella (2015).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:6720 tvg-logo="https://image.tmdb.org/t/p/original/9yADG2wdItXw0f7oFvIa4HBU2lZ.jpg" group-title="Descendants Franchise", Descendants (2015)
-http://192.168.1.74:8096/Videos/15/Descendants (2015).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/15/Descendants (2015).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:6720 tvg-logo="https://image.tmdb.org/t/p/original/aBaVVnpD5EbPfsSKNC8MF0XlsdB.jpg" group-title="Descendants Franchise", Descendants 2 (2017)
-http://192.168.1.74:8096/Videos/16/Descendants 2 (2017).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/16/Descendants 2 (2017).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:6360 tvg-logo="https://image.tmdb.org/t/p/original/vsQwhLdEsmkfP3qICHf4J2YxdFx.jpg" group-title="Descendants Franchise", Descendants 3 (2019)
-http://192.168.1.74:8096/Videos/17/Descendants 3 (2019).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/17/Descendants 3 (2019).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:5520 tvg-logo="https://image.tmdb.org/t/p/original/mc2vTEVv21uxKucjEDb5c87exkL.jpg" group-title="Descendants Franchise", Descendants: The Rise of Red (2024)
-http://192.168.1.74:8096/Videos/18/Descendants The Rise of Red (2024).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/18/Descendants The Rise of Red (2024).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:6720 tvg-logo="https://image.tmdb.org/t/p/original/dDDdiz2b9a1o9jqPr0Mg3Jw15GM.jpg", Dumbo (2019)
-http://192.168.1.74:8096/Videos/19/Dumbo (2019).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/19/Dumbo (2019).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:5700 tvg-logo="https://image.tmdb.org/t/p/original/9dSyguWPrYKqRGPKlF955M5kKGN.jpg" group-title="Inside Out Franchise", Inside Out (2015)
-http://192.168.1.74:8096/Videos/20/Inside Out (2015).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/20/Inside Out (2015).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:5760 tvg-logo="https://image.tmdb.org/t/p/original/e5zGobWxJsUVikspN5JVWwKNmA6.jpg" group-title="Inside Out Franchise", Inside Out 2 (2024)
-http://192.168.1.74:8096/Videos/21/Inside Out 2 (2024).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/21/Inside Out 2 (2024).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:5100 tvg-logo="https://image.tmdb.org/t/p/original/53qC58IeMpg8NprzVs9CbY1HpmT.jpg" group-title="Lilo and Stitch Franchise", Lilo & Stitch (2002)
-http://192.168.1.74:8096/Videos/23/Lilo and Stitch (2002).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/23/Lilo and Stitch (2002).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:6540 tvg-logo="https://image.tmdb.org/t/p/original/pZ7vlKJqaBaUGcJDBp08T1gJ0UB.jpg" group-title="Lilo and Stitch Franchise", Lilo & Stitch (2025)
-http://192.168.1.74:8096/Videos/22/Lilo & Stitch (2025).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/22/Lilo & Stitch (2025).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:7080 tvg-logo="https://image.tmdb.org/t/p/original/pHNiDTij7D3gP8BZqTeM7IA2Tka.jpg", The Lion King (2019)
-http://192.168.1.74:8096/Videos/30/The Lion King (2019).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/30/The Lion King (2019).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:8100 tvg-logo="https://image.tmdb.org/t/p/original/q1l20kUMfrXvr2w6rwiyydLYNg6.jpg", The Little Mermaid (2023)
-http://192.168.1.74:8096/Videos/31/The Little Mermaid (2023).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/31/The Little Mermaid (2023).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:6060 tvg-logo="https://image.tmdb.org/t/p/original/vdprV0mY4s7ZY6zi6S74oak5Ai8.jpg", A Minecraft Movie (2025)
-http://192.168.1.74:8096/Videos/11/A Minecraft Movie (2025).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/11/A Minecraft Movie (2025).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:6420 tvg-logo="https://image.tmdb.org/t/p/original/kNAANuEyhDu5g4c5p0gcMFLhV0k.jpg" group-title="Moana Franchise", Moana (2016)
-http://192.168.1.74:8096/Videos/24/Moana (2016).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/24/Moana (2016).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:5580 tvg-logo="https://image.tmdb.org/t/p/original/rMrfAeUa0KL1EVuPzcq9LpsKPE4.jpg" group-title="Moana Franchise", Moana 2 (2024)
-http://192.168.1.74:8096/Videos/25/Moana 2 (2024).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/25/Moana 2 (2024).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:6360 tvg-logo="https://image.tmdb.org/t/p/original/vF6IPaY1pjoJHcVfBUR8iZGmlUs.jpg", Paddington in Peru (2024)
-http://192.168.1.74:8096/Videos/26/Paddington in Peru (2024).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/26/Paddington in Peru (2024).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:6480 tvg-logo="https://image.tmdb.org/t/p/original/qI5mnNRs0Su7yDI6GbsxevZlV48.jpg" group-title="Sing Franchise", Sing (2016)
-http://192.168.1.74:8096/Videos/27/Sing (2016).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/27/Sing (2016).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:6600 tvg-logo="https://image.tmdb.org/t/p/original/nyAosW1asxbdAijpi5Csbquu9Cq.jpg" group-title="Sing Franchise", Sing 2 (2021)
-http://192.168.1.74:8096/Videos/28/Sing 2 (2021).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/28/Sing 2 (2021).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:6660 tvg-logo="https://image.tmdb.org/t/p/original/nL59ebET8eMDdwHwW0Ze6Kx4FxB.jpg", Snow White (2025)
-http://192.168.1.74:8096/Videos/29/Snow White (2025).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/29/Snow White (2025).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:5520 tvg-logo="https://image.tmdb.org/t/p/original/u4SDPknBWEEOCzPJvL0NwApkQSR.jpg", The Super Mario Bros. Movie (2023)
-http://192.168.1.74:8096/Videos/32/The Super Mario Bros. Movie (2023).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/32/The Super Mario Bros. Movie (2023).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:7620 tvg-logo="https://image.tmdb.org/t/p/original/cb1h6cynMQHAqTVHkg6Xqyyt71P.jpg", Thunderbolts (2025)
-http://192.168.1.74:8096/Videos/33/Thunderbolts (2025).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/33/Thunderbolts (2025).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:5520 tvg-logo="https://image.tmdb.org/t/p/original/mVS30PQuN24MdVaH5ZKHyJdVHuZ.jpg" group-title="Trolls Franchise", Trolls (2016)
-http://192.168.1.74:8096/Videos/34/Trolls (2016).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/34/Trolls (2016).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:5460 tvg-logo="https://image.tmdb.org/t/p/original/nHE2VcSsCxhoG6SrBpDzmZoOmcx.jpg" group-title="Trolls Franchise", Trolls World Tour (2020)
-http://192.168.1.74:8096/Videos/36/Trolls World Tour (2020).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/36/Trolls World Tour (2020).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:5460 tvg-logo="https://image.tmdb.org/t/p/original/c6msiFybhohrgaBYxfR5gyDkn6L.jpg" group-title="Trolls Franchise", Trolls Band Together (2023)
-http://192.168.1.74:8096/Videos/35/Trolls Band Together (2023).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/35/Trolls Band Together (2023).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:5640 tvg-logo="https://image.tmdb.org/t/p/original/iDnO5JXlRCfT8GuDlMXmaJZ5qoh.jpg" group-title="Zombies Franchise", Zombies (2018)
-http://192.168.1.74:8096/Videos/37/Zombies (2018).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/37/Zombies (2018).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:5040 tvg-logo="https://image.tmdb.org/t/p/original/slLeIprfFePIsD5FcsWpuddJgCE.jpg" group-title="Zombies Franchise", Zombies 2 (2020)
-http://192.168.1.74:8096/Videos/38/Zombies 2 (2020).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/38/Zombies 2 (2020).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:5280 tvg-logo="https://image.tmdb.org/t/p/original/cLX9xvJgBz9dvfCrLrufsw5E82A.jpg" group-title="Zombies Franchise", Zombies 3 (2022)
-http://192.168.1.74:8096/Videos/39/Zombies 3 (2022).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/39/Zombies 3 (2022).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
 #EXTINF:5160 tvg-logo="https://image.tmdb.org/t/p/original/2RIjnBMQqyrTrN7NrHt0fKZlIyN.jpg" group-title="Zombies Franchise", Zombies 4: Dawn of the Vampires (2025)
-http://192.168.1.74:8096/Videos/40/Zombies 4 Dawn of the Vampires (2025).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b
+http://192.168.1.74:8096/Videos/40/Zombies 4 Dawn of the Vampires (2025).mp4?static=true&api_key=a5353ad24f6949d590d77de65aed2c3b|Referer=http://192.168.1.74:8096
