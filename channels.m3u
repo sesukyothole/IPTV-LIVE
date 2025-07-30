@@ -1,21 +1,21 @@
 #EXTM3U url-tvg="https://gtvservices5.github.io/M3U8-IPTV-EPG/epg.xml"
 #EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Teens",Disney Channel HD
-https://fl5.moveonjoy.com/DISNEY/index.m3u8
+https://fl5.moveonjoy.com/DISNEY/index.m3u8|Referer=https://moveonjoy.com
 #EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Kids",Disney Channel HD
-https://fl5.moveonjoy.com/DISNEY/index.m3u8
+https://fl5.moveonjoy.com/DISNEY/index.m3u8|Referer=https://moveonjoy.com
 #EXTINF:-1 tvg-id="Disney.Junior.USA.-.East.us" tvg-name="Disney Junior HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png" group-title="Preschoolers",Disney Junior HD
-https://fl3.moveonjoy.com/DISNEY_JR/index.m3u8
+https://fl3.moveonjoy.com/DISNEY_JR/index.m3u8|Referer=https://moveonjoy.com
 #EXTINF:-1 tvg-id="Disney.XD.USA.-.Eastern.Feed.us" tvg-name="Disney XD HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18279_dark_360w_270h.png" group-title="Kids",Disney XD HD
-https://fl3.moveonjoy.com/DISNEY_XD/index.m3u8
+https://fl3.moveonjoy.com/DISNEY_XD/index.m3u8|Referer=https://moveonjoy.com
 #EXTINF:-1 tvg-id="Freeform.-.East.Feed.us" tvg-name="Freeform HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="Teens",Freeform HD
-https://fl3.moveonjoy.com/FREE_FORM/index.m3u8
+https://fl3.moveonjoy.com/FREE_FORM/index.m3u8|Referer=https://moveonjoy.com
 #EXTINF:-1 tvg-id="Nickelodeon.USA.-.East.Feed.us" tvg-name="Nickelodeon HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="Teens",Nickelodeon HD
-http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
+http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8|Referer=https://moveonjoy.com
 #EXTINF:-1 tvg-id="Nickelodeon.USA.-.East.Feed.us" tvg-name="Nickelodeon HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="Kids",Nickelodeon HD
-http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
+http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8|Referer=https://moveonjoy.com
 #EXTINF:-1 tvg-id="TeenNick.-.Eastern.us" tvg-name="TeenNick HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/TeenNick_2019_logo.svg/512px-TeenNick_2019_logo.svg.png" group-title="Teens",TeenNick HD
-https://fl3.moveonjoy.com/Teen_Nick/index.m3u8
+https://fl3.moveonjoy.com/Teen_Nick/index.m3u8|Referer=https://moveonjoy.com
 #EXTINF:-1 tvg-id="Nick.Jr..-.East.us" tvg-name="Nick Jr. HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png" group-title="Preschoolers",Nick Jr. HD
-https://fl3.moveonjoy.com/NICK_JR/index.m3u8
+https://fl3.moveonjoy.com/NICK_JR/index.m3u8|Referer=https://moveonjoy.com
 #EXTINF:-1 tvg-id="Nicktoons.-.East.us" tvg-name="NickToons HD" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true" group-title="Kids",NickToons HD
 http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/654ca7f92c1d3300086b608c/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=2c7b6610-35fc-11ef-a031-2b5d494037a2&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=359ee837-a829-4fe0-9d99-8dc36018ced2
