@@ -16,6 +16,6 @@ http://127.0.0.1:8000/nick
 #EXTINF:-1 tvg-id="TeenNick.-.Eastern.us" tvg-name="TeenNick HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/TeenNick_2019_logo.svg/512px-TeenNick_2019_logo.svg.png" group-title="Teens",TeenNick HD
 http://127.0.0.1:8000/teennick
 #EXTINF:-1 tvg-id="Nick.Jr..-.East.us" tvg-name="Nick Jr. HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png" group-title="Preschoolers",Nick Jr. HD
-https://fl3.moveonjoy.com/NICK_JR/index.m3u8
+http://127.0.0.1:8000/nickjr
 #EXTINF:-1 tvg-id="Nicktoons.-.East.us" tvg-name="NickToons HD" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true" group-title="Kids",NickToons HD
 http://127.0.0.1:8000/nicktoons
