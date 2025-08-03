@@ -39,9 +39,9 @@ https://fl3.moveonjoy.com/NICK_JR/index.m3u8
 https://fl3.moveonjoy.com/NICKTOONS/index.m3u8
 #EXTINF:-1 tvg-id="TeenNick.-.Eastern.us" tvg-name="Nickelodeon Teen" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/TeenNick_2019_logo.svg/512px-TeenNick_2019_logo.svg.png" group-title="Teens",Nickelodeon Teen
 https://fl3.moveonjoy.com/Teen_Nick/index.m3u8
-#EXTINF:-1 group-title="Radio" tvg-name="Smooth Jazz Radio", Smooth Jazz Radio
+#EXTINF:-1 radio="true" group-title="Radio" tvg-name="Smooth Jazz Radio", Smooth Jazz Radio
 https://radio.garden/api/ara/content/listen/1vlrqH6v/channel.mp3?1754234356201
-#EXTINF:-1 group-title="Radio" tvg-name="Lo-Fi Radio", Lo-Fi Radio
+#EXTINF:-1 radio="true" group-title="Radio" tvg-name="Lo-Fi Radio", Lo-Fi Radio
 https://radio.garden/api/ara/content/listen/z3aOLSzU/channel.mp3?1754234569520
-#EXTINF:-1 group-title="Radio" tvg-name="Piano Music Radio", Piano Music Radio
+#EXTINF:-1 radio="true" group-title="Radio" tvg-name="Piano Music Radio", Piano Music Radio
 https://radio.garden/api/ara/content/listen/wNnoQcV9/channel.mp3?1754234740163
