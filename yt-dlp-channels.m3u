@@ -1,6 +1,6 @@
 #EXTM3U url-tvg="https://gtvservices5.github.io/M3U8-IPTV-EPG/epg.xml"
 #EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Teens",Disney Channel HD
-https://fl5.moveonjoy.com/DISNEY/tracks-v1a1/mono.ts.m3u8
+http://127.0.0.1:8090/stream.ts
 #EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Kids",Disney Channel HD
 https://fl5.moveonjoy.com/DISNEY/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-id="Disney.Junior.USA.-.East.us" tvg-name="Disney Junior HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png" group-title="Preschoolers",Disney Junior HD
