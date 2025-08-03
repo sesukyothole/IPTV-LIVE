@@ -28,7 +28,10 @@ TARGET_CHANNELS = {
     "Disney.-.Eastern.Feed.us", "Disney.Junior.USA.-.East.us", "Disney.XD.USA.-.Eastern.Feed.us",
     "Freeform.-.East.Feed.us", "Nickelodeon.USA.-.East.us", "TeenNick.-.Eastern.us",
     "Nick.Jr..-.East.us", "Nicktoons.-.East.us", "Boomerang.us",
-    "HBO.-.Eastern.Feed.us", "AdultSwim.com.Cartoon.Network.us", "Boomerang.us", "Nick.Music.(NICM).us"
+    "HBO.-.Eastern.Feed.us", "AdultSwim.com.Cartoon.Network.us",
+    "Boomerang.us", "Nick.Music.(NICM).us", "HBO.Zone.HD.-.East.us",
+    "HBO.2.-.Eastern.Feed.us", "HBO.-.Eastern.Feed.us", "HBO.Comedy.HD.-.East.us",
+    "HBO.Family.-.Eastern.Feed.us"
 }
 
 MANUAL_ID_OVERRIDES = {
