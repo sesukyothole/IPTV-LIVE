@@ -1,4 +1,10 @@
 #EXTM3U url-tvg="https://gtvservices5.github.io/M3U8-IPTV-EPG/epg.xml"
+#EXTINF:-1 tvg-id="Boomerang.us" tvg-name="Boomerang" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png" group-title="Kids",Boomerang
+https://fl4.moveonjoy.com/BOOMERANG/index.m3u8
+#EXTINF:-1 tvg-id="AdultSwim.com.Cartoon.Network.us" tvg-name="Cartoon Network HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Teens",Cartoon Network HD
+https://fl4.moveonjoy.com/CARTOON_NETWORK/index.m3u8
+#EXTINF:-1 tvg-id="AdultSwim.com.Cartoon.Network.us" tvg-name="Cartoon Network HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Kids",Cartoon Network HD
+https://fl4.moveonjoy.com/CARTOON_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Teens",Disney Channel HD
 https://fl5.moveonjoy.com/DISNEY/index.m3u8
 #EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel HD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Kids",Disney Channel HD
