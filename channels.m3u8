@@ -25,7 +25,7 @@ https://fl3.moveonjoy.com/HBO_2/index.m3u8
 https://fl3.moveonjoy.com/HBO_COMEDY/index.m3u8
 #EXTINF:-1 tvg-id="HBO.Family.-.Eastern.Feed.us" tvg-name="HBO Family HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-family-us.png" group-title="Kids", HBO Family HD
 https://fl3.moveonjoy.com/HBO_FAMILY/index.m3u8
-#EXTINF:-1 tvg-id="HBO.Zone.HD.-.East.us" tvg-name="HBO Zone HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-zone-us.png" group-title="Adults", HBO HD
+#EXTINF:-1 tvg-id="HBO.Zone.HD.-.East.us" tvg-name="HBO Zone HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-zone-us.png" group-title="Adults", HBO ZOne HD
 https://fl3.moveonjoy.com/HBO_ZONE/index.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.USA.-.East.Feed.us" tvg-name="Nickelodeon HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="Teens",Nickelodeon HD
 http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
