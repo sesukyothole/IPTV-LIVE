@@ -32,7 +32,7 @@ TARGET_CHANNELS = {
     "Boomerang.us", "Nick.Music.(NICM).us", "HBO.Zone.HD.-.East.us",
     "HBO.2.-.Eastern.Feed.us", "HBO.-.Eastern.Feed.us", "HBO.Comedy.HD.-.East.us",
     "HBO.Family.-.Eastern.Feed.us", "Paramount.Network.USA.-.Eastern.Feed.us", "National.Geographic.US.-.Eastern.us",
-    "National.Geographic.Wild.us"
+    "National.Geographic.Wild.us", "AMC.-.Eastern.Feed.us"
 }
 
 MANUAL_ID_OVERRIDES = {
