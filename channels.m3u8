@@ -1,17 +1,19 @@
 #EXTM3U url-tvg="https://gtvservices5.github.io/M3U8-IPTV-EPG/epg.xml"
+#EXTINF:-1 tvg-id="AMC.-.Eastern.Feed.us" tvg-name="AMC Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png" group-title="Adults", AMC Network
+https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="Boomerang.us" tvg-name="Boomerang" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png" group-title="Kids",Boomerang
 https://fl4.moveonjoy.com/BOOMERANG/index.m3u8
 #EXTINF:-1 tvg-id="AdultSwim.com.Cartoon.Network.us" tvg-name="Cartoon Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Teens",Cartoon Network
 https://fl4.moveonjoy.com/CARTOON_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="AdultSwim.com.Cartoon.Network.us" tvg-name="Cartoon Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Kids",Cartoon Network
 https://fl4.moveonjoy.com/CARTOON_NETWORK/index.m3u8
-#EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Teens",Disney Channel
+#EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-channel-us.png" group-title="Teens",Disney Channel
 https://fl5.moveonjoy.com/DISNEY/index.m3u8
-#EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png" group-title="Kids",Disney Channel
+#EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-channel-us.png" group-title="Kids",Disney Channel
 https://fl5.moveonjoy.com/DISNEY/index.m3u8
-#EXTINF:-1 tvg-id="Disney.Junior.USA.-.East.us" tvg-name="Disney Junior" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png" group-title="Preschoolers",Disney Junior
+#EXTINF:-1 tvg-id="Disney.Junior.USA.-.East.us" tvg-name="Disney Junior" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-jr-us.png" group-title="Preschoolers",Disney Junior
 https://fl3.moveonjoy.com/DISNEY_JR/index.m3u8
-#EXTINF:-1 tvg-id="Disney.XD.USA.-.Eastern.Feed.us" tvg-name="Disney XD" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18279_dark_360w_270h.png" group-title="Kids",Disney XD
+#EXTINF:-1 tvg-id="Disney.XD.USA.-.Eastern.Feed.us" tvg-name="Disney XD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png" group-title="Kids",Disney XD
 https://fl3.moveonjoy.com/DISNEY_XD/index.m3u8
 #EXTINF:-1 tvg-id="Freeform.-.East.Feed.us" tvg-name="Freeform" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="Teens",Freeform
 https://fl3.moveonjoy.com/FREE_FORM/index.m3u8
@@ -37,11 +39,11 @@ http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
 http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
 #EXTINF:-1 tvg-id="Nick.Music.(NICM).us" tvg-name="Nickelodeon Music" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-music-us.png" group-title="Music", Nickelodeon Music
 https://fl6.moveonjoy.com/NICK_MUSIC/index.m3u8
-#EXTINF:-1 tvg-id="Nick.Jr..-.East.us" tvg-name="Nick Jr." tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png" group-title="Preschoolers",Nick Jr.
+#EXTINF:-1 tvg-id="Nick.Jr..-.East.us" tvg-name="Nick Jr." tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-jr-us.png" group-title="Preschoolers",Nick Jr.
 https://fl3.moveonjoy.com/NICK_JR/index.m3u8
-#EXTINF:-1 tvg-id="Nicktoons.-.East.us" tvg-name="Nickelodeon Cartoons" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true" group-title="Kids",Nickelodeon Cartoons
+#EXTINF:-1 tvg-id="Nicktoons.-.East.us" tvg-name="Nickelodeon Cartoons" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-toons-us.png" group-title="Kids",Nickelodeon Cartoons
 https://fl3.moveonjoy.com/NICKTOONS/index.m3u8
-#EXTINF:-1 tvg-id="TeenNick.-.Eastern.us" tvg-name="Nickelodeon Teen" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/TeenNick_2019_logo.svg/512px-TeenNick_2019_logo.svg.png" group-title="Teens",Nickelodeon Teen
+#EXTINF:-1 tvg-id="TeenNick.-.Eastern.us" tvg-name="Nickelodeon Teen" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/teen-nick-us.png" group-title="Teens",Nickelodeon Teen
 https://fl3.moveonjoy.com/Teen_Nick/index.m3u8
 #EXTINF:-1 tvg-id="Paramount.Network.USA.-.Eastern.Feed.us" tvg-name="Paramount Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/paramount-network-icon-hd-us.png", Paramount Network
 https://fl3.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8
