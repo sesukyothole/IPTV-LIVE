@@ -47,6 +47,8 @@ https://fl3.moveonjoy.com/Teen_Nick/index.m3u8
 https://fl3.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8
 #EXTINF:-1 radio="true", Smooth Jazz Radio
 https://radio.garden/api/ara/content/listen/1vlrqH6v/channel.mp3?1754234356201
+#EXTINF:-1 radio="true", Jazz Music
+https://radio.garden/api/ara/content/listen/GYIpCtPq/channel.mp3?1754308036042
 #EXTINF:-1 radio="true", Lo-Fi Radio
 https://radio.garden/api/ara/content/listen/z3aOLSzU/channel.mp3?1754234569520
 #EXTINF:-1 radio="true", Piano Music Radio
