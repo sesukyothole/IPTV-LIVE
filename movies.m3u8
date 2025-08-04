@@ -8,7 +8,7 @@ http://192.168.1.74:8096/Videos/b3f1057117e7940beedc2377715e7996/stream?static=t
 #EXTINF:6300 tvg-id="cinderella2015" tvg-name="Cinderella" tvg-logo="https://image.tmdb.org/t/p/original/vWdndPq6qEoaXIwedoSDuSPFrH0.jpg" movie="true" group-title="Movies", Cinderella (2015)
 #KODIPROP:stream_headers="referer=http://192.168.1.74:8096"
 http://192.168.1.74:8096/Videos/06e1b02f744bef13b8cc47bb2b59e555/stream?static=true&api_key=0932b45e633f463fabc70ae22deca2ce
-#EXTINF:6720 tvg-id="descendants2015" tvg-name="Descendants" tvg-logo="https://image.tmdb.org/t/p/original/9yADG2wdItXw0f7oFvIa4HBU2lZ.jpg" movie="true" group-title="Descendants Franchise, Descendants (2015)
+#EXTINF:6720 tvg-id="descendants2015" tvg-name="Descendants" tvg-logo="https://image.tmdb.org/t/p/original/9yADG2wdItXw0f7oFvIa4HBU2lZ.jpg" movie="true" group-title="Descendants Franchise", Descendants (2015)
 #KODIPROP:stream_headers="referer=http://192.168.1.74:8096"
 http://192.168.1.74:8096/Videos/7a9bc1400cba8b2695c45fbccb4c14d6/stream?static=true&api_key=0932b45e633f463fabc70ae22deca2ce
 #EXTINF:6720 tvg-id="descendantstwo2017" tvg-name="Descendants 2" tvg-logo="https://image.tmdb.org/t/p/original/aBaVVnpD5EbPfsSKNC8MF0XlsdB.jpg" movie="true" group-title="Descendants Franchise", Descendants 2 (2017)
