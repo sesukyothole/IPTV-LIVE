@@ -7,13 +7,13 @@ https://fl4.moveonjoy.com/BOOMERANG/index.m3u8
 https://fl4.moveonjoy.com/CARTOON_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="AdultSwim.com.Cartoon.Network.us" tvg-name="Cartoon Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Kids",Cartoon Network
 https://fl4.moveonjoy.com/CARTOON_NETWORK/index.m3u8
-#EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-channel-us.png" group-title="Teens",Disney Channel
+#EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Disney_Channel_Germany_Logo_2014.png/640px-Disney_Channel_Germany_Logo_2014.png" group-title="Teens",Disney Channel
 https://fl5.moveonjoy.com/DISNEY/index.m3u8
-#EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-channel-us.png" group-title="Kids",Disney Channel
+#EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Disney_Channel_Germany_Logo_2014.png/640px-Disney_Channel_Germany_Logo_2014.png" group-title="Kids",Disney Channel
 https://fl5.moveonjoy.com/DISNEY/index.m3u8
-#EXTINF:-1 tvg-id="Disney.Junior.USA.-.East.us" tvg-name="Disney Junior" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-jr-us.png" group-title="Preschoolers",Disney Junior
+#EXTINF:-1 tvg-id="Disney.Junior.USA.-.East.us" tvg-name="Disney Junior" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7d/2011_Disney_Junior_logo.png" group-title="Preschoolers",Disney Junior
 https://fl3.moveonjoy.com/DISNEY_JR/index.m3u8
-#EXTINF:-1 tvg-id="Disney.XD.USA.-.Eastern.Feed.us" tvg-name="Disney XD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png" group-title="Kids",Disney XD
+#EXTINF:-1 tvg-id="Disney.XD.USA.-.Eastern.Feed.us" tvg-name="Disney XD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/2009_Disney_XD_logo.svg/640px-2009_Disney_XD_logo.svg.png" group-title="Kids",Disney XD
 https://fl3.moveonjoy.com/DISNEY_XD/index.m3u8
 #EXTINF:-1 tvg-id="Freeform.-.East.Feed.us" tvg-name="Freeform" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="Teens",Freeform
 https://fl3.moveonjoy.com/FREE_FORM/index.m3u8
@@ -47,13 +47,13 @@ https://fl3.moveonjoy.com/NICKTOONS/index.m3u8
 https://fl3.moveonjoy.com/Teen_Nick/index.m3u8
 #EXTINF:-1 tvg-id="Paramount.Network.USA.-.Eastern.Feed.us" tvg-name="Paramount Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/paramount-network-icon-hd-us.png", Paramount Network
 https://fl3.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8
-#EXTINF:-1 radio="true", Smooth Jazz Radio
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/SMOOTH_JAZZ_JAMS_ROKU_TV.png/640px-SMOOTH_JAZZ_JAMS_ROKU_TV.png" radio="true", Smooth Jazz Radio
 https://radio.garden/api/ara/content/listen/1vlrqH6v/channel.mp3?1754234356201
-#EXTINF:-1 radio="true", Jazz Music
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Barnstar_Jazz.svg/640px-Barnstar_Jazz.svg.png" radio="true", Jazz Music
 https://radio.garden/api/ara/content/listen/GYIpCtPq/channel.mp3?1754308036042
-#EXTINF:-1 radio="true", Lo-Fi Radio
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/LO-FI_music_Icon.png/640px-LO-FI_music_Icon.png" radio="true", Lo-Fi Radio
 https://radio.garden/api/ara/content/listen/z3aOLSzU/channel.mp3?1754234569520
-#EXTINF:-1 radio="true", Piano Music Radio
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Steinway_%26_Sons_upright_piano%2C_model_K-52_%28mahogany_finish%29%2C_manufactured_at_Steinway%27s_factory_in_New_York_City.jpg/640px-Steinway_%26_Sons_upright_piano%2C_model_K-52_%28mahogany_finish%29%2C_manufactured_at_Steinway%27s_factory_in_New_York_City.jpg" radio="true", Piano Music Radio
 https://radio.garden/api/ara/content/listen/wNnoQcV9/channel.mp3?1754234740163
-#EXTINF:-1 radio="true", Lo-Fi Night Vibes
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/LO-FI_music_Icon.png/640px-LO-FI_music_Icon.png" radio="true", Lo-Fi Night Vibes
 https://radio.garden/api/ara/content/listen/gr0G5FVj/channel.mp3?1754236222917
