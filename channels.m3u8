@@ -30,7 +30,7 @@ https://fl3.moveonjoy.com/FREE_FORM/index.m3u8
 #EXTINF:-1 tvg-id="HBO.-.Eastern.Feed.us" tvg-name="HBO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" group-title="Adults", HBO
 http://23.237.104.106:8080/USA_HBO/index.m3u8
 #EXTINF:-1 tvg-id="HBO.-.Eastern.Feed.us" tvg-name="HBO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" group-title="Teens", HBO
-https://fl3.moveonjoy.com/HBO/index.m3u8
+http://23.237.104.106:8080/USA_HBO/index.m3u8
 #EXTINF:-1 tvg-id="HBO.2.-.Eastern.Feed.us" tvg-name="HBO 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-2-us.png" group-title="Adults", HBO 2
 https://fl3.moveonjoy.com/HBO_2/index.m3u8
 #EXTINF:-1 tvg-id="HBO.Comedy.HD.-.East.us" tvg-name="HBO Comedy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-comedy-us.png" group-title="Adults", HBO Comedy
