@@ -94,6 +94,14 @@ https://radio.garden/api/ara/content/listen/z3aOLSzU/channel.mp3?1754234569520
 https://radio.garden/api/ara/content/listen/wNnoQcV9/channel.mp3?1754234740163
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/LO-FI_music_Icon.png/640px-LO-FI_music_Icon.png" radio="true" group-title="Radio", Lo-Fi Night Vibes
 https://radio.garden/api/ara/content/listen/gr0G5FVj/channel.mp3?1754236222917
+#EXTINF:-1 tvg-logo="https://cdn.imgbin.com/12/16/21/imgbin-computer-icons-nature-icon-design-landscape-forest-vrmAM9ZWmwaSvzvVpUdUcsFEA.jpg" radio="true" group-title="Radio", Nature Radio
+https://radio.garden/api/ara/content/listen/ooA06IRX/channel.mp3?1754407506693
+#EXTINF:-1 tvg-logo="https://cdn-icons-png.freepik.com/512/2642/2642358.png" radio="true" group-title="Radio", Sleep Radio
+https://radio.garden/api/ara/content/listen/qcfvBFRm/channel.mp3?1754407638179
+#EXTINF:-1 tvg-logo="https://cdn.imgbin.com/12/16/21/imgbin-computer-icons-nature-icon-design-landscape-forest-vrmAM9ZWmwaSvzvVpUdUcsFEA.jpg" radio="true" group-title="Radio", Relaxing Nature Sounds
+https://radio.garden/api/ara/content/listen/5hle4awo/channel.mp3?1754407820153
+#EXTINF:-1 tvg-logo="https://cdn-icons-png.freepik.com/512/2642/2642358.png", radio="true" group-title="Radio", New Age Music for Sleeping
+https://radio.garden/api/ara/content/listen/mygXCZor/channel.mp3?1754407947476
 #EXTINF:7680 tvg-id="aladdin2019" tvg-name="Aladdin" tvg-logo="https://image.tmdb.org/t/p/original/p3laucrKVQo6tLosJMMNPeMBCXi.jpg" movie="true" group-title="Movies", Aladdin (2019)
 #KODIPROP:stream_headers="referer=http://192.168.1.74:8096"
 http://192.168.1.74:8096/Videos/1f4f40acecb7ce463cf640b8060b88e6/stream?static=true&api_key=0932b45e633f463fabc70ae22deca2ce
