@@ -47,15 +47,14 @@ https://fl3.moveonjoy.com/NICKTOONS/index.m3u8
 https://fl3.moveonjoy.com/Teen_Nick/index.m3u8
 #EXTINF:-1 tvg-id="Paramount.Network.USA.-.Eastern.Feed.us" tvg-name="Paramount Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/paramount-network-icon-hd-us.png", Paramount Network
 https://fl3.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/SMOOTH_JAZZ_JAMS_ROKU_TV.png/640px-SMOOTH_JAZZ_JAMS_ROKU_TV.png" group-title="Radio" radio="true", Smooth Jazz Radio
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/SMOOTH_JAZZ_JAMS_ROKU_TV.png/640px-SMOOTH_JAZZ_JAMS_ROKU_TV.png" radio="true" group-title="Radio", Smooth Jazz Radio
 https://radio.garden/api/ara/content/listen/1vlrqH6v/channel.mp3?1754234356201
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Barnstar_Jazz.svg/640px-Barnstar_Jazz.svg.png" group-title="Radio" radio="true", Jazz Music
-https://radio.garden/api/ara/content/listen/GYIpCtPq/channel.mp3?1754308036042
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/LO-FI_music_Icon.png/640px-LO-FI_music_Icon.png" group-title="Radio" radio="true", Lo-Fi Radio
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Barnstar_Jazz.svg/640px-Barnstar_Jazz.svg.png" radio="true" group-title="Radio", Jazz Music https://radio.garden/api/ara/content/listen/GYIpCtPq/channel.mp3?1754308036042
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/LO-FI_music_Icon.png/640px-LO-FI_music_Icon.png" radio="true" group-title="Radio", Lo-Fi Radio
 https://radio.garden/api/ara/content/listen/z3aOLSzU/channel.mp3?1754234569520
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Steinway_%26_Sons_upright_piano%2C_model_K-52_%28mahogany_finish%29%2C_manufactured_at_Steinway%27s_factory_in_New_York_City.jpg/640px-Steinway_%26_Sons_upright_piano%2C_model_K-52_%28mahogany_finish%29%2C_manufactured_at_Steinway%27s_factory_in_New_York_City.jpg" group-title="Radio" radio="true", Piano Music Radio
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Steinway_%26_Sons_upright_piano%2C_model_K-52_%28mahogany_finish%29%2C_manufactured_at_Steinway%27s_factory_in_New_York_City.jpg/640px-Steinway_%26_Sons_upright_piano%2C_model_K-52_%28mahogany_finish%29%2C_manufactured_at_Steinway%27s_factory_in_New_York_City.jpg" radio="true" group-title="Radio", Piano Music Radio
 https://radio.garden/api/ara/content/listen/wNnoQcV9/channel.mp3?1754234740163
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/LO-FI_music_Icon.png/640px-LO-FI_music_Icon.png" group-title="Radio" radio="true", Lo-Fi Night Vibes
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/LO-FI_music_Icon.png/640px-LO-FI_music_Icon.png" radio="true" group-title="Radio", Lo-Fi Night Vibes
 https://radio.garden/api/ara/content/listen/gr0G5FVj/channel.mp3?1754236222917
 #EXTINF:7680 tvg-id="aladdin2019" tvg-name="Aladdin" tvg-logo="https://image.tmdb.org/t/p/original/p3laucrKVQo6tLosJMMNPeMBCXi.jpg" movie="true" group-title="Movies", Aladdin (2019)
 #KODIPROP:stream_headers="referer=http://192.168.1.74:8096"
