@@ -21,7 +21,7 @@ https://fl3.moveonjoy.com/ESPN_U/index.m3u8
 https://fl3.moveonjoy.com/ESPN_NEWS/index.m3u8
 #EXTINF:-1 tvg-id="FUSE.TV.-.Eastern.feed.us" tvg-name="Fuse Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/59/Fuse_logo15.png", Fuse Network
 https://fl3.moveonjoy.com/FUSE/index.m3u8
-#EXTINF:-1 tvg-id="FX.Networks.East.Coast.us" tvg-name="FX Networks" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/33/FX_Networks_logo.svg", FX Networks
+#EXTINF:-1 tvg-id="FX.Networks.East.Coast.us" tvg-name="FX Networks" tvg-logo="https://pbs.twimg.com/profile_images/1715419203610857472/W2ZpsXbt_400x400.jpg", FX Networks
 https://fl5.moveonjoy.com/FX/index.m3u8
 #EXTINF:-1 tvg-id="FX.Movie.Channel.us" tvg-name="FX Movie Networks" tvg-logo="https://static.wikia.nocookie.net/logofanon2/images/1/13/FX_Movies.png", FX Movie Networks
 https://fl3.moveonjoy.com/FX_MOVIE/index.m3u8
