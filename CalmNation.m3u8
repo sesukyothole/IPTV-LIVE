@@ -14,7 +14,17 @@ https://radio.garden/api/ara/content/listen/ooA06IRX/channel.mp3?1754407506693
 https://radio.garden/api/ara/content/listen/qcfvBFRm/channel.mp3?1754407638179
 #EXTINF:-1 tvg-logo="https://cdn.imgbin.com/12/16/21/imgbin-computer-icons-nature-icon-design-landscape-forest-vrmAM9ZWmwaSvzvVpUdUcsFEA.jpg" radio="true" group-title="Radio", Relaxing Nature Sounds
 https://radio.garden/api/ara/content/listen/5hle4awo/channel.mp3?1754407820153
-#EXTINF:-1 tvg-logo="https://cdn-icons-png.freepik.com/512/2642/2642358.png", radio="true" group-title="Radio", New Age Music for Sleeping
+#EXTINF:-1 tvg-logo="https://cdn-icons-png.freepik.com/512/2642/2642358.png" radio="true" group-title="Radio", New Age Music for Sleeping
 https://radio.garden/api/ara/content/listen/mygXCZor/channel.mp3?1754407947476
 #EXTINF:-1 tvg-logo="https://i.pinimg.com/736x/4c/16/38/4c1638d0e30c392d0d38897f726fea47.jpg" radio="true" group-title="Radio", Lounge Music
 https://streaming.brol.tech/rtfmlounge
+#EXTINF:-1 tvg-logo="https://somafm.com/logos/120/groovesalad120.png" radio="true" group-title="Radio", SomaFM Groove Salad #1
+https://ice1.somafm.com/groovesalad-256-mp3
+#EXTINF:-1 tvg-logo="https://somafm.com/logos/120/groovesalad120.png" radio="true" group-title="Radio", SomaFM Groove Salad #2
+https://ice6.somafm.com/groovesalad-256-mp3
+#EXTINF:-1 tvg-logo="https://somafm.com/logos/120/groovesalad120.png" radio="true" group-title="Radio", SomaFM Groove Salad #3
+https://ice2.somafm.com/groovesalad-256-mp3
+#EXTINF:-1 tvg-logo="https://somafm.com/logos/120/groovesalad120.png" radio="true" group-title="Radio", SomaFM Groove Salad #4
+https://ice5.somafm.com/groovesalad-256-mp3
+#EXTINF:-1 tvg-logo="https://somafm.com/logos/120/groovesalad120.png radio="true" group-title="Radio, SomaFM Groove Salad #5
+https://ice3.somafm.com/groovesalad-256-mp3
