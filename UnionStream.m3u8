@@ -1,7 +1,7 @@
 #EXTM3U url-tvg="https://gtvservices5.github.io/M3U8-IPTV-EPG/epg.xml"
 #EXTINF:-1 tvg-id="AMC.-.Eastern.Feed.us" tvg-name="AMC Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png" group-title="Adults", AMC Network
 https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8
-#EXTINF=-1 tvg-id="Bloomberg.TV.USA.us" tvg-name="Bloomberg Television" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png", Bloomberg Television
+#EXTINF:-1 tvg-id="Bloomberg.TV.USA.us" tvg-name="Bloomberg Television" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png", Bloomberg Television
 https://fl3.moveonjoy.com/BLOOMBERG/index.m3u8
 #EXTINF:-1 tvg-id="Boomerang.us" tvg-name="Boomerang" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png" group-title="Kids",Boomerang
 https://fl4.moveonjoy.com/BOOMERANG/index.m3u8
