@@ -16,3 +16,5 @@ https://radio.garden/api/ara/content/listen/qcfvBFRm/channel.mp3?1754407638179
 https://radio.garden/api/ara/content/listen/5hle4awo/channel.mp3?1754407820153
 #EXTINF:-1 tvg-logo="https://cdn-icons-png.freepik.com/512/2642/2642358.png", radio="true" group-title="Radio", New Age Music for Sleeping
 https://radio.garden/api/ara/content/listen/mygXCZor/channel.mp3?1754407947476
+#EXTINF:-1 tvg-logo="https://i.pinimg.com/736x/4c/16/38/4c1638d0e30c392d0d38897f726fea47.jpg" radio="true" group-title="Radio", Lounge Music
+https://streaming.brol.tech/rtfmlounge
