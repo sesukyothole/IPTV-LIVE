@@ -32,7 +32,8 @@ TARGET_CHANNELS = {
     "Boomerang.us", "Nick.Music.(NICM).us", "HBO.Zone.HD.-.East.us",
     "HBO.2.-.Eastern.Feed.us", "HBO.-.Eastern.Feed.us", "HBO.Comedy.HD.-.East.us",
     "HBO.Family.-.Eastern.Feed.us", "Paramount.Network.USA.-.Eastern.Feed.us", "National.Geographic.US.-.Eastern.us",
-    "National.Geographic.Wild.us", "AMC.-.Eastern.Feed.us"
+    "National.Geographic.Wild.us", "AMC.-.Eastern.Feed.us", "ESPN.U.us", "ESPN.News.us", "FUSE.TV.-.Eastern.feed.us",
+    "FX.Networks.East.Coast.us", "FX.Movie.Channel.us", "FXX.USA.-.Eastern.us", "FYI.USA.-.Eastern.us"
 }
 
 MANUAL_ID_OVERRIDES = {
