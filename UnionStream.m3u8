@@ -85,7 +85,3 @@ http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5d
 http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/61d4b38226b8a50007fe03a6/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2ce917-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=5b34f49b-bb11-47dd-b65b-7c5074a9925c
 #EXTINF:-1 tvg-name="Vevo True School Hip-Hop" tvg-logo="https://i.imgur.com/Lbc9cYw.png" group-title="Music", Vevo True School Hip-Hop
 http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/61d4c2817a823d00070ba53e/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2ce918-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=90c1dbc6-366d-4ba4-913a-7ff94babe33e
-#EXTINF:-1 tvg-logo="https://cdn.imgbin.com/12/16/21/imgbin-computer-icons-nature-icon-design-landscape-forest-vrmAM9ZWmwaSvzvVpUdUcsFEA.jpg" radio="true" group-title="Radio", Relaxing Nature Sounds
-https://radio.garden/api/ara/content/listen/5hle4awo/channel.mp3?1754407820153
-#EXTINF:-1 tvg-logo="https://cdn-icons-png.freepik.com/512/2642/2642358.png", radio="true" group-title="Radio", New Age Music for Sleeping
-https://radio.garden/api/ara/content/listen/mygXCZor/channel.mp3?1754407947476
