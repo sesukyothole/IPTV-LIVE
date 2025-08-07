@@ -33,6 +33,10 @@ https://fl3.moveonjoy.com/FXX/index.m3u8
 https://fl3.moveonjoy.com/FYI/index.m3u8
 #EXTINF:-1 tvg-id="Freeform.-.East.Feed.us" tvg-name="Freeform" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="Teens",Freeform
 https://fl3.moveonjoy.com/FREE_FORM/index.m3u8
+#EXTINF:-1 tvg-id="Hallmark.-.Eastern.Feed.us" tvg-name="Hallmark Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-channel-us.png",Hallmark Channel
+https://fl3.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8
+#EXTINF:-1 tvg-id="Hallmark.Drama.HDTV.(HALDRHD).us" tvg-name="Hallmark Family Channel (formerly Hallmark Drama Channel)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-family-us.png",Hallmark Family Channel (formerly Hallmark Drama Channel)
+https://fl3.moveonjoy.com/HALLMARK_DRAMA/index.m3u8
 #EXTINF:-1 tvg-id="HBO.-.Eastern.Feed.us" tvg-name="HBO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" group-title="Adults", HBO
 http://23.237.104.106:8080/USA_HBO/index.m3u8
 #EXTINF:-1 tvg-id="HBO.-.Eastern.Feed.us" tvg-name="HBO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" group-title="Teens", HBO
@@ -49,6 +53,14 @@ https://fl5.moveonjoy.com/HBO_ZONE/index.m3u8
 https://fl3.moveonjoy.com/National_Geographic/index.m3u8
 #EXTINF:-1 tvg-id="National.Geographic.Wild.us" tvg-name="National Geographic Wild Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nat-geo-wild-alt-us.png" group-title="Nature", National Geographic Wild Network
 https://fl3.moveonjoy.com/Nat_Geo_Wild/index.m3u8
+#EXTINF:-1 tvg-id="ION..-.Eastern.Feed.us" tvg-name="ION TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/ion-television-us.png",ION TV
+https://fl3.moveonjoy.com/ION_TV/index.m3u8
+#EXTINF:-1 tvg-id="ION.Plus.TV.us" tvg-name="ION Plus TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/ion-plus-us.png", ION Plus TV
+https://fl3.moveonjoy.com/ION_Plus/index.m3u8
+#EXTINF:-1 tvg-id="MGM+.HDTV.(East).(MGM+HD).us" tvg-name="MGM+" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/mgm-plus-us.png",MGM+
+https://fl3.moveonjoy.com/EPIX/index.m3u8
+#EXTINF:-1 tvg-id="MGM+.Marquee.HDTV.(East).(MGM+MRQ).us" tvg-name="MGM+ Marquee" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/mgm-plus-marquee-us.png",MGM+ Marquee
+https://fl3.moveonjoy.com/EPIX_DRIVE_IN/index.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.USA.-.East.Feed.us" tvg-name="Nickelodeon" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="Teens",Nickelodeon
 http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.USA.-.East.Feed.us" tvg-name="Nickelodeon" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="Kids",Nickelodeon
@@ -65,6 +77,12 @@ https://fl3.moveonjoy.com/Teen_Nick/index.m3u8
 http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5cb0cae7a461406ffe3f5213/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2a7819-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=8a4a0712-cb24-4d05-b429-1b98c1f73f74
 #EXTINF:-1 tvg-id="Paramount.Network.USA.-.Eastern.Feed.us" tvg-name="Paramount Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/paramount-network-icon-hd-us.png", Paramount Network
 https://fl3.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8
+#EXTINF:-1 tvg-id="Showtime.2.-.Eastern.us" tvg-name="Showtime 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-2-us.png",Showtime 2
+https://fl3.moveonjoy.com/SHOWTIME_2/index.m3u8
+#EXTINF:-1 tvg-id="Showtime.Next.HD.-.Eastern.us" tvg-name="Showtime Next" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-next-us.png",Showtime Next
+https://fl3.moveonjoy.com/SHOWTIME_NEXT/index.m3u8
+#EXTINF:-1 tvg-id="Showtime.Women.HD.-.Eastern.us" tvg-name="Showtime Women" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-women-us.png",Showtime Women
+https://fl3.moveonjoy.com/SHOWTIME_WOMEN/index.m3u8
 #EXTINF:-1 tvg-id="Starz.-.Eastern.us" tvg-name="STARZ" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-us.png",STARZ
 https://fl3.moveonjoy.com/STARZ/index.m3u8
 #EXTINF:-1 tvg-id="Starz.Encore.Classic.-.Eastern.us" tvg-name="STARZ Encore Classic" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-classic-us.png",STARZ Encore Classic
