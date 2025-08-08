@@ -45,7 +45,7 @@ http://23.237.104.106:8080/USA_HBO/index.m3u8
 https://fl3.moveonjoy.com/HBO_2/index.m3u8
 #EXTINF:-1 tvg-id="403650" tvg-name="HBO Comedy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-comedy-us.png" group-title="Adults", HBO Comedy
 https://fl3.moveonjoy.com/HBO_COMEDY/index.m3u8
-#EXTINF:-1 tvg-id="403783" tvg-name="HBO Family" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-family-us.png" group-title="Kids", HBO Family
+#EXTINF:-1 tvg-id="403933" tvg-name="HBO Family" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-family-us.png" group-title="Kids", HBO Family
 https://fl3.moveonjoy.com/HBO_FAMILY/index.m3u8
 #EXTINF:-1 tvg-id="403823" tvg-name="HBO Zone" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-zone-us.png" group-title="Adults", HBO Zone
 https://fl5.moveonjoy.com/HBO_ZONE/index.m3u8
