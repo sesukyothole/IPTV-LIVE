@@ -25,16 +25,15 @@ TMDB_BASE = "https://api.themoviedb.org/3"
 TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w780"  # Bigger size than w500
 
 TARGET_CHANNELS = {
-    "Disney.-.Eastern.Feed.us", "Disney.Junior.USA.-.East.us", "Disney.XD.USA.-.Eastern.Feed.us",
-    "Freeform.-.East.Feed.us", "Nickelodeon.USA.-.East.us", "TeenNick.-.Eastern.us",
-    "Nick.Jr..-.East.us", "Nicktoons.-.East.us", "Boomerang.us",
-    "HBO.-.Eastern.Feed.us", "AdultSwim.com.Cartoon.Network.us",
-    "Boomerang.us", "Nick.Music.(NICM).us", "HBO.Zone.HD.-.East.us",
-    "HBO.2.-.Eastern.Feed.us", "HBO.-.Eastern.Feed.us", "HBO.Comedy.HD.-.East.us",
-    "HBO.Family.-.Eastern.Feed.us", "Paramount.Network.USA.-.Eastern.Feed.us", "National.Geographic.US.-.Eastern.us",
-    "National.Geographic.Wild.us", "AMC.-.Eastern.Feed.us", "ESPN.U.us", "ESPN.News.us", "FUSE.TV.-.Eastern.feed.us",
-    "FX.Networks.East.Coast.us", "FX.Movie.Channel.us", "FXX.USA.-.Eastern.us", "FYI.USA.-.Eastern.us", "Starz.-.Eastern.us",
-    "Starz.Encore.Classic.-.Eastern.us", "Bloomberg.TV.USA.us", "MavTV.USA.us", "TV.One.us", "Hallmark.Drama.HDTV.(HALDRHD).us"
+    "403788", "403674", "403837",
+    "403794", "403620", "403772",
+    "403655", "403847", "403576", "403461",
+    "403576", "403823",
+    "403522", "403926", "403650",
+    "403783", "403824", "403578",
+    "403563", "403838", "403486", "403928", "403455",
+    "403815", "403717", "403518", "403581", "403646",
+    "403786", "403726", "403529", "440244"
 }
 
 MANUAL_ID_OVERRIDES = {
