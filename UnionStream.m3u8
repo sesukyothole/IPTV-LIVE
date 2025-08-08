@@ -3,7 +3,7 @@
 https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="403726" tvg-name="Bloomberg Television" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png", Bloomberg Television
 https://fl3.moveonjoy.com/BLOOMBERG/index.m3u8
-#EXTINF:-1 tvg-id="Boomerang.us" tvg-name="Boomerang" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png" group-title="Kids",Boomerang
+#EXTINF:-1 tvg-id="403576" tvg-name="Boomerang" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png" group-title="Kids",Boomerang
 https://fl4.moveonjoy.com/BOOMERANG/index.m3u8
 #EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Teens",Cartoon Network
 https://fl4.moveonjoy.com/CARTOON_NETWORK/index.m3u8
