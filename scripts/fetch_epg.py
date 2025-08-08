@@ -6,7 +6,7 @@ import io
 from datetime import datetime
 
 # === CONFIG ===
-EPG_GZ_URL = "https://epg.pw/xmltv/epg_US.xml.gz"
+EPG_GZ_URL = "https://epg.pw/xmltv/epg_US.xml"
 OUTPUT_FILE = "epg.xml"
 BACKUP_FILE = f"guide_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xml"
 
