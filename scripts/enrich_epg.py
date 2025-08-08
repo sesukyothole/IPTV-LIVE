@@ -135,12 +135,14 @@ async def process_programme(session, programme):
             details = await get_details(session, ovr["type"], ovr["id"])
             rating = await get_rating(session, ovr["type"], ovr["id"])
             cast, director = await get_credits(session, ovr["type"], ovr["id"])
+            first_air_date_raw = details.get("first_air_date") or details.get("release_date")
             data = {
                 "title": details.get("name") or details.get("title"),
                 "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
                 "description": details.get("overview", "").strip(),
                 "genres": [TMDB_GENRES.get(g["id"]) for g in details.get("genres", []) if TMDB_GENRES.get(g["id"])],
-                "year": (details.get("first_air_date") or details.get("release_date") or "")[:4],
+                "year": first_air_date_raw[:4] if first_air_date_raw else "",
+                "first_air_date": datetime.strptime(first_air_date_raw, "%Y-%m-%d").strftime("%d/%m/%Y") if first_air_date_raw else "",
                 "rating": rating,
                 "cast": cast,
                 "director": director,
@@ -160,12 +162,14 @@ async def process_programme(session, programme):
             details = await get_details(session, content_type, content_id)
             rating = await get_rating(session, content_type, content_id)
             cast, director = await get_credits(session, content_type, content_id)
+            first_air_date_raw = details.get("first_air_date") or details.get("release_date")
             data = {
                 "title": details.get("name") or details.get("title"),
                 "poster": TMDB_IMAGE_BASE + (details.get("poster_path") or ""),
                 "description": details.get("overview", "").strip(),
                 "genres": [TMDB_GENRES.get(g["id"]) for g in details.get("genres", []) if TMDB_GENRES.get(g["id"])],
-                "year": (details.get("first_air_date") or details.get("release_date") or "")[:4],
+                "year": first_air_date_raw[:4] if first_air_date_raw else "",
+                "first_air_date": datetime.strptime(first_air_date_raw, "%Y-%m-%d").strftime("%d/%m/%Y") if first_air_date_raw else "",
                 "rating": rating,
                 "cast": cast,
                 "director": director,
@@ -201,13 +205,11 @@ async def process_programme(session, programme):
         for g in data["genres"]:
             cat_el = ET.SubElement(programme, "category")
             cat_el.text = g
-            color = get_color_for_genre(g)
-            cat_el.set("color", color)  # Optional attribute
+            cat_el.set("color", get_color_for_genre(g))
 
-
-        if data["year"]:
+        if data["first_air_date"]:
             date_el = programme.find("date") or ET.SubElement(programme, "date")
-            date_el.text = data["year"]
+            date_el.text = data["first_air_date"]
 
         if data["rating"]:
             rating_el = ET.SubElement(programme, "rating")
