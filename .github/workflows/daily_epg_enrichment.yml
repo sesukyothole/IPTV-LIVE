@@ -24,7 +24,7 @@ jobs:
 
       - name: 🌐 Download US EPG from epg.pw
         run: |
-          curl -L "https://epg.pw/xmltv/epg_US.xml"
+          curl -L "https://epg.pw/xmltv/epg.xml"
       
       - name: 🧠 Enrich EPG with TMDb Info
         run: python3 scripts/enrich_epg.py epg.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
