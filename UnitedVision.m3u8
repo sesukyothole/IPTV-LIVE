@@ -71,6 +71,8 @@ https://fl3.moveonjoy.com/NICK_JR/index.m3u8
 https://fl3.moveonjoy.com/NICKTOONS/index.m3u8
 #EXTINF:-1 tvg-id="403772" tvg-name="Nickelodeon Teen" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/teen-nick-us.png" group-title="Teens",Nickelodeon Teen
 https://fl3.moveonjoy.com/Teen_Nick/index.m3u8
+#EXTINF:-1 tvg-id="8359" tvg-name="Nickelodeon Music" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-music-us.png" group-title="Music",Nickelodeon Music 
+https://fl6.moveonjoy.com/Nick_Music/index.m3u8
 #EXTINF:-1 tvg-id="403529" tvg-name="TV One" tvg-logo="https://www.vhv.rs/dpng/d/560-5607033_tv-one-us-channel-logo-hd-png-download.png", TV One
 https://fl3.moveonjoy.com/TV_ONE/index.m3u8
 #EXTINF:-1 tvg-id="403824" tvg-name="Paramount Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/paramount-network-icon-hd-us.png", Paramount Network
