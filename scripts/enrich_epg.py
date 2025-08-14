@@ -61,7 +61,8 @@ MANUAL_ID_OVERRIDES = {
     "Moana": {"type": "movie", "id": 277834},
     "Modern Family": {"type": "tv", "id": 1421},
     "Henry Danger": {"type": "tv", "id": 61852},
-    "The Really Loud House": {"type": "tv", "id": 211779}
+    "The Really Loud House": {"type": "tv", "id": 211779},
+    "Lilo & Stitch": {"type": "tv", "id": 2355}
 }
 
 TMDB_GENRES = {
