@@ -7,8 +7,7 @@ You can paste these links to your IPTV App (Internationally)
 1. Live TV: https://gtvservices5.github.io/M3U8-IPTV-EPG/UnitedVision.m3u8
 2. Live Radio: https://gtvservices5.github.io/M3U8-IPTV-EPG/CalmNation.m3u8
 
-Geo-blocked Playlists (US IP Addresses Only)
-Live TV:
+Geo-Blocked Live TV Playlists (US IP Addresses Only)
 1. https://gtvservices5.github.io/M3U8-IPTV-EPG/playlist.m3u8
 2. https://gtvservices5.github.io/M3U8-IPTV-EPG/hdplaylist.m3u8
 3. https://gtvservices5.github.io/M3U8-IPTV-EPG/sdplaylist.m3u8
