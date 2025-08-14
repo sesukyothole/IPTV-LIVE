@@ -3,8 +3,8 @@ Playlists
 2. CalmNation.m3u8 is for Live Radio
 3. CinePatriot.m3u8 is for Jellyfin Movies (Geo-blocked to Indonesian local IP Address, unfortunately)
 You can paste these links to your IPTV App (Internationally)
-Live TV: https://gtvservices5.github.io/M3U8-IPTV-EPG/UnitedVision.m3u8
-Live Radio: https://gtvservices5.github.io/M3U8-IPTV-EPG/CalmNation.m3u8
+1. Live TV: https://gtvservices5.github.io/M3U8-IPTV-EPG/UnitedVision.m3u8
+2. Live Radio: https://gtvservices5.github.io/M3U8-IPTV-EPG/CalmNation.m3u8
 
 Geo-blocked Playlists (US IP Addresses Only)
 Live TV:
