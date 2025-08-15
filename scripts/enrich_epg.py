@@ -62,7 +62,8 @@ MANUAL_ID_OVERRIDES = {
     "Modern Family": {"type": "tv", "id": 1421},
     "Henry Danger": {"type": "tv", "id": 61852},
     "The Really Loud House": {"type": "tv", "id": 211779},
-    "Lilo & Stitch": {"type": "tv", "id": 2355}
+    "Lilo & Stitch": {"type": "tv", "id": 2355},
+    "Disney's Kim Possible Movie: So the Drama": {"type": "movie", "id": 20771}
 }
 
 TMDB_GENRES = {
