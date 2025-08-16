@@ -8,11 +8,13 @@ You can paste these links to your IPTV App (Internationally)
 2. Live Radio: https://bit.ly/WebOSRadio
 
 Geo-Blocked Live TV Playlists (US IP Addresses Only)
-1. https://tinyurl.com/USOnlyMain
-2. https://tinyurl.com/USOnlyHD
-3. https://tinyurl.com/USOnlySD
+1. https://rebrand.ly/USOnlyMain
+2. https://rebrand.ly/USOnlyHD
+3. https://rebrand.ly/USOnlySD
    
 Geo-Blocked Movie Link
-https://bit.ly/CinePatriot
+https://bit.ly/CinePatriot:
 
-Live TV and Live Radio Combined: https://tinyurl.com/LiveTV-Radio
+Live TV and Live Radio Combined: https://rebrand.ly/LiveTV-Radio
+
+Live TV EPG Link: https://rebrand.ly/LiveTV-Radio
