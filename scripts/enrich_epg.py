@@ -66,7 +66,11 @@ MANUAL_ID_OVERRIDES = {
     "Henry Danger": {"type": "tv", "id": 61852},
     "The Really Loud House": {"type": "tv", "id": 211779},
     "Lilo & Stitch": {"type": "tv", "id": 2355},
-    "Disney's Kim Possible Movie: So the Drama": {"type": "movie", "id": 20771}
+    "Disney's Kim Possible Movie: So the Drama": {"type": "movie", "id": 20771},
+    "My Cousin Rachel": {"type": "movie", "id": 413998},
+    "Tuesday": {"type": "movie", "id": 831395},
+    "The Huntsman: Winter's War": {"type: "movie", "id": 290595},
+    "Blue Beetle": {"type": "movie", "id": 565770}
 }
 
 TMDB_GENRES = {
