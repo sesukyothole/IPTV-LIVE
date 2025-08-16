@@ -69,7 +69,7 @@ MANUAL_ID_OVERRIDES = {
     "Disney's Kim Possible Movie: So the Drama": {"type": "movie", "id": 20771},
     "My Cousin Rachel": {"type": "movie", "id": 413998},
     "Tuesday": {"type": "movie", "id": 831395},
-    "The Huntsman: Winter's War": {"type: "movie", "id": 290595},
+    "The Huntsman: Winter's War": {"type": "movie", "id": 290595},
     "Blue Beetle": {"type": "movie", "id": 565770}
 }
 
