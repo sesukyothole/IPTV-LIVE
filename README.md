@@ -16,4 +16,4 @@ Geo-Blocked Movie Link: https://bit.ly/CinePatriot
 
 Live TV and Live Radio Combined: https://rebrand.ly/LiveTV-Radio
 
-Live TV EPG Link: https://rebrand.ly/LiveTV-Radio
+Live TV EPG Link: https://rebrand.ly/LiveTV-EPG
