@@ -212,9 +212,11 @@ async def process_programme(session, programme):
             date_el = programme.find("date") or ET.SubElement(programme, "date")
             date_el.text = data["first_air_date"]
 
-        if data["rating"]:
-            rating_el = ET.SubElement(programme, "rating")
+        # Add MPAA rating to programme (TVirl / Google Live Channels compatible)
+        if data["rating"] and data["rating"] not in ("", "Not Rated"):
+            rating_el = ET.SubElement(programme, "rating", system="MPAA")
             ET.SubElement(rating_el, "value").text = data["rating"]
+
 
         if data["cast"] or data["director"]:
             credits = programme.find("credits") or ET.SubElement(programme, "credits")
