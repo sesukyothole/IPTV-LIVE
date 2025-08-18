@@ -11,8 +11,6 @@ Geo-Blocked Live TV Playlists (US IP Addresses Only)
 1. https://rebrand.ly/USOnlyMain
 2. https://rebrand.ly/USOnlyHD
 3. https://rebrand.ly/USOnlySD
-   
-Geo-Blocked Movie Link: https://bit.ly/CinePatriot
 
 Live TV and Live Radio Combined: https://rebrand.ly/LiveTV-Radio
 
