@@ -15,4 +15,4 @@ EPG Source: https://epgshare01.online/epgshare01/epg_ripper_US.xml
 
 Live TV and Live Radio Combined: https://rebrand.ly/LiveTV-Radio
 
-Live TV EPG Link: https://rebrand.ly/LiveTV-EPG
+Live TV (Non-Geo-Blocked Playlist) EPG Link: https://rebrand.ly/LiveTV-EPG
