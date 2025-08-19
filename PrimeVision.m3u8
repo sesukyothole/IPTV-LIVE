@@ -33,7 +33,7 @@ https://fl5.moveonjoy.com/DISNEY_JR/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:http-referrer=https://moveonjoy.com/
 #EXTINF:-1 tvg-id="403837" tvg-name="Disney XD USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png" group-title="Kids",Disney XD USA - East
-https://fl3.moveonjoy.com/DISNEY_XD/index.m3u8
+https://fl6.moveonjoy.com/DISNEY_XD/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:http-referrer=https://moveonjoy.com/
 #EXTINF:-1 tvg-id="403486" tvg-name="ESPN U USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-u-us.png" group-title="Adults", ESPN U USA - East
