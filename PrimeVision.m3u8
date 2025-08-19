@@ -1,51 +1,51 @@
 #EXTM3U url-tvg="https://rebrand.ly/LiveTV-EPG"
-#EXTINF:-1 tvg-id="403838" tvg-name="AMC Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png" group-title="Adults", AMC Network USA - East
+#EXTINF:-1 tvg-id="403838" tvg-name="AMC Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png", AMC Network USA - East
 https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="403726" tvg-name="Bloomberg Television USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png", Bloomberg Television USA - East
 http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
-#EXTINF:-1 tvg-id="403576" tvg-name="Boomerang USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png" group-title="Kids",Boomerang USA - East
+#EXTINF:-1 tvg-id="403576" tvg-name="Boomerang USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png",Boomerang USA - East
 http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
-#EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Teens",Cartoon Network USA - East
+#EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png",Cartoon Network USA - East
 http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="403829" tvg-name="Cinemax USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png",Cinemax USA - East
 https://fl3.moveonjoy.com/CINEMAX/index.m3u8
-#EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-channel-us.png" group-title="Teens",Disney Channel USA - East
+#EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-channel-us.png",Disney Channel USA - East
 https://fl5.moveonjoy.com/DISNEY/index.m3u8
-#EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-jr-us.png" group-title="Preschoolers",Disney Junior USA - East
+#EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-jr-us.png",Disney Junior USA - East
 https://fl5.moveonjoy.com/DISNEY_JR/index.m3u8
-#EXTINF:-1 tvg-id="403837" tvg-name="Disney XD USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png" group-title="Kids",Disney XD USA - East
+#EXTINF:-1 tvg-id="403837" tvg-name="Disney XD USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png",Disney XD USA - East
 https://fl5.moveonjoy.com/DISNEY_XD/index.m3u8
-#EXTINF:-1 tvg-id="403486" tvg-name="ESPN U USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-u-us.png" group-title="Adults", ESPN U USA - East
+#EXTINF:-1 tvg-id="403486" tvg-name="ESPN U USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-u-us.png", ESPN U USA - East
 https://fl3.moveonjoy.com/ESPN_U/index.m3u8
-#EXTINF:-1 tvg-id="403928" tvg-name="ESPN News USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espnews-us.png" group-title="News", ESPN News USA - East
+#EXTINF:-1 tvg-id="403928" tvg-name="ESPN News USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espnews-us.png", ESPN News USA - East
 https://fl3.moveonjoy.com/ESPN_NEWS/index.m3u8
-#EXTINF:-1 tvg-id="403455" tvg-name="Fuse Network USA - East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/59/Fuse_logo15.png", Fuse Network USA - East
+#EXTINF:-1 tvg-id="403455" tvg-name="Fuse Network USA - East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/59/Fuse_logo15.png",Fuse Network USA - East
 http://23.237.104.106:8080/USA_FUSE/index.m3u8
-#EXTINF:-1 tvg-id="403815" tvg-name="FX Networks USA - East" tvg-logo="https://pbs.twimg.com/profile_images/1715419203610857472/W2ZpsXbt_400x400.jpg", FX Networks USA - East
+#EXTINF:-1 tvg-id="403815" tvg-name="FX Networks USA - East" tvg-logo="https://pbs.twimg.com/profile_images/1715419203610857472/W2ZpsXbt_400x400.jpg",FX Networks USA - East
 http://23.237.104.106:8080/USA_FX/index.m3u8
-#EXTINF:-1 tvg-id="403717" tvg-name="FX Movie Networks USA - East" tvg-logo="https://static.wikia.nocookie.net/logofanon2/images/1/13/FX_Movies.png", FX Movie Networks USA - East
+#EXTINF:-1 tvg-id="403717" tvg-name="FX Movie Networks USA - East" tvg-logo="https://static.wikia.nocookie.net/logofanon2/images/1/13/FX_Movies.png",FX Movie Networks USA - East
 https://fl3.moveonjoy.com/FX_MOVIE/index.m3u8
-#EXTINF:-1 tvg-id="403518" tvg-name="FXX Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fxx-us.png", FXX Network USA - East
+#EXTINF:-1 tvg-id="403518" tvg-name="FXX Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fxx-us.png",FXX Network USA - East
 https://fl3.moveonjoy.com/FXX/index.m3u8
-#EXTINF:-1 tvg-id="403581" tvg-name="FYI Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fyi-us.png", FYI Network USA - East
+#EXTINF:-1 tvg-id="403581" tvg-name="FYI Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fyi-us.png",FYI Network USA - East
 https://fl3.moveonjoy.com/FYI/index.m3u8
-#EXTINF:-1 tvg-id="403794" tvg-name="Freeform USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="Teens",Freeform USA - East
+#EXTINF:-1 tvg-id="403794" tvg-name="Freeform USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png",Freeform USA - East
 https://fl3.moveonjoy.com/FREE_FORM/index.m3u8
 #EXTINF:-1 tvg-id="403490" tvg-name="Hallmark Channel USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-channel-us.png",Hallmark Channel USA - East
 https://fl3.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8
 #EXTINF:-1 tvg-id="440244" tvg-name="Hallmark Family USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-family-us.png",Hallmark Family USA - East
 https://fl3.moveonjoy.com/HALLMARK_DRAMA/index.m3u8
-#EXTINF:-1 tvg-id="403926" tvg-name="HBO USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" group-title="Adults", HBO USA - East
+#EXTINF:-1 tvg-id="403926" tvg-name="HBO USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png", HBO USA - East
 http://23.237.104.106:8080/USA_HBO/index.m3u8
-#EXTINF:-1 tvg-id="403522" tvg-name="HBO 2 USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-2-us.png" group-title="Adults", HBO 2 USA - East
+#EXTINF:-1 tvg-id="403522" tvg-name="HBO 2 USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-2-us.png", HBO 2 USA - East
 https://fl3.moveonjoy.com/HBO_2/index.m3u8
-#EXTINF:-1 tvg-id="403650" tvg-name="HBO Comedy USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-comedy-us.png" group-title="Adults", HBO Comedy USA - East
+#EXTINF:-1 tvg-id="403650" tvg-name="HBO Comedy USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-comedy-us.png", HBO Comedy USA - East
 http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8
-#EXTINF:-1 tvg-id="403823" tvg-name="HBO Zone USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-zone-us.png" group-title="Adults", HBO Zone USA - East
+#EXTINF:-1 tvg-id="403823" tvg-name="HBO Zone USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-zone-us.png", HBO Zone USA - East
 https://fl5.moveonjoy.com/HBO_ZONE/index.m3u8
-#EXTINF:-1 tvg-id="403578" tvg-name="National Geographic Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/national-geographic-us.png" group-title="Nature", National Geographic Network USA - East
+#EXTINF:-1 tvg-id="403578" tvg-name="National Geographic Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/national-geographic-us.png", National Geographic Network USA - East
 https://fl3.moveonjoy.com/National_Geographic/index.m3u8
-#EXTINF:-1 tvg-id="403563" tvg-name="National Geographic Wild Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nat-geo-wild-alt-us.png" group-title="Nature", National Geographic Wild Network USA - East
+#EXTINF:-1 tvg-id="403563" tvg-name="National Geographic Wild Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nat-geo-wild-alt-us.png", National Geographic Wild Network USA - East
 https://fl3.moveonjoy.com/Nat_Geo_Wild/index.m3u8
 #EXTINF:-1 tvg-id="403718" tvg-name="ION TV USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/ion-television-us.png",ION TV USA - East
 https://fl3.moveonjoy.com/ION_TV/index.m3u8
@@ -59,19 +59,19 @@ https://fl3.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8
 https://fl3.moveonjoy.com/EPIX/index.m3u8
 #EXTINF:-1 tvg-id="9045" tvg-name="MGM+ Marquee USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/mgm-plus-marquee-us.png",MGM+ Marquee USA - East
 https://fl3.moveonjoy.com/EPIX_DRIVE_IN/index.m3u8
-#EXTINF:-1 tvg-id="403620" tvg-name="Nickelodeon USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" group-title="Teens",Nickelodeon USA - East
+#EXTINF:-1 tvg-id="403620" tvg-name="Nickelodeon USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png",Nickelodeon USA - East
 http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
-#EXTINF:-1 tvg-id="403655" tvg-name="Nick Jr. USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-jr-us.png" group-title="Preschoolers",Nick Jr. USA - East
+#EXTINF:-1 tvg-id="403655" tvg-name="Nick Jr. USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-jr-us.png",Nick Jr. USA - East
 https://fl3.moveonjoy.com/NICK_JR/index.m3u8
-#EXTINF:-1 tvg-id="403847" tvg-name="Nicktoons USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-toons-us.png" group-title="Kids",Nicktoons USA - East
+#EXTINF:-1 tvg-id="403847" tvg-name="Nicktoons USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-toons-us.png",Nicktoons USA - East
 https://fl3.moveonjoy.com/NICKTOONS/index.m3u8
-#EXTINF:-1 tvg-id="403772" tvg-name="TeenNick USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/teen-nick-us.png" group-title="Teens",TeenNick USA - East
+#EXTINF:-1 tvg-id="403772" tvg-name="TeenNick USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/teen-nick-us.png",TeenNick USA - East
 https://fl3.moveonjoy.com/Teen_Nick/index.m3u8
-#EXTINF:-1 tvg-id="8359" tvg-name="NickMusic USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-music-us.png" group-title="Music",NickMusic USA - East
+#EXTINF:-1 tvg-id="8359" tvg-name="NickMusic USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-music-us.png",NickMusic USA - East
 https://fl5.moveonjoy.com/NICK_MUSIC/index.m3u8
-#EXTINF:-1 tvg-id="403529" tvg-name="TV One USA - East" tvg-logo="https://www.vhv.rs/dpng/d/560-5607033_tv-one-us-channel-logo-hd-png-download.png", TV One USA - East
+#EXTINF:-1 tvg-id="403529" tvg-name="TV One USA - East" tvg-logo="https://www.vhv.rs/dpng/d/560-5607033_tv-one-us-channel-logo-hd-png-download.png",TV One USA - East
 https://fl3.moveonjoy.com/TV_ONE/index.m3u8
-#EXTINF:-1 tvg-id="403824" tvg-name="Paramount Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/paramount-network-icon-hd-us.png", Paramount Network USA - East
+#EXTINF:-1 tvg-id="403824" tvg-name="Paramount Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/paramount-network-icon-hd-us.png",Paramount Network USA - East
 https://fl3.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="403520" tvg-name="Showtime Next USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-next-us.png",Showtime Next USA - East
 https://fl3.moveonjoy.com/SHOWTIME_NEXT/index.m3u8
