@@ -11,7 +11,7 @@ Geo-Blocked Live TV Playlists (US IP Addresses Only)
 2. https://rebrand.ly/USOnlyHD
 3. https://rebrand.ly/USOnlySD
 
-EPG Source: https://epgshare01.online/epgshare01/epg_ripper_US.xml
+EPG Source: https://epgshare01.online/epgshare01/epg_ripper_US.xml.gz
 
 Live TV and Live Radio Combined: https://rebrand.ly/LiveTV-Radio
 
