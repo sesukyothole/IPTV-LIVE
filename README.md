@@ -1,7 +1,6 @@
 Playlists
 1. PrimeVision.m3u8 is for Live TV
 2. WebOSRadio.m3u8 is for Live Radio
-3. CinePatriot.m3u8 is for Jellyfin Movies (Geo-blocked to Indonesian local IP Address, unfortunately)
 
 You can paste these links to your IPTV App (Internationally)
 1. Live TV: https://rebrand.ly/PrimeVision
