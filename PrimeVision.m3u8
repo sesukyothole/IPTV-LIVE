@@ -13,11 +13,10 @@ http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://23.237.104.106:8080/
 #EXTINF:-1 tvg-id="403576" tvg-name="Boomerang USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png" group-title="Kids",Boomerang USA - East
 http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.manifest_type=hls
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://23.237.104.106:8080/
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:http-referrer=https://moveonjoy.com/
 #EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" group-title="Teens",Cartoon Network USA - East
-http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
+http://fl4.moveonjoy.com/CARTOON_NETWORK/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:http-referrer=https://moveonjoy.com/
 #EXTINF:-1 tvg-id="403829" tvg-name="Cinemax USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png",Cinemax USA - East
