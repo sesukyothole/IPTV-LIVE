@@ -222,8 +222,9 @@ async def process_programme(session, programme):
 
         # Add MPAA rating to programme (TVirl / Google Live Channels compatible)
         if data["rating"] and data["rating"] not in ("", "Not Rated"):
-            rating_el = ET.SubElement(programme, "rating", system="MPAA")
+            rating_el = ET.SubElement(programme, "rating", system="urn:kodi:rating")
             ET.SubElement(rating_el, "value").text = data["rating"]
+
 
 
         if data["cast"] or data["director"]:
