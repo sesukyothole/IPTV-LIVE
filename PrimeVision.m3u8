@@ -12,9 +12,9 @@ https://fl3.moveonjoy.com/CINEMAX/index.m3u8
 #EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-channel-us.png" group-title="Teens",Disney Channel USA - East
 https://fl5.moveonjoy.com/DISNEY/index.m3u8|Referer=https://moveonjoy.com/
 #EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-jr-us.png" group-title="Preschoolers",Disney Junior USA - East
-https://fl5.moveonjoy.com/DISNEY_JR/index.m3u8
+http://23.237.104.106:8080/USA_DISNEY_JUNIOR/index.m3u8
 #EXTINF:-1 tvg-id="403837" tvg-name="Disney XD USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png" group-title="Kids",Disney XD USA - East
-https://fl3.moveonjoy.com/DISNEY_XD/index.m3u8
+http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8
 #EXTINF:-1 tvg-id="403486" tvg-name="ESPN U USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-u-us.png" group-title="Adults", ESPN U USA - East
 https://fl3.moveonjoy.com/ESPN_U/index.m3u8
 #EXTINF:-1 tvg-id="403928" tvg-name="ESPN News USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espnews-us.png" group-title="News", ESPN News USA - East
