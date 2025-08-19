@@ -63,11 +63,11 @@ https://fl3.moveonjoy.com/EPIX_DRIVE_IN/index.m3u8
 http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
 #EXTINF:-1 tvg-id="403655" tvg-name="Nick Jr. USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-jr-us.png" group-title="Preschoolers",Nick Jr. USA - East
 https://fl3.moveonjoy.com/NICK_JR/index.m3u8
-#EXTINF:-1 tvg-id="403847" tvg-name="Nickelodeon Cartoons USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-toons-us.png" group-title="Kids",Nickelodeon Cartoons USA - East
+#EXTINF:-1 tvg-id="403847" tvg-name="Nicktoons USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-toons-us.png" group-title="Kids",Nicktoons USA - East
 https://fl3.moveonjoy.com/NICKTOONS/index.m3u8
-#EXTINF:-1 tvg-id="403772" tvg-name="Nickelodeon Teen USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/teen-nick-us.png" group-title="Teens",Nickelodeon Teen USA - East
+#EXTINF:-1 tvg-id="403772" tvg-name="TeenNick USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/teen-nick-us.png" group-title="Teens",TeenNick USA - East
 https://fl3.moveonjoy.com/Teen_Nick/index.m3u8
-#EXTINF:-1 tvg-id="8359" tvg-name="Nickelodeon Music USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-music-us.png" group-title="Music",Nickelodeon Music USA - East
+#EXTINF:-1 tvg-id="8359" tvg-name="NickMusic USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-music-us.png" group-title="Music",NickMusic USA - East
 https://fl5.moveonjoy.com/NICK_MUSIC/index.m3u8
 #EXTINF:-1 tvg-id="403529" tvg-name="TV One USA - East" tvg-logo="https://www.vhv.rs/dpng/d/560-5607033_tv-one-us-channel-logo-hd-png-download.png", TV One USA - East
 https://fl3.moveonjoy.com/TV_ONE/index.m3u8
