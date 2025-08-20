@@ -1,7 +1,7 @@
 #EXTM3U url-tvg="https://gtvservices5.github.io/M3U8-IPTV-EPG/epg.xml"
 
 #EXTINF:-1 tvg-id="403838" tvg-name="AMC Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png",AMC Network USA - East
-https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8|Referer=https://fl5.moveonjoy.com/
+https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8|Referer=https://fl5.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403726" tvg-name="Bloomberg Television USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png",Bloomberg Television USA - East
 http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8|Referer=http://23.237.104.106:8080/|User-Agent=Mozilla/5.0
@@ -13,22 +13,22 @@ http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8|Referer=http://23.237.104.10
 http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8|Referer=http://23.237.104.106:8080/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403829" tvg-name="Cinemax USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png",Cinemax USA - East
-https://fl3.moveonjoy.com/CINEMAX/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/CINEMAX/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-channel-us.png",Disney Channel USA - East
-https://fl5.moveonjoy.com/DISNEY/index.m3u8|Referer=https://fl5.moveonjoy.com/
+https://fl5.moveonjoy.com/DISNEY/index.m3u8|Referer=https://fl5.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-jr-us.png",Disney Junior USA - East
-https://fl5.moveonjoy.com/DISNEY_JR/index.m3u8|Referer=https://fl5.moveonjoy.com/
+https://fl5.moveonjoy.com/DISNEY_JR/index.m3u8|Referer=https://fl5.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403837" tvg-name="Disney XD USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png",Disney XD USA - East
 http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8|Referer=http://23.237.104.106:8080/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403486" tvg-name="ESPN U USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-u-us.png",ESPN U USA - East
-https://fl3.moveonjoy.com/ESPN_U/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/ESPN_U/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403928" tvg-name="ESPN News USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espnews-us.png",ESPN News USA - East
-https://fl3.moveonjoy.com/ESPN_NEWS/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/ESPN_NEWS/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403455" tvg-name="Fuse Network USA - East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/59/Fuse_logo15.png",Fuse Network USA - East
 http://23.237.104.106:8080/USA_FUSE/index.m3u8|Referer=http://23.237.104.106:8080/|User-Agent=Mozilla/5.0
@@ -37,88 +37,88 @@ http://23.237.104.106:8080/USA_FUSE/index.m3u8|Referer=http://23.237.104.106:808
 http://23.237.104.106:8080/USA_FX/index.m3u8|Referer=http://23.237.104.106:8080/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403717" tvg-name="FX Movie Networks USA - East" tvg-logo="https://static.wikia.nocookie.net/logofanon2/images/1/13/FX_Movies.png",FX Movie Networks USA - East
-https://fl3.moveonjoy.com/FX_MOVIE/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/FX_MOVIE/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403518" tvg-name="FXX Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fxx-us.png",FXX Network USA - East
-https://fl3.moveonjoy.com/FXX/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/FXX/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403581" tvg-name="FYI Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fyi-us.png",FYI Network USA - East
-https://fl3.moveonjoy.com/FYI/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/FYI/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403794" tvg-name="Freeform USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png",Freeform USA - East
-https://fl3.moveonjoy.com/FREE_FORM/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/FREE_FORM/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403490" tvg-name="Hallmark Channel USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-channel-us.png",Hallmark Channel USA - East
-https://fl3.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="440244" tvg-name="Hallmark Family USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-family-us.png",Hallmark Family USA - East
-https://fl3.moveonjoy.com/HALLMARK_DRAMA/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/HALLMARK_DRAMA/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403926" tvg-name="HBO USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png",HBO USA - East
 http://23.237.104.106:8080/USA_HBO/index.m3u8|Referer=http://23.237.104.106:8080/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403522" tvg-name="HBO 2 USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-2-us.png",HBO 2 USA - East
-https://fl3.moveonjoy.com/HBO_2/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/HBO_2/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403650" tvg-name="HBO Comedy USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-comedy-us.png",HBO Comedy USA - East
 http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8|Referer=http://23.237.104.106:8080/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403823" tvg-name="HBO Zone USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-zone-us.png",HBO Zone USA - East
-https://fl5.moveonjoy.com/HBO_ZONE/index.m3u8|Referer=https://fl5.moveonjoy.com/
+https://fl5.moveonjoy.com/HBO_ZONE/index.m3u8|Referer=https://fl5.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403578" tvg-name="National Geographic Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/national-geographic-us.png",National Geographic Network USA - East
-https://fl3.moveonjoy.com/National_Geographic/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/National_Geographic/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403563" tvg-name="National Geographic Wild Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nat-geo-wild-alt-us.png",National Geographic Wild Network USA - East
-https://fl3.moveonjoy.com/Nat_Geo_Wild/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/Nat_Geo_Wild/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403718" tvg-name="ION TV USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/ion-television-us.png",ION TV USA - East
-https://fl3.moveonjoy.com/ION_TV/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/ION_TV/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="399929" tvg-name="ION Plus TV USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/ion-plus-us.png",ION Plus TV USA - East
-https://fl3.moveonjoy.com/ION_Plus/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/ION_Plus/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403512" tvg-name="Lifetime Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/lifetime-us.png",Lifetime Network USA - East
-https://fl3.moveonjoy.com/LIFETIME/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/LIFETIME/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403730" tvg-name="Lifetime Movie Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/lifetime-movies-us.png",Lifetime Movie Network USA - East
-https://fl3.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="8935" tvg-name="MGM+ USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/mgm-plus-us.png",MGM+ USA - East
-https://fl3.moveonjoy.com/EPIX/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/EPIX/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="9045" tvg-name="MGM+ Marquee USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/mgm-plus-marquee-us.png",MGM+ Marquee USA - East
-https://fl3.moveonjoy.com/EPIX_DRIVE_IN/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/EPIX_DRIVE_IN/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403620" tvg-name="Nickelodeon USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png",Nickelodeon USA - East
 http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8|Referer=http://23.237.104.106:8080/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403655" tvg-name="Nick Jr. USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-jr-us.png",Nick Jr. USA - East
-https://fl3.moveonjoy.com/NICK_JR/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/NICK_JR/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403847" tvg-name="Nicktoons USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-toons-us.png",Nicktoons USA - East
-https://fl3.moveonjoy.com/NICKTOONS/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/NICKTOONS/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403772" tvg-name="TeenNick USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/teen-nick-us.png",TeenNick USA - East
-https://fl3.moveonjoy.com/Teen_Nick/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/Teen_Nick/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="8359" tvg-name="NickMusic USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-music-us.png",NickMusic USA - East
-https://fl5.moveonjoy.com/NICK_MUSIC/index.m3u8|Referer=https://fl5.moveonjoy.com/
+https://fl5.moveonjoy.com/NICK_MUSIC/index.m3u8|Referer=https://fl5.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403529" tvg-name="TV One USA - East" tvg-logo="https://www.vhv.rs/dpng/d/560-5607033_tv-one-us-channel-logo-hd-png-download.png",TV One USA - East
-https://fl3.moveonjoy.com/TV_ONE/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/TV_ONE/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403824" tvg-name="Paramount Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/paramount-network-icon-hd-us.png",Paramount Network USA - East
-https://fl3.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403520" tvg-name="Showtime Next USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-next-us.png",Showtime Next USA - East
-https://fl3.moveonjoy.com/SHOWTIME_NEXT/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/SHOWTIME_NEXT/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403651" tvg-name="Showtime 2 USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-2-us.png",Showtime 2 USA - East
-https://fl3.moveonjoy.com/SHOWTIME_2/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/SHOWTIME_2/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403646" tvg-name="STARZ USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-us.png",STARZ USA - East
-https://fl3.moveonjoy.com/STARZ/index.m3u8|Referer=https://fl3.moveonjoy.com/
+https://fl3.moveonjoy.com/STARZ/index.m3u8|Referer=https://fl3.moveonjoy.com/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403786" tvg-name="STARZ Encore Classic USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-classic-us.png",STARZ Encore Classic USA - East
-https://fl5.moveonjoy.com/STARZ_ENCORE_CLASSIC/index.m3u8|Referer=https://fl5.moveonjoy.com/
+https://fl5.moveonjoy.com/STARZ_ENCORE_CLASSIC/index.m3u8|Referer=https://fl5.moveonjoy.com/|User-Agent=Mozilla/5.0
