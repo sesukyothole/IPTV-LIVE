@@ -6,11 +6,8 @@ https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="403726" tvg-name="Bloomberg Television USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png",Bloomberg Television USA - East
 https://fl3.moveonjoy.com/BLOOMBERG/index.m3u8
 
-#EXTINF:-1 tvg-id="403576" tvg-name="Boomerang USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png",Boomerang USA - East
-http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8|Referer=http://23.237.104.106:8080/|User-Agent=Mozilla/5.0
-
 #EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png",Cartoon Network USA - East
-http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8|Referer=http://23.237.104.106:8080/|User-Agent=Mozilla/5.0
+https://fl5.moveonjoy.com/CARTOON_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-id="403829" tvg-name="Cinemax USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png",Cinemax USA - East
 https://fl3.moveonjoy.com/CINEMAX/index.m3u8
