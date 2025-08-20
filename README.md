@@ -1,6 +1,6 @@
 Playlists
 1. PrimeVision.m3u8 is for Live TV
-2. WebOSRadio.m3u8 is for Live Radio
+2. UnionRadio.m3u8 is for Live Radio
 
 You can paste these links to your IPTV App (Internationally)
 1. Live TV: https://rebrand.ly/PrimeVision
