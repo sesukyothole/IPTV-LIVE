@@ -1,4 +1,4 @@
-#EXTM3U url-tvg="https://gtvservices5.github.io/M3U8-IPTV-EPG/epg.xml"
+#EXTM3U url-tvg="https://gtvservices5.github.io/IPTV-LIVE/epg.xml"
 
 #EXTINF:-1 tvg-id="403838" tvg-name="AMC Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png",AMC Network USA - East
 https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8
