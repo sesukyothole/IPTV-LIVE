@@ -22,7 +22,7 @@ https://fl5.moveonjoy.com/DISNEY/index.m3u8|Referer=https://fl5.moveonjoy.com/
 https://fl5.moveonjoy.com/DISNEY_JR/index.m3u8|Referer=https://fl5.moveonjoy.com/
 
 #EXTINF:-1 tvg-id="403837" tvg-name="Disney XD USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png",Disney XD USA - East
-http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8|User-Agent=Mozilla/5.0&Referer=http://23.237.104.106:8080/
+http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8|Referer=http://23.237.104.106:8080/|User-Agent=Mozilla/5.0
 
 #EXTINF:-1 tvg-id="403486" tvg-name="ESPN U USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-u-us.png",ESPN U USA - East
 https://fl3.moveonjoy.com/ESPN_U/index.m3u8|Referer=https://fl3.moveonjoy.com/
