@@ -1,4 +1,4 @@
-Playlists
+Playlist' 
 1. PrimeVision.m3u8 is for Live TV
 2. UnionRadio.m3u8 is for Live Radio
 
@@ -13,4 +13,4 @@ Geo-Blocked Live TV Playlists (US IP Addresses Only)
 
 EPG Source: https://epgshare01.online/epgshare01/epg_ripper_US.xml.gz
 
-Live TV (Non-Geo-Blocked Playlist) EPG Link: https://rebrand.ly/LiveTV-EPG
+Live TV (Non-Geo-Blocked Playlist) EPG Link: https://gtvservices5.github.io/IPTV-LIVE/epg.xml
