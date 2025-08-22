@@ -11,6 +11,5 @@ Geo-Blocked Live TV Playlists (US IP Addresses Only)
 2. https://rebrand.ly/USOnlyHD
 3. https://rebrand.ly/USOnlySD
 
-EPG Source: https://epgshare01.online/epgshare01/epg_ripper_US.xml.gz
+EPG Source: https://gtvservices5.github.io/IPTV-LIVE/epg.xml
 
-Live TV (Non-Geo-Blocked Playlist) EPG Link: https://gtvservices5.github.io/IPTV-LIVE/epg.xml
