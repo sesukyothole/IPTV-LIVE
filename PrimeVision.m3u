@@ -4,10 +4,10 @@
 https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-id="403726" tvg-name="Bloomberg Television USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png",Bloomberg Television USA - East
-https://fl3.moveonjoy.com/BLOOMBERG/index.m3u8
+http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
 
 #EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png",Cartoon Network USA - East
-https://fl5.moveonjoy.com/CARTOON_NETWORK/index.m3u8
+http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-id="403829" tvg-name="Cinemax USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png",Cinemax USA - East
 https://fl3.moveonjoy.com/CINEMAX/index.m3u8
@@ -19,7 +19,7 @@ https://fl5.moveonjoy.com/DISNEY/index.m3u8
 https://fl5.moveonjoy.com/DISNEY_JR/index.m3u8
 
 #EXTINF:-1 tvg-id="403837" tvg-name="Disney XD USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png",Disney XD USA - East
-https://fl5.moveonjoy.com/DISNEY_XD/index.m3u8
+http://fl3.moveonjoy.com/DISNEY_XD/index.m3u8
 
 #EXTINF:-1 tvg-id="403486" tvg-name="ESPN U USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-u-us.png",ESPN U USA - East
 https://fl3.moveonjoy.com/ESPN_U/index.m3u8R
@@ -28,7 +28,7 @@ https://fl3.moveonjoy.com/ESPN_U/index.m3u8R
 https://fl3.moveonjoy.com/ESPN_NEWS/index.m3u8
 
 #EXTINF:-1 tvg-id="403455" tvg-name="Fuse Network USA - East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/59/Fuse_logo15.png",Fuse Network USA - East
-https://fl3.moveonjoy.com/FUSE/index.m3u8
+http://23.237.104.106:8080/USA_FUSE/index.m3u8
 
 #EXTINF:-1 tvg-id="403815" tvg-name="FX Networks USA - East" tvg-logo="https://pbs.twimg.com/profile_images/1715419203610857472/W2ZpsXbt_400x400.jpg",FX Networks USA - East
 https://fl3.moveonjoy.com/FX/index.m3u8
@@ -52,13 +52,13 @@ https://fl3.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8
 https://fl3.moveonjoy.com/HALLMARK_DRAMA/index.m3u8
 
 #EXTINF:-1 tvg-id="403926" tvg-name="HBO USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png",HBO USA - East
-https://fl3.moveonjoy.com/HBO/index.m3u8
+http://23.237.104.106:8080/USA_HBO/index.m3u8
 
 #EXTINF:-1 tvg-id="403522" tvg-name="HBO 2 USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-2-us.png",HBO 2 USA - East
 https://fl3.moveonjoy.com/HBO_2/index.m3u8
 
 #EXTINF:-1 tvg-id="403650" tvg-name="HBO Comedy USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-comedy-us.png",HBO Comedy USA - East
-https://fl3.moveonjoy.com/HBO_COMEDY/index.m3u8
+http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8
 
 #EXTINF:-1 tvg-id="403823" tvg-name="HBO Zone USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-zone-us.png",HBO Zone USA - East
 https://fl5.moveonjoy.com/HBO_ZONE/index.m3u8
