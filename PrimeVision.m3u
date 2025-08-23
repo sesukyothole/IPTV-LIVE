@@ -63,6 +63,9 @@ https://fl3.moveonjoy.com/HBO_2/index.m3u8
 #EXTINF:-1 tvg-id="403650" tvg-name="HBO Comedy USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-comedy-us.png",HBO Comedy USA - East
 http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8
 
+#EXTINF:-1 tvg-id="403477" tvg-name="HBO Signature USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-signature-us.png",HBO Signature USA - East
+http://23.237.104.106:8080/USA_HBO_SIGNATURE/index.m3u8
+
 #EXTINF:-1 tvg-id="403823" tvg-name="HBO Zone USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-zone-us.png",HBO Zone USA - East
 https://fl5.moveonjoy.com/HBO_ZONE/index.m3u8
 
