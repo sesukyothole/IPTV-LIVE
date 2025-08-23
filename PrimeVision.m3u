@@ -19,10 +19,10 @@ https://fl3.moveonjoy.com/CINEMAX/index.m3u8
 https://fl5.moveonjoy.com/DISNEY/index.m3u8
 
 #EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/4/48/DisneyJr3Dver.png",Disney Junior USA - East
-https://fl3.moveonjoy.com/DISNEY_JR/index.m3u8
+https://fl5.moveonjoy.com/DISNEY_JR/index.m3u8
 
 #EXTINF:-1 tvg-id="403837" tvg-name="Disney XD USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png",Disney XD USA - East
-http://fl3.moveonjoy.com/DISNEY_XD/index.m3u8
+https://fl5.moveonjoy.com/DISNEY_XD/index.m3u8
 
 #EXTINF:-1 tvg-id="403486" tvg-name="ESPN U USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-u-us.png",ESPN U USA - East
 https://fl3.moveonjoy.com/ESPN_U/index.m3u8R
