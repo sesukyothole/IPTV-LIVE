@@ -10,7 +10,7 @@ http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
 http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
 
 #EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png",Cartoon Network USA - East
-https://fl3.moveonjoy.com/CARTOON_NETWORK/index.m3u8
+http://fl4.moveonjoy.com/CARTOON_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-id="403829" tvg-name="Cinemax USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png",Cinemax USA - East
 https://fl3.moveonjoy.com/CINEMAX/index.m3u8
