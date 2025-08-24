@@ -26,10 +26,12 @@ jobs:
       - name: 🌐 Download US EPG from epg.pw
         run: python3 scripts/fetch_epg.py
 
-      - name: 💾 Replace Old EPG
+      - name: Replace old EPG
         run: |
-          cp epg.xml epg_yesterday.xml || true
-          mv epg_updated.xml epg.xml
+         echo "Replacing old EPG with latest epgshare01.online version..."
+         rm -f epg.xml         # remove old EPG file if it exists
+         mv new_epg.xml epg.xml  # rename the downloaded one
+
 
       - name: 🎨 Generate Genre List
         run: python3 scripts/generate_genres.py epg.xml
