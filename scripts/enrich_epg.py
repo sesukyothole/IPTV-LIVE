@@ -25,17 +25,17 @@ TMDB_BASE = "https://api.themoviedb.org/3"
 TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w780"  # Bigger size than w500
 
 TARGET_CHANNELS = {
-    "403788", "403674", "403837",
-    "403794", "403620", "403772",
-    "403655", "403847", "403576", 
-    "403576", "403823", "403928",
-    "403522", "403926", "403650",
-    "403933", "403824", "403578",
-    "403563", "403838", "403486",
-    "403815", "403717", "403518",  
-    "403786", "403726", "403529",  
-    "403730", "403520", "403455",
-    "403581", "403646", "440244",
+    "AMC.-.Eastern.Feed.us", "Bloomberg.TV.USA.us", "Boomerang.us",
+    "Cartoon.Network.USA.-.Eastern.Feed.us", "Cinemax.-.Eastern.Feed.us", "Disney.-.Eastern.Feed.us",
+    "Disney.Junior.USA.-.East.us", "Disney.XD.USA.-.Eastern.Feed.us", "ESPN.U.us", 
+    "ESPN.News.us", "FUSE.TV.-.Eastern.feed.us", "FX.Networks.East.Coast.us",
+    "FX.Movie.Channel.us", "FXX.USA.-.Eastern.us", "FYI.USA.-.Eastern.us",
+    "Freeform.-.East.Feed.us", "Hallmark.-.Eastern.Feed.us", "Hallmark.Drama.HDTV.(HALDRHD).us",
+    "HBO.-.Eastern.Feed.us", "HBO.2.-.Eastern.Feed.us", "HBO.Comedy.HD.-.East.us",
+    "HBO.Signature.(HBO.3).-.Eastern.us", "HBO.Zone.HD.-.East.us", "National.Geographic.US.-.Eastern.us",  
+    "National.Geographic.Wild.us", "ION..-.Eastern.Feed.us", "ION.Plus.TV.us",  
+    "Lifetime.Network.US.-.Eastern.Feed.us", "Lifetime.Movies.-.East.us", "MGM+.HDTV.(East).(MGM+HD).us",
+    "MGM+.Marquee.HDTV.(East).(MGM+MRQ).us", "Nickelodeon.USA.-.East.Feed.us", "Nick.Jr..-.East.us",
     "403512", "403461", "403829",
     "403477"
 }
