@@ -30,7 +30,7 @@ jobs:
         run: |
          echo "Replacing old EPG with latest epgshare01.online version..."
          rm -f epg.xml         # remove old EPG file if it exists
-         mv new_epg.xml epg.xml  # rename the downloaded one
+         mv epg.xml epg.xml  # rename the downloaded one
 
 
       - name: 🎨 Generate Genre List
