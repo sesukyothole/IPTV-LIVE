@@ -25,9 +25,6 @@ jobs:
 
       - name: 🌐 Download US EPG from epg.pw
         run: python3 scripts/fetch_epg.py
-      
-      - name: 🧠 Enrich EPG with TMDb Info
-        run: python3 scripts/enrich_epg.py epg.xml epg_updated.xml ${{ secrets.TMDB_API_KEY }}
 
       - name: 💾 Replace Old EPG
         run: |
