@@ -1,61 +1,61 @@
 #EXTM3U
 
 #EXTINF:7620 tvg-name="Aladdin" tvg-logo="https://image.tmdb.org/t/p/original/p3laucrKVQo6tLosJMMNPeMBCXi.jpg" group-title="Movies" type="movie",Aladdin
-http://192.168.1.71:9096/emby/Videos/12/Aladdin (2019).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/12/Aladdin%20(2019).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:6000 tvg-name="The Bad Guys" tvg-logo="https://image.tmdb.org/t/p/original/95zHwiYHyVNuKwaJyz3KIvJGXUr.jpg" group-title="Movies" type="movie",The Bad Guys
-http://192.168.1.71:9096/emby/Videos/33/The Bad Guys (2022).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/33/The%20Bad%20Guys%20(2022).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:6180 tvg-name="The Bad Guys 2" tvg-logo="https://image.tmdb.org/t/p/original/qEJ8OKctYNFmfddHX8V4K7ntEja.jpg" group-title="Movies" type="movie",The Bad Guys 2
-http://192.168.1.71:9096/emby/Videos/34/The Bad Guys 2 (2025).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/34/The%20Bad%20Guys%202%20(2025).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:7740 tvg-name="Beauty and the Beast" tvg-logo="https://image.tmdb.org/t/p/original/anofgxcL1saDxAWs37WZsMwrQdA.jpg" group-title="Movies" type="movie",Beauty and the Beast
-http://192.168.1.71:9096/emby/Videos/13/Beauty and the Beast (2017).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/13/Beauty%20and%20the%20Beast%20(2017).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:6300 tvg-name="Cinderella" tvg-logo="https://image.tmdb.org/t/p/original/vWdndPq6qEoaXIwedoSDuSPFrH0.jpg" group-title="Movies" type="movie",Cinderella
-http://192.168.1.71:9096/emby/Videos/14/Cinderella (2015).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/14/Cinderella%20(2015).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:6720 tvg-name="Descendants" tvg-logo="https://image.tmdb.org/t/p/original/kmLzk4mtJegFpBZzjmesRp1AYYP.jpg" group-title="Movies" type="movie",Descendants
-http://192.168.1.71:9096/emby/Videos/15/Descendants (2015).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/15/Descendants%20(2015).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:6660 tvg-name="Descendants 2" tvg-logo="https://image.tmdb.org/t/p/original/fBivEVWPFI6IwCudH1BZ3YuKKuW.jpg" group-title="Movies" type="movie",Descendants 2
-http://192.168.1.71:9096/emby/Videos/16/Descendants 2 (2017).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/16/Descendants%202%20(2017).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:6360 tvg-name="Descendants 3" tvg-logo="https://image.tmdb.org/t/p/original/u8IcPjNeUEhn9ueDIr1DvdOTdzl.jpg" group-title="Movies" type="movie",Descendants 3
-http://192.168.1.71:9096/emby/Videos/17/Descendants 3 (2019).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/17/Descendants%203%20(2019).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:5460 tvg-name="Descendants: The Rise of Red" tvg-logo="https://image.tmdb.org/t/p/original/mc2vTEVv21uxKucjEDb5c87exkL.jpg" group-title="Movies" type="movie",Descendants: The Rise of Red
-http://192.168.1.71:9096/emby/Videos/18/Descendants The Rise of Red (2024).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/18/Descendants%20The%20Rise%20of%20Red%20(2024).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:6660 tvg-name="Dumbo" tvg-logo="https://image.tmdb.org/t/p/original/dDDdiz2b9a1o9jqPr0Mg3Jw15GM.jpg" group-title="Movies" type="movie",Dumbo
-http://192.168.1.71:9096/emby/Videos/19/Dumbo (2019).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/19/Dumbo%20(2019).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:7500 tvg-name="How to Train Your Dragon" tvg-logo="https://image.tmdb.org/t/p/original/9E0C4FVsGfQzeuQA7wMxYKwhxVv.jpg" group-title="Movies" type="movie",How to Train Your Dragon
-http://192.168.1.71:9096/emby/Videos/20/How to Train Your Dragon (2025).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/20/How%20to%20Train%20Your%20Dragon%20(2025).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:5640 tvg-name="Inside Out" tvg-logo="https://image.tmdb.org/t/p/original/9dSyguWPrYKqRGPKlF955M5kKGN.jpg" group-title="Movies" type="movie",Inside Out
-http://192.168.1.71:9096/emby/Videos/21/Inside Out (2015).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/21/Inside%20Out%20(2015).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:5760 tvg-name="Inside Out 2" tvg-logo="https://image.tmdb.org/t/p/original/e5zGobWxJsUVikspN5JVWwKNmA6.jpg" group-title="Movies" type="movie",Inside Out 2
-http://192.168.1.71:9096/emby/Videos/22/Inside Out 2 (2024).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/22/Inside%20Out%202%20(2024).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:6540 tvg-name="Lilo & Stitch (Live-Action)" tvg-logo="https://image.tmdb.org/t/p/original/pZ7vlKJqaBaUGcJDBp08T1gJ0UB.jpg" group-title="Movies" type="movie",Lilo & Stitch (Live-Action)
-http://192.168.1.71:9096/emby/Videos/23/Lilo and Stitch (2025).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/23/Lilo%20and%20Stitch%20(2025).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:5100 tvg-name="Lilo & Stitch" tvg-logo="https://image.tmdb.org/t/p/original/pmagBlmlYqIWGn9A43UdNuqJXBT.jpg" group-title="Movies" type="movie",Lilo & Stitch
-http://192.168.1.71:9096/emby/Videos/24/Lilo and Stitch (2002).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/24/Lilo%20and%20Stitch%20(2002).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:7080 tvg-name="The Lion King" tvg-logo="https://image.tmdb.org/t/p/original/pHNiDTij7D3gP8BZqTeM7IA2Tka.jpg" group-title="Movies" type="movie",The Lion King
-http://192.168.1.71:9096/emby/Videos/35/The Lion King (2019).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/35/The%20Lion%20King%20(2019).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:8100 tvg-name="The Little Mermaid" tvg-logo="https://image.tmdb.org/t/p/original/q1l20kUMfrXvr2w6rwiyydLYNg6.jpg" group-title="Movies" type="movie",The Little Mermaid
-http://192.168.1.71:9096/emby/Videos/36/The Little Mermaid (2023).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/36/The%20Little%20Mermaid%20(2023).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:6060 tvg-name="A Minecraft Movie" tvg-logo="https://image.tmdb.org/t/p/original/vdprV0mY4s7ZY6zi6S74oak5Ai8.jpg" group-title="Movies" type="movie",A Minecraft Movie
-http://192.168.1.71:9096/emby/Videos/11/A Minecraft Movie (2025).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/11/A Minecraft%20Movie%20(2025).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:9960 tvg-name="Mission Impossible: Dead Reckoning" tvg-logo="https://image.tmdb.org/t/p/original/h56edmERPTkey89SqyKu4hINVNy.jpg" group-title="Movies" type="movie",Mission Impossible: Dead Reckoning
-http://192.168.1.71:9096/emby/Videos/25/Mission Impossible Dead Reckoning (2023).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+http://192.168.1.71:9096/emby/Videos/25/Mission%20Impossible%20Dead%20Reckoning%20(2023).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:10320 tvg-name="Mission Impossible: The Final Reckoning" tvg-logo="https://image.tmdb.org/t/p/original/rQTW9oQZFsujMlvyYBjbwa8LYkD.jpg" group-title="Movies" type="movie",Mission Impossible: The Final Reckoning
 http://192.168.1.71:9096/emby/Videos/26/Mission Impossible The Final Reckoning (2025).mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
