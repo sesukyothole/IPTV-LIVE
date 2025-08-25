@@ -12,6 +12,9 @@ http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
 #EXTINF:-1 tvg-id="Cartoon.Network.USA.-.Eastern.Feed.us" tvg-name="Cartoon Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png",Cartoon Network USA - East
 http://fl4.moveonjoy.com/CARTOON_NETWORK/index.m3u8
 
+#EXTINF:-1 tvg-id="Comedy.Central.(US).-.Eastern.Feed.us" tvg-name="Comedy Central USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/comedy-central-us.png",Comedy Central USA - East
+https://fl3.moveonjoy.com/Comedy_Central/index.m3u8
+
 #EXTINF:-1 tvg-id="Cinemax.-.Eastern.Feed.us" tvg-name="Cinemax USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png",Cinemax USA - East
 https://fl3.moveonjoy.com/CINEMAX/index.m3u8
 
@@ -50,9 +53,6 @@ https://fl3.moveonjoy.com/FREE_FORM/index.m3u8
 
 #EXTINF:-1 tvg-id="Hallmark.-.Eastern.Feed.us" tvg-name="Hallmark Channel USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-channel-us.png",Hallmark Channel USA - East
 https://fl3.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8
-
-#EXTINF:-1 tvg-id="Hallmark.Drama.HDTV.(HALDRHD).us" tvg-name="Hallmark Family USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-family-us.png",Hallmark Family USA - East
-https://fl3.moveonjoy.com/HALLMARK_DRAMA/index.m3u8
 
 #EXTINF:-1 tvg-id="HBO.-.Eastern.Feed.us" tvg-name="HBO USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png",HBO USA - East
 http://23.237.104.106:8080/USA_HBO/index.m3u8
