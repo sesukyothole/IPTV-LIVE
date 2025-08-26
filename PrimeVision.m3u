@@ -54,6 +54,9 @@ https://fl3.moveonjoy.com/FREE_FORM/index.m3u8
 #EXTINF:-1 tvg-id="Hallmark.-.Eastern.Feed.us" tvg-name="Hallmark Channel USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-channel-us.png",Hallmark Channel USA - East
 https://fl3.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8
 
+#EXTINF:-1 tvg-id="Hallmark.Mystery.Eastern.-.HD.us" tvg-name="Hallmark Movies & Mysteries USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-mystery-us.png",Hallmark Movies & Mysteries USA - East
+https://fl3.moveonjoy.com/HALLMARK_MOVIES_MYSTERIES/index.m3u8
+
 #EXTINF:-1 tvg-id="HBO.-.Eastern.Feed.us" tvg-name="HBO USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png",HBO USA - East
 http://23.237.104.106:8080/USA_HBO/index.m3u8
 
