@@ -1,9 +1,9 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz"
 
-#EXTINF:-1 tvg-id="AMC.-.Eastern.Feed.us" tvg-name="AMC Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png" tvg-language="en",AMC Network USA - East
+#EXTINF:-1 tvg-id="AMC.-.Eastern.Feed.us" tvg-name="AMC Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png" tvg-language="en" group-title="Ungrouped",AMC Network USA - East
 https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8
 
-#EXTINF:-1 tvg-id="Bloomberg.TV.USA.us" tvg-name="Bloomberg Television USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png" tvg-language="en",Bloomberg Television USA - East
+#EXTINF:-1 tvg-id="Bloomberg.TV.USA.us" tvg-name="Bloomberg Television USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png" tvg-language="en" group-title="Ungrouped",Bloomberg Television USA - East
 http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
 
 #EXTINF:-1 tvg-id="Boomerang.us" tvg-name="Boomerang USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png" tvg-language="en" group-title="Warner Bros. Discovery",Boomerang USA - East
@@ -12,10 +12,10 @@ https://fl5.moveonjoy.com/BOOMERANG/index.m3u8
 #EXTINF:-1 tvg-id="Cartoon.Network.USA.-.Eastern.Feed.us" tvg-name="Cartoon Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" tvg-language="en" group-title="Warner Bros. Discovery",Cartoon Network USA - East
 http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
 
-#EXTINF:-1 tvg-id="Comedy.Central.(US).-.Eastern.Feed.us" tvg-name="Comedy Central USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/comedy-central-us.png" tvg-language="en",Comedy Central USA - East
+#EXTINF:-1 tvg-id="Comedy.Central.(US).-.Eastern.Feed.us" tvg-name="Comedy Central USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/comedy-central-us.png" tvg-language="en" group-title="Ungrouped",Comedy Central USA - East
 https://fl3.moveonjoy.com/Comedy_Central/index.m3u8
 
-#EXTINF:-1 tvg-id="Cinemax.-.Eastern.Feed.us" tvg-name="Cinemax USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png" tvg-language="en",Cinemax USA - East
+#EXTINF:-1 tvg-id="Cinemax.-.Eastern.Feed.us" tvg-name="Cinemax USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png" tvg-language="en" group-title="Ungrouped",Cinemax USA - East
 https://fl3.moveonjoy.com/CINEMAX/index.m3u8
 
 #EXTINF:-1 tvg-id="Disney.-.Eastern.Feed.us" tvg-name="Disney Channel USA - East" tvg-logo="https://static.wikia.nocookie.net/disney/images/2/25/Disney_Channel_2024_logo.png" tvg-language="en" group-title="Disney",Disney Channel USA - East
@@ -33,7 +33,7 @@ https://fl3.moveonjoy.com/ESPN_U/index.m3u8R
 #EXTINF:-1 tvg-id="ESPN.News.us" tvg-name="ESPN News USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espnews-us.png" tvg-language="en" group-title="ESPN",ESPN News USA - East
 https://fl3.moveonjoy.com/ESPN_NEWS/index.m3u8
 
-#EXTINF:-1 tvg-id="FUSE.TV.-.Eastern.feed.us" tvg-name="Fuse Network USA - East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/59/Fuse_logo15.png" tvg-language="en",Fuse Network USA - East
+#EXTINF:-1 tvg-id="FUSE.TV.-.Eastern.feed.us" tvg-name="Fuse Network USA - East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/59/Fuse_logo15.png" tvg-language="en" group-title="Ungrouped",Fuse Network USA - East
 http://23.237.104.106:8080/USA_FUSE/index.m3u8
 
 #EXTINF:-1 tvg-id="FX.Networks.East.Coast.us" tvg-name="FX Networks USA - East" tvg-logo="https://pbs.twimg.com/profile_images/1715419203610857472/W2ZpsXbt_400x400.jpg" tvg-language="en" group-title="FX",FX Networks USA - East
@@ -42,10 +42,10 @@ https://fl3.moveonjoy.com/FX/index.m3u8
 #EXTINF:-1 tvg-id="FX.Movie.Channel.us" tvg-name="FX Movie Networks USA - East" tvg-logo="https://static.wikia.nocookie.net/logofanon2/images/1/13/FX_Movies.png" tvg-language="en" group-title="FX",FX Movie Networks USA - East
 https://fl3.moveonjoy.com/FX_MOVIE/index.m3u8
 
-#EXTINF:-1 tvg-id="FXX.USA.-.Eastern.us" tvg-name="FXX Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fxx-us.png" tvg-language="en",FXX Network USA - East
+#EXTINF:-1 tvg-id="FXX.USA.-.Eastern.us" tvg-name="FXX Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fxx-us.png" tvg-language="en" group-title="Ungrouped",FXX Network USA - East
 https://fl3.moveonjoy.com/FXX/index.m3u8
 
-#EXTINF:-1 tvg-id="FYI.USA.-.Eastern.us" tvg-name="FYI Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fyi-us.png" tvg-language="en",FYI Network USA - East
+#EXTINF:-1 tvg-id="FYI.USA.-.Eastern.us" tvg-name="FYI Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fyi-us.png" tvg-language="en" group-title="Ungrouped",FYI Network USA - East
 https://fl3.moveonjoy.com/FYI/index.m3u8
 
 #EXTINF:-1 tvg-id="Freeform.-.East.Feed.us" tvg-name="Freeform USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" tvg-language="en" group-title="Disney",Freeform USA - East
