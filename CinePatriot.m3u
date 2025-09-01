@@ -3,6 +3,9 @@
 #EXTINF:7620 tvg-name="Aladdin" tvg-logo="https://image.tmdb.org/t/p/original/p3laucrKVQo6tLosJMMNPeMBCXi.jpg" group-title="Movies" type="movie",Aladdin
 http://192.168.1.71:9096/emby/Videos/12/Aladdin%20%282019%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
+#EXTINF:8940 tvg-name="Avengers: Infinity War" tvg-logo="https://image.tmdb.org/t/p/original/8c1dyE7UCEVELjImPHMRcYy9asG.jpg" group-title="Movies" type="movie",Avengers: Infinity War
+http://192.168.1.71:9096/emby/Videos/2932/Avengers%20Infinity%20War%20%282018%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+
 #EXTINF:6000 tvg-name="The Bad Guys" tvg-logo="https://image.tmdb.org/t/p/original/95zHwiYHyVNuKwaJyz3KIvJGXUr.jpg" group-title="Movies" type="movie",The Bad Guys
 http://192.168.1.71:9096/emby/Videos/33/The%20Bad%20Guys%20%282022%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
@@ -11,6 +14,9 @@ http://192.168.1.71:9096/emby/Videos/34/The%20Bad%20Guys%202%20%282025%29.mp4?st
 
 #EXTINF:7740 tvg-name="Beauty and the Beast" tvg-logo="https://image.tmdb.org/t/p/original/anofgxcL1saDxAWs37WZsMwrQdA.jpg" group-title="Movies" type="movie",Beauty and the Beast
 http://192.168.1.71:9096/emby/Videos/13/Beauty%20and%20the%20Beast%20%282017%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+
+#EXTINF:4920 tvg-name="Big City Greens the Movie: Spacecation" tvg-logo="https://image.tmdb.org/t/p/original/q2Cs6Vxt3a4MZKX6oE2gCG01j70.jpg" group-title="Movies" type="movie", Big City Greens the Movie: Spacecation
+http://192.168.1.71:9096/emby/Videos/3011/Big%20City%20Greens%20the%20Movie%20Spacecation%20%282024%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:6300 tvg-name="Cinderella" tvg-logo="https://image.tmdb.org/t/p/original/vWdndPq6qEoaXIwedoSDuSPFrH0.jpg" group-title="Movies" type="movie",Cinderella
 http://192.168.1.71:9096/emby/Videos/14/Cinderella%20%282015%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
