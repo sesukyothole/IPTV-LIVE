@@ -73,7 +73,9 @@ MANUAL_ID_OVERRIDES = {
     "Tuesday": {"type": "movie", "id": 831395},
     "The Huntsman: Winter's War": {"type": "movie", "id": 290595},
     "Blue Beetle": {"type": "movie", "id": 565770},
-    "Unknown": {"type": "movie", "id": 48138}
+    "Unknown": {"type": "movie", "id": 48138},
+    "Liv and Maddie: Cali Style" {"type": "tv", "id": 59375},
+    "Bunk'D": {"type": "tv", "id": 62875"}
 }
 
 TMDB_GENRES = {
