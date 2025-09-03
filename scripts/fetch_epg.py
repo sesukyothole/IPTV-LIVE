@@ -1,53 +1,39 @@
 import requests
+import shutil
+import os
 import gzip
 import io
-import xml.etree.ElementTree as ET
+from datetime import datetime
 
-# List of your EPG .gz URLs
-EPG_GZ_URLS = [
-    "https://epg.pw/xmltv/epg_US.xml.gz",
-    "https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz"
-]
+# === CONFIG ===
+EPG_GZ_URL = "https://epg.pw/xmltv/epg_US.xml.gz"
+OUTPUT_FILE = "epg.xml"
+BACKUP_FILE = f"guide_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xml"
 
-# Function to download and extract EPG XML
-def fetch_epg(url):
-    print(f"Fetching EPG from {url} ...")
-    response = requests.get(url)
-    if response.status_code == 200:
+# === FUNCTIONALITY ===
+
+def fetch_and_decompress_gz(url, output_file, backup=True):
+    try:
+        print(f"[INFO] Downloading EPG from: {url}")
+        response = requests.get(url, timeout=30)
+        response.raise_for_status()
+
+        # Backup current XML if exists
+        if os.path.exists(output_file) and backup:
+            shutil.copyfile(output_file, BACKUP_FILE)
+            print(f"[INFO] Backup created: {BACKUP_FILE}")
+
+        # Decompress in memory
         with gzip.GzipFile(fileobj=io.BytesIO(response.content)) as gz:
-            epg_xml = gz.read().decode("utf-8")
-        print(f"EPG fetched successfully from {url}")
-        return epg_xml
-    else:
-        print(f"Failed to fetch {url}: {response.status_code}")
-        return None
+            xml_content = gz.read()
 
-# Create root element for merged XML
-merged_root = ET.Element("tv")
+        # Save decompressed XML
+        with open(output_file, "wb") as f:
+            f.write(xml_content)
+        print(f"[SUCCESS] EPG saved to: {output_file}")
 
-# To keep track of added channels to avoid duplicates
-added_channels = set()
+    except Exception as e:
+        print(f"[ERROR] Failed to fetch or decompress EPG: {e}")
 
-for url in EPG_GZ_URLS:
-    epg_data = fetch_epg(url)
-    if not epg_data:
-        continue
-
-    root = ET.fromstring(epg_data)
-    
-    # Merge <channel> elements
-    for channel in root.findall("channel"):
-        channel_id = channel.get("id")
-        if channel_id not in added_channels:
-            merged_root.append(channel)
-            added_channels.add(channel_id)
-
-    # Merge <programme> elements
-    for programme in root.findall("programme"):
-        merged_root.append(programme)
-
-# Convert merged XML tree to string
-merged_tree = ET.ElementTree(merged_root)
-merged_tree.write("merged_epg.xml", encoding="utf-8", xml_declaration=True)
-
-print("Merged EPG saved as merged_epg.xml")
+if __name__ == "__main__":
+    fetch_and_decompress_gz(EPG_GZ_URL, OUTPUT_FILE)
