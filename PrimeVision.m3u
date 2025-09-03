@@ -9,7 +9,7 @@ http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
 #EXTINF:-1 tvg-id="403576" tvg-name="Boomerang USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png" tvg-language="en" group-title="Warner Bros. Discovery",Boomerang USA - East
 https://fl5.moveonjoy.com/BOOMERANG/index.m3u8
 
-#EXTINF:-1 tvg-id="403461" tvg-name="Adult Swim/Cartoon Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" tvg-language="en" group-title="Warner Bros. Discovery",Adult Swim/Cartoon Network USA - East
+#EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" tvg-language="en" group-title="Warner Bros. Discovery",Cartoon Network USA - East
 http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-id="403666" tvg-name="Comedy Central USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/comedy-central-us.png" tvg-language="en" group-title="Ungrouped",Comedy Central USA - East
