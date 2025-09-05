@@ -1,133 +1,133 @@
 #EXTM3U url-tvg="https://gtvservices5.github.io/IPTV-LIVE/epg.xml"
 
-#EXTINF:-1 tvg-id="403838" tvg-name="AMC Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png" tvg-language="en" group-title="Ungrouped",AMC Network USA - East
+#EXTINF:-1 tvg-id="403838" tvg-name="AMC Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png" tvg-language="en",AMC Network USA - East
 https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8
 
-#EXTINF:-1 tvg-id="403726" tvg-name="Bloomberg Television USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png" tvg-language="en" group-title="Ungrouped",Bloomberg Television USA - East
+#EXTINF:-1 tvg-id="403726" tvg-name="Bloomberg Television USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png" tvg-language="en",Bloomberg Television USA - East
 http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
 
-#EXTINF:-1 tvg-id="403576" tvg-name="Boomerang USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png" tvg-language="en" group-title="Warner Bros. Discovery",Boomerang USA - East
+#EXTINF:-1 tvg-id="403576" tvg-name="Boomerang USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png" tvg-language="en",Boomerang USA - East
 http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
 
-#EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" tvg-language="en" group-title="Warner Bros. Discovery",Cartoon Network USA - East
+#EXTINF:-1 tvg-id="403461" tvg-name="Cartoon Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" tvg-language="en",Cartoon Network USA - East
 http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
 
-#EXTINF:-1 tvg-id="403666" tvg-name="Comedy Central USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/comedy-central-us.png" tvg-language="en" group-title="Ungrouped",Comedy Central USA - East
+#EXTINF:-1 tvg-id="403666" tvg-name="Comedy Central USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/comedy-central-us.png" tvg-language="en",Comedy Central USA - East
 https://fl3.moveonjoy.com/Comedy_Central/index.m3u8
 
-#EXTINF:-1 tvg-id="403829" tvg-name="Cinemax USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png" tvg-language="en" group-title="Ungrouped",Cinemax USA - East
+#EXTINF:-1 tvg-id="403829" tvg-name="Cinemax USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png" tvg-language="en",Cinemax USA - East
 https://fl3.moveonjoy.com/CINEMAX/index.m3u8
 
-#EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel USA - East" tvg-logo="https://static.wikia.nocookie.net/disney/images/2/25/Disney_Channel_2024_logo.png" tvg-language="en" group-title="Disney",Disney Channel USA - East
+#EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel USA - East" tvg-logo="https://static.wikia.nocookie.net/disney/images/2/25/Disney_Channel_2024_logo.png" tvg-language="en",Disney Channel USA - East
 https://fl5.moveonjoy.com/DISNEY/index.m3u8
 
-#EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/4/48/DisneyJr3Dver.png" tvg-language="en" group-title="Disney",Disney Junior USA - East
+#EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/4/48/DisneyJr3Dver.png" tvg-language="en",Disney Junior USA - East
 https://fl3.moveonjoy.com/DISNEY_JR/index.m3u8
 
-#EXTINF:-1 tvg-id="403837" tvg-name="Disney XD USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png" tvg-language="en" group-title="Disney",Disney XD USA - East
+#EXTINF:-1 tvg-id="403837" tvg-name="Disney XD USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png" tvg-language="en",Disney XD USA - East
 http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8
 
-#EXTINF:-1 tvg-id="403486" tvg-name="ESPN U USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-u-us.png" tvg-language="en" group-title="ESPN",ESPN U USA - East
+#EXTINF:-1 tvg-id="403486" tvg-name="ESPN U USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-u-us.png" tvg-language="en",ESPN U USA - East
 https://fl3.moveonjoy.com/ESPN_U/index.m3u8R
 
-#EXTINF:-1 tvg-id="403928" tvg-name="ESPN News USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espnews-us.png" tvg-language="en" group-title="ESPN",ESPN News USA - East
+#EXTINF:-1 tvg-id="403928" tvg-name="ESPN News USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espnews-us.png" tvg-language="en",ESPN News USA - East
 https://fl3.moveonjoy.com/ESPN_NEWS/index.m3u8
 
-#EXTINF:-1 tvg-id="403455" tvg-name="Fuse Network USA - East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/59/Fuse_logo15.png" tvg-language="en" group-title="Ungrouped",Fuse Network USA - East
+#EXTINF:-1 tvg-id="403455" tvg-name="Fuse Network USA - East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/59/Fuse_logo15.png" tvg-language="en",Fuse Network USA - East
 http://23.237.104.106:8080/USA_FUSE/index.m3u8
 
-#EXTINF:-1 tvg-id="403815" tvg-name="FX Networks USA - East" tvg-logo="https://pbs.twimg.com/profile_images/1715419203610857472/W2ZpsXbt_400x400.jpg" tvg-language="en" group-title="FX",FX Networks USA - East
+#EXTINF:-1 tvg-id="403815" tvg-name="FX Networks USA - East" tvg-logo="https://pbs.twimg.com/profile_images/1715419203610857472/W2ZpsXbt_400x400.jpg" tvg-language="en",FX Networks USA - East
 https://fl3.moveonjoy.com/FX/index.m3u8
 
-#EXTINF:-1 tvg-id="403717" tvg-name="FX Movie Networks USA - East" tvg-logo="https://static.wikia.nocookie.net/logofanon2/images/1/13/FX_Movies.png" tvg-language="en" group-title="FX",FX Movie Networks USA - East
+#EXTINF:-1 tvg-id="403717" tvg-name="FX Movie Networks USA - East" tvg-logo="https://static.wikia.nocookie.net/logofanon2/images/1/13/FX_Movies.png" tvg-language="en",FX Movie Networks USA - East
 https://fl3.moveonjoy.com/FX_MOVIE/index.m3u8
 
-#EXTINF:-1 tvg-id="403518" tvg-name="FXX Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fxx-us.png" tvg-language="en" group-title="Ungrouped",FXX Network USA - East
+#EXTINF:-1 tvg-id="403518" tvg-name="FXX Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fxx-us.png" tvg-language="en",FXX Network USA - East
 https://fl3.moveonjoy.com/FXX/index.m3u8
 
-#EXTINF:-1 tvg-id="403581" tvg-name="FYI Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fyi-us.png" tvg-language="en" group-title="Ungrouped",FYI Network USA - East
+#EXTINF:-1 tvg-id="403581" tvg-name="FYI Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fyi-us.png" tvg-language="en",FYI Network USA - East
 https://fl3.moveonjoy.com/FYI/index.m3u8
 
-#EXTINF:-1 tvg-id="403794" tvg-name="Freeform USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" tvg-language="en" group-title="Disney",Freeform USA - East
+#EXTINF:-1 tvg-id="403794" tvg-name="Freeform USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" tvg-language="en",Freeform USA - East
 https://fl3.moveonjoy.com/FREE_FORM/index.m3u8
 
-#EXTINF:-1 tvg-id="403490" tvg-name="Hallmark Channel USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-channel-us.png" tvg-language="en" group-title="Hallmark",Hallmark Channel USA - East
+#EXTINF:-1 tvg-id="403490" tvg-name="Hallmark Channel USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-channel-us.png" tvg-language="en",Hallmark Channel USA - East
 https://fl3.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8
 
-#EXTINF:-1 tvg-id="440244" tvg-name="Hallmark Family USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-family-us.png" tvg-language="en" group-tiitle="Hallmark",Hallmark Family USA - East
+#EXTINF:-1 tvg-id="440244" tvg-name="Hallmark Family USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-family-us.png" tvg-language="en",Hallmark Family USA - East
 https://fl3.moveonjoy.com/HALLMARK_DRAMA/index.m3u8
 
-#EXTINF:-1 tvg-id="403472" tvg-name="Hallmark Mystery USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-mystery-us.png" tvg-language="en" group-title="Hallmark",Hallmark Mystery USA - East
+#EXTINF:-1 tvg-id="403472" tvg-name="Hallmark Mystery USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-mystery-us.png" tvg-language="en",Hallmark Mystery USA - East
 https://fl3.moveonjoy.com/HALLMARK_MOVIES_MYSTERIES/index.m3u8
 
-#EXTINF:-1 tvg-id="403926" tvg-name="HBO USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" tvg-language="en" group-title="HBO",HBO USA - East
+#EXTINF:-1 tvg-id="403926" tvg-name="HBO USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" tvg-language="en",HBO USA - East
 http://23.237.104.106:8080/USA_HBO/index.m3u8
 
-#EXTINF:-1 tvg-id="403522" tvg-name="HBO Hits USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a0/HBO_Hits_2025.svg/revision/latest/scale-to-width-down/150?cb=20250904230718" tvg-language="en" group-title="HBO",HBO Hits USA - East
+#EXTINF:-1 tvg-id="403522" tvg-name="HBO Hits USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a0/HBO_Hits_2025.svg/revision/latest/scale-to-width-down/150?cb=20250904230718" tvg-language="en",HBO Hits USA - East
 https://fl3.moveonjoy.com/HBO_2/index.m3u8
 
-#EXTINF:-1 tvg-id="403650" tvg-name="HBO Comedy USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-comedy-us.png" tvg-language="en" group-title="HBO",HBO Comedy USA - East
+#EXTINF:-1 tvg-id="403650" tvg-name="HBO Comedy USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-comedy-us.png" tvg-language="en",HBO Comedy USA - East
 http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8
 
-#EXTINF:-1 tvg-id="403477" tvg-name="HBO Drama USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/b/b6/HBO_Drama_2025.svg/revision/latest/scale-to-width-down/150?cb=20250904230842" tvg-language="en" group-title="HBO",HBO Drama USA - East
+#EXTINF:-1 tvg-id="403477" tvg-name="HBO Drama USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/b/b6/HBO_Drama_2025.svg/revision/latest/scale-to-width-down/150?cb=20250904230842" tvg-language="en",HBO Drama USA - East
 http://23.237.104.106:8080/USA_HBO_SIGNATURE/index.m3u8
 
-#EXTINF:-1 tvg-id="403823" tvg-name="HBO Movies USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/7c/HBO_Movies_2025.svg/revision/latest/scale-to-width-down/150?cb=20250904231017" tvg-language="en" group-title="HBO",HBO Movies USA - East
+#EXTINF:-1 tvg-id="403823" tvg-name="HBO Movies USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/7c/HBO_Movies_2025.svg/revision/latest/scale-to-width-down/150?cb=20250904231017" tvg-language="en",HBO Movies USA - East
 https://fl5.moveonjoy.com/HBO_ZONE/index.m3u8
 
-#EXTINF:-1 tvg-id="403578" tvg-name="National Geographic Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/national-geographic-us.png" tvg-language="en" group-title="National Geogrphic",National Geographic Network USA - East
+#EXTINF:-1 tvg-id="403578" tvg-name="National Geographic Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/national-geographic-us.png" tvg-language="en",National Geographic Network USA - East
 https://fl3.moveonjoy.com/National_Geographic/index.m3u8
 
-#EXTINF:-1 tvg-id="403563" tvg-name="National Geographic Wild Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nat-geo-wild-alt-us.png" tvg-language="en" group-title="National Geogrphic",National Geographic Wild Network USA - East
+#EXTINF:-1 tvg-id="403563" tvg-name="National Geographic Wild Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nat-geo-wild-alt-us.png" tvg-language="en",National Geographic Wild Network USA - East
 https://fl3.moveonjoy.com/Nat_Geo_Wild/index.m3u8
 
-#EXTINF:-1 tvg-id="403718" tvg-name="ION TV USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/ion-television-us.png" tvg-language="en" group-title="ION",ION TV USA - East
+#EXTINF:-1 tvg-id="403718" tvg-name="ION TV USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/ion-television-us.png" tvg-language="en",ION TV USA - East
 https://fl3.moveonjoy.com/ION_TV/index.m3u8
 
-#EXTINF:-1 tvg-id="399929" tvg-name="ION Plus TV USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/ion-plus-us.png" tvg-language="en" group-title="ION",ION Plus TV USA - East
+#EXTINF:-1 tvg-id="399929" tvg-name="ION Plus TV USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/ion-plus-us.png" tvg-language="en",ION Plus TV USA - East
 https://fl3.moveonjoy.com/ION_Plus/index.m3u8
 
-#EXTINF:-1 tvg-id="403512" tvg-name="Lifetime Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/lifetime-us.png" tvg-language="en" group-title="Lifetime",Lifetime Network USA - East
+#EXTINF:-1 tvg-id="403512" tvg-name="Lifetime Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/lifetime-us.png" tvg-language="en",Lifetime Network USA - East
 https://fl3.moveonjoy.com/LIFETIME/index.m3u8
 
-#EXTINF:-1 tvg-id="403730" tvg-name="Lifetime Movie Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/lifetime-movies-us.png" tvg-language="en" group-title="Lifetime",Lifetime Movie Network USA - East
+#EXTINF:-1 tvg-id="403730" tvg-name="Lifetime Movie Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/lifetime-movies-us.png" tvg-language="en",Lifetime Movie Network USA - East
 https://fl3.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8
 
-#EXTINF:-1 tvg-id="8935" tvg-name="MGM+ USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/mgm-plus-us.png" tvg-language="en" group-title="MGM",MGM+ USA - East
+#EXTINF:-1 tvg-id="8935" tvg-name="MGM+ USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/mgm-plus-us.png" tvg-language="en",MGM+ USA - East
 https://fl3.moveonjoy.com/EPIX/index.m3u8
 
-#EXTINF:-1 tvg-id="9045" tvg-name="MGM+ Marquee USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/mgm-plus-marquee-us.png" tvg-language="en" group-title="MGM",MGM+ Marquee USA - East
+#EXTINF:-1 tvg-id="9045" tvg-name="MGM+ Marquee USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/mgm-plus-marquee-us.png" tvg-language="en",MGM+ Marquee USA - East
 https://fl3.moveonjoy.com/EPIX_DRIVE_IN/index.m3u8
 
-#EXTINF:-1 tvg-id="403620" tvg-name="Nickelodeon USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" tvg-language="en" group-title="Nickelodeon",Nickelodeon USA - East
+#EXTINF:-1 tvg-id="403620" tvg-name="Nickelodeon USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" tvg-language="en",Nickelodeon USA - East
 http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
 
-#EXTINF:-1 tvg-id="403655" tvg-name="Nick Jr. USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-jr-us.png" tvg-language="en" group-title="Nickelodeon",Nick Jr. USA - East
+#EXTINF:-1 tvg-id="403655" tvg-name="Nick Jr. USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-jr-us.png" tvg-language="en",Nick Jr. USA - East
 https://fl3.moveonjoy.com/NICK_JR/index.m3u8
 
-#EXTINF:-1 tvg-id="403847" tvg-name="Nicktoons USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-toons-us.png" tvg-language="en" group-title="Nickelodeon",Nicktoons USA - East
+#EXTINF:-1 tvg-id="403847" tvg-name="Nicktoons USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-toons-us.png" tvg-language="en",Nicktoons USA - East
 https://fl3.moveonjoy.com/NICKTOONS/index.m3u8
 
-#EXTINF:-1 tvg-id="403772" tvg-name="TeenNick USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/teen-nick-us.png" tvg-language="en" group-title="Nickelodeon",TeenNick USA - East
+#EXTINF:-1 tvg-id="403772" tvg-name="TeenNick USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/teen-nick-us.png" tvg-language="en",TeenNick USA - East
 https://fl3.moveonjoy.com/Teen_Nick/index.m3u8
 
-#EXTINF:-1 tvg-id="8359" tvg-name="NickMusic USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-music-us.png" tvg-language="en" group-title="Nickelodeon",NickMusic USA - East
+#EXTINF:-1 tvg-id="8359" tvg-name="NickMusic USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-music-us.png" tvg-language="en",NickMusic USA - East
 https://fl5.moveonjoy.com/NICK_MUSIC/index.m3u8
 
-#EXTINF:-1 tvg-id="403529" tvg-name="TV One USA - East" tvg-logo="https://www.vhv.rs/dpng/d/560-5607033_tv-one-us-channel-logo-hd-png-download.png" tvg-language="en" group-title="Ungrouped",TV One USA - East
+#EXTINF:-1 tvg-id="403529" tvg-name="TV One USA - East" tvg-logo="https://www.vhv.rs/dpng/d/560-5607033_tv-one-us-channel-logo-hd-png-download.png" tvg-language="en",TV One USA - East
 https://fl3.moveonjoy.com/TV_ONE/index.m3u8
 
-#EXTINF:-1 tvg-id="403824" tvg-name="Paramount Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/paramount-network-icon-hd-us.png" tvg-language="en" group-title="Ungrouped",Paramount Network USA - East
+#EXTINF:-1 tvg-id="403824" tvg-name="Paramount Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/paramount-network-icon-hd-us.png" tvg-language="en",Paramount Network USA - East
 https://fl3.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8
 
-#EXTINF:-1 tvg-id="403520" tvg-name="Showtime Next USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-next-us.png" tvg-language="en" group-title="Showtime",Showtime Next USA - East
+#EXTINF:-1 tvg-id="403520" tvg-name="Showtime Next USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-next-us.png" tvg-language="en",Showtime Next USA - East
 https://fl3.moveonjoy.com/SHOWTIME_NEXT/index.m3u8
 
-#EXTINF:-1 tvg-id="403651" tvg-name="Showtime 2 USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-2-us.png" tvg-language="en" group-title="Showtime",Showtime 2 USA - East
+#EXTINF:-1 tvg-id="403651" tvg-name="Showtime 2 USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-2-us.png" tvg-language="en",Showtime 2 USA - East
 https://fl3.moveonjoy.com/SHOWTIME_2/index.m3u8
 
-#EXTINF:-1 tvg-id="403646" tvg-name="STARZ USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-us.png" tvg-language="en" group-title="STARZ",STARZ USA - East
+#EXTINF:-1 tvg-id="403646" tvg-name="STARZ USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-us.png" tvg-language="en",STARZ USA - East
 https://fl3.moveonjoy.com/STARZ/index.m3u8
 
-#EXTINF:-1 tvg-id="403786" tvg-name="STARZ Encore Classic USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-classic-us.png" tvg-language="en" group-title="STARZ",STARZ Encore Classic USA - East
-https://fl5.moveonjoy.com/STARZ_ENCORE_CLASSIC/index.m3u8ada 
+#EXTINF:-1 tvg-id="403786" tvg-name="STARZ Encore Classic USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-classic-us.png" tvg-language="en",STARZ Encore Classic USA - East
+https://fl5.moveonjoy.com/STARZ_ENCORE_CLASSIC/index.m3u8
