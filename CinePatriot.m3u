@@ -1,112 +1,112 @@
 #EXTM3U
 
-#EXTINF:7620 tvg-name="Aladdin" tvg-logo="https://image.tmdb.org/t/p/original/p3laucrKVQo6tLosJMMNPeMBCXi.jpg",Aladdin
+#EXTINF:7620 tvg-name="Aladdin" tvg-logo="https://image.tmdb.org/t/p/original/p3laucrKVQo6tLosJMMNPeMBCXi.jpg" group-title="Movies" type="movie",Aladdin
 http://192.168.1.71:9096/emby/Videos/12/Aladdin%20%282019%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:8940 tvg-name="Avengers: Infinity War" tvg-logo="https://image.tmdb.org/t/p/original/8c1dyE7UCEVELjImPHMRcYy9asG.jpg",Avengers: Infinity War
+#EXTINF:8940 tvg-name="Avengers: Infinity War" tvg-logo="https://image.tmdb.org/t/p/original/8c1dyE7UCEVELjImPHMRcYy9asG.jpg" group-title="Movies" type="movie",Avengers: Infinity War
 http://192.168.1.71:9096/emby/Videos/2932/Avengers%20Infinity%20War%20%282018%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:6000 tvg-name="The Bad Guys" tvg-logo="https://image.tmdb.org/t/p/original/95zHwiYHyVNuKwaJyz3KIvJGXUr.jpg",The Bad Guys
+#EXTINF:6000 tvg-name="The Bad Guys" tvg-logo="https://image.tmdb.org/t/p/original/95zHwiYHyVNuKwaJyz3KIvJGXUr.jpg" group-title="Movies" type="movie",The Bad Guys
 http://192.168.1.71:9096/emby/Videos/33/The%20Bad%20Guys%20%282022%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:6180 tvg-name="The Bad Guys 2" tvg-logo="https://image.tmdb.org/t/p/original/qEJ8OKctYNFmfddHX8V4K7ntEja.jpg",The Bad Guys 2
+#EXTINF:6180 tvg-name="The Bad Guys 2" tvg-logo="https://image.tmdb.org/t/p/original/qEJ8OKctYNFmfddHX8V4K7ntEja.jpg" group-title="Movies" type="movie",The Bad Guys 2
 http://192.168.1.71:9096/emby/Videos/34/The%20Bad%20Guys%202%20%282025%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:7740 tvg-name="Beauty and the Beast" tvg-logo="https://image.tmdb.org/t/p/original/anofgxcL1saDxAWs37WZsMwrQdA.jpg",Beauty and the Beast
+#EXTINF:7740 tvg-name="Beauty and the Beast" tvg-logo="https://image.tmdb.org/t/p/original/anofgxcL1saDxAWs37WZsMwrQdA.jpg" group-title="Movies" type="movie",Beauty and the Beast
 http://192.168.1.71:9096/emby/Videos/13/Beauty%20and%20the%20Beast%20%282017%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:4920 tvg-name="Big City Greens the Movie: Spacecation" tvg-logo="https://image.tmdb.org/t/p/original/q2Cs6Vxt3a4MZKX6oE2gCG01j70.jpg",Big City Greens the Movie: Spacecation
+#EXTINF:4920 tvg-name="Big City Greens the Movie: Spacecation" tvg-logo="https://image.tmdb.org/t/p/original/q2Cs6Vxt3a4MZKX6oE2gCG01j70.jpg" group-title="Movies" type="movie",Big City Greens the Movie: Spacecation
 http://192.168.1.71:9096/emby/Videos/3011/Big%20City%20Greens%20the%20Movie%20Spacecation%20%282024%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:6300 tvg-name="Cinderella" tvg-logo="https://image.tmdb.org/t/p/original/vWdndPq6qEoaXIwedoSDuSPFrH0.jpg",Cinderella
+#EXTINF:6300 tvg-name="Cinderella" tvg-logo="https://image.tmdb.org/t/p/original/vWdndPq6qEoaXIwedoSDuSPFrH0.jpg" group-title="Movies" type="movie",Cinderella
 http://192.168.1.71:9096/emby/Videos/14/Cinderella%20%282015%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:6720 tvg-name="Descendants" tvg-logo="https://image.tmdb.org/t/p/original/kmLzk4mtJegFpBZzjmesRp1AYYP.jpg",Descendants
+#EXTINF:6720 tvg-name="Descendants" tvg-logo="https://image.tmdb.org/t/p/original/kmLzk4mtJegFpBZzjmesRp1AYYP.jpg" group-title="Movies" type="movie",Descendants
 http://192.168.1.71:9096/emby/Videos/15/Descendants%20%282015%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:6660 tvg-name="Descendants 2" tvg-logo="https://image.tmdb.org/t/p/original/fBivEVWPFI6IwCudH1BZ3YuKKuW.jpg",Descendants 2
+#EXTINF:6660 tvg-name="Descendants 2" tvg-logo="https://image.tmdb.org/t/p/original/fBivEVWPFI6IwCudH1BZ3YuKKuW.jpg" group-title="Movies" type="movie",Descendants 2
 http://192.168.1.71:9096/emby/Videos/16/Descendants%202%20%282017%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:6360 tvg-name="Descendants 3" tvg-logo="https://image.tmdb.org/t/p/original/u8IcPjNeUEhn9ueDIr1DvdOTdzl.jpg",Descendants 3
+#EXTINF:6360 tvg-name="Descendants 3" tvg-logo="https://image.tmdb.org/t/p/original/u8IcPjNeUEhn9ueDIr1DvdOTdzl.jpg" group-title="Movies" type="movie",Descendants 3
 http://192.168.1.71:9096/emby/Videos/17/Descendants%203%20%282019%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:5460 tvg-name="Descendants: The Rise of Red" tvg-logo="https://image.tmdb.org/t/p/original/mc2vTEVv21uxKucjEDb5c87exkL.jpg",Descendants: The Rise of Red
+#EXTINF:5460 tvg-name="Descendants: The Rise of Red" tvg-logo="https://image.tmdb.org/t/p/original/mc2vTEVv21uxKucjEDb5c87exkL.jpg" group-title="Movies" type="movie",Descendants: The Rise of Red
 http://192.168.1.71:9096/emby/Videos/18/Descendants%20The%20Rise%20of%20Red%20%282024%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:6660 tvg-name="Dumbo" tvg-logo="https://image.tmdb.org/t/p/original/dDDdiz2b9a1o9jqPr0Mg3Jw15GM.jpg",Dumbo
+#EXTINF:6660 tvg-name="Dumbo" tvg-logo="https://image.tmdb.org/t/p/original/dDDdiz2b9a1o9jqPr0Mg3Jw15GM.jpg" group-title="Movies" type="movie",Dumbo
 http://192.168.1.71:9096/emby/Videos/19/Dumbo%20%282019%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:7500 tvg-name="How to Train Your Dragon" tvg-logo="https://image.tmdb.org/t/p/original/9E0C4FVsGfQzeuQA7wMxYKwhxVv.jpg",How to Train Your Dragon
+#EXTINF:7500 tvg-name="How to Train Your Dragon" tvg-logo="https://image.tmdb.org/t/p/original/9E0C4FVsGfQzeuQA7wMxYKwhxVv.jpg" group-title="Movies" type="movie",How to Train Your Dragon
 http://192.168.1.71:9096/emby/Videos/20/How%20to%20Train%20Your%20Dragon%20%282025%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:5640 tvg-name="Inside Out" tvg-logo="https://image.tmdb.org/t/p/original/9dSyguWPrYKqRGPKlF955M5kKGN.jpg",Inside Out
+#EXTINF:5640 tvg-name="Inside Out" tvg-logo="https://image.tmdb.org/t/p/original/9dSyguWPrYKqRGPKlF955M5kKGN.jpg" group-title="Movies" type="movie",Inside Out
 http://192.168.1.71:9096/emby/Videos/21/Inside%20Out%20%282015%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:5760 tvg-name="Inside Out 2" tvg-logo="https://image.tmdb.org/t/p/original/e5zGobWxJsUVikspN5JVWwKNmA6.jpg",Inside Out 2
+#EXTINF:5760 tvg-name="Inside Out 2" tvg-logo="https://image.tmdb.org/t/p/original/e5zGobWxJsUVikspN5JVWwKNmA6.jpg" group-title="Movies" type="movie",Inside Out 2
 http://192.168.1.71:9096/emby/Videos/22/Inside%20Out%202%20%282024%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:6540 tvg-name="Lilo & Stitch (Live-Action)" tvg-logo="https://image.tmdb.org/t/p/original/pZ7vlKJqaBaUGcJDBp08T1gJ0UB.jpg",Lilo & Stitch (Live-Action)
+#EXTINF:6540 tvg-name="Lilo & Stitch (Live-Action)" tvg-logo="https://image.tmdb.org/t/p/original/pZ7vlKJqaBaUGcJDBp08T1gJ0UB.jpg" group-title="Movies" type="movie",Lilo & Stitch (Live-Action)
 http://192.168.1.71:9096/emby/Videos/23/Lilo%20and%20Stitch%20%282025%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:5100 tvg-name="Lilo & Stitch" tvg-logo="https://image.tmdb.org/t/p/original/pmagBlmlYqIWGn9A43UdNuqJXBT.jpg",Lilo & Stitch
+#EXTINF:5100 tvg-name="Lilo & Stitch" tvg-logo="https://image.tmdb.org/t/p/original/pmagBlmlYqIWGn9A43UdNuqJXBT.jpg" group-title="Movies" type="movie",Lilo & Stitch
 http://192.168.1.71:9096/emby/Videos/24/Lilo%20and%20Stitch%20%282002%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:7080 tvg-name="The Lion King" tvg-logo="https://image.tmdb.org/t/p/original/pHNiDTij7D3gP8BZqTeM7IA2Tka.jpg",The Lion King
+#EXTINF:7080 tvg-name="The Lion King" tvg-logo="https://image.tmdb.org/t/p/original/pHNiDTij7D3gP8BZqTeM7IA2Tka.jpg" group-title="Movies" type="movie",The Lion King
 http://192.168.1.71:9096/emby/Videos/35/The%20Lion%20King%20%282019%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:8100 tvg-name="The Little Mermaid" tvg-logo="https://image.tmdb.org/t/p/original/q1l20kUMfrXvr2w6rwiyydLYNg6.jpg",The Little Mermaid
+#EXTINF:8100 tvg-name="The Little Mermaid" tvg-logo="https://image.tmdb.org/t/p/original/q1l20kUMfrXvr2w6rwiyydLYNg6.jpg" group-title="Movies" type="movie",The Little Mermaid
 http://192.168.1.71:9096/emby/Videos/36/The%20Little%20Mermaid%20%282023%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:6060 tvg-name="A Minecraft Movie" tvg-logo="https://image.tmdb.org/t/p/original/vdprV0mY4s7ZY6zi6S74oak5Ai8.jpg",A Minecraft Movie
+#EXTINF:6060 tvg-name="A Minecraft Movie" tvg-logo="https://image.tmdb.org/t/p/original/vdprV0mY4s7ZY6zi6S74oak5Ai8.jpg" group-title="Movies" type="movie",A Minecraft Movie
 http://192.168.1.71:9096/emby/Videos/11/A%20Minecraft%20Movie%20%282025%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:9960 tvg-name="Mission Impossible: Dead Reckoning" tvg-logo="https://image.tmdb.org/t/p/original/h56edmERPTkey89SqyKu4hINVNy.jpg",Mission Impossible: Dead Reckoning
+#EXTINF:9960 tvg-name="Mission Impossible: Dead Reckoning" tvg-logo="https://image.tmdb.org/t/p/original/h56edmERPTkey89SqyKu4hINVNy.jpg" group-title="Movies" type="movie",Mission Impossible: Dead Reckoning
 http://192.168.1.71:9096/emby/Videos/25/Mission%20Impossible%20Dead%20Reckoning%20%282023%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:10320 tvg-name="Mission Impossible: The Final Reckoning" tvg-logo="https://image.tmdb.org/t/p/original/rQTW9oQZFsujMlvyYBjbwa8LYkD.jpg",Mission Impossible: The Final Reckoning
+#EXTINF:10320 tvg-name="Mission Impossible: The Final Reckoning" tvg-logo="https://image.tmdb.org/t/p/original/rQTW9oQZFsujMlvyYBjbwa8LYkD.jpg" group-title="Movies" type="movie",Mission Impossible: The Final Reckoning
 http://192.168.1.71:9096/emby/Videos/26/Mission%20Impossible%20The%20Final%20Reckoning%20%282025%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:6420 tvg-name="Moana" tvg-logo="https://image.tmdb.org/t/p/original/kNAANuEyhDu5g4c5p0gcMFLhV0k.jpg",Moana
+#EXTINF:6420 tvg-name="Moana" tvg-logo="https://image.tmdb.org/t/p/original/kNAANuEyhDu5g4c5p0gcMFLhV0k.jpg" group-title="Movies" type="movie",Moana
 http://192.168.1.71:9096/emby/Videos/27/Moana%20%282016%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:5580 tvg-name="Moana 2" tvg-logo="https://image.tmdb.org/t/p/original/rMrfAeUa0KL1EVuPzcq9LpsKPE4.jpg",Moana 2
+#EXTINF:5580 tvg-name="Moana 2" tvg-logo="https://image.tmdb.org/t/p/original/rMrfAeUa0KL1EVuPzcq9LpsKPE4.jpg" group-title="Movies" type="movie",Moana 2
 http://192.168.1.71:9096/emby/Videos/28/Moana%202%20%282024%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:6360 tvg-name="Paddington in Peru" tvg-logo="https://image.tmdb.org/t/p/original/vF6IPaY1pjoJHcVfBUR8iZGmlUs.jpg",Paddington in Peru
+#EXTINF:6360 tvg-name="Paddington in Peru" tvg-logo="https://image.tmdb.org/t/p/original/vF6IPaY1pjoJHcVfBUR8iZGmlUs.jpg" group-title="Movies" type="movie",Paddington in Peru
 http://192.168.1.71:9096/emby/Videos/29/Paddington%20in%20Peru%20%282024%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:6420 tvg-name="Sing" tvg-logo="https://image.tmdb.org/t/p/original/qI5mnNRs0Su7yDI6GbsxevZlV48.jpg",Sing
+#EXTINF:6420 tvg-name="Sing" tvg-logo="https://image.tmdb.org/t/p/original/qI5mnNRs0Su7yDI6GbsxevZlV48.jpg" group-title="Movies" type="movie",Sing
 http://192.168.1.71:9096/emby/Videos/30/Sing%20%282016%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:6540 tvg-name="Sing 2" tvg-logo="https://image.tmdb.org/t/p/original/3tG1PVyTAKMKfHqCPPdilnmXELH.jpg",Sing 2
+#EXTINF:6540 tvg-name="Sing 2" tvg-logo="https://image.tmdb.org/t/p/original/3tG1PVyTAKMKfHqCPPdilnmXELH.jpg" group-title="Movies" type="movie",Sing 2
 http://192.168.1.71:9096/emby/Videos/31/Sing%202%20%282021%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:6480 tvg-name="Snow White" tvg-logo="https://image.tmdb.org/t/p/original/q54mGnum04t8eLV7jQVPxYuY8Tm.jpg",Snow White
+#EXTINF:6480 tvg-name="Snow White" tvg-logo="https://image.tmdb.org/t/p/original/q54mGnum04t8eLV7jQVPxYuY8Tm.jpg" group-title="Movies" type="movie",Snow White
 http://192.168.1.71:9096/emby/Videos/32/Snow%20White%20%282025%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:5520 tvg-name="The Super Mario Bros. Movie" tvg-logo="https://image.tmdb.org/t/p/original/u4SDPknBWEEOCzPJvL0NwApkQSR.jpg",The Super Mario Bros. Movie
+#EXTINF:5520 tvg-name="The Super Mario Bros. Movie" tvg-logo="https://image.tmdb.org/t/p/original/u4SDPknBWEEOCzPJvL0NwApkQSR.jpg" group-title="Movies" type="movie",The Super Mario Bros. Movie
 http://192.168.1.71:9096/emby/Videos/37/The%20Super%20Mario%20Bros.%20Movie%20%282023%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:7560 tvg-name="Thunderbolts*" tvg-logo="https://image.tmdb.org/t/p/original/d2J5coWE1pRE0UQSPSxCWfMi60L.jpg",Thunderbolts*
+#EXTINF:7560 tvg-name="Thunderbolts*" tvg-logo="https://image.tmdb.org/t/p/original/d2J5coWE1pRE0UQSPSxCWfMi60L.jpg" group-title="Movies" type="movie",Thunderbolts*
 http://192.168.1.71:9096/emby/Videos/38/Thunderbolts%20%282025%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:5520 tvg-name="Trolls" tvg-logo="https://image.tmdb.org/t/p/original/mVS30PQuN24MdVaH5ZKHyJdVHuZ.jpg",Trolls
+#EXTINF:5520 tvg-name="Trolls" tvg-logo="https://image.tmdb.org/t/p/original/mVS30PQuN24MdVaH5ZKHyJdVHuZ.jpg" group-title="Movies" type="movie",Trolls
 http://192.168.1.71:9096/emby/Videos/39/Trolls%20%282016%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:5400 tvg-name="Trolls World Tour" tvg-logo="https://image.tmdb.org/t/p/original/nHE2VcSsCxhoG6SrBpDzmZoOmcx.jpg",Trolls World Tour
+#EXTINF:5400 tvg-name="Trolls World Tour" tvg-logo="https://image.tmdb.org/t/p/original/nHE2VcSsCxhoG6SrBpDzmZoOmcx.jpg" group-title="Movies" type="movie",Trolls World Tour
 http://192.168.1.71:9096/emby/Videos/41/Trolls%20World%20Tour%20%282020%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:5460 tvg-name="Trolls Band Together" tvg-logo="https://image.tmdb.org/t/p/original/76QNJRHUcsyYfPHx9JFy8jJDAXk.jpg",Trolls Band Together
+#EXTINF:5460 tvg-name="Trolls Band Together" tvg-logo="https://image.tmdb.org/t/p/original/76QNJRHUcsyYfPHx9JFy8jJDAXk.jpg" group-title="Movies" type="movie",Trolls Band Together
 http://192.168.1.71:9096/emby/Videos/40/Trolls%20Band%20Together%20%282023%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:5640 tvg-name="Z-O-M-B-I-E-S" tvg-logo="https://image.tmdb.org/t/p/original/iDnO5JXlRCfT8GuDlMXmaJZ5qoh.jpg",Z-O-M-B-I-E-S
+#EXTINF:5640 tvg-name="Z-O-M-B-I-E-S" tvg-logo="https://image.tmdb.org/t/p/original/iDnO5JXlRCfT8GuDlMXmaJZ5qoh.jpg" group-title="Movies" type="movie",Z-O-M-B-I-E-S
 http://192.168.1.71:9096/emby/Videos/42/Z-O-M-B-I-E-S%20%282018%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:4980 tvg-name="Z-O-M-B-I-E-S 2" tvg-logo="https://image.tmdb.org/t/p/original/qEWcPuZbmft2KNicp27nEK0Rjm8.jpg",Z-O-M-B-I-E-S 2
+#EXTINF:4980 tvg-name="Z-O-M-B-I-E-S 2" tvg-logo="https://image.tmdb.org/t/p/original/qd5qk0ltZniDy3vUJkRt12H1wzX.jpg" group-title="Movies" type="movie",Z-O-M-B-I-E-S 2
 http://192.168.1.71:9096/emby/Videos/43/Z-O-M-B-I-E-S%202%20%282020%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:5280 tvg-name="Z-O-M-B-I-E-S 3" tvg-logo="https://image.tmdb.org/t/p/original/s97inRMAEmoRU7IaAFVRGxxR9j3.jpg",Z-O-M-B-I-E-S 3
+#EXTINF:5040 tvg-name="Z-O-M-B-I-E-S 3" tvg-logo="https://image.tmdb.org/t/p/original/8pJ82Rq0Jj0VPhwKCEvX9GRB4R7.jpg" group-title="Movies" type="movie",Z-O-M-B-I-E-S 3
 http://192.168.1.71:9096/emby/Videos/44/Z-O-M-B-I-E-S%203%20%282022%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:5100 tvg-name="Z-O-M-B-I-E-S 4: Dawn of the Vampires" tvg-logo="https://image.tmdb.org/t/p/original/2RIjnBMQqyrTrN7NrHt0fKZlIyN.jpg",Z-O-M-B-I-E-S 4: Dawn of the Vampires
-http://192.168.1.71:9096/emby/Videos/45/Zombies%204%20Dawn%20of%20the%20Vampires%20%282025%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
+#EXTINF:5100 tvg-name="Z-O-M-B-I-E-S 4: Dawn of the Vampires" tvg-logo="https://image.tmdb.org/t/p/original/3hfn5jH3H0Vq5nOw8MErzHnWmLW.jpg" group-title="Movies" type="movie",Z-O-M-B-I-E-S 4: Dawn of the Vampires
+http://192.168.1.71:9096/emby/Videos/45/Z-O-M-B-I-E-S%204%20Dawn%20of%20the%20Vampires%20%282025%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
