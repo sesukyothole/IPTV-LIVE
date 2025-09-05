@@ -102,7 +102,7 @@ http://192.168.1.71:9096/emby/Videos/37/The%20Super%20Mario%20Bros.%20Movie%20%2
 #EXTINF:7560 tvg-name="Thunderbolts*" tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/8z03qu64snrO7FtUoCGEXWJMF0H.jpg",Thunderbolts*
 http://192.168.1.71:9096/emby/Videos/38/Thunderbolts%20%282025%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
-#EXTINF:5520 tvg-name="Trolls" tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/9VlK2j0THZWzh",Trolls
+#EXTINF:5520 tvg-name="Trolls" tvg-logo=https://image.tmdb.org/t/p/original/zKu5MNy9QW1a5ZHgv7iAp3kRZpE.jpg",Trolls
 http://192.168.1.71:9096/emby/Videos/39/Trolls%20%282016%29.mp4?static=true&api_key=971f9c0913e34705930a9813a34f82e5
 
 #EXTINF:5400 tvg-name="Trolls World Tour" tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/9VlK2j0THZWzhQPq0W3Oc0IIdBB.jpg",Trolls World Tour
