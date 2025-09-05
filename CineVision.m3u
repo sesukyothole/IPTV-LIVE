@@ -63,16 +63,16 @@ https://fl3.moveonjoy.com/HALLMARK_MOVIES_MYSTERIES/index.m3u8
 #EXTINF:-1 tvg-id="403926" tvg-name="HBO USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" tvg-language="en" group-title="HBO",HBO USA - East
 http://23.237.104.106:8080/USA_HBO/index.m3u8
 
-#EXTINF:-1 tvg-id="403522" tvg-name="HBO 2 USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-2-us.png" tvg-language="en" group-title="HBO",HBO 2 USA - East
+#EXTINF:-1 tvg-id="403522" tvg-name="HBO Hits USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-2-us.png" tvg-language="en" group-title="HBO",HBO Hits USA - East
 https://fl3.moveonjoy.com/HBO_2/index.m3u8
 
 #EXTINF:-1 tvg-id="403650" tvg-name="HBO Comedy USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-comedy-us.png" tvg-language="en" group-title="HBO",HBO Comedy USA - East
 http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8
 
-#EXTINF:-1 tvg-id="403477" tvg-name="HBO Signature USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-signature-us.png" tvg-language="en" group-title="HBO",HBO Signature USA - East
+#EXTINF:-1 tvg-id="403477" tvg-name="HBO Drama USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-signature-us.png" tvg-language="en" group-title="HBO",HBO Drama USA - East
 http://23.237.104.106:8080/USA_HBO_SIGNATURE/index.m3u8
 
-#EXTINF:-1 tvg-id="403823" tvg-name="HBO Zone USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-zone-us.png" tvg-language="en" group-title="HBO",HBO Zone USA - East
+#EXTINF:-1 tvg-id="403823" tvg-name="HBO Movies USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-zone-us.png" tvg-language="en" group-title="HBO",HBO Movies USA - East
 https://fl5.moveonjoy.com/HBO_ZONE/index.m3u8
 
 #EXTINF:-1 tvg-id="403578" tvg-name="National Geographic Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/national-geographic-us.png" tvg-language="en" group-title="National Geogrphic",National Geographic Network USA - East
