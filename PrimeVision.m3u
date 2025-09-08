@@ -3,6 +3,9 @@
 #EXTINF:-1 tvg-id="403838" tvg-name="AMC Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png" tvg-language="en",AMC Network USA - East
 https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8
 
+#EXTINF:-1 tvg-id="403895" tvg-name="BBC America USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bbc-america-us.png" tvg-language="en",BBC America USA - East
+https://fl3.moveonjoy.com/BBC_AMERICA/index.m3u8
+
 #EXTINF:-1 tvg-id="403726" tvg-name="Bloomberg Television USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png" tvg-language="en",Bloomberg Television USA - East
 http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
 
