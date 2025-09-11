@@ -76,7 +76,8 @@ MANUAL_ID_OVERRIDES = {
     "Blue Beetle": {"type": "movie", "id": 565770},
     "Unknown": {"type": "movie", "id": 48138},
     "Liv and Maddie: Cali Style": {"type": "tv", "id": 59375},
-    "Bunk'D": {"type": "tv", "id": 62875} 
+    "Bunk'D": {"type": "tv", "id": 62875},
+    "Vampirina: Teenage Vampire": {"type": "tv", "id": 275722}
 }
 
 TMDB_GENRES = {
