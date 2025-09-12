@@ -16,10 +16,10 @@ https://3abn.bozztv.com/3abn2/Pro_live/smil:Pro_live.smil/playlist.m3u8
 https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-id="403895" tvg-name="BBC America USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bbc-america-us.png" tvg-language="en",BBC America USA - East
-https://fl3.moveonjoy.com/BBC_AMERICA/index.m3u8
+http://23.237.104.106:8080/USA_BBC_AMERICA/index.m3u8
 
 #EXTINF:-1 tvg-id="405729" tvg-name="BBC World News America" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/8/8a/BBC_World_News_America_2023.svg/revision/latest/scale-to-width-down/150?cb=20231023223729" tvg-language="en",BBC World News America
-https://fl3.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8
+https://fl4.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8
 
 #EXTINF:-1 tvg-id="403726" tvg-name="Bloomberg Television USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png" tvg-language="en",Bloomberg Television USA - East
 http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
