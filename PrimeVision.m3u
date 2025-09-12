@@ -1,7 +1,16 @@
 #EXTM3U url-tvg="https://gtvservices5.github.io/IPTV-LIVE/epg.xml"
 
-#EXTINF:-1 tvg-id="166678" tvg-name="3ABN Kids USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-kids-network-us.png",3ABN Kids USA  
+#EXTINF:-1 tvg-id="167443" tvg-name="3ABN Dare to Dream Netwok USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-dare-to-dream-network-us.png",3ABN Dare to Dream Network USA
+https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="166678" tvg-name="3ABN Kids Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-kids-network-us.png",3ABN Kids Network USA  
 https://3abn.bozztv.com/3abn2/Kids_live/smil:Kids_live.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="170666" tvg-name="3ABN Praise Him Music Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-praise-him-music-network-us.png",3ABN Praise Him Music Network USA
+https://3abn.bozztv.com/3abn1/PraiseHim/smil:PraiseHim.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="167451" tvg-name="3ABN Proclaim Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-proclaim-network-us.png",3ABN Proclaim Network USA
+https://3abn.bozztv.com/3abn2/Pro_live/smil:Pro_live.smil/playlist.m3u8
 
 #EXTINF:-1 tvg-id="403838" tvg-name="AMC Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png" tvg-language="en",AMC Network USA - East
 https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8
