@@ -78,7 +78,8 @@ MANUAL_ID_OVERRIDES = {
     "Unknown": {"type": "movie", "id": 48138},
     "Liv and Maddie: Cali Style": {"type": "tv", "id": 59375},
     "Bunk'D": {"type": "tv", "id": 62875},
-    "Vampirina: Teenage Vampire": {"type": "tv", "id": 275722}
+    "Vampirina: Teenage Vampire": {"type": "tv", "id": 275722},
+    "Electric Bloom": {"type": "tv", "id": 275724}
 }
 
 TMDB_GENRES = {
