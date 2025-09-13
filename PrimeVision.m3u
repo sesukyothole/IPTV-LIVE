@@ -100,7 +100,7 @@ http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8
 http://23.237.104.106:8080/USA_HBO_SIGNATURE/index.m3u8
 
 #EXTINF:-1 tvg-id="403823" tvg-name="HBO Movies USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/7c/HBO_Movies_2025.svg/revision/latest/scale-to-width-down/150?cb=20250904231017" tvg-language="en",HBO Movies USA - East
-https://fl4.moveonjoy.com/HBO_ZONE/index.m3u8
+http://23.237.104.106:8080/USA_HBO_ZONE/index.m3u8
 
 #EXTINF:-1 tvg-id="403578" tvg-name="National Geographic Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/national-geographic-us.png" tvg-language="en",National Geographic Network USA - East
 https://fl4.moveonjoy.com/National_Geographic/index.m3u8
