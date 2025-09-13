@@ -159,20 +159,20 @@ https://fl4.moveonjoy.com/SHOWTIME_2/index.m3u8
 #EXTINF:-1 tvg-id="403851" tvg-name="Showtime Women USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-women-us.png" tvg-language="en",Showtime Women USA - East
 https://fl4.moveonjoy.com/SHOWTIME_WOMEN/index.m3u8
 
-#EXTINF:-1 tvg-id="403646" tvg-name="Starz USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-us.png" tvg-language="en",STARZ USA - East
+#EXTINF:-1 tvg-id="403646" tvg-name="Starz USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-us.png" tvg-language="en",Starz USA - East
 http://23.237.104.106:8080/USA_STARZ/index.m3u8
 
-#EXTINF:-1 tvg-id="403889" tvg-name="Starz Cinema USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-cinema-us.png" tvg-language="en",STARZ Cinema USA - East
+#EXTINF:-1 tvg-id="403889" tvg-name="Starz Cinema USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-cinema-us.png" tvg-language="en",Starz Cinema USA - East
 http://23.237.104.106:8080/USA_STARZ_CINEMA/index.m3u8
 
-#EXTINF:-1 tvg-id="403873" tvg-name="Starz Comedy USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-comedy-us.png" tvg-language="en",STARZ Comedy USA - East
+#EXTINF:-1 tvg-id="403873" tvg-name="Starz Comedy USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-comedy-us.png" tvg-language="en",Starz Comedy USA - East
 http://23.237.104.106:8080/USA_STARZ_COMEDY/index.m3u8
 
-#EXTINF:-1 tvg-id="403480" tvg-name="Starz Encore Action USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-action-us.png" tvg-language="en",STARZ Encore Action USA - East
+#EXTINF:-1 tvg-id="403480" tvg-name="Starz Encore Action USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-action-us.png" tvg-language="en",Starz Encore Action USA - East
 https://fl4.moveonjoy.com/STARZ_ENCORE_ACTION/index.m3u8
 
-#EXTINF:-1 tvg-id="403786" tvg-name="Starz Encore Classic USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-classic-us.png" tvg-language="en",STARZ Encore Classic USA - East
+#EXTINF:-1 tvg-id="403786" tvg-name="Starz Encore Classic USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-classic-us.png" tvg-language="en",Starz Encore Classic USA - East
 https://fl4.moveonjoy.com/STARZ_ENCORE_CLASSIC/index.m3u8
 
-#EXTINF:-1 tvg-id="403951" tvg-name="Starz Encore Westerns USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-westerns-us.png" tvg-language="en",STARZ Encore Westerns USA - East
+#EXTINF:-1 tvg-id="403951" tvg-name="Starz Encore Westerns USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-westerns-us.png" tvg-language="en",Starz Encore Westerns USA - East
 https://fl4.moveonjoy.com/STARZ_ENCORE_WESTERNS/index.m3u8
