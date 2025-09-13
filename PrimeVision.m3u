@@ -42,6 +42,9 @@ https://fl4.moveonjoy.com/Comedy_Central/index.m3u8
 #EXTINF:-1 tvg-id="403829" tvg-name="Cinemax USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png" tvg-language="en",Cinemax USA - East
 https://fl4.moveonjoy.com/CINEMAX/index.m3u8
 
+#EXTINF:-1 tvg-id="403564" tvg-name="Discovery Channel USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/discovery-channel-us.png" tvg-language="en",Discovery Channel USA - East
+http://23.237.104.106:8080/USA_DISCOVERY/index.m3u8
+
 #EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel USA - East" tvg-logo="https://static.wikia.nocookie.net/disney/images/2/25/Disney_Channel_2024_logo.png" tvg-language="en",Disney Channel USA - East
 https://fl4.moveonjoy.com/DISNEY/index.m3u8
 
