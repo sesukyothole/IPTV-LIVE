@@ -130,7 +130,7 @@ http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
 https://fl4.moveonjoy.com/NICK_JR/index.m3u8
 
 #EXTINF:-1 tvg-id="403847" tvg-name="Nicktoons USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-toons-us.png" tvg-language="en",Nicktoons USA - East
-https://fl3.moveonjoy.com/NICKTOONS/index.m3u8
+https://fl4.moveonjoy.com/NICKTOONS/index.m3u8
 
 #EXTINF:-1 tvg-id="403772" tvg-name="TeenNick USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/teen-nick-us.png" tvg-language="en",TeenNick USA - East
 https://fl4.moveonjoy.com/Teen_Nick/index.m3u8
@@ -151,7 +151,7 @@ https://fl4.moveonjoy.com/SHOWTIME_NEXT/index.m3u8
 https://fl4.moveonjoy.com/SHOWTIME_2/index.m3u8
 
 #EXTINF:-1 tvg-id="403646" tvg-name="STARZ USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-us.png" tvg-language="en",STARZ USA - East
-https://fl4.moveonjoy.com/STARZ/index.m3u8
+http://23.237.104.106:8080/USA_STARZ/index.m3u8
 
 #EXTINF:-1 tvg-id="403786" tvg-name="STARZ Encore Classic USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-classic-us.png" tvg-language="en",STARZ Encore Classic USA - East
 https://fl4.moveonjoy.com/STARZ_ENCORE_CLASSIC/index.m3u8
