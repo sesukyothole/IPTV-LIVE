@@ -15,6 +15,9 @@ https://3abn.bozztv.com/3abn2/Pro_live/smil:Pro_live.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="403805" tvg-name="ABC USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/abc-us.png" tvg-language="en",ABC USA - East
 https://fl4.moveonjoy.com/ABC_EAST/index.m3u8
 
+#EXTINF:-1 tvg-id="399930" tvg-name="ABC News USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/abc-news-us.png" tvg-language="en",ABC News USA - East
+https://livetv-fa.tubi.video/abc-news/index.m3u8
+
 #EXTINF:-1 tvg-id="403534" tvg-name="ACC Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/acc-network-us.png" tvg-language="en",ACC Network USA
 https://fl4.moveonjoy.com/ACC_NETWORK/index.m3u8
 
@@ -66,6 +69,9 @@ https://fl4.moveonjoy.com/ESPN_NEWS/index.m3u8
 #EXTINF:-1 tvg-id="403455" tvg-name="Fuse Network USA - East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/59/Fuse_logo15.png" tvg-language="en",Fuse Network USA - East
 http://23.237.104.106:8080/USA_FUSE/index.m3u8
 
+#EXTINF:-1 tvg-id="435991" tvg-name="Filmrise True Crime USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/filmrise-crime-us.png" tvg-language="en",Filmrise True Crime USA - East
+https://livetv-fa.tubi.video/filmrise-true-crime/index.m3u8
+
 #EXTINF:-1 tvg-id="403815" tvg-name="FX Networks USA - East" tvg-logo="https://pbs.twimg.com/profile_images/1715419203610857472/W2ZpsXbt_400x400.jpg" tvg-language="en",FX Networks USA - East
 https://fl4.moveonjoy.com/FX/index.m3u8
 
@@ -93,16 +99,16 @@ https://fl4.moveonjoy.com/HALLMARK_MOVIES_MYSTERIES/index.m3u8
 #EXTINF:-1 tvg-id="403926" tvg-name="HBO USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" tvg-language="en",HBO USA - East
 http://23.237.104.106:8080/USA_HBO/index.m3u8
 
-#EXTINF:-1 tvg-id="403522" tvg-name="HBO Hits USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a0/HBO_Hits_2025.svg/revision/latest/scale-to-width-down/150?cb=20250904230718" tvg-language="en",HBO Hits USA - East
+#EXTINF:-1 tvg-id="403522" tvg-name="HBO Hits USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a0/HBO_Hits_2025.svg/revision/latest/scale-to-width-down/512?cb=20250904230718" tvg-language="en",HBO Hits USA - East
 https://fl4.moveonjoy.com/HBO_2/index.m3u8
 
 #EXTINF:-1 tvg-id="403650" tvg-name="HBO Comedy USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-comedy-us.png" tvg-language="en",HBO Comedy USA - East
 http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8
 
-#EXTINF:-1 tvg-id="403477" tvg-name="HBO Drama USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/b/b6/HBO_Drama_2025.svg/revision/latest/scale-to-width-down/150?cb=20250904230842" tvg-language="en",HBO Drama USA - East
+#EXTINF:-1 tvg-id="403477" tvg-name="HBO Drama USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/b/b6/HBO_Drama_2025.svg/revision/latest/scale-to-width-down/512?cb=20250904230842" tvg-language="en",HBO Drama USA - East
 http://23.237.104.106:8080/USA_HBO_SIGNATURE/index.m3u8
 
-#EXTINF:-1 tvg-id="403823" tvg-name="HBO Movies USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/7c/HBO_Movies_2025.svg/revision/latest/scale-to-width-down/150?cb=20250904231017" tvg-language="en",HBO Movies USA - East
+#EXTINF:-1 tvg-id="403823" tvg-name="HBO Movies USA - East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/7c/HBO_Movies_2025.svg/revision/latest/scale-to-width-down/512?cb=20250904231017" tvg-language="en",HBO Movies USA - East
 http://23.237.104.106:8080/USA_HBO_ZONE/index.m3u8
 
 #EXTINF:-1 tvg-id="403578" tvg-name="National Geographic Network USA - East" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/national-geographic-us.png" tvg-language="en",National Geographic Network USA - East
