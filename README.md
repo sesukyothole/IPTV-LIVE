@@ -1,15 +1,9 @@
-Playlist' 
-1. PrimeVision.m3u8 is for Live TV
-2. UnionRadio.m3u8 is for Live Radio
+# IPTV-LIVE 🎬📺
+Free IPTV M3U playlists with live TV channels worldwide.  
+Works on VLC, Kodi, Android TV, and IPTV apps.
 
-You can paste these links to your IPTV App (Internationally)
-1. Live TV: https://gtvservices5.github.io/IPTV-LIVE/PrimeVision.m3u8
-2. Live Radio: https://bit.ly/WebOSRadio
-
-Geo-Blocked Live TV Playlists (US IP Addresses Only)
-1. https://rebrand.ly/USOnlyMain
-2. https://rebrand.ly/USOnlyHD
-3. https://rebrand.ly/USOnlySD
-
-EPG Source: https://gtvservices5.github.io/IPTV-LIVE/epg.xml
-
+✅ Updated regularly  
+✅ Includes sports, movies, kids, and news channels  
+✅ Open-source and free to use
+✅ Posters included
+✅ Age rating shows up on Kodi
