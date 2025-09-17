@@ -69,7 +69,7 @@ https://fl4.moveonjoy.com/ESPN_NEWS/index.m3u8
 #EXTINF:-1 tvg-id="403455" tvg-name="Fuse Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/59/Fuse_logo15.png" tvg-language="en",Fuse Network
 http://23.237.104.106:8080/USA_FUSE/index.m3u8
 
-#EXTINF:-1 tvg-id="403903" tvg-name="Fox News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fox-news-us.png"  
+#EXTINF:-1 tvg-id="403903" tvg-name="Fox News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fox-news-us.png",Fox News  
 https://fl4.moveonjoy.com/FOX_NEWS_CHANNEL/index.m3u8
 
 #EXTINF:-1 tvg-id="435991" tvg-name="Filmrise True Crime" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/filmrise-crime-us.png" tvg-language="en",Filmrise True Crime
