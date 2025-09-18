@@ -52,10 +52,10 @@ https://fl7.moveonjoy.com/CINEMAX/index.m3u8
 http://23.237.104.106:8080/USA_DISCOVERY/index.m3u8
 
 #EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel" tvg-logo="https://static.wikia.nocookie.net/disney/images/2/25/Disney_Channel_2024_logo.png" tvg-language="en",Disney Channel
-https://fl7.moveonjoy.con/DISNEY/index.m3u8
+https://fl7.moveonjoy.com/DISNEY/index.m3u8
 
 #EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/4/48/DisneyJr3Dver.png" tvg-language="en",Disney Junior
-https://fl7.moveonjoy.con/DISNEY_JR/index.m3u8
+https://fl7.moveonjoy.com/DISNEY_JR/index.m3u8
 
 #EXTINF:-1 tvg-id="403837" tvg-name="Disney XD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png" tvg-language="en",Disney XD
 http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8
