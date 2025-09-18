@@ -52,7 +52,7 @@ https://fl4.moveonjoy.com/CINEMAX/index.m3u8
 http://23.237.104.106:8080/USA_DISCOVERY/index.m3u8
 
 #EXTINF:-1 tvg-id="403788" tvg-name="Disney Channel" tvg-logo="https://static.wikia.nocookie.net/disney/images/2/25/Disney_Channel_2024_logo.png" tvg-language="en",Disney Channel
-https://fl4.moveonjoy.com/DISNEY/index.m3u8
+https://list.iptvcat.com/my_list/s/37cd1668fafc1e739a1f124c4edf0478.m3u8
 
 #EXTINF:-1 tvg-id="403674" tvg-name="Disney Junior" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/4/48/DisneyJr3Dver.png" tvg-language="en",Disney Junior
 http://23.237.104.106:8080/USA_DISNEY_JUNIOR/index.m3u8
