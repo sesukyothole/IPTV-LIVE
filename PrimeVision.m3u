@@ -61,7 +61,7 @@ https://fl7.moveonjoy.com/DISNEY/index.m3u8
 https://fl7.moveonjoy.com/DISNEY_JR/index.m3u8
 
 #EXTINF:-1 tvg-id="403837" tvg-name="Disney XD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png" tvg-language="en" group-title="Kids",Disney XD
-http://fl7.moveonjoy.com/DISNEY_XD/index.m3u8
+http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8
 
 #EXTINF:-1 tvg-id="403486" tvg-name="ESPN U" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-u-us.png" tvg-language="en" group-title="Sports",ESPN U
 https://fl7.moveonjoy.com/ESPN_U/index.m3u8
