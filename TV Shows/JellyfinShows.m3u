@@ -68,3 +68,15 @@ http://192.168.1.71:9000/Videos/4445819f2004ffa14c7f31285ff7ed75/stream?static=t
 
 #EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/7ZDusUcjxqx9g77JHMXhuzkQmbT.jpg" group-title="Wizards Beyond Waverly Place Season 2",Episode 2 - Ooze!... I Did It Again
 http://192.168.1.71:9000/Videos/5d28697c01305c81156d7d62cd8f7c1d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1620 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title"Vampirina: Teenage Vampire Season 1",Episode 1 - First Year to Watch
+http://192.168.1.71:9000/Videos/93121f4600a6be004276a94d0ec0562c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title"Vampirina: Teenage Vampire Season 1",Episode 2 - First Day of School
+http://192.168.1.71:9000/Videos/3b549c3e4846100225750f498501e4d8/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1260 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title"Vampirina: Teenage Vampire Season 1",Episode 3 - First Dance
+http://192.168.1.71:9000/Videos/6ac25c29c13f236599b64879e0040147/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title"Vampirina: Teenage Vampire Season 1",Episode 4 - First Parents Day
+http://192.168.1.71:9000/Videos/ad49067fbbb79f475568719cb79779f4/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
