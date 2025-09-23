@@ -29,3 +29,42 @@ http://192.168.1.71:9000/Videos/96c0a0757836d2c9c8c0791c4a3bd660/stream?static=t
 
 #EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 10 - Ain't Gnome Party Like a Wizard Party
 http://192.168.1.71:9000/Videos/d2848ba5e1e61b2fbd607bc98548ed88/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 11 - Potions Eleven
+http://192.168.1.71:9000/Videos/9d0de804146a1c1f12541a2c65249c4c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 12 - Battle of the Wands
+http://192.168.1.71:9000/Videos/e68662f3a1f67d5e7a51930f11f7240b/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 13 - There's Something About the Russos
+http://192.168.1.71:9000/Videos/5c2b605c99f1ba489b974c3421243b25/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 14 - Ready Player Wand
+http://192.168.1.71:9000/Videos/872c9f80e5f80cd6a534cbb00054ca0e/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 15 - Quest Birthday Ever!
+http://192.168.1.71:9000/Videos/ffec669fbbdceccdfff036b21370538e/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 16 - While You Were Sleepcasting
+http://192.168.1.71:9000/Videos/a776e8215117961f3b6e1f0aca0b2be7/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 17 - Abraca-Disaster!
+http://192.168.1.71:9000/Videos/d8bc23b29f0fa4490dacc91f6ace17fd/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 18 - Hit Me with Your Best Bot
+http://192.168.1.71:9000/Videos/6e521938a20a0164e0033cbdbb4b7726/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 19 - Raiders of the Locked Archive
+http://192.168.1.71:9000/Videos/60a8d3bbb136e513e70befba527c93e3/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 20 - When You Wish Upon a Squonk
+http://192.168.1.71:9000/Videos/cbdae8166b44dd26d41bc41be1c1708d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 21 - Nigh Is Now!
+http://192.168.1.71:9000/Videos/ba04497825331d9236a87349e792ca3a/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/7ZDusUcjxqx9g77JHMXhuzkQmbT.jpg" group-title="Wizards Beyond Waverly Place Season 2",Episode 1 - Curse Me Baby One More Time
+http://192.168.1.71:9000/Videos/4445819f2004ffa14c7f31285ff7ed75/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/7ZDusUcjxqx9g77JHMXhuzkQmbT.jpg" group-title="Wizards Beyond Waverly Place Season 2",Episode 2 - Ooze!... I Did It Again
+http://192.168.1.71:9000/Videos/5d28697c01305c81156d7d62cd8f7c1d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
