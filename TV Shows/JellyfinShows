@@ -1,0 +1,31 @@
+#EXTM3U
+
+#EXTINF:1620 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 1 - Everything Is Not What It Seems
+http://192.168.1.71:9000/Videos/339c6424791c9e20b4ecfd517edf169b/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 2 - Mortal Vibes Only
+http://192.168.1.71:9000/Videos/efca147d566d3156e7cbfc1a15727f6d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 3 - Saved by the Spell
+http://192.168.1.71:9000/Videos/7d65823f8ab7ed3e929b1a208b7d046b/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 4 - Something Wizard This Way Comes
+http://192.168.1.71:9000/Videos/5033a597eaa6de075d1a787741ec0dde/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 5 - Wizards Just Wand to Have Fun
+http://192.168.1.71:9000/Videos/19ae52abeae46a008a3e1d93c61bbef0/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 6 - The Legend of Creepy Follows
+http://192.168.1.71:9000/Videos/34288e6470029d806fbfae14ce375035/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 7 - We're Gonna Need a Bigger Float
+http://192.168.1.71:9000/Videos/79d7ee0f270bbd031deab2d7d977b79e/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 8 - You Can't Handle the Tooth
+http://192.168.1.71:9000/Videos/3f6bc9c2fc421a902558e5fbc8a5adc1/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 9 - Wiz-Taken Identity
+http://192.168.1.71:9000/Videos/96c0a0757836d2c9c8c0791c4a3bd660/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 10 - Ain't Gnome Party Like a Wizard Party
+http://192.168.1.71:9000/Videos/d2848ba5e1e61b2fbd607bc98548ed88/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
