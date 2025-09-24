@@ -6,7 +6,7 @@ http://192.168.1.71:9000/Videos/e2e0eaa9c44709ae2e18df32d1d2e198/stream?static=t
 #EXTINF:10860 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg" group-title="All Movies",Avengers: Endgame (2019)
 http://192.168.1.71:9000/Videos/b5020bab3bf857ec62741c760a80fe84/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
-#EXTINF:8940 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg" group-titlr="All Movies",Avengers: Infinity War (2018)
+#EXTINF:8940 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg" group-title="All Movies",Avengers: Infinity War (2018)
 http://192.168.1.71:9000/Videos/9ce4847b0135f9260b2fbccec1aff7f5/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
 #EXTINF:6000 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg" group-title="All Movies",The Bad Guys (2022)
@@ -95,6 +95,9 @@ http://192.168.1.71:9000/Videos/98ad7952efbca34094c88b4645cf263a/stream?static=t
 
 #EXTINF:6000 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/aLVkiINlIeCkcZIzb7XHzPYgO6L.jpg" group-title="All Movies",Moana 2 (2024)
 http://192.168.1.71:9000/Videos/8473427a24b51b4247ac6ae02ab225bd/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:7260 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/lurEK87kukWNaHd0zYnsi3yzJrs.jpg" group-title="All Movies",Mufasa: The Lion King (2024)
+http://192.168.1.71:9000/Videos/3d0275eb915fe32c4d76708cb4b099f5/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
 #EXTINF:6360 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/1ffZAucqfvQu36x1C49XfOdjuOG.jpg" group-title="All Movies",Paddington in Peru (2024)
 http://192.168.1.71:9000/Videos/f5ffceefb1d801b2743d600c1b5206ad/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
