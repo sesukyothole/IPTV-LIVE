@@ -72,6 +72,42 @@ http://192.168.1.71:9000/Videos/5d28697c01305c81156d7d62cd8f7c1d/stream?static=t
 #EXTINF:1620 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 1 - How It Started
 http://192.168.1.71:9000/Videos/9c212a97020b802a530229778f31c04d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 2 - How It Almost Ended
+http://192.168.1.71:9000/Videos/313c974f96308225e6bc3d488d5c355e/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 3 - How We Rocked Homecoming
+http://192.168.1.71:9000/Videos/059be602c14b145ef5cd13001091fbb2/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1260 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 4 - How We Got Crushed
+http://192.168.1.71:9000/Videos/2ad294cf6932cf00979330115b08d38c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 5 - How We Made a Tiny Mistake
+http://192.168.1.71:9000/Videos/4753fee580630102bfa2d9169958ed66/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 6 - How We Found Howie
+http://192.168.1.71:9000/Videos/be9f3e444b7f502ca5c29daabdfc183c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 7 - How to (Not) Make a Music Video
+http://192.168.1.71:9000/Videos/bcd0d10fcc1df651feb14110fb98735a/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1260 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 8 - How We Danced the Night Away
+http://192.168.1.71:9000/Videos/51ca6e6b25d29166a22d26e1bea85dfb/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 9 - How It All Came Out in the Wash
+http://192.168.1.71:9000/Videos/842e12109dad71e91553dac86ff334a9/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 10 - How Tulip Became a Shelly: A Halloween Nightmare
+http://192.168.1.71:9000/Videos/61d015dcaa22669bfa1ade7723a85b7b/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 11 - How We Learned To Love Our Haters
+http://192.168.1.71:9000/Videos/74ac9052c188d382b41c9736b2f6af20/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 12 - How We Pulled A Song Out Of Our Pocket
+http://192.168.1.71:9000/Videos/f5f0273afe493c335c465ee219875959/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 13 - How We Tried To Crash A Party
+http://192.168.1.71:9000/Videos/f0069347eca45f26653643011dacf046/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
 #EXTINF:1620 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title="Vampirina: Teenage Vampire Season 1",Episode 1 - First Year to Watch
 http://192.168.1.71:9000/Videos/93121f4600a6be004276a94d0ec0562c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
