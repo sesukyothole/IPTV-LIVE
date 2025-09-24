@@ -134,3 +134,6 @@ http://192.168.1.71:9000/Videos/9aeb5555dc8164c1796bb1f88361c209/stream?static=t
 
 #EXTINF:2640 tvg-logo="https://image.tmdb.org/t/p/original/34S2q0TiaDQk8MWIBVRmwDfse3A.jpg" group-title="DuckTales (2017) Season 1",Episode 1 - Woo-oo!
 http://192.168.1.71:9000/Videos/82e34655c93c8594872fa46f8108e0b7/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/34S2q0TiaDQk8MWIBVRmwDfse3A.jpg" group-title="DuckTales (2017) Season 1",Episode 2 - Daytrip of Doom!
+http://192.168.1.71:9000/Videos/62010cde506be7c140a3a5f628d1560a/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
