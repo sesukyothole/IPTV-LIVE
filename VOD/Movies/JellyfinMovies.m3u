@@ -2,3 +2,147 @@
 
 #EXTINF:7680 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/ykUEbfpkf8d0w49pHh0AD2KrT52.jpg" group-title="All Movies",Aladdin (2019)
 http://192.168.1.71:9000/Videos/e2e0eaa9c44709ae2e18df32d1d2e198/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:10860 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg" group-title="All Movies",Avengers: Endgame (2019)
+http://192.168.1.71:9000/Videos/b5020bab3bf857ec62741c760a80fe84/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:8940 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg" group-titlr="All Movies",Avengers: Infinity War (2018)
+http://192.168.1.71:9000/Videos/9ce4847b0135f9260b2fbccec1aff7f5/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6000 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg" group-title="All Movies",The Bad Guys (2022)
+http://192.168.1.71:9000/Videos/c522062392be13fbceb12f42e8c6b05b/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6240 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/26oSPnq0ct59l07QOXZKyzsiRtN.jpg" group-title="All Movies",The Bad Guys 2 (2025)
+http://192.168.1.71:9000/Videos/71e2eb17618bf229a740c2028ddd6d5a/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:7740 tvg-logo="" group-title="All Movies",Beauty and the Beast (2017)
+http://192.168.1.71:9000/Videos/131807cebde8e8698d1f45f3911fcfd0/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:4920 tvg-logo="" group-title="All Movies",Big City Greens the Movie: Spacecation (2024)
+http://192.168.1.71:9000/Videos/a54612e046f5b600f3352e9586e4b979/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6300 tvg-logo="" group-title="All Movies",Cinderella (2015)
+http://192.168.1.71:9000/Videos/74c7aaa9d41cb5cb23448394602968d2/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6300 tvg-logo="" group-title="All Movies",Coco (2017)
+http://192.168.1.71:9000/Videos/9d25c9bf744c00a2a957e98cfeb4f40c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6720 tvg-logo="" group-title="All Movies",Descendants (2015)
+http://192.168.1.71:9000/Videos/7ba3987574ed809c98a59fddafe8e81d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6720 tvg-logo="" group-title="All Movies",Descendants 2 (2017)
+http://192.168.1.71:9000/Videos/85eff418427657f61214d64d8b19aeb8/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6360 tvg-logo="" group-title="All Movies",Descendants 3 (2019)
+http://192.168.1.71:9000/Videos/e2fd2a3fa9127a6dd71af73be58dedfd/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5520 tvg-logo="" group-title="All Movies",Descendants: The Rise of Red (2024)
+http://192.168.1.71:9000/Videos/5085a3bc0c3c93262bebfb4417f46d81/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5340 tvg-logo="" group-title="All Movies",Dog Man (2025)
+http://192.168.1.71:9000/Videos/e69eaa37d07bf41fb7844c9a5ca7fae7/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6720 tvg-logo="" group-title="All Movies",Dumbo (2019)
+http://192.168.1.71:9000/Videos/e49f7af6b35a1fd199475f0240c38a35/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5880 tvg-logo="" group-title="All Movies",Elio (2025)
+http://192.168.1.71:9000/Videos/9a65dd431318ba59d2bae6e0d48211ec/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:8940 tvg-logo="" group-title="All Movies",F1: The Movie (2025)
+http://192.168.1.71:9000/Videos/d3080cb6b06b45cc168a1ffb6fe738a2/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5820 tvg-logo="" group-title="All Movies",Freaky Friday (2003)
+http://192.168.1.71:9000/Video/d1df723c36bb33f1821415c9d33187df/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5460 tvg-logo="" group-title="All Movies",Freaky Friday (2018)
+http://192.168.1.71:9000/Videos/d8c6126a503268ce028c6e668f0cd007/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:7500 tvg-logo="" group-title="All Movies",How to Train Your Dragon (2025)
+http://192.168.1.71:9000/Videos/56d72f563fd92e55f68dd46329235631/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5700 tvg-logo="" group-title="All Movies",Inside Out (2015)
+http://192.168.1.71:9000/Videos/b71890814360e89166160ff2df3b7908/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5760 tvg-logo="" group-title="All Movies",Inside Out 2 (2024)
+http://192.168.1.71:9000/Videos/2af87f788038f70610e58c97194a9079/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:8040 tvg-logo="" group-title="All Movies",Jurrasic World: Rebirth (2025)
+http://192.168.1.71:9000/Videos/608a6a4674071c17c70d0d9abd8a6737/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6000 tvg-logo="" group-title="All Movies",KPop Demon Hunters (2025)
+http://192.168.1.71:9000/Videos/da19b28cadd052ea036cb91ae2f85685/stream?static=trueapi_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5100 tvg-logo="" group-title="All Movies",Lilo & Stitch (2002)
+http://192.168.1.71:9000/Videos/fbb4b8e9408af2a1dbf13283b8736595/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6480 tvg-logo="" group-title="All Movies",Lilo & Stitch (2025)
+http://192.168.1.71:9000/Videos/c70a931979c61bc52b0288ee3cea245a/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:7080 tvg-logo="" group-title="All Movies",The Lion King (2019)
+http://192.168.1.71:9000/Videos/20d554f98e8c04c770eb76b043ab4a7c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6060 tvg-logo="" group-title="All Movies",A Minecraft Movie (2025)
+http://192.168.1.71:9000/Videos/f5ac1cb0bf6cd6fa5649af7d63da8fe9/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:10020 tvg-logo="" group-title="All Movies",Mission: Impossible - Dead Reckoning Part One (2023)
+http://192.168.1.71:9000/Videos/073f593e5b9d4bdbdd7d4d61f7211350/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:10380 tvg-logo="" group-title="All Movies",Mission: Impossible - The Final Reckoning (2025)
+http://192.168.1.71:9000/Videos/40cd09ce23b1ebc50b511a0188eccb23/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6420 tvg-logo="" group-title="All Movies",Moana (2016)
+http://192.168.1.71:9000/Videos/98ad7952efbca34094c88b4645cf263a/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6000 tvg-logo="" group-title="All Movies",Moana 2 (2024)
+http://192.168.1.71:9000/Videos/8473427a24b51b4247ac6ae02ab225bd/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6360 tvg-logo="" group-title="All Movies",Paddington in Peru (2024)
+http://192.168.1.71:9000/Videos/f5ffceefb1d801b2743d600c1b5206ad/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6480 tvg-logo="" group-title="All Movies",Sing (2016)
+http://192.168.1.71:9000/Videos/7906925de290f06cbaa1e6053fc16b3e/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6600 tvg-logo="" group-title="All Movies",Sing 2 (2021)
+http://192.168.1.71:9000/Videos/0e661f5bfcaeda9da94e6769b7b35a47/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5400 tvg-logo="" group-title="All Movies",Smurfs (2025)
+http://192.168.1.71:9000/Videos/f0041e2dbc68ba293343ae477e78d887/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6540 tvg-logo="" group-title="All Movies",Snow White (2025)
+http://192.168.1.71:9000/Videos/dc2d6a3a5bd5898aee5b2cb22fba8b9a/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:8460 tvg-logo="" group-title="All Movies",Spider-Man: No Way Home (2021)
+http://192.168.1.71:9000/Videos/da5ca12bf3dd0a04750155a318573c64/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5520 tvg-logo="" group-title="All Movies",The Super Mario Bros. Movie (2023)
+http://192.168.1.71:9000/Videos/7a5710202f811df60f70f1515825fe47/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:7740 tvg-logo="" group-title="All Movies",Superman (2025)
+http://192.168.1.71:9000/Videos/137d8d994bc49762d386f1eb7f2ec9f1/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:7620 tvg-logo="" group-title="All Movies",Thunderbolts* (2025)
+http://192.168.1.71:9000/Videos/16f49fd2cef365557d7d0861e1c9c814/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5520 tvg-logo="" group-title="All Movies",Trolls (2016)
+http://192.168.1.71:9000/Videos/f330b387bb30efc02f214bc3fc6348a1/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5460 tvg-logo="" group-title="All Movies",Trolls World Tour (2020)
+http://192.168.1.71:9000/Videos/90cac0613518ef869536fa8539976e0f/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5460 tvg-logo="" group-title="All Movies",Trolls Band Together (2023)
+http://192.168.1.71:9000/Videos/e8eb17718bbf05387bf38ce718869917/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5640 tvg-logo="" group-title="All Movies",Z-O-M-B-I-E-S (2018)
+http://192.168.1.71:9000/Videos/3dcf55da20bc2a622b70645f169e777d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5040 tvg-logo="" group-title="All Movies",Z-O-M-B-I-E-S 2 (2020)
+http://192.168.1.71:9000/Videos/2b0a994c6f6311f8d24e101afe76df52/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5280 tvg-logo="" group-title="All Movies",Z-O-M-B-I-E-S 3 (2022)
+http://192.168.1.71:9000/Videos/9460d58c90ab9b0b6579f84c3a67aea8/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:5160 tvg-logo="" group-title="All Movies",Z-O-M-B-I-E-S 4: Dawn of the Vampires (2025)
+http://192.168.1.71:9000/Videos/c1fea9c442b8ae1a472d867dafbdf69b/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:6540 tvg-logo="" group-title="All Movies",Zootopia (2016)
+http://192.168.1.71:9000/Videos/eb59815dc16d31c385e22131e0f6e9ec/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
