@@ -119,3 +119,18 @@ http://192.168.1.71:9000/Videos/6ac25c29c13f236599b64879e0040147/stream?static=t
 
 #EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title="Vampirina: Teenage Vampire Season 1",Episode 4 - First Parents Day
 http://192.168.1.71:9000/Videos/ad49067fbbb79f475568719cb79779f4/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/6J0f6wkN6rafFUCWOpFeI3H5zNx.jpg" group-title="Dream Productions Mini Series",Episode 1 - The Dream Team
+http://192.168.1.71:9000/Videos/291dbfd57ef676e12290c31172016b51/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/6J0f6wkN6rafFUCWOpFeI3H5zNx.jpg" group-title="Dream Productions Mini Series",Episode 2 - Out of Body
+http://192.168.1.71:9000/Videos/1e64d7f79c80fd24f817c89632876b9a/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/6J0f6wkN6rafFUCWOpFeI3H5zNx.jpg" group-title="Dream Productions Mini Series",Episode 3 - Romance!
+http://192.168.1.71:9000/Videos/92bdfce993cfca53da720d8249ca880c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1620 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/6J0f6wkN6rafFUCWOpFeI3H5zNx.jpg" group-title="Dream Productions Mini Series",Episode 4 - A Night to Remember
+http://192.168.1.71:9000/Videos/9aeb5555dc8164c1796bb1f88361c209/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:2640 tvg-logo="https://image.tmdb.org/t/p/original/34S2q0TiaDQk8MWIBVRmwDfse3A.jpg" group-title="DuckTales (2017) Season 1",Episode 1 - Woo-oo!
+http://192.168.1.71:9000/Videos/82e34655c93c8594872fa46f8108e0b7/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
