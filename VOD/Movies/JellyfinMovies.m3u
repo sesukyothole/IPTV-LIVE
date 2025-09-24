@@ -1,0 +1,4 @@
+#EXTM3U
+
+#EXTINF:7680 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/ykUEbfpkf8d0w49pHh0AD2KrT52.jpg" group-title="All Movies",Aladdin (2019)
+http://192.168.1.71:9000/Videos/e2e0eaa9c44709ae2e18df32d1d2e198/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
