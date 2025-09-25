@@ -200,3 +200,75 @@ http://192.168.1.71:9000/Videos/1e65ca2d06a476089a7fbf30aa1eafa0/stream?static=t
 
 #EXTINF:2640 tvg-logo="https://image.tmdb.org/t/p/original/34S2q0TiaDQk8MWIBVRmwDfse3A.jpg" group-title="DuckTales (2017) Season 1",Episode 23 - The Shadow War!
 http://192.168.1.71:9000/Videos/cda0c9a7caa3686091d95c20f0f03761/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 1 - The Most Dangerous Game... Night!
+http://192.168.1.71:9000/Videos/3b5d15e63c34cd6dedcd1049d7498bb2/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 2 - The Depths of Cousin Fethry!
+http://192.168.1.71:9000/Videos/cc5aac570b6bfa6497eb30708a3e68b1/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 3 - The Ballad of Duke Baloney!
+http://192.168.1.71:9000/Videos/09ac0d9752cdc19562752e15ef92e4e1/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 4 - The Town Were Everyone Was Nice!
+http://192.168.1.71:9000/Videos/69fe18e3af4680fb287dab6f042cfd52/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 5 - Storkules in Duckburg!
+http://192.168.1.71:9000/Videos/fefcb7b58945a991db66612727af7e85/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 6 - Last Christmas!
+http://192.168.1.71:9000/Videos/b2f4fedb10dbf6ceccb425c50c437f7d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 7 - What Ever Happened to Della Duck?!
+http://192.168.1.71:9000/Videos/fa2b441155585dd7067c0c134f7c762e/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 8 - Treasure of the Found Lamp!
+http://192.168.1.71:9000/Videos/d923b342faf25e5fa16cc2233f3a4d71/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 9 - The Outlaw Scrooge McDuck!
+http://192.168.1.71:9000/Videos/d07ec8f301eb1ccae30417de6698858e/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 10 - The 87 Cent Solution!
+http://192.168.1.71:9000/Videos/b8b8b1f7a59219e3b62d3c4b405fff2d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 11 - The Golden Spear!
+http://192.168.1.71:9000/Videos/9ea65eaff7b8f7c69c0805edb5f311df/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 12 - Nothing Can Stop Della Duck!
+http://192.168.1.71:9000/Videos/54be0cac257d94a97d5143486d83e2cc/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 13 - Raiders of the Doomsday Vault!
+http://192.168.1.71:9000/Videos/3e4d3cddaaa6eb692254c1e978c8eb12/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 14 - Friendship Hates Magic!
+http://192.168.1.71:9000/Videos/64fbb17da2624ed00942caa681fd87cf/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 15 - The Dangerous Chemistry of Gandra Dee!
+http://192.168.1.71:9000/Videos/afd5f477a5bf8816a2c99d8bb7d5d10f/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 16 - The Duck Knight Returns!
+http://192.168.1.71:9000/Videos/ae25ad1db692d3f943b6744969f8dda8/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 17 - What Ever Happened to Donald Duck?!
+http://192.168.1.71:9000/Videos/8476a759b10e089d7e159a444d21c236/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 18 - Happy Birthday, Doofus Drake!
+http://192.168.1.71:9000/Videos/c2cc9cf51b793ceb8ed3e96d30a4f978/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 19 - A Nightmare on Killmotor Hill!
+http://192.168.1.71:9000/Videos/82f8e184862c681d13237243a174d995/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 20 - The Golden Armory of Cornelius Coot!
+http://192.168.1.71:9000/Videos/8f41f731cb1a7b5690df33279076f270/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 21 - Timephoon!
+http://192.168.1.71:9000/Videos/2cddd8ab24637092676b8907c61a09cb/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 22 - GloomTales!
+http://192.168.1.71:9000/Videos/6d3fb7b536b7c8aa611faec1da0877ba/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 23 - The Richest Duck in the World!
+http://192.168.1.71:9000/Videos/0257d08d309b2b8351537a298ee86b57/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:2640 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 24 - Moonvasion!
+http://192.168.1.71:9000/Videos/3378b7287683f54199d71ece23d7ea90/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
