@@ -272,3 +272,69 @@ http://192.168.1.71:9000/Videos/0257d08d309b2b8351537a298ee86b57/stream?static=t
 
 #EXTINF:2640 tvg-logo="https://image.tmdb.org/t/p/original/dFC4sZjYyDMX6qEEb0jR4jwhpk9.jpg" group-title="DuckTales (2017) Season 2",Episode 24 - Moonvasion!
 http://192.168.1.71:9000/Videos/3378b7287683f54199d71ece23d7ea90/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 1 - Challenge of the Senior Junior Woodchucks!
+http://192.168.1.71:9000/Videos/2432630b5c8517b4b53892859f8a7410/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 2 - Quack Pack!
+http://192.168.1.71:9000/Videos/45cba48a6406f768a0db3b912c66f2d2/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 3 - Double-O-Duck in You Only Crash Twice!
+http://192.168.1.71:9000/Videos/3fb8d05429c33513013ee5e303912778/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 4 - The Lost Harp of Mervana!
+http://192.168.1.71:9000/Videos/bb565f883aed598fa9f871c278957dc4/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 5 - Louie's Eleven!
+http://192.168.1.71:9000/Videos/e7018ae9722882273ad0a8e2b9d5f103/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 6 - Astro B.O.Y.D.!
+http://192.168.1.71:9000/Videos/d7262f2b4759a1183df74dfe9cb156df/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 7 - The Rumble of Ragnarok!
+http://192.168.1.71:9000/Videos/58dbe61390e3c66e0d8b83934f5b97d8/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 8 - The Phantom and the Sorceress!
+http://192.168.1.71:9000/Videos/d1e8a591160f6ba48e477ab1ec3dc1d6/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 9 - They Put a Moonlander on the Earth!
+http://192.168.1.71:9000/Videos/72a7d0b57143b64d7a2f6b17ba8243b7/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 10 - The Trickening!
+http://192.168.1.71:9000/Videos/906202e15aa0ebc2586a876b9a68005b/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 11 - The Forbidden Fountain of the Foreverglades!
+http://192.168.1.71:9000/Videos/31747b726356e7886c0a3df30fb56a3f/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:2640 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 12 - Let's Get Dangerous!
+http://192.168.1.71:9000/Videos/3ccf6db42cfd3107b0fde775a9c4c996/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 13 - Escape from the ImpossiBin!
+http://192.168.1.71:9000/Videos/7fa5d1e6769dae0c81fe335b959fc08a/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 14 - The Split Sword of Swanstantine!
+http://192.168.1.71:9000/Videos/2589b5a69c69b36e3e198fbff74fad22/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 15 - New Gods on the Block!
+http://192.168.1.71:9000/Videos/8d1c4ab6f5a91994c663df98ccf23208/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 16 - The First Adventure!
+http://192.168.1.71:9000/Videos/0ae3c8a096cc821fd9cd5a240a250646/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 17 - The Fight for Castle McDuck!
+http://192.169.1.71:9000/Videos/71c2731620a7d5ed58d5778a18b8fdc4/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 18 - How Santa Stole Christmas!
+http://192.168.1.71:9000/Videos/95db248153774676d1ecb1ebd9ae1b92/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 19 - Beaks in the Shell!
+http://192.168.1.71:9000/Videos/bc0fc57d8921812cca3575c73c66f6f6/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 20 - The Lost Cargo of Kit Cloudkicker
+http://192.168.1.71:9000/Videos/7d39ace3cadc499133a21bb4d250ea4c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 21 - The Life and Crimes of Scrooge McDuck!
+http://192.168.1.71:9000/Videos/64345bbbf0f690f14b896023ebd2d846/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:4020 tvg-logo="https://image.tmdb.org/t/p/original/fNxHNcW5XSsFyxbEfn1E0XumCcp.jpg" group-title="DuckTales (2017) Season 3",Episode 22 - The Last Adventure!
+http://192.168.1.71:9000/Videos/a37a5d1893496acac1ea1563b37b906b/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
