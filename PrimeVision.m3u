@@ -52,7 +52,7 @@ http://23.237.104.106:8080/USA_DISCOVERY/index.m3u8
 https://fl25.moveonjoy.com/DISNEY/index.m3u8
 
 #EXTINF:-1 tvg-id="Disney.Junior.HD.us2" tvg-name="Disney Junior" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/4/48/DisneyJr3Dver.png" tvg-language="en" group-title="Kids",Disney Junior
-http://fl25.moveonjoy.com/DISNEY_JR/index.m3u8
+http://23.237.104.106:8080/USA_DISNEY_JUNIOR/index.m3u8
 
 #EXTINF:-1 tvg-id="Disney.XD.HD.us2" tvg-name="Disney XD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png" tvg-language="en" group-title="Kids",Disney XD
 http://fl25.moveonjoy.com/DISNEY_XD/index.m3u8
