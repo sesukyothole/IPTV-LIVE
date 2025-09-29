@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<tv date="20250928080002 +0000" generator-info-name="epg.pw" generator-info-url="https://epg.pw" source-info-name="FREE EPG" source-info-url="https://epg.pw/xmltv/epg_US.xml">
+<tv date="20250929080003 +0000" generator-info-name="epg.pw" generator-info-url="https://epg.pw" source-info-name="FREE EPG" source-info-url="https://epg.pw/xmltv/epg_US.xml">
   <channel id="8359">
     <display-name lang="US">Nick Music (NICM)</display-name>
     <icon src="" />
@@ -98,10 +98,6 @@
   </channel>
   <channel id="401811">
     <display-name lang="US">EARTHX EarthxTV</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403434">
-    <display-name lang="US">DirecTV MLS Direct Kick (473)</display-name>
     <icon src="" />
   </channel>
   <channel id="403435">
@@ -208,10 +204,6 @@
     <display-name lang="US">ABC (KABC) Los Angeles, CA</display-name>
     <icon src="" />
   </channel>
-  <channel id="403533">
-    <display-name lang="US">DirecTV MLS Direct Kick (471)</display-name>
-    <icon src="" />
-  </channel>
   <channel id="403541">
     <display-name lang="US">TFC - The Filipino Channel</display-name>
     <icon src="" />
@@ -300,24 +292,12 @@
     <display-name lang="US">C-SPAN</display-name>
     <icon src="" />
   </channel>
-  <channel id="403599">
-    <display-name lang="US">DirecTV Sports 707</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403602">
-    <display-name lang="US">DirecTV NHL Center Ice (773)</display-name>
-    <icon src="" />
-  </channel>
   <channel id="403603">
     <display-name lang="US">SundanceTV USA - East</display-name>
     <icon src="" />
   </channel>
   <channel id="403607">
     <display-name lang="US">DirecTV MLB Extra Innings (736)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403609">
-    <display-name lang="US">DirecTV Sports 708</display-name>
     <icon src="" />
   </channel>
   <channel id="403611">
@@ -370,10 +350,6 @@
   </channel>
   <channel id="403641">
     <display-name lang="US">CCTV-4 America</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403645">
-    <display-name lang="US">DirecTV MLS Direct Kick (472)</display-name>
     <icon src="" />
   </channel>
   <channel id="403652">
@@ -430,10 +406,6 @@
   </channel>
   <channel id="403691">
     <display-name lang="US">TyC Sports</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403692">
-    <display-name lang="US">DirecTV Sports 716</display-name>
     <icon src="" />
   </channel>
   <channel id="403696">
@@ -528,10 +500,6 @@
     <display-name lang="US">DirecTV MLB Extra Innings (728)</display-name>
     <icon src="" />
   </channel>
-  <channel id="403760">
-    <display-name lang="US">DirecTV MLS Direct Kick (475)</display-name>
-    <icon src="" />
-  </channel>
   <channel id="403761">
     <display-name lang="US">VICE</display-name>
     <icon src="" />
@@ -550,10 +518,6 @@
   </channel>
   <channel id="403795">
     <display-name lang="US">History Channel US - Eastern Feed</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403798">
-    <display-name lang="US">ESPN Classics USA</display-name>
     <icon src="" />
   </channel>
   <channel id="403799">
@@ -650,10 +614,6 @@
   </channel>
   <channel id="403860">
     <display-name lang="US">Phoenix InfoNews</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403863">
-    <display-name lang="US">DirecTV MLS Direct Kick (474)</display-name>
     <icon src="" />
   </channel>
   <channel id="403864">
@@ -872,10 +832,6 @@
     <display-name lang="US">News 12 New Jersey</display-name>
     <icon src="" />
   </channel>
-  <channel id="408662">
-    <display-name lang="US">Tastemade Travel Channel</display-name>
-    <icon src="" />
-  </channel>
   <channel id="408736">
     <display-name lang="US">WFTT Scientology Network HDTV</display-name>
     <icon src="" />
@@ -888,20 +844,8 @@
     <display-name lang="US">Salem News Channel (SNC)</display-name>
     <icon src="" />
   </channel>
-  <channel id="410798">
-    <display-name lang="US">Scares by Shudder</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="412082">
-    <display-name lang="US">Circle Country</display-name>
-    <icon src="" />
-  </channel>
   <channel id="412083">
     <display-name lang="US">SportsNet Pittsburgh+</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="412762">
-    <display-name lang="US">Sony KAL</display-name>
     <icon src="" />
   </channel>
   <channel id="413090">
@@ -936,20 +880,8 @@
     <display-name lang="US">WWE Network</display-name>
     <icon src="" />
   </channel>
-  <channel id="418726">
-    <display-name lang="US">MotorTrend FAST TV</display-name>
-    <icon src="" />
-  </channel>
   <channel id="419129">
     <display-name lang="US">Bon Appétit TV</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="421060">
-    <display-name lang="US">CINEVAULT</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="421062">
-    <display-name lang="US">CINEVAULT Westerns</display-name>
     <icon src="" />
   </channel>
   <channel id="427997">
@@ -988,10 +920,6 @@
     <display-name lang="US">Tastemade</display-name>
     <icon src="" />
   </channel>
-  <channel id="435991">
-    <display-name lang="US">FilmRise True Crime</display-name>
-    <icon src="" />
-  </channel>
   <channel id="441995">
     <display-name lang="US">FM Fuse Music</display-name>
     <icon src="" />
@@ -1006,10 +934,6 @@
   </channel>
   <channel id="443941">
     <display-name lang="US">Tastemade Travel</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="444413">
-    <display-name lang="US">Audience Network</display-name>
     <icon src="" />
   </channel>
   <channel id="445038">
@@ -1060,10 +984,6 @@
     <display-name lang="US">AFN sports2</display-name>
     <icon src="" />
   </channel>
-  <channel id="453661">
-    <display-name lang="US">Stadium College Sports - Pacific</display-name>
-    <icon src="" />
-  </channel>
   <channel id="454287">
     <display-name lang="US">Oxygen - Eastern Feed</display-name>
     <icon src="" />
@@ -1108,20 +1028,12 @@
     <display-name lang="US">MSG (Madison Square Gardens)</display-name>
     <icon src="" />
   </channel>
-  <channel id="455649">
-    <display-name lang="US">Stadium College Sports - Central</display-name>
-    <icon src="" />
-  </channel>
   <channel id="455818">
     <display-name lang="US">Cinemax - Pacific Feed</display-name>
     <icon src="" />
   </channel>
   <channel id="455985">
     <display-name lang="US">NBA League Pass 10</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="456318">
-    <display-name lang="US">DirecTV NHL Center Ice (778) HD</display-name>
     <icon src="" />
   </channel>
   <channel id="456319">
@@ -1140,24 +1052,8 @@
     <display-name lang="US">MBC Drama (Korean)</display-name>
     <icon src="" />
   </channel>
-  <channel id="456880">
-    <display-name lang="US">DirecTV NHL Center Ice (772) HD</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="457053">
-    <display-name lang="US">DirecTV NHL Center Ice (781)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="457056">
-    <display-name lang="US">DirecTV Sports 719</display-name>
-    <icon src="" />
-  </channel>
   <channel id="457057">
     <display-name lang="US">NBC Sports Bay Area</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="457059">
-    <display-name lang="US">NFL RedZone</display-name>
     <icon src="" />
   </channel>
   <channel id="457060">
@@ -1176,20 +1072,8 @@
     <display-name lang="US">Colorado Rockies TV</display-name>
     <icon src="" />
   </channel>
-  <channel id="458481">
-    <display-name lang="US">DirecTV NHL Center Ice (780)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458482">
-    <display-name lang="US">DirecTV MLB Extra Innings (745)</display-name>
-    <icon src="" />
-  </channel>
   <channel id="458483">
     <display-name lang="US">Zee TV USA</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458485">
-    <display-name lang="US">DirecTV NHL Center Ice (781) HD</display-name>
     <icon src="" />
   </channel>
   <channel id="458487">
@@ -1198,10 +1082,6 @@
   </channel>
   <channel id="458490">
     <display-name lang="US">Fox Sports 2</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458491">
-    <display-name lang="US">DirecTV Sports 712</display-name>
     <icon src="" />
   </channel>
   <channel id="458492">
@@ -1228,10 +1108,6 @@
     <display-name lang="US">Pets TV</display-name>
     <icon src="" />
   </channel>
-  <channel id="458689">
-    <display-name lang="US">DirecTV NHL Center Ice (782)</display-name>
-    <icon src="" />
-  </channel>
   <channel id="458913">
     <display-name lang="US">DirecTV MLB Extra Innings (729)</display-name>
     <icon src="" />
@@ -1246,10 +1122,6 @@
   </channel>
   <channel id="458921">
     <display-name lang="US">Starz - Eastern</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458922">
-    <display-name lang="US">DirecTV NHL Center Ice (775) HD</display-name>
     <icon src="" />
   </channel>
   <channel id="458925">
@@ -1284,10 +1156,6 @@
     <display-name lang="US">Chicago Sports Network Plus</display-name>
     <icon src="" />
   </channel>
-  <channel id="458938">
-    <display-name lang="US">DirecTV NHL Center Ice (780) HD</display-name>
-    <icon src="" />
-  </channel>
   <channel id="459158">
     <display-name lang="US">Sur Peru - Eastern</display-name>
     <icon src="" />
@@ -1320,14 +1188,6 @@
     <display-name lang="US">Free Speech Network</display-name>
     <icon src="" />
   </channel>
-  <channel id="459169">
-    <display-name lang="US">DirecTV MLB Extra Innings (732)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="459170">
-    <display-name lang="US">DirecTV NHL Center Ice (787)</display-name>
-    <icon src="" />
-  </channel>
   <channel id="459171">
     <display-name lang="US">El Rey Network</display-name>
     <icon src="" />
@@ -1336,300 +1196,8 @@
     <display-name lang="US">AXS TV USA HD</display-name>
     <icon src="" />
   </channel>
-  <channel id="459174">
-    <display-name lang="US">DirecTV NHL Center Ice (779)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="459175">
-    <display-name lang="US">DirecTV NHL Center Ice (779) HD</display-name>
-    <icon src="" />
-  </channel>
   <channel id="459176">
     <display-name lang="US">UP</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="459177">
-    <display-name lang="US">Stadium College Sports - Atlantic</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="8388">
-    <display-name lang="US">ATN - Cricket Plus</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="8543">
-    <display-name lang="US">WeatherNation HDTV (WTHRN)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="8889">
-    <display-name lang="US">NBC Sports Philadelphia Plus (NBCSPA+)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="9045">
-    <display-name lang="US">MGM+ Marquee HDTV (East) (MGM+MRQ)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="9102">
-    <display-name lang="US">IndiePlex HDTV (INDIEHD)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="146984">
-    <display-name lang="US">Monumental Sports Network 2</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="146985">
-    <display-name lang="US">Monumental Sports Network</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="335485">
-    <display-name lang="US">Cheddar News</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="393950">
-    <display-name lang="US">CW Plus Mountain</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="393951">
-    <display-name lang="US">CW Plus East</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="400141">
-    <display-name lang="US">CSPAN3</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403465">
-    <display-name lang="US">TMC (US) - Pacific Feed</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403478">
-    <display-name lang="US">Altitude 2</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403493">
-    <display-name lang="US">GAC Family - East</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403499">
-    <display-name lang="US">Cartoon Network USA - Pacific Feed</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403526">
-    <display-name lang="US">Mexicanal - Eastern</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403527">
-    <display-name lang="US">CNBC USA</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403549">
-    <display-name lang="US">ESPNU On Demand</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403569">
-    <display-name lang="US">Big Ten Network Overflow 2</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403580">
-    <display-name lang="US">Pursuit Channel</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403582">
-    <display-name lang="US">Channel 1 Russian</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403600">
-    <display-name lang="US">CMT US - Eastern Feed</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403605">
-    <display-name lang="US">Wapa America</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403637">
-    <display-name lang="US">IVC Network - International</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403653">
-    <display-name lang="US">VH1 - Eastern Feed</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403686">
-    <display-name lang="US">Bandamax</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403703">
-    <display-name lang="US">Sportsman Channel</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403726">
-    <display-name lang="US">Bloomberg TV USA</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403739">
-    <display-name lang="US">Destination America</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403741">
-    <display-name lang="US">DirecTV MLB Extra Innings (737)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403744">
-    <display-name lang="US">MTV Tr3s - East</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403772">
-    <display-name lang="US">TeenNick - Eastern</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403830">
-    <display-name lang="US">Dominicana</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403845">
-    <display-name lang="US">SHOPHQ</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403855">
-    <display-name lang="US">ESPN College Extra 5</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403872">
-    <display-name lang="US">ESPN On Demand</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403879">
-    <display-name lang="US">TV Land - Eastern</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403901">
-    <display-name lang="US">SEC Network</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403937">
-    <display-name lang="US">TV Globo</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403951">
-    <display-name lang="US">Starz Encore Westerns - Eastern</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="403954">
-    <display-name lang="US">Pasiones USA</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="405245">
-    <display-name lang="US">Great American Family</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="405440">
-    <display-name lang="US">Family Movie Classics (FMC)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="405560">
-    <display-name lang="US">ScreenPix</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="428457">
-    <display-name lang="US">beIN Sport USA</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="440244">
-    <display-name lang="US">Hallmark Family HDTV (HALDRHD)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="454791">
-    <display-name lang="US">Discovery Channel (US) on demand</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="457052">
-    <display-name lang="US">Cars TV</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="457054">
-    <display-name lang="US">Sony Movies</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="457055">
-    <display-name lang="US">Olympic Channel</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="457429">
-    <display-name lang="US">Root Sports Northwest Plus</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="457430">
-    <display-name lang="US">DirecTV MLB Extra Innings (747)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="457431">
-    <display-name lang="US">DirecTV MLB Extra Innings (746)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="457437">
-    <display-name lang="US">HDNet Movies HD</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458672">
-    <display-name lang="US">ION  - Eastern Feed</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458674">
-    <display-name lang="US">NASA Public Educational Channel</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458676">
-    <display-name lang="US">MGM+ Hits HDTV (East) (MGM+HTHD)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458677">
-    <display-name lang="US">NewsNation - Eastern Feed</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458686">
-    <display-name lang="US">Merit Street</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458687">
-    <display-name lang="US">i24 News</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458915">
-    <display-name lang="US">NBA League Pass 8</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458916">
-    <display-name lang="US">HBO Latino (HBO 7) - Eastern</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458918">
-    <display-name lang="US">V-Me Television HD</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458920">
-    <display-name lang="US">Nickelodeon USA - East Feed</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458923">
-    <display-name lang="US">DirecTV MLB Extra Innings (740)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458924">
-    <display-name lang="US">Mid-Atlantic Sports Network</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458927">
-    <display-name lang="US">Altitude Sports - Denver</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458929">
-    <display-name lang="US">NBA League Pass 9</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458935">
-    <display-name lang="US">DirecTV MLB Extra Innings (738)</display-name>
-    <icon src="" />
-  </channel>
-  <channel id="458939">
-    <display-name lang="US">DirecTV MLB Extra Innings (739)</display-name>
     <icon src="" />
   </channel>
 </tv>
