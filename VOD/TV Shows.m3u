@@ -69,6 +69,12 @@ http://192.168.1.71:9000/Videos/4445819f2004ffa14c7f31285ff7ed75/stream?static=t
 #EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/7ZDusUcjxqx9g77JHMXhuzkQmbT.jpg" group-title="Wizards Beyond Waverly Place Season 2",Episode 2 - Ooze!... I Did It Again
 http://192.168.1.71:9000/Videos/5d28697c01305c81156d7d62cd8f7c1d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/7ZDusUcjxqx9g77JHMXhuzkQmbT.jpg" group-title="Wizards Beyond Waverly Place Season 2",Episode 3 - Howdy with a Trance of Gumballs
+http://192.168.1.71:9000/Videos/d06b8982cca77d3453288089d25932ed/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/7ZDusUcjxqx9g77JHMXhuzkQmbT.jpg" group-title="Wizards Beyond Waverly Place Season 2",Episode 4 - Don't Go Changeling My Heart
+http://192.168.1.71:9000/Videos/6a200832c0b5190cb2be8ba6e246e1a4/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
 #EXTINF:1620 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 1 - How It Started
 http://192.168.1.71:9000/Videos/9c212a97020b802a530229778f31c04d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
