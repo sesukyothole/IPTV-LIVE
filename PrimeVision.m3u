@@ -88,7 +88,7 @@ https://fl25.moveonjoy.com/FREE_FORM/index.m3u8
 https://fl25.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8
 
 #EXTINF:-1 tvg-id="Hallmark.Family.us2" tvg-name="Hallmark Family" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-family-us.png" tvg-language="en" group-title="Drama/Lifestyle",Hallmark Family
-https://fl25.moveonjoy.com/HALMARK_DRAMA/index.m3u8
+https://fl25.moveonjoy.com/HALLMARK_DRAMA/index.m3u8
 
 #EXTINF:-1 tvg-id="Hallmark.Mystery.HD.us2" tvg-name="Hallmark Mystery" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-mystery-us.png" tvg-language="en" group-title="Drama/Lifestyle",Hallmark Mystery
 https://fl25.moveonjoy.com/HALLMARK_MOVIES_MYSTERIES/index.m3u8
