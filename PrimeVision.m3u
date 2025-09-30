@@ -100,7 +100,7 @@ https://fl25.moveonjoy.com/HBO_2/index.m3u8
 http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8
 
 #EXTINF:-1 tvg-id="HBO.Drama.us2" tvg-name="HBO Drama" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-drama-us.png" tvg-language="en" group-title="Movies",HBO Drama
-https://e5.thetvapp.to/hls/HBOSignatureEast/tracks-v1a1/mono.m3u8
+http://23.237.104.106:8080/USA_HBO_SIGNATURE/index.m3u8
 
 #EXTINF:-1 tvg-id="HBO.Zone.HD.us2" tvg-name="HBO Movies" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-movies-us.png" tvg-language="en" group-title="Movies",HBO Movies
 http://23.237.104.106:8080/USA_HBO_ZONE/index.m3u8
