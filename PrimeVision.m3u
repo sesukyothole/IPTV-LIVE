@@ -51,7 +51,7 @@ http://23.237.104.106:8080/USA_DISCOVERY/index.m3u8
 #EXTINF:-1 tvg-id="Disney.Channel.HD.us2" tvg-name="Disney Channel" tvg-logo="https://static.wikia.nocookie.net/disney/images/2/25/Disney_Channel_2024_logo.png" tvg-language="en" group-title="Kids",Disney Channel
 https://fl25.moveonjoy.com/DISNEY/index.m3u8
 
-#EXTINF:-1 tvg-id="Disney.Junior.HD.us2" tvg-name="Disney Junior" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/4/48/DisneyJr3Dver.png" tvg-language="en" group-title="Kids",Disney Junior
+#EXTINF:-1 tvg-id="Disney.Junior.HD.us2" tvg-name="Disney Junior" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-jr-us.png" tvg-language="en" group-title="Kids",Disney Junior
 http://23.237.104.106:8080/USA_DISNEY_JUNIOR/index.m3u8
 
 #EXTINF:-1 tvg-id="Disney.XD.HD.us2" tvg-name="Disney XD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png" tvg-language="en" group-title="Kids",Disney XD
@@ -99,10 +99,10 @@ https://fl25.moveonjoy.com/HBO_2/index.m3u8
 #EXTINF:-1 tvg-id="HBO.Comedy.HD.us2" tvg-name="HBO Comedy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-comedy-us.png" tvg-language="en" group-title="Movies",HBO Comedy
 http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8
 
-#EXTINF:-1 tvg-id="HBO.Drama.us2" tvg-name="HBO Drama" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/b/b6/HBO_Drama_2025.svg/revision/latest/scale-to-width-down/512?cb=20250904230842" tvg-language="en" group-title="Movies",HBO Drama
+#EXTINF:-1 tvg-id="HBO.Drama.us2" tvg-name="HBO Drama" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-drama-us.png" tvg-language="en" group-title="Movies",HBO Drama
 http://23.237.104.106:8080/USA_HBO_SIGNATURE/index.m3u8
 
-#EXTINF:-1 tvg-id="HBO.Zone.HD.us2" tvg-name="HBO Movies" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/7c/HBO_Movies_2025.svg/revision/latest/scale-to-width-down/512?cb=20250904231017" tvg-language="en" group-title="Movies",HBO Movies
+#EXTINF:-1 tvg-id="HBO.Zone.HD.us2" tvg-name="HBO Movies" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-movies-us.png" tvg-language="en" group-title="Movies",HBO Movies
 http://23.237.104.106:8080/USA_HBO_ZONE/index.m3u8
 
 #EXTINF:-1 tvg-id="National.Geographic.HD.us2" tvg-name="National Geographic Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/national-geographic-us.png" tvg-language="en" group-title="Documentary/Knowledge",National Geographic Network
