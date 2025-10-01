@@ -51,6 +51,9 @@ http://192.168.1.71:9000/Videos/9a65dd431318ba59d2bae6e0d48211ec/stream?static=t
 #EXTINF:8940 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/9PXZIUsSDh4alB80jheWX4fhZmy.jpg" group-title="All Movies",F1: The Movie (2025)
 http://192.168.1.71:9000/Videos/d3080cb6b06b45cc168a1ffb6fe738a2/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
+#EXTINF:6360 tvg-logo="https://image.tmdb.org/t/p/original/1hjuA6170nRXSs726cLTvB36c1i.jpg" group-title="All Movies",Freakier Friday (2025)
+http://192.168.1.71:9000/Videos/4371a78dbd8ba9d3d8f5cc883a0f7130/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
 #EXTINF:5820 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/ipKcZ4Up7dp18XpsfYUc9NKZy3g.jpg" group-title="All Movies",Freaky Friday (2003)
 http://192.168.1.71:9000/Video/d1df723c36bb33f1821415c9d33187df/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
