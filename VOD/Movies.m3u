@@ -81,6 +81,9 @@ http://192.168.1.71:9000/Videos/c70a931979c61bc52b0288ee3cea245a/stream?static=t
 #EXTINF:7080 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/dzBtMocZuJbjLOXvrl4zGYigDzh.jpg" group-title="All Movies",The Lion King (2019)
 http://192.168.1.71:9000/Videos/20d554f98e8c04c770eb76b043ab4a7c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
+#EXTINF:8400 tvg-logo="https://image.tmdb.org/t/p/original/dxwSJy75BlnBhxOa9RKZgD4mBnG.jpg" group-title="All Movies",The Little Mermaid (2023)
+http://192.168.1.71:9000/Videos/d44e4f1e2251c48165dd04c812516b5c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
 #EXTINF:6900 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/x26MtUlwtWD26d0G0FXcppxCJio.jpg" group-title="All Movies",The Fantastic Four: First Steps (2025)
 http://192.168.1.71:9000/Videos/e59b11fc299f32f11659743df5ce049f/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
