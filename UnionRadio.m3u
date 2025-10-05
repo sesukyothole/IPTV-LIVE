@@ -1,37 +1,25 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/SMOOTH_JAZZ_JAMS_ROKU_TV.png/640px-SMOOTH_JAZZ_JAMS_ROKU_TV.png" radio="true" group-title="Radio", Smooth Jazz Radio #1
-https://radio.garden/api/ara/content/listen/1vlrqH6v/channel.mp3?1754234356201
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Barnstar_Jazz.svg/640px-Barnstar_Jazz.svg.png" radio="true" group-title="Radio", Jazz Music 
-https://radio.garden/api/ara/content/listen/GYIpCtPq/channel.mp3?1754308036042
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/LO-FI_music_Icon.png/640px-LO-FI_music_Icon.png" radio="true" group-title="Radio", Lo-Fi Radio
-https://radio.garden/api/ara/content/listen/z3aOLSzU/channel.mp3?1754234569520
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Steinway_%26_Sons_upright_piano%2C_model_K-52_%28mahogany_finish%29%2C_manufactured_at_Steinway%27s_factory_in_New_York_City.jpg/640px-Steinway_%26_Sons_upright_piano%2C_model_K-52_%28mahogany_finish%29%2C_manufactured_at_Steinway%27s_factory_in_New_York_City.jpg" radio="true" group-title="Radio", Piano Music Radio
-https://radio.garden/api/ara/content/listen/wNnoQcV9/channel.mp3?1754234740163
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/LO-FI_music_Icon.png/640px-LO-FI_music_Icon.png" radio="true" group-title="Radio", Lo-Fi Night Vibes
-https://radio.garden/api/ara/content/listen/gr0G5FVj/channel.mp3?1754236222917
-#EXTINF:-1 tvg-logo="https://cdn.imgbin.com/12/16/21/imgbin-computer-icons-nature-icon-design-landscape-forest-vrmAM9ZWmwaSvzvVpUdUcsFEA.jpg" radio="true" group-title="Radio", Nature Radio
-https://radio.garden/api/ara/content/listen/ooA06IRX/channel.mp3?1754407506693
-#EXTINF:-1 tvg-logo="https://cdn-icons-png.freepik.com/512/2642/2642358.png" radio="true" group-title="Radio", Sleep Radio
-https://radio.garden/api/ara/content/listen/qcfvBFRm/channel.mp3?1754407638179
-#EXTINF:-1 tvg-logo="https://cdn.imgbin.com/12/16/21/imgbin-computer-icons-nature-icon-design-landscape-forest-vrmAM9ZWmwaSvzvVpUdUcsFEA.jpg" radio="true" group-title="Radio", Relaxing Nature Sounds
-https://radio.garden/api/ara/content/listen/5hle4awo/channel.mp3?1754407820153
-#EXTINF:-1 tvg-logo="https://cdn-icons-png.freepik.com/512/2642/2642358.png" radio="true" group-title="Radio", New Age Music for Sleeping
-https://radio.garden/api/ara/content/listen/mygXCZor/channel.mp3?1754407947476
-#EXTINF:-1 tvg-logo="https://i.pinimg.com/736x/4c/16/38/4c1638d0e30c392d0d38897f726fea47.jpg" radio="true" group-title="Radio", Lounge Music
-https://streaming.brol.tech/rtfmlounge
-#EXTINF:-1 tvg-logo="https://somafm.com/logos/120/groovesalad120.png" radio="true" group-title="Radio", SomaFM Groove Salad #1
-https://ice1.somafm.com/groovesalad-256-mp3
-#EXTINF:-1 tvg-logo="https://somafm.com/logos/120/groovesalad120.png" radio="true" group-title="Radio", SomaFM Groove Salad #2
-https://ice6.somafm.com/groovesalad-256-mp3
-#EXTINF:-1 tvg-logo="https://somafm.com/logos/120/groovesalad120.png" radio="true" group-title="Radio", SomaFM Groove Salad #3
-https://ice2.somafm.com/groovesalad-256-mp3
-#EXTINF:-1 tvg-logo="https://somafm.com/logos/120/groovesalad120.png" radio="true" group-title="Radio", SomaFM Groove Salad #4
-https://ice5.somafm.com/groovesalad-256-mp3
-#EXTINF:-1 tvg-logo="https://somafm.com/logos/120/groovesalad120.png radio="true" group-title="Radio", SomaFM Groove Salad #5
-https://ice3.somafm.com/groovesalad-256-mp3
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/SMOOTH_JAZZ_JAMS_ROKU_TV.png/640px-SMOOTH_JAZZ_JAMS_ROKU_TV.png" radio="true" group-title="Radio", Smooth Jazz Radio #2
-https://radio4.cdm-radio.com:18024/stream-mp3-Smooth
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Steinway_%26_Sons_upright_piano%2C_model_K-52_%28mahogany_finish%29%2C_manufactured_at_Steinway%27s_factory_in_New_York_City.jpg/640px-Steinway_%26_Sons_upright_piano%2C_model_K-52_%28mahogany_finish%29%2C_manufactured_at_Steinway%27s_factory_in_New_York_City.jpg" radio="true" group-title="Radio", Instrumental Radio
-https://edge01.cdn.bitflip.ee:8888/instrumental?_i=720a2a2c
-#EXTINF:-1 tvg-logo="https://www.vhv.rs/dpng/d/317-3170963_radio-disney-logo-png-png-download-radio-disney.png" radio="true" group-title="Radio", Disney Radio
+
+#EXTINF:-1 tvg-logo="https://www.vhv.rs/dpng/d/317-3170963_radio-disney-logo-png-png-download-radio-disney.png" radio="true" group-title="Radio Stations",Disney Radio
 https://15113.live.streamtheworld.com/SAM05AAC015.mp3
+
+#EXTINF:-1 tvg-logo="https://play-lh.googleusercontent.com/12VDksQlzV9q8xFpOn4TEA0C0nMy4VV2gsvmgbI7QLCxyumaLq9yzbbmreQQ9YcnVRY" radio="true" group-title="Radio Stations",24/7 Blues Radio
+https://radio.garden/api/ara/content/listen/hYpXtjOZ/channel.mp3?1759659001165
+
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/7/1/jazz-radio-logo-png_seeklogo-75131.png" radio="true" group-title="Radio Stations",24/7 Jazz Radio
+https://radio.garden/api/ara/content/listen/zG0u6xF1/channel.mp3?1759659189338
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Lofi_Girl_logo_2024.jpg/250px-Lofi_Girl_logo_2024.jpg" radio="true" group-title="Radio Stations",24/7 Lofi Radio
+https://radio.garden/api/ara/content/listen/6ZuArjAu/channel.mp3?1759659327552
+
+#EXTINF:-1 tvg-logo="https://i.discogs.com/uiTirCkhLF-Pacaumds5bTzJ11slJh3ZUdEu-2PD73w/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9MLTEwNTU5/OTItMTYxMDk2OTQ3/OC0zMzIwLmpwZWc.jpeg" radio="true" group-title="Radio Stations",24/7 London Radio 
+https://radio.garden/api/ara/content/listen/ql2FiWgS/channel.mp3?1759659488709
+
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/tvos_radios/8tbqeypbfxra.jpg" radio="true" group-title="Radio Stations",24/7 Nature Radio
+https://radio.garden/api/ara/content/listen/RuRlznOl/channel.mp3?1759661102502
+
+#EXTINF:-1 tvg-logo="https://www.shutterstock.com/image-vector/online-radio-icon-logo-design-260nw-485017039.jpg" radio="true" group-title="Radio Stations",24/7 Online Radio
+https://radio.garden/api/ara/content/listen/5yobjhX-/channel.mp3?1759661207537
+
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/7/1/jazz-radio-logo-png_seeklogo-75131.png" radio="true" group-title="Radio Stations",Best Smooth Jazz 24/7
+https://radio.garden/api/ara/content/listen/TFmalAbW/channel.mp3?1759661292461
