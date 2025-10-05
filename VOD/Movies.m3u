@@ -93,6 +93,9 @@ http://192.168.1.71:9000/Videos/e59b11fc299f32f11659743df5ce049f/stream?static=t
 #EXTINF:6060 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/yFHHfHcUgGAxziP1C3lLt0q2T4s.jpg" group-title="All Movies",A Minecraft Movie (2025)
 http://192.168.1.71:9000/Videos/f5ac1cb0bf6cd6fa5649af7d63da8fe9/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
+#EXTINF:6120 tvg-logo="https://image.tmdb.org/t/p/original/85TPrMqLBQoWLLwLbFdXJUEWmDQ.jpg" group-title="All Movies",Miraculous: Ladybug and Cat Noir, The Movie (2023)
+http://192.168.1.71:9000/Videos/38e7c6964394f1046ebb1a428a79ed47/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
 #EXTINF:10020 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/NNxYkU70HPurnNCSiCjYAmacwm.jpg" group-title="All Movies",Mission: Impossible - Dead Reckoning Part One (2023)
 http://192.168.1.71:9000/Videos/073f593e5b9d4bdbdd7d4d61f7211350/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
