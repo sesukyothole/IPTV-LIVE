@@ -1,0 +1,188 @@
+#EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz"
+
+#EXTINF:-1 tvg-id="3ABN.Dare.to.Dream.Network.us2" tvg-name="3ABN Dare to Dream Netwok USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-dare-to-dream-network-us.png" tvg-language="en" group-title="Religious",3ABN Dare to Dream Network USA
+https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="3ABN.Kids.Network.us2" tvg-name="3ABN Kids Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-kids-network-us.png" tvg-language="en" group-title="Religious",3ABN Kids Network USA
+https://3abn.bozztv.com/3abn2/Kids_live/smil:Kids_live.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="3ABN.Praise.Him.Music.us2" tvg-name="3ABN Praise Him Music Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-praise-him-music-network-us.png" tvg-language="en" group-title="Religious",3ABN Praise Him Music Network USA
+https://3abn.bozztv.com/3abn1/PraiseHim/smil:PraiseHim.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="3ABN.Proclaim.Network.us2" tvg-name="3ABN Proclaim Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-proclaim-network-us.png" tvg-language="en" group-title="Religious",3ABN Proclaim Network USA
+https://3abn.bozztv.com/3abn2/Pro_live/smil:Pro_live.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="ABC.News.Live.us2" tvg-name="ABC News USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/abc-news-us.png" tvg-language="en" group-title="News",ABC News USA
+https://livetv-fa.tubi.video/abc-news/index.m3u8
+
+#EXTINF:-1 tvg-id="ACC.Network.us2" tvg-name="ACC Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/acc-network-us.png" tvg-language="en" group-title="Sports",ACC Network USA
+https://fl7.moveonjoy.com/ACC_NETWORK/index.m3u8
+
+#EXTINF:-1 tvg-id="AMC.HD.us2" tvg-name="AMC Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png" tvg-language="en" group-title="Movies",AMC Network USA
+https://fl7.moveonjoy.com/AMC_NETWORK/index.m3u8
+
+#EXTINF:-1 tvg-id="Bravo.HD.us2" tvg-name="Bravo Network USA" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a4/Bravo_2005_blue_white.svg/revision/latest/scale-to-width-down/512?cb=20250725213050" tvg-language="en" group-title="Entertainment/Lifestyle",Bravo Network USA
+https://fl7.moveonjoy.com/BRAVO/index.m3u8
+
+#EXTINF:-1 tvg-id="BBC.America.HD.us2" tvg-name="BBC America" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bbc-america-us.png" tvg-language="en" group-title="International/Premium",BBC America
+http://23.237.104.106:8080/USA_BBC_AMERICA/index.m3u8
+
+#EXTINF:-1 tvg-id="BBC.News.(North.America).HD.us2" tvg-name="BBC World News USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/international/bbc-world-news-white-hz-int.png" tvg-language="en" group-title="News",BBC World News USA
+https://fl7.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8
+
+#EXTINF:-1 tvg-id="Bloomberg.HD.us2" tvg-name="Bloomberg Television USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png" tvg-language="en",Bloomberg Television USA
+http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
+
+#EXTINF:-1 tvg-id="Boomerang.us2" tvg-name="Boomerang USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png" tvg-language="en" group-title="Kids",Boomerang USA
+http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
+
+#EXTINF:-1 tvg-id="Cartoon.Network.HD.us2" tvg-name="Cartoon Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" tvg-language="en" group-title="Kids",Cartoon Network USA
+http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
+
+#EXTINF:-1 tvg-id="CNBC.HD.us2" tvg-name="CNBC USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cnbc-us.png" tvg-language="en" group-title="News",CNBC USA
+https://fl7.moveonjoy.com/CNBC/index.m3u8
+
+#EXTINF:-1 tvg-id="Comedy.Central.HD.us2" tvg-name="Comedy Central USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/comedy-central-us.png" tvg-language="en",Comedy Central USA
+https://fl7.moveonjoy.com/Comedy_Central/index.m3u8
+
+#EXTINF:-1 tvg-id="Cinemax.HD.us2" tvg-name="Cinemax USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png" tvg-language="en" group-title="Movies",Cinemax USA
+https://fl7.moveonjoy.com/CINEMAX/index.m3u8
+
+#EXTINF:-1 tvg-id="Discovery.Channel.HD.us2" tvg-name="Discovery Channel USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/discovery-channel-us.png" tvg-language="en" group-title="Documentary/Knowledge",Discovery Channel USA
+http://23.237.104.106:8080/USA_DISCOVERY/index.m3u8
+
+#EXTINF:-1 tvg-id="Disney.Channel.HD.us2" tvg-name="Disney Channel USA" tvg-logo="https://static.wikia.nocookie.net/disney/images/2/25/Disney_Channel_2024_logo.png" tvg-language="en" group-title="Kids",Disney Channel USA
+https://fl7.moveonjoy.com/DISNEY/index.m3u8
+
+#EXTINF:-1 tvg-id="Disney.Junior.HD.us2" tvg-name="Disney Junior USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-jr-us.png" tvg-language="en" group-title="Kids",Disney Junior USA
+http://23.237.104.106:8080/USA_DISNEY_JUNIOR/index.m3u8
+
+#EXTINF:-1 tvg-id="Disney.XD.HD.us2" tvg-name="Disney XD USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-xd-us.png" tvg-language="en" group-title="Kids",Disney XD USA
+http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8
+
+#EXTINF:-1 tvg-id="ESPNU.HD.us2" tvg-name="ESPN U USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-u-us.png" tvg-language="en" group-title="Sports",ESPN U USA
+https://fl7.moveonjoy.com/ESPN_U/index.m3u8
+
+#EXTINF:-1 tvg-id="ESPNEWS.HD.us2" tvg-name="ESPN News USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espnews-us.png" tvg-language="en" group-title="Sports",ESPN News USA
+https://fl7.moveonjoy.com/ESPN_NEWS/index.m3u8
+
+#EXTINF:-1 tvg-id="Fuse.HD.us2" tvg-name="Fuse Network USA" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/59/Fuse_logo15.png" tvg-language="en" group-title="Music",Fuse Network USA
+http://23.237.104.106:8080/USA_FUSE/index.m3u8
+
+#EXTINF:-1 tvg-id="Fox.News.Channel.HD.us2" tvg-name="Fox News USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fox-news-us.png" group-title="News",Fox News USA  
+https://fl7.moveonjoy.com/FOX_NEWS_CHANNEL/index.m3u8
+
+#EXTINF:-1 tvg-id="FX.HD.us2" tvg-name="FX Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fx-us.png" tvg-language="en" group-title="International/Premium",FX Network USA
+https://fl7.moveonjoy.com/FX/index.m3u8
+
+#EXTINF:-1 tvg-id="FX.Movie.Channel.HD.us2" tvg-name="FX Movie Channel USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fxm-movie-channel-us.png" tvg-language="en" group-title="Movies",FX Movie Channel USA
+https://fl7.moveonjoy.com/FX_MOVIE/index.m3u8
+
+#EXTINF:-1 tvg-id="FXX.HD.us2" tvg-name="FXX Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fxx-us.png" tvg-language="en" group-title="International/Premium",FXX Network USA
+https://fl7.moveonjoy.com/FXX/index.m3u8
+
+#EXTINF:-1 tvg-id="FYI.Channel.HD.us2" tvg-name="FYI Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fyi-us.png" tvg-language="en",FYI Network USA
+https://fl7.moveonjoy.com/FYI/index.m3u8
+
+#EXTINF:-1 tvg-id="Freeform.HD.us2" tvg-name="Freeform USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" tvg-language="en" group-title="Entertainment/General",Freeform USA
+https://fl7.moveonjoy.com/FREE_FORM/index.m3u8
+
+#EXTINF:-1 tvg-id="Hallmark.Channel.HD.us2" tvg-name="Hallmark Channel USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-channel-us.png" tvg-language="en" group-title="Drama/Lifestyle",Hallmark Channel USA
+https://fl7.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8
+
+#EXTINF:-1 tvg-id="Hallmark.Family.us2" tvg-name="Hallmark Family USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-family-us.png" tvg-language="en" group-title="Drama/Lifestyle",Hallmark Family USA
+https://fl7.moveonjoy.com/HALLMARK_DRAMA/index.m3u8
+
+#EXTINF:-1 tvg-id="Hallmark.Mystery.HD.us2" tvg-name="Hallmark Mystery USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-mystery-us.png" tvg-language="en" group-title="Drama/Lifestyle",Hallmark Mystery USA
+https://fl7.moveonjoy.com/HALLMARK_MOVIES_MYSTERIES/index.m3u8
+
+#EXTINF:-1 tvg-id="HBO.East.us2" tvg-name="HBO USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-us.png" tvg-language="en" group-title="Movies",HBO USA
+http://23.237.104.106:8080/USA_HBO/index.m3u8
+
+#EXTINF:-1 tvg-id="HBO2.HD.us2" tvg-name="HBO Hits USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-hits-us.png" tvg-language="en" group-title="Movies",HBO Hits USA
+https://fl7.moveonjoy.com/HBO_2/index.m3u8
+
+#EXTINF:-1 tvg-id="HBO.Comedy.HD.us2" tvg-name="HBO Comedy USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-comedy-us.png" tvg-language="en" group-title="Movies",HBO Comedy USA
+http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8
+
+#EXTINF:-1 tvg-id="HBO.Zone.HD.us2" tvg-name="HBO Movies USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-movies-us.png" tvg-language="en" group-title="Movies",HBO Movies USA
+http://23.237.104.106:8080/USA_HBO_ZONE/index.m3u8
+
+#EXTINF:-1 tvg-id="National.Geographic.HD.us2" tvg-name="National Geographic USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/national-geographic-us.png" tvg-language="en" group-title="Documentary/Knowledge",National Geographic USA
+https://fl7.moveonjoy.com/National_Geographic/index.m3u8
+
+#EXTINF:-1 tvg-id="National.Geographic.Wild.HD.us2" tvg-name="National Geographic Wild USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nat-geo-wild-alt-us.png" tvg-language="en" group-title="Documentary/Knowledge",National Geographic Wild USA
+https://fl7.moveonjoy.com/Nat_Geo_Wild/index.m3u8
+
+#EXTINF:-1 tvg-id="ION.Television.HD.us2" tvg-name="ION Television USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/ion-television-us.png" tvg-language="en" group-title="Entertainment/General",ION Television USA
+https://fl7.moveonjoy.com/ION_TV/index.m3u8
+
+#EXTINF:-1 tvg-id="ION.Plus.us2" tvg-name="ION Plus Television USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/ion-plus-us.png" tvg-language="en" group-title="Entertainment/General",ION Plus Television USA
+https://fl7.moveonjoy.com/ION_Plus/index.m3u8
+
+#EXTINF:-1 tvg-id="Lifetime.HD.us2" tvg-name="Lifetime Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/lifetime-us.png" tvg-language="en" group-title="Drama/Lifestyle",Lifetime Network USA
+https://fl7.moveonjoy.com/LIFETIME/index.m3u8
+
+#EXTINF:-1 tvg-id="LMN.HD.us2" tvg-name="Lifetime Movie Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/lifetime-movies-us.png" tvg-language="en" group-title="Drama/Lifestyle",Lifetime Movie Network USA
+https://fl7.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8
+
+#EXTINF:-1 tvg-id="MGM+.HD.us2" tvg-name="MGM+ USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/mgm-plus-us.png" tvg-language="en" group-title="Movies",MGM+ USA
+https://fl7.moveonjoy.com/EPIX/index.m3u8
+
+#EXTINF:-1 tvg-id="MGM+.Marquee.HD.us2" tvg-name="MGM+ Marquee USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/mgm-plus-marquee-us.png" tvg-language="en" group-title="Movies",MGM+ Marquee USA
+https://fl7.moveonjoy.com/EPIX_DRIVE_IN/index.m3u8
+
+#EXTINF:-1 tvg-id="Nickelodeon.HD.us2" tvg-name="Nickelodeon USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" tvg-language="en" group-title="Kids",Nickelodeon USA
+http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
+
+#EXTINF:-1 tvg-id="Nick.Jr.HD.us2" tvg-name="Nick Jr. USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-jr-us.png" tvg-language="en" group-title="Kids",Nick Jr. USA
+https://fl7.moveonjoy.com/NICK_JR/index.m3u8
+
+#EXTINF:-1 tvg-id="Nicktoons.us2" tvg-name="Nicktoons USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-toons-us.png" tvg-language="en" group-title="Kids",Nicktoons USA
+https://fl7.moveonjoy.com/NICKTOONS/index.m3u8
+
+#EXTINF:-1 tvg-id="Nick.Music.us2" tvg-name="Nick Music USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-music-us.png" tvg-language="en" group-title="Music",Nick Music USA
+https://fl7.moveonjoy.com/NICK_MUSIC/index.m3u8
+
+#EXTINF:-1 tvg-id="Teen.Nick.us2" tvg-name="Teen Nick USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/teen-nick-us.png" tvg-language="en" group-title="Kids",Teen Nick USA
+https://fl7.moveonjoy.com/Teen_Nick/index.m3u8
+
+#EXTINF:-1 tvg-id="PBS.KIDS.HD.us2" tvg-name="PBS Kids USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/pbs-kids-dot-icon-us.png" tvg-language="en" group-title="Kids",PBS Kids USA
+https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est_2.m3u8
+
+
+#EXTINF:-1 tvg-id="TV.ONE.HD.us2" tvg-name="TV One USA" tvg-logo="https://www.vhv.rs/dpng/d/560-5607033_tv-one-us-channel-logo-hd-png-download.png" tvg-language="en" group-title="Entertainment/General",TV One USA
+https://fl7.moveonjoy.com/TV_ONE/index.m3u8
+
+#EXTINF:-1 tvg-id="Paramount.Network.HD.us2" tvg-name="Paramount Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/paramount-network-icon-hd-us.png" tvg-language="en" group-title="Entertainment/General",Paramount Network USA
+https://fl7.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8
+
+#EXTINF:-1 tvg-id="Showtime.Extreme.HD.us2" tvg-name="Showtime Extreme USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-extreme-us.png" tvg-language="en" group-title="Movies",Showtime Extreme USA
+https://fl7.moveonjoy.com/SHOWTIME_EXTREME/index.m3u8
+
+#EXTINF:-1 tvg-id="Showtime.Next.HD.us2" tvg-name="Showtime Next USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-next-us.png" tvg-language="en" group-title="Movies",Showtime Next USA
+https://fl7.moveonjoy.com/SHOWTIME_NEXT/index.m3u8
+
+#EXTINF:-1 tvg-id="Showtime.2.HD.us2" tvg-name="Showtime 2 USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-2-us.png" tvg-language="en" group-title="Movies",Showtime 2 USA
+https://fl7.moveonjoy.com/SHOWTIME_2/index.m3u8
+
+#EXTINF:-1 tvg-id="Showtime.Women.HD.us2" tvg-name="Showtime Women USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-women-us.png" tvg-language="en" group-title="Movies",Showtime Women USA
+https://fl7.moveonjoy.com/SHOWTIME_WOMEN/index.m3u8
+
+#EXTINF:-1 tvg-id="Starz.HD.us2" tvg-name="Starz USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-us.png" tvg-language="en" group-title="Movies",Starz USA
+http://23.237.104.106:8080/USA_STARZ/index.m3u8
+
+#EXTINF:-1 tvg-id="Starz.Cinema.HD.us2" tvg-name="Starz Cinema USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-cinema-us.png" tvg-language="en" group-title="Movies",Starz Cinema USA
+http://23.237.104.106:8080/USA_STARZ_CINEMA/index.m3u8
+
+#EXTINF:-1 tvg-id="Starz.Comedy.HD.us2" tvg-name="Starz Comedy USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-comedy-us.png" tvg-language="en" group-title="Movies",Starz Comedy USA
+http://23.237.104.106:8080/USA_STARZ_COMEDY/index.m3u8
+
+#EXTINF:-1 tvg-id="Starz.Encore.Action.HD.us2" tvg-name="Starz Encore Action USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-action-us.png" tvg-language="en" group-title="Movies",Starz Encore Action USA
+https://fl7.moveonjoy.com/STARZ_ENCORE_ACTION/index.m3u8
+
+#EXTINF:-1 tvg-id="Starz.Encore.Classic.us2" tvg-name="Starz Encore Classic USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-classic-us.png" tvg-language="en" group-title="Movies",Starz Encore Classic USA
+https://fl7.moveonjoy.com/STARZ_ENCORE_CLASSIC/index.m3u8
+
+#EXTINF:-1 tvg-id="Starz.Encore.Westerns.SD.us2" tvg-name="Starz Encore Westerns USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-westerns-us.png" tvg-language="en" group-title="Movies",Starz Encore Westerns USA
+https://fl7.moveonjoy.com/STARZ_ENCORE_WESTERNS/index.m3u8
