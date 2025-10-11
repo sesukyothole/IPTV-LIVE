@@ -12,9 +12,6 @@ https://3abn.bozztv.com/3abn1/PraiseHim/smil:PraiseHim.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="3ABN.Proclaim.Network.us2" tvg-name="3ABN Proclaim Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-proclaim-network-us.png" tvg-language="en" group-title="Religious",3ABN Proclaim Network USA
 https://3abn.bozztv.com/3abn2/Pro_live/smil:Pro_live.smil/playlist.m3u8
 
-#EXTINF:-1 tvg-id="ABCKidsSydney.au" tvg-name="ABC Kids Australia" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-kids-au.png" tvg-guide="https://epgshare01.online/epsgshare01/epg_ripper_AU1.xml.gz" tvg-language="en" group-title="Kids",ABC Kids Australia 
-https://c.mjh.nz/abc-kids.m3u8
-
 #EXTINF:-1 tvg-id="ABC.News.Live.us2" tvg-name="ABC News USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/abc-news-us.png" tvg-language="en" group-title="News",ABC News USA
 https://livetv-fa.tubi.video/abc-news/index.m3u8
 
@@ -41,9 +38,6 @@ http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
 
 #EXTINF:-1 tvg-id="Cartoon.Network.HD.us2" tvg-name="Cartoon Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" tvg-language="en" group-title="Kids",Cartoon Network USA
 http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
-
-#EXTINF:-1 tvg-id="CBeebies.HD.uk" tvg-name="CBeebies UK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/bbc-cbeebies-uk.png" tvg-guide="https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz" group-title="Kids",CBeebies UK
-https://viamotionhsi.netplus.ch/live/eds/bbc4cbeebies/browser-HLS8/bbc4cbeebies.m3u8
 
 #EXTINF:-1 tvg-id="CNBC.HD.us2" tvg-name="CNBC USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cnbc-us.png" tvg-language="en" group-title="News",CNBC USA
 https://fl7.moveonjoy.com/CNBC/index.m3u8
