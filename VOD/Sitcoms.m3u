@@ -1,0 +1,148 @@
+#EXTM3U
+
+#EXTINF:1620 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 1 - Everything Is Not What It Seems
+http://192.168.1.71:9000/Videos/339c6424791c9e20b4ecfd517edf169b/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 2 - Mortal Vibes Only
+http://192.168.1.71:9000/Videos/efca147d566d3156e7cbfc1a15727f6d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 3 - Saved by the Spell
+http://192.168.1.71:9000/Videos/7d65823f8ab7ed3e929b1a208b7d046b/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 4 - Something Wizard This Way Comes
+http://192.168.1.71:9000/Videos/5033a597eaa6de075d1a787741ec0dde/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 5 - Wizards Just Wand to Have Fun
+http://192.168.1.71:9000/Videos/19ae52abeae46a008a3e1d93c61bbef0/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 6 - The Legend of Creepy Follows
+http://192.168.1.71:9000/Videos/34288e6470029d806fbfae14ce375035/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 7 - We're Gonna Need a Bigger Float
+http://192.168.1.71:9000/Videos/79d7ee0f270bbd031deab2d7d977b79e/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 8 - You Can't Handle the Tooth
+http://192.168.1.71:9000/Videos/3f6bc9c2fc421a902558e5fbc8a5adc1/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 9 - Wiz-Taken Identity
+http://192.168.1.71:9000/Videos/96c0a0757836d2c9c8c0791c4a3bd660/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 10 - Ain't Gnome Party Like a Wizard Party
+http://192.168.1.71:9000/Videos/d2848ba5e1e61b2fbd607bc98548ed88/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 11 - Potions Eleven
+http://192.168.1.71:9000/Videos/9d0de804146a1c1f12541a2c65249c4c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 12 - Battle of the Wands
+http://192.168.1.71:9000/Videos/e68662f3a1f67d5e7a51930f11f7240b/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 13 - There's Something About the Russos
+http://192.168.1.71:9000/Videos/5c2b605c99f1ba489b974c3421243b25/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 14 - Ready Player Wand
+http://192.168.1.71:9000/Videos/872c9f80e5f80cd6a534cbb00054ca0e/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 15 - Quest Birthday Ever!
+http://192.168.1.71:9000/Videos/ffec669fbbdceccdfff036b21370538e/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 16 - While You Were Sleepcasting
+http://192.168.1.71:9000/Videos/a776e8215117961f3b6e1f0aca0b2be7/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 17 - Abraca-Disaster!
+http://192.168.1.71:9000/Videos/d8bc23b29f0fa4490dacc91f6ace17fd/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 18 - Hit Me with Your Best Bot
+http://192.168.1.71:9000/Videos/6e521938a20a0164e0033cbdbb4b7726/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 19 - Raiders of the Locked Archive
+http://192.168.1.71:9000/Videos/60a8d3bbb136e513e70befba527c93e3/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 20 - When You Wish Upon a Squonk
+http://192.168.1.71:9000/Videos/cbdae8166b44dd26d41bc41be1c1708d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/4s5owuIwkubhCM44hicgQgiWeiq.jpg" group-title="Wizards Beyond Waverly Place Season 1",Episode 21 - Nigh Is Now!
+http://192.168.1.71:9000/Videos/ba04497825331d9236a87349e792ca3a/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/7ZDusUcjxqx9g77JHMXhuzkQmbT.jpg" group-title="Wizards Beyond Waverly Place Season 2",Episode 1 - Curse Me Baby One More Time
+http://192.168.1.71:9000/Videos/4445819f2004ffa14c7f31285ff7ed75/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/7ZDusUcjxqx9g77JHMXhuzkQmbT.jpg" group-title="Wizards Beyond Waverly Place Season 2",Episode 2 - Ooze!... I Did It Again
+http://192.168.1.71:9000/Videos/5d28697c01305c81156d7d62cd8f7c1d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/7ZDusUcjxqx9g77JHMXhuzkQmbT.jpg" group-title="Wizards Beyond Waverly Place Season 2",Episode 3 - Howdy with a Trance of Gumballs
+http://192.168.1.71:9000/Videos/d06b8982cca77d3453288089d25932ed/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/7ZDusUcjxqx9g77JHMXhuzkQmbT.jpg" group-title="Wizards Beyond Waverly Place Season 2",Episode 4 - Don't Go Changeling My Heart
+http://192.168.1.71:9000/Videos/6a200832c0b5190cb2be8ba6e246e1a4/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/7ZDusUcjxqx9g77JHMXhuzkQmbT.jpg" group-title="Wizards Beyond Waverly Place Season 2",Episode 5 - Spells Like Halloween Spirit
+http://192.168.1.71:9000/Videos/4fb4a73cab91851c7e3873dfeb045b4a/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1620 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 1 - How It Started
+http://192.168.1.71:9000/Videos/9c212a97020b802a530229778f31c04d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 2 - How It Almost Ended
+http://192.168.1.71:9000/Videos/313c974f96308225e6bc3d488d5c355e/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 3 - How We Rocked Homecoming
+http://192.168.1.71:9000/Videos/059be602c14b145ef5cd13001091fbb2/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1260 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 4 - How We Got Crushed
+http://192.168.1.71:9000/Videos/2ad294cf6932cf00979330115b08d38c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 5 - How We Made a Tiny Mistake
+http://192.168.1.71:9000/Videos/4753fee580630102bfa2d9169958ed66/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 6 - How We Found Howie
+http://192.168.1.71:9000/Videos/be9f3e444b7f502ca5c29daabdfc183c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 7 - How to (Not) Make a Music Video
+http://192.168.1.71:9000/Videos/bcd0d10fcc1df651feb14110fb98735a/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1260 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 8 - How We Danced the Night Away
+http://192.168.1.71:9000/Videos/51ca6e6b25d29166a22d26e1bea85dfb/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 9 - How It All Came Out in the Wash
+http://192.168.1.71:9000/Videos/842e12109dad71e91553dac86ff334a9/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 10 - How Tulip Became a Shelly: A Halloween Nightmare
+http://192.168.1.71:9000/Videos/61d015dcaa22669bfa1ade7723a85b7b/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 11 - How We Learned To Love Our Haters
+http://192.168.1.71:9000/Videos/74ac9052c188d382b41c9736b2f6af20/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 12 - How We Pulled A Song Out Of Our Pocket
+http://192.168.1.71:9000/Videos/f5f0273afe493c335c465ee219875959/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 13 - How We Tried To Crash A Party
+http://192.168.1.71:9000/Videos/f0069347eca45f26653643011dacf046/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1620 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title="Vampirina: Teenage Vampire Season 1",Episode 1 - First Year to Watch
+http://192.168.1.71:9000/Videos/93121f4600a6be004276a94d0ec0562c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title="Vampirina: Teenage Vampire Season 1",Episode 2 - First Day of School
+http://192.168.1.71:9000/Videos/3b549c3e4846100225750f498501e4d8/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1260 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title="Vampirina: Teenage Vampire Season 1",Episode 3 - First Dance
+http://192.168.1.71:9000/Videos/6ac25c29c13f236599b64879e0040147/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title="Vampirina: Teenage Vampire Season 1",Episode 4 - First Parents Day
+http://192.168.1.71:9000/Videos/ad49067fbbb79f475568719cb79779f4/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title="Vampirina: Teenage Vampire Season 1",Episode 5 - First Enemy
+http://192.168.1.71:9000/Videos/d6a3d3f79a69a26666d45d70a90f3209/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title="Vampirina: Teenage Vampire Season 1",Episode 6 - First Club
+http://192.168.1.71:9000/Videos/98731f29a57122406a877e28c355d24e/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title="Vampirina: Teenage Vampire Season 1",Episode 7 - First Halloween
+http://192.168.1.71:9000/Videos/f5f818cd32577561fcf0185952ee47a1/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title="Vampirina: Teenage Vampire Season 1",Episode 8 - First Nightmare
+http://192.168.1.71:9000/Videos/9ddb64fc4826de8b76cbc1076ae3c68b/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title="Vampirina: Teenage Vampire Season 1",Episode 9 - First Final
+http://192.168.1.71:9000/Videos/596f90f9b959bd5522e9b4b0ba08d53f/stream?static=true&api_key=4720dcae6bf548c89c42e8ef0b6a353a
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title="Vampirina: Teenage Vampire Season 1",Episode 10 - First Holiday
+http://192.168.1.71:9000/Videos/137066a4c1fc1b130f904fee1edd276a/stream?static=true&api_key=4720dcae6bf548c89c42e8ef0b6a353a
