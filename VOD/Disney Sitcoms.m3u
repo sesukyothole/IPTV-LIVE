@@ -90,7 +90,7 @@ http://192.168.1.71:9000/Videos/20935aa927b53ded8995d5ac09a55d6d/stream?static=t
 #EXTINF:1560 tvg-logo="https://image.tmdb.org/t/p/original/7ZDusUcjxqx9g77JHMXhuzkQmbT.jpg" group-title="Wizards Beyond Waverly Place Season 2",Episode 9 - The Wizard at the End of the World (Part 1)
 http://192.168.1.71:9000/Videos/6d737c33ec6532e7bb4688fe5d6795e6/stream?static=true&api_key=4d7f183e806c4c0bb80abfd3d6f5a697
 
-#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/7ZDusUcjxqx9g77JHMXhuzkQmbT.jpg" group-title="Wizards Beyond Waverly Place Season 2",Episode 10 - The WIzard at the End of the World (Part 2)
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/7ZDusUcjxqx9g77JHMXhuzkQmbT.jpg" group-title="Wizards Beyond Waverly Place Season 2",Episode 10 - The Wizard at the End of the World (Part 2)
 http://192.168.1.71:9000/Videos/6055a940a806983fcd4ea35acb78dec4/stream?static=true&api_key=4d7f183e806c4c0bb80abfd3d6f5a697
 
 #EXTINF:1620 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 1 - How It Started
