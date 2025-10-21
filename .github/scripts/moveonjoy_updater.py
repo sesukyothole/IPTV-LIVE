@@ -2,31 +2,36 @@ import re
 import requests
 from pathlib import Path
 
-FL_URL = "https://fl.moveonjoy.com/"
+# --- CONFIG ---
+CHECK_RANGE = range(1, 51)  # fl1 through fl50
 OLD_DOMAIN_PATTERN = r"mov\d+\.moveonjoy\.(?:com|xyz)"
 PLAYLIST_PATH = Path("gtvservices5/IPTV-LIVE/PrimeVision/us.m3u")
 
-print("🔍 Checking current MoveOnJoy redirect...")
+print("🔍 Searching for available MoveOnJoy subdomain...")
 
 NEW_DOMAIN = None
+WORKING_FL = None
 
-try:
-    response = requests.get(FL_URL, allow_redirects=True, timeout=10)
-    final_url = response.url
-    match = re.search(r"(mov\d+\.moveonjoy\.(?:com|xyz))", final_url)
-    if match:
-        NEW_DOMAIN = match.group(1)
-        print(f"✅ Found new domain: {NEW_DOMAIN}")
-    else:
-        print("⚠️ No valid MoveOnJoy domain found in redirect URL.")
-except Exception as e:
-    print(f"⚠️ Error fetching domain from {FL_URL}: {e}")
+# --- STEP 1: Try multiple fl subdomains ---
+for i in CHECK_RANGE:
+    test_url = f"https://fl{i}.moveonjoy.com/"
+    try:
+        resp = requests.get(test_url, allow_redirects=True, timeout=5)
+        if resp.status_code == 200:
+            match = re.search(r"(mov\d+\.moveonjoy\.(?:com|xyz))", resp.url)
+            if match:
+                NEW_DOMAIN = match.group(1)
+                WORKING_FL = f"fl{i}.moveonjoy.com"
+                print(f"✅ Found working redirect: {WORKING_FL} → {NEW_DOMAIN}")
+                break
+    except requests.RequestException:
+        continue  # try next one silently
 
-# Stop here if no domain found
 if not NEW_DOMAIN:
-    print("❌ Could not determine new MoveOnJoy domain. No changes made.")
+    print("❌ Could not find any working MoveOnJoy redirect from fl1–fl50.")
     exit(0)
 
+# --- STEP 2: Update playlist ---
 if not PLAYLIST_PATH.exists():
     print(f"⚠️ Playlist not found at: {PLAYLIST_PATH}")
     exit(0)
@@ -42,6 +47,6 @@ if matches:
     PLAYLIST_PATH.write_text(updated, encoding="utf-8")
     print(f"✅ Replaced '{old_domain}' → '{NEW_DOMAIN}' in {PLAYLIST_PATH}")
 else:
-    print("ℹ️ Playlist already up-to-date or no MoveOnJoy links found.")
+    print("ℹ️ No MoveOnJoy links found or already up-to-date.")
 
-print("🎉 Script completed successfully.")
+print(f"🎉 Update complete. Using redirect from {WORKING_FL}")
