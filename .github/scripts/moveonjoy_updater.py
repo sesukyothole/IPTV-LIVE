@@ -14,17 +14,19 @@ END = 50
 TIMEOUT = 3
 
 def find_working_subdomain():
-    print(f"🔍 Searching for available MoveOnJoy redirect (fl{START}–fl{END})...")
-    for i in range(START, END + 1):
+    print(f"🔍 Searching for available MoveOnJoy redirect (fl{END}–fl{START})...")
+
+    # Loop backwards from fl50 to fl2
+    for i in range(END, START - 1, -1):
         subdomain = f"fl{i}"
         url = f"https://{subdomain}.moveonjoy.com/"
         try:
             # Try HEAD first
             response = requests.head(url, timeout=TIMEOUT, allow_redirects=True)
             if response.status_code >= 400:
-                # If HEAD fails, try GET (some servers block HEAD)
+                # Some servers block HEAD — fallback to GET
                 response = requests.get(url, timeout=TIMEOUT, allow_redirects=True)
-            
+
             if response.status_code < 400:
                 print(f"✅ Found working MoveOnJoy domain: {subdomain}.moveonjoy.com ({response.status_code})")
                 return subdomain
@@ -32,7 +34,7 @@ def find_working_subdomain():
                 print(f"⚙️ Tried {url} — status {response.status_code}.")
         except requests.RequestException:
             print(f"⚙️ Tried {url} — connection failed.")
-    print(f"❌ Could not find any working MoveOnJoy redirect from fl{START}–fl{END}.")
+    print(f"❌ Could not find any working MoveOnJoy redirect from fl{END}–fl{START}.")
     return None
 
 
@@ -44,9 +46,14 @@ def update_m3u(subdomain):
     with open(M3U_FILE_PATH, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Replace all old MoveOnJoy subdomains (flX.moveonjoy.com)
     pattern = r"https://fl\d+\.moveonjoy\.com"
     new_url = f"https://{subdomain}.moveonjoy.com"
+
+    # Skip update if same domain is already used
+    if new_url in content:
+        print(f"ℹ️ Playlist already using {new_url}. No changes needed.")
+        return False
+
     new_content, count = re.subn(pattern, new_url, content)
 
     if count == 0:
