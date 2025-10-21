@@ -3,57 +3,82 @@ import re
 import requests
 import subprocess
 
-# Your M3U file path in the repo
+# M3U file path
 M3U_FILE_PATH = "PrimeVision/us.m3u"
 
 # Range of MoveOnJoy subdomains to test
 START = 2
 END = 50
 
-# Timeout for each request (seconds)
+# Timeout (seconds)
 TIMEOUT = 3
 
-def find_working_subdomain():
-    print(f"🔍 Searching for available MoveOnJoy redirect (fl{END}–fl{START})...")
 
-    # Loop backwards from fl50 to fl2
-    for i in range(END, START - 1, -1):
-        subdomain = f"fl{i}"
-        url = f"https://{subdomain}.moveonjoy.com/"
-        try:
-            # Try HEAD first
-            response = requests.head(url, timeout=TIMEOUT, allow_redirects=True)
-            if response.status_code >= 400:
-                # Some servers block HEAD — fallback to GET
-                response = requests.get(url, timeout=TIMEOUT, allow_redirects=True)
+def check_domain(subdomain):
+    """Return True if the MoveOnJoy subdomain responds successfully."""
+    url = f"https://{subdomain}.moveonjoy.com/"
+    try:
+        response = requests.head(url, timeout=TIMEOUT, allow_redirects=True)
+        if response.status_code >= 400:
+            response = requests.get(url, timeout=TIMEOUT, allow_redirects=True)
+        return response.status_code < 400
+    except requests.RequestException:
+        return False
 
-            if response.status_code < 400:
-                print(f"✅ Found working MoveOnJoy domain: {subdomain}.moveonjoy.com ({response.status_code})")
-                return subdomain
-            else:
-                print(f"⚙️ Tried {url} — status {response.status_code}.")
-        except requests.RequestException:
-            print(f"⚙️ Tried {url} — connection failed.")
-    print(f"❌ Could not find any working MoveOnJoy redirect from fl{END}–fl{START}.")
+
+def find_current_subdomain():
+    """Extract the current subdomain (e.g. fl25) from the M3U playlist."""
+    if not os.path.exists(M3U_FILE_PATH):
+        return None
+    with open(M3U_FILE_PATH, "r", encoding="utf-8") as f:
+        content = f.read()
+    match = re.search(r"https://(fl\d+)\.moveonjoy\.com", content)
+    return match.group(1) if match else None
+
+
+def find_next_working_subdomain(current):
+    """Find the next working MoveOnJoy domain — lower first, then higher."""
+    if not current:
+        print("⚠️ No current subdomain found in playlist.")
+        return None
+
+    try:
+        current_number = int(re.search(r"\d+", current).group())
+    except (AttributeError, ValueError):
+        return None
+
+    print(f"🔍 Checking if current domain {current}.moveonjoy.com is online...")
+    if check_domain(current):
+        print(f"✅ Current domain {current}.moveonjoy.com is still working.")
+        return None  # No change needed
+
+    print(f"❌ {current}.moveonjoy.com is offline. Searching for alternatives...")
+
+    # Check lower subdomains first
+    for i in range(current_number - 1, START - 1, -1):
+        sub = f"fl{i}"
+        if check_domain(sub):
+            print(f"✅ Found working lower domain: {sub}.moveonjoy.com")
+            return sub
+
+    # If no lower found, check higher ones
+    for i in range(current_number + 1, END + 1):
+        sub = f"fl{i}"
+        if check_domain(sub):
+            print(f"✅ Found working higher domain: {sub}.moveonjoy.com")
+            return sub
+
+    print(f"❌ No working subdomain found from fl{START}–fl{END}.")
     return None
 
 
 def update_m3u(subdomain):
-    if not os.path.exists(M3U_FILE_PATH):
-        print(f"❌ Playlist not found at {M3U_FILE_PATH}")
-        return False
-
+    """Replace old MoveOnJoy subdomain with the new one in the playlist."""
     with open(M3U_FILE_PATH, "r", encoding="utf-8") as f:
         content = f.read()
 
     pattern = r"https://fl\d+\.moveonjoy\.com"
     new_url = f"https://{subdomain}.moveonjoy.com"
-
-    # Skip update if same domain is already used
-    if new_url in content:
-        print(f"ℹ️ Playlist already using {new_url}. No changes needed.")
-        return False
-
     new_content, count = re.subn(pattern, new_url, content)
 
     if count == 0:
@@ -68,7 +93,7 @@ def update_m3u(subdomain):
 
 
 def commit_changes():
-    """Commit and push changes if running in GitHub Actions."""
+    """Commit and push changes if running inside GitHub Actions."""
     if os.getenv("GITHUB_ACTIONS"):
         print("💾 Committing changes to repository...")
         subprocess.run(["git", "config", "user.name", "github-actions"], check=False)
@@ -80,11 +105,12 @@ def commit_changes():
 
 
 def main():
-    working_subdomain = find_working_subdomain()
-    if working_subdomain and update_m3u(working_subdomain):
+    current = find_current_subdomain()
+    next_sub = find_next_working_subdomain(current)
+    if next_sub and update_m3u(next_sub):
         commit_changes()
     else:
-        print("⚠️ No playlist changes made.")
+        print("ℹ️ No updates were needed.")
 
 
 if __name__ == "__main__":
