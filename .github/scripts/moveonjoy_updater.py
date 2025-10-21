@@ -13,9 +13,9 @@ END = 50
 TIMEOUT = 3
 
 def find_working_subdomain():
-    print("🔍 Searching for available MoveOnJoy redirect (fl1–fl50)...")
+    print("🔍 Searching for available MoveOnJoy redirect (fl2–fl50)...")
     for i in range(START, END + 1):
-        subdomain = f"fl{i}"
+        subdomain = f"fl2{i}"
         url = f"https://{subdomain}.moveonjoy.com/"
         try:
             response = requests.head(url, timeout=TIMEOUT, allow_redirects=True)
@@ -26,7 +26,7 @@ def find_working_subdomain():
                 print(f"⚙️ Tried {url} — status {response.status_code}.")
         except requests.RequestException:
             print(f"⚙️ Tried {url} — connection failed.")
-    print("❌ Could not find any working MoveOnJoy redirect from fl1–fl50.")
+    print("❌ Could not find any working MoveOnJoy redirect from fl2–fl50.")
     return None
 
 def update_m3u(subdomain):
