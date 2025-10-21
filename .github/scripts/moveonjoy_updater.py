@@ -1,62 +1,61 @@
+import os
 import re
 import requests
-from pathlib import Path
 
-# --- CONFIG ---
-CHECK_RANGE = range(1, 51)  # fl1 through fl50
-OLD_DOMAIN_PATTERN = r"mov\d+\.moveonjoy\.(?:com|xyz)"
-PLAYLIST_PATH = Path("gtvservices5/IPTV-LIVE/PrimeVision/us.m3u")
+# Your M3U file path in the repo
+M3U_FILE_PATH = "PrimeVision/us.m3u"
 
-print("🔍 Searching for available MoveOnJoy redirect (fl1–fl50)...")
+# Range of MoveOnJoy subdomains to test
+START = 1
+END = 50
 
-NEW_DOMAIN = None
-WORKING_FL = None
+# Timeout for each request (seconds)
+TIMEOUT = 3
 
-headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                  "AppleWebKit/537.36 (KHTML, like Gecko) "
-                  "Chrome/122.0 Safari/537.36"
-}
-
-for i in CHECK_RANGE:
-    test_url = f"https://fl{i}.moveonjoy.com/"
-    try:
-        resp = requests.get(test_url, allow_redirects=True, timeout=6, headers=headers)
-        # Check final redirected URL first
-        match_redirect = re.search(r"(mov\d+\.moveonjoy\.(?:com|xyz))", resp.url)
-        # Then check the page content if no redirect
-        match_body = re.search(r"(mov\d+\.moveonjoy\.(?:com|xyz))", resp.text)
-        match = match_redirect or match_body
-        if match:
-            NEW_DOMAIN = match.group(1)
-            WORKING_FL = f"fl{i}.moveonjoy.com"
-            print(f"✅ Working: {WORKING_FL} → {NEW_DOMAIN}")
-            break
-        else:
-            print(f"⚙️ Tried {test_url} — no redirect detected.")
-    except requests.RequestException:
-        continue
-
-if not NEW_DOMAIN:
+def find_working_subdomain():
+    print("🔍 Searching for available MoveOnJoy redirect (fl1–fl50)...")
+    for i in range(START, END + 1):
+        subdomain = f"fl{i}"
+        url = f"https://{subdomain}.moveonjoy.com/"
+        try:
+            response = requests.head(url, timeout=TIMEOUT, allow_redirects=True)
+            if response.status_code < 400:  # any 2xx or 3xx means it's online
+                print(f"✅ Found working MoveOnJoy domain: {subdomain}.moveonjoy.com ({response.status_code})")
+                return subdomain
+            else:
+                print(f"⚙️ Tried {url} — status {response.status_code}.")
+        except requests.RequestException:
+            print(f"⚙️ Tried {url} — connection failed.")
     print("❌ Could not find any working MoveOnJoy redirect from fl1–fl50.")
-    exit(0)
+    return None
 
-# --- STEP 2: Update playlist ---
-if not PLAYLIST_PATH.exists():
-    print(f"⚠️ Playlist not found at: {PLAYLIST_PATH}")
-    exit(0)
+def update_m3u(subdomain):
+    if not os.path.exists(M3U_FILE_PATH):
+        print(f"❌ Playlist not found at {M3U_FILE_PATH}")
+        return False
 
-print(f"🧩 Updating playlist: {PLAYLIST_PATH}")
+    with open(M3U_FILE_PATH, "r", encoding="utf-8") as f:
+        content = f.read()
 
-content = PLAYLIST_PATH.read_text(encoding="utf-8")
-matches = re.findall(OLD_DOMAIN_PATTERN, content)
+    # Replace all old MoveOnJoy subdomains (flX.moveonjoy.com) with the new one
+    new_content = re.sub(r"https://fl\d+\.moveonjoy\.com", f"https://{subdomain}.moveonjoy.com", content)
 
-if matches:
-    old_domain = matches[0]
-    updated = re.sub(OLD_DOMAIN_PATTERN, NEW_DOMAIN, content)
-    PLAYLIST_PATH.write_text(updated, encoding="utf-8")
-    print(f"✅ Replaced '{old_domain}' → '{NEW_DOMAIN}' in {PLAYLIST_PATH}")
-else:
-    print("ℹ️ No MoveOnJoy links found or already up-to-date.")
+    if content == new_content:
+        print("ℹ️ No subdomain changes detected in playlist.")
+        return False
 
-print(f"🎉 Update complete. Using redirect from {WORKING_FL}")
+    with open(M3U_FILE_PATH, "w", encoding="utf-8") as f:
+        f.write(new_content)
+
+    print(f"✅ Updated MoveOnJoy subdomain to {subdomain}.moveonjoy.com in {M3U_FILE_PATH}")
+    return True
+
+def main():
+    working_subdomain = find_working_subdomain()
+    if working_subdomain:
+        update_m3u(working_subdomain)
+    else:
+        print("⚠️ No available subdomain found. Playlist not updated.")
+
+if __name__ == "__main__":
+    main()
