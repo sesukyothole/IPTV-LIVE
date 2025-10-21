@@ -18,7 +18,7 @@ jobs:
           python-version: '3.x'
 
       - name: Run MoveOnJoy updater
-        run: python .github/scripts/auto_update_moveonjoy.py
+        run: python .github/scripts/moveonjoy_updater.py
 
       - name: Commit and push if updated
         run: |
