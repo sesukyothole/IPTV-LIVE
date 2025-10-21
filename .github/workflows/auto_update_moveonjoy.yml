@@ -22,7 +22,7 @@ jobs:
              pip install requests
       
       - name: Run MoveOnJoy updater
-        run: python .github/scripts/moveonjoy_updater.py
+        run: python scripts/moveonjoy_updater.py
 
       - name: Commit and push if updated
         run: |
