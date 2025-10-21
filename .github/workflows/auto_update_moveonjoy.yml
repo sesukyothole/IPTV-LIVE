@@ -1,4 +1,4 @@
-name: Auto Update MoveOnJoy (FL Redirect)
+name: 🛜 Auto Update MoveOnJoy (FL Redirect)
 
 on:
   workflow_dispatch:
