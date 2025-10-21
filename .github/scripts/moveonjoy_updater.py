@@ -7,25 +7,35 @@ CHECK_RANGE = range(1, 51)  # fl1 through fl50
 OLD_DOMAIN_PATTERN = r"mov\d+\.moveonjoy\.(?:com|xyz)"
 PLAYLIST_PATH = Path("gtvservices5/IPTV-LIVE/PrimeVision/us.m3u")
 
-print("🔍 Searching for available MoveOnJoy subdomain...")
+print("🔍 Searching for available MoveOnJoy redirect (fl1–fl50)...")
 
 NEW_DOMAIN = None
 WORKING_FL = None
 
-# --- STEP 1: Try multiple fl subdomains ---
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/122.0 Safari/537.36"
+}
+
 for i in CHECK_RANGE:
     test_url = f"https://fl{i}.moveonjoy.com/"
     try:
-        resp = requests.get(test_url, allow_redirects=True, timeout=5)
-        if resp.status_code == 200:
-            match = re.search(r"(mov\d+\.moveonjoy\.(?:com|xyz))", resp.url)
-            if match:
-                NEW_DOMAIN = match.group(1)
-                WORKING_FL = f"fl{i}.moveonjoy.com"
-                print(f"✅ Found working redirect: {WORKING_FL} → {NEW_DOMAIN}")
-                break
+        resp = requests.get(test_url, allow_redirects=True, timeout=6, headers=headers)
+        # Check final redirected URL first
+        match_redirect = re.search(r"(mov\d+\.moveonjoy\.(?:com|xyz))", resp.url)
+        # Then check the page content if no redirect
+        match_body = re.search(r"(mov\d+\.moveonjoy\.(?:com|xyz))", resp.text)
+        match = match_redirect or match_body
+        if match:
+            NEW_DOMAIN = match.group(1)
+            WORKING_FL = f"fl{i}.moveonjoy.com"
+            print(f"✅ Working: {WORKING_FL} → {NEW_DOMAIN}")
+            break
+        else:
+            print(f"⚙️ Tried {test_url} — no redirect detected.")
     except requests.RequestException:
-        continue  # try next one silently
+        continue
 
 if not NEW_DOMAIN:
     print("❌ Could not find any working MoveOnJoy redirect from fl1–fl50.")
