@@ -3,7 +3,7 @@ import re
 import requests
 
 # Your M3U file path in the repo
-M3U_FILE_PATH = "IPTV-LIVE/PrimeVision/us.m3u"
+M3U_FILE_PATH = "PrimeVision/us.m3u"
 
 # Range of MoveOnJoy subdomains to test
 START = 2
