@@ -3,22 +3,22 @@ import re
 import requests
 import subprocess
 
-# M3U file path
+# M3U playlist path
 M3U_FILE_PATH = "PrimeVision/us.m3u"
 
-# Range of MoveOnJoy subdomains
+# MoveOnJoy subdomain range
 START = 2
 END = 50
 
 # Segment check settings
 NUM_SEGMENTS = 5
-TIMEOUT = 5  # seconds per segment
+TIMEOUT = 5  # seconds per request
 
 
 # ------------------- Stream Status Check -------------------
 
 def get_segments(m3u8_url, num_segments=NUM_SEGMENTS):
-    """Fetch first few .ts segments from playlist."""
+    """Fetch first few .ts segments from playlist, if present."""
     try:
         r = requests.get(m3u8_url, timeout=TIMEOUT)
         r.raise_for_status()
@@ -46,19 +46,47 @@ def test_segments(base_url, segments):
             stable = False
     return stable
 
-def check_stream(url):
-    """Return 'online', 'unstable', or 'offline'"""
-    segments = get_segments(url)
-    if not segments:
+def check_stream_status(subdomain):
+    """Return 'online', 'unstable', or 'offline' for a subdomain."""
+    root_url = f"https://{subdomain}.moveonjoy.com/"
+    try:
+        r = requests.head(root_url, timeout=TIMEOUT, allow_redirects=True)
+        if r.status_code >= 400:
+            # fallback GET request
+            r = requests.get(root_url, timeout=TIMEOUT, allow_redirects=True)
+        if r.status_code >= 400:
+            return "offline"
+    except requests.RequestException:
         return "offline"
-    stable = test_segments(url, segments)
+
+    # Try checking segments if M3U is present
+    m3u_url = find_playlist_url(subdomain)
+    if not m3u_url:
+        return "online"  # no playlist, root works → consider online
+
+    segments = get_segments(m3u_url)
+    if not segments:
+        return "offline"  # playlist missing or unreachable
+
+    stable = test_segments(m3u_url, segments)
     return "online" if stable else "unstable"
+
+
+def find_playlist_url(subdomain):
+    """Return playlist URL from M3U file for the subdomain."""
+    if not os.path.exists(M3U_FILE_PATH):
+        return None
+    with open(M3U_FILE_PATH, "r", encoding="utf-8") as f:
+        content = f.read()
+    # Extract playlist URL that contains this subdomain
+    match = re.search(rf"https://{subdomain}\.moveonjoy\.com[^\s]*\.m3u8", content)
+    return match.group(0) if match else None
 
 
 # ------------------- MoveOnJoy Updater -------------------
 
 def find_current_subdomain():
-    """Extract current subdomain (flXX) from M3U."""
+    """Extract current subdomain (flXX) from the M3U playlist."""
     if not os.path.exists(M3U_FILE_PATH):
         return None
     with open(M3U_FILE_PATH, "r", encoding="utf-8") as f:
@@ -66,14 +94,15 @@ def find_current_subdomain():
     match = re.search(r"https://(fl\d+)\.moveonjoy\.com", content)
     return match.group(1) if match else None
 
+
 def check_domain(subdomain):
-    """Quick check if subdomain responds (playlist reachable)."""
-    url = f"https://{subdomain}.moveonjoy.com/live/stream.m3u8"
-    status = check_stream(url)
+    """Quick check if subdomain root responds."""
+    status = check_stream_status(subdomain)
     return status != "offline"
 
+
 def find_next_working_subdomain(current):
-    """Find closest working domain if current is offline or unstable."""
+    """Find closest working subdomain if current is offline or unstable."""
     if not current:
         return None
     try:
@@ -81,23 +110,24 @@ def find_next_working_subdomain(current):
     except (AttributeError, ValueError):
         return None
 
-    url = f"https://{current}.moveonjoy.com/live/stream.m3u8"
-    stream_status = check_stream(url)
-    if stream_status == "online":
+    # Check current domain status
+    status = check_stream_status(current)
+    if status == "online":
         print(f"✅ Current domain {current}.moveonjoy.com is online and stable.")
-        return None  # no change needed
-    elif stream_status == "unstable":
+        return None
+    elif status == "unstable":
         print(f"⚠️ Current domain {current}.moveonjoy.com is unstable. Searching alternatives...")
     else:
         print(f"❌ Current domain {current}.moveonjoy.com is offline. Searching alternatives...")
 
-    # Check lower subdomains first
+    # Lower subdomains first
     for i in range(current_number - 1, START - 1, -1):
         sub = f"fl{i}"
         if check_domain(sub):
             print(f"✅ Found working lower domain: {sub}.moveonjoy.com")
             return sub
-    # Then check higher subdomains
+
+    # Then higher subdomains
     for i in range(current_number + 1, END + 1):
         sub = f"fl{i}"
         if check_domain(sub):
@@ -106,6 +136,7 @@ def find_next_working_subdomain(current):
 
     print(f"❌ No working subdomain found from fl{START}–fl{END}.")
     return None
+
 
 def update_m3u(subdomain):
     """Replace old subdomain with new one in M3U."""
@@ -124,6 +155,7 @@ def update_m3u(subdomain):
         f.write(new_content)
     print(f"✅ Updated {count} link(s) to {new_url} in {M3U_FILE_PATH}")
     return True
+
 
 def commit_changes():
     """Commit and push changes if running in GitHub Actions."""
