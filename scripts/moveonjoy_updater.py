@@ -8,7 +8,7 @@ import subprocess
 M3U_FILE_PATH = "PrimeVision/us.m3u"
 
 # MoveOnJoy domain range
-START = 3
+START = 8
 END = 50
 
 # Request settings
