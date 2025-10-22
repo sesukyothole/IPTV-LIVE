@@ -6,6 +6,10 @@ from pathlib import Path
 M3U_PATH = Path("PrimeVision/us.m3u")
 SUBDOMAIN_RANGE = range(50, 2, -1)  # fl50 → fl3
 
+SPECIAL_CHANNELS = {
+    "DISNEY/index.m3u8": "Disney Channel USA"
+}
+
 def check_domain(subdomain, retries=3):
     """Check if a MoveOnJoy subdomain responds reliably."""
     url = f"https://{subdomain}.moveonjoy.com/"
