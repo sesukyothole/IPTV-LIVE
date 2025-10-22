@@ -8,7 +8,7 @@ from pathlib import Path
 M3U_PATH = Path("PrimeVision/us.m3u")
 SUBDOMAIN_RANGE = range(50, 2, -1)  # fl50 → fl3
 SPECIAL_CHANNELS = {
-    "DISNEY/index.m3u8": "Disney Channel USA - East"
+    "DISNEY/index.m3u8": "Disney Channel USA"
 }
 RETRIES = 3
 RETRY_DELAY = 1  # seconds
