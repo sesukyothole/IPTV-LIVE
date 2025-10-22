@@ -1,83 +1,113 @@
 import re
 import requests
-import time
 from pathlib import Path
+import time
 
+# ----------------- CONFIG -----------------
 M3U_PATH = Path("PrimeVision/us.m3u")
 SUBDOMAIN_RANGE = range(50, 2, -1)  # fl50 → fl3
 
+# Special channels mapping: {path_in_url: Channel Name}
 SPECIAL_CHANNELS = {
     "DISNEY/index.m3u8": "Disney Channel USA"
 }
 
-def check_domain(subdomain, retries=3):
-    """Check if a MoveOnJoy subdomain responds reliably."""
-    url = f"https://{subdomain}.moveonjoy.com/"
+RETRIES = 3
+RETRY_DELAY = 1  # seconds
+
+# ----------------- HELPER FUNCTIONS -----------------
+
+def check_url(url, retries=RETRIES):
+    """Check if a full URL is online, with retries."""
     for attempt in range(1, retries + 1):
         try:
-            r = requests.get(url, timeout=5, allow_redirects=True)
+            r = requests.get(url, timeout=5)
             if r.status_code < 400:
                 if attempt > 1:
-                    print(f"✅ {subdomain}.moveonjoy.com recovered on attempt {attempt}.")
-                else:
-                    print(f"✅ {subdomain}.moveonjoy.com is online.")
+                    print(f"✅ URL recovered on attempt {attempt}: {url}")
                 return True
         except requests.RequestException:
-            print(f"⚠️ Attempt {attempt}: {subdomain}.moveonjoy.com not responding...")
-        time.sleep(1)
-    print(f"❌ {subdomain}.moveonjoy.com is unstable/offline after {retries} tries.")
+            print(f"⚠️ Attempt {attempt} failed for {url}")
+        time.sleep(RETRY_DELAY)
     return False
 
 
-def find_working_subdomain():
-    """Find a stable MoveOnJoy domain (fl50–fl3)."""
-    print("🔍 Searching for available MoveOnJoy redirect (fl3–fl50)...")
+def find_working_subdomain_for_path(path):
+    """Find the first working subdomain for a specific path."""
     for i in SUBDOMAIN_RANGE:
         subdomain = f"fl{i}"
-        if check_domain(subdomain):
+        url = f"https://{subdomain}.moveonjoy.com/{path}"
+        if check_url(url):
             return subdomain
     return None
 
 
-def find_current_subdomain(content):
-    """Detect the current domain in playlist."""
+def update_playlist_line(line, new_subdomain, path):
+    """Replace the subdomain in this line only."""
+    pattern = rf"https://fl\d+\.moveonjoy\.com/{re.escape(path)}"
+    return re.sub(pattern, f"https://{new_subdomain}.moveonjoy.com/{path}", line)
+
+
+def find_current_main_subdomain(content):
+    """Detect the current main domain in playlist."""
     match = re.search(r"https://(fl\d+)\.moveonjoy\.com", content)
     return match.group(1) if match else None
 
 
-def update_playlist(current, new):
-    """Replace the domain inside the M3U."""
-    content = M3U_PATH.read_text(encoding="utf-8")
-    updated = re.sub(current, new, content)
-    M3U_PATH.write_text(updated, encoding="utf-8")
-    print(f"📝 Updated playlist: {current} → {new}")
-
+# ----------------- MAIN -----------------
 
 def main():
     print("🚀 MoveOnJoy Auto-Updater Initialized")
     content = M3U_PATH.read_text(encoding="utf-8")
-    current = find_current_subdomain(content)
+    lines = content.splitlines()
+    updated_lines = []
 
-    if not current:
-        print("❌ Could not find any MoveOnJoy domain in playlist.")
+    # Detect main subdomain
+    current_main = find_current_main_subdomain(content)
+    if not current_main:
+        print("❌ No MoveOnJoy domain found in playlist.")
         return
 
-    print(f"🔍 Checking if current domain {current}.moveonjoy.com is stable...")
-    if check_domain(current):
-        print(f"✅ Current domain {current}.moveonjoy.com is still stable.")
-        print("ℹ️ No updates were needed.")
-        return
+    print(f"🔍 Checking main subdomain {current_main}.moveonjoy.com...")
+    main_online = check_url(f"https://{current_main}.moveonjoy.com/")
+    if not main_online:
+        print(f"❌ Main subdomain {current_main} is offline. Searching alternatives...")
+        new_main = None
+        for i in SUBDOMAIN_RANGE:
+            sub = f"fl{i}"
+            if check_url(f"https://{sub}.moveonjoy.com/"):
+                new_main = sub
+                print(f"✅ Found new main subdomain: {sub}")
+                break
+        if new_main:
+            print(f"📝 Updating main subdomain {current_main} → {new_main}")
+            current_main = new_main
+        else:
+            print("❌ No working main subdomain found. Keeping old main.")
+    
+    # Process each line
+    for line in lines:
+        updated_line = line
+        # Special channels first
+        for path, name in SPECIAL_CHANNELS.items():
+            if path in line:
+                print(f"🔍 Checking special channel {name}")
+                if not check_url(line):
+                    print(f"❌ {name} offline. Searching working subdomain...")
+                    new_sub = find_working_subdomain_for_path(path)
+                    if new_sub:
+                        updated_line = update_playlist_line(line, new_sub, path)
+                        print(f"✅ Updated {name} → {new_sub}.moveonjoy.com")
+                    else:
+                        print(f"❌ No working subdomain found for {name}. Leaving old URL.")
+        # Replace main subdomain if line is not special channel
+        if updated_line == line and current_main:
+            updated_line = re.sub(r"https://fl\d+\.moveonjoy\.com", f"https://{current_main}.moveonjoy.com", updated_line)
+        updated_lines.append(updated_line)
 
-    print(f"❌ Current domain {current}.moveonjoy.com is offline. Searching alternatives...")
-    new = find_working_subdomain()
-
-    if not new:
-        print("❌ No stable subdomain found from fl3–fl50.")
-        print("ℹ️ No updates were made.")
-        return
-
-    update_playlist(current, new)
-    print(f"✅ Updated playlist successfully with {new}.moveonjoy.com!")
+    # Save updated playlist
+    M3U_PATH.write_text("\n".join(updated_lines), encoding="utf-8")
+    print("📝 Playlist update completed.")
 
 
 if __name__ == "__main__":
