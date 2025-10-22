@@ -1,17 +1,15 @@
 import re
 import requests
-from pathlib import Path
+import subprocess
 import time
+from pathlib import Path
 
 # ----------------- CONFIG -----------------
 M3U_PATH = Path("PrimeVision/us.m3u")
 SUBDOMAIN_RANGE = range(50, 2, -1)  # fl50 → fl3
-
-# Special channels mapping: {path_in_url: Channel Name}
 SPECIAL_CHANNELS = {
-    "DISNEY/index.m3u8": "Disney Channel USA"
+    "DISNEY/index.m3u8": "Disney Channel USA - East"
 }
-
 RETRIES = 3
 RETRY_DELAY = 1  # seconds
 
@@ -54,6 +52,17 @@ def find_current_main_subdomain(content):
     return match.group(1) if match else None
 
 
+def git_commit_and_push(file_path, message):
+    """Commit changes and push to GitHub."""
+    try:
+        subprocess.run(["git", "add", str(file_path)], check=True)
+        subprocess.run(["git", "commit", "-m", message], check=True)
+        subprocess.run(["git", "push"], check=True)
+        print(f"🚀 Changes committed and pushed: {message}")
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Git operation failed: {e}")
+
+
 # ----------------- MAIN -----------------
 
 def main():
@@ -84,13 +93,17 @@ def main():
             current_main = new_main
         else:
             print("❌ No working main subdomain found. Keeping old main.")
-    
+
     # Process each line
+    playlist_changed = False
     for line in lines:
         updated_line = line
+        is_special = False
+
         # Special channels first
         for path, name in SPECIAL_CHANNELS.items():
             if path in line:
+                is_special = True
                 print(f"🔍 Checking special channel {name}")
                 if not check_url(line):
                     print(f"❌ {name} offline. Searching working subdomain...")
@@ -98,16 +111,29 @@ def main():
                     if new_sub:
                         updated_line = update_playlist_line(line, new_sub, path)
                         print(f"✅ Updated {name} → {new_sub}.moveonjoy.com")
+                        playlist_changed = True
                     else:
                         print(f"❌ No working subdomain found for {name}. Leaving old URL.")
-        # Replace main subdomain if line is not special channel
-        if updated_line == line and current_main:
-            updated_line = re.sub(r"https://fl\d+\.moveonjoy\.com", f"https://{current_main}.moveonjoy.com", updated_line)
+                break  # Stop checking other special channels for this line
+
+        # Replace main subdomain if this line is not a special channel
+        if not is_special and current_main:
+            new_line = re.sub(r"https://fl\d+\.moveonjoy\.com", f"https://{current_main}.moveonjoy.com", updated_line)
+            if new_line != updated_line:
+                playlist_changed = True
+                updated_line = new_line
+
         updated_lines.append(updated_line)
 
-    # Save updated playlist
-    M3U_PATH.write_text("\n".join(updated_lines), encoding="utf-8")
-    print("📝 Playlist update completed.")
+    # Save updated playlist if anything changed
+    if playlist_changed:
+        M3U_PATH.write_text("\n".join(updated_lines), encoding="utf-8")
+        print("📝 Playlist update completed.")
+
+        # Commit and push changes to GitHub
+        git_commit_and_push(M3U_PATH, f"Auto-update MoveOnJoy subdomains at {time.strftime('%Y-%m-%d %H:%M:%S')}")
+    else:
+        print("ℹ️ No changes needed in playlist.")
 
 
 if __name__ == "__main__":
