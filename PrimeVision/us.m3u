@@ -1,4 +1,4 @@
-#EXTM3U
+#EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz" 
 
 #EXTINF:-1 tvg-id="3ABN.Dare.to.Dream.Network.us2" tvg-name="3ABN Dare to Dream Netwok USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-dare-to-dream-network-us.png" tvg-language="en" group-title="Religious",3ABN Dare to Dream Network USA
 https://3abn.bozztv.com/3abn2/d2d_live/smil:d2d_live.smil/playlist.m3u8
