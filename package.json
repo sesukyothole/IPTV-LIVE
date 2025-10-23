@@ -1,0 +1,12 @@
+{
+  "name": "moveonjoy-updater",
+  "version": "1.0.0",
+  "description": "MoveOnJoy subdomain updater (Node.js)",
+  "main": "scripts/moveonjoy_updater.js",
+  "scripts": {
+    "start": "node scripts/moveonjoy_updater.js"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
