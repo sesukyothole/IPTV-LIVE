@@ -1,9 +1,12 @@
-name: MoveOnJoy Full Updater
+name: MoveOnJoy Updater
 
 on:
   schedule:
-    - cron: '*/15 * * * *'   # every 15 minutes
+    - cron: '*/10 * * * *' # every 10 minutes
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -12,12 +15,12 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
         with:
           persist-credentials: true
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -25,18 +28,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Debug list
+      - name: Debug — list files
         run: |
           pwd
           ls -la
           ls -la PrimeVision || true
 
-      - name: Run updater
+      - name: Run MoveOnJoy Updater
         run: node scripts/moveonjoy_updater.js
-
-      - name: Deploy docs to GitHub Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
