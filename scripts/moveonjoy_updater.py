@@ -136,6 +136,19 @@ def extract_current_main(lines):
             return m.group(1)
     return None
 
+from urllib.parse import urlparse
+
+def extract_current_subdomain(lines):
+    """
+    Extract the first flNN subdomain found in playlist lines.
+    Example: https://fl25.moveonjoy.com/ACC_NETWORK/index.m3u8 -> fl25
+    """
+    for line in lines:
+        # look for https://flXX.moveonjoy.com/
+        m = re.search(r"https://(fl\d+)\.moveonjoy\.com/", line)
+        if m:
+            return m.group(1)
+    return None
 # ---------- LIVENESS CHECKS ----------
 
 def subdomain_alive_by_any_channel(lines, subdomain, limit=SAMPLE_LIMIT):
