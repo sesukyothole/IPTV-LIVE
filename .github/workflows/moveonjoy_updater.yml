@@ -1,0 +1,33 @@
+name: MoveOnJoy Updater
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'   # every 10 minutes (adjust as needed)
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Debug - list files
+        run: |
+          pwd
+          ls -la
+          ls -la PrimeVision || true
+
+      - name: Run MoveOnJoy Updater
+        run: node scripts/moveonjoy_updater.js
