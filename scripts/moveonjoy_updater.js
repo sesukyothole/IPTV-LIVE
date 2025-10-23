@@ -44,7 +44,6 @@ async function findWorkingSubdomain(url) {
       return testUrl;
     }
   }
-
   return null;
 }
 
@@ -53,26 +52,25 @@ async function processPlaylist() {
   const lines = data.split('\n');
 
   for (let i = 0; i < lines.length; i++) {
-    if (lines[i].startsWith('http://')) {
-      const url = lines[i];
-      const online = await isStreamOnline(url);
+    const url = lines[i];
 
-      if (!online) {
-        console.log(`❌ Offline: ${url}`);
-        const workingUrl = await findWorkingSubdomain(url);
-        if (workingUrl) {
-          lines[i] = workingUrl;
-        } else {
-          console.warn(`⚠ No fallback found for: ${url}`);
-        }
-      } else {
-        console.log(`✅ Online: ${url}`);
-      }
+    // ✅ Only process URLs that contain moveonjoy.ml
+    if (!url.includes("moveonjoy.ml")) continue;
+
+    const online = await isStreamOnline(url);
+
+    if (!online) {
+      console.log(`❌ Offline: ${url}`);
+      const workingUrl = await findWorkingSubdomain(url);
+      if (workingUrl) lines[i] = workingUrl;
+      else console.warn(`⚠ No fallback found for: ${url}`);
+    } else {
+      console.log(`✅ Online: ${url}`);
     }
   }
 
   fs.writeFileSync(m3uFilePath, lines.join('\n'), 'utf8');
-  console.log("✅ Playlist update complete!");
+  console.log("✅ Playlist update complete! Only MoveOnJoy streams modified.");
 }
 
 processPlaylist();
