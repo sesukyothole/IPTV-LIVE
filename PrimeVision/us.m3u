@@ -15,13 +15,12 @@ https://3abn.bozztv.com/3abn2/Pro_live/smil:Pro_live.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="ABC.News.Live.us2" tvg-name="ABC News USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/abc-news-us.png" tvg-language="en" group-title="News",ABC News USA
 https://livetv-fa.tubi.video/abc-news/index.m3u8
 
-#EXTINF:-1 tvg-id="ACC.Network.us2" tvg-name="ACC Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/acc-network-us.png" tvg-language="en" group-title="Sports",ACC Network USA
-# OFFLINE: 2025-10-23T13:58:43.159Z - # OFFLINE: 2025-10-23T13:53:55.334Z - https://fl41.moveonjoy.com/ACC_NETWORK/index.m3u8
+#EXTINF:-1 tvg-id="ACC.Network.us2" tvg-name="ACC Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/acc-network-us.png" tvg-language="en" group-title="Sports",ACC Network USA https://fl25.moveonjoy.com/ACC_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-id="AMC.HD.us2" tvg-name="AMC Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png" tvg-language="en" group-title="Movies",AMC Network USA
 https://fl25.moveonjoy.com/AMC_NETWORK/index.m3u8
 
-#EXTINF:-1 tvg-id="Bravo.HD.us2" tvg-name="Bravo Network USA" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a4/Bravo_2005_blue_white.svg/revision/latest/scale-to-width-down/512?cb=20250725213050" tvg-language="en" group-title="Entertainment/Lifestyle",Bravo Network USA https://fl41.moveonjoy.com/BRAVO/index.m3u8
+#EXTINF:-1 tvg-id="Bravo.HD.us2" tvg-name="Bravo Network USA" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a4/Bravo_2005_blue_white.svg/revision/latest/scale-to-width-down/512?cb=20250725213050" tvg-language="en" group-title="Entertainment/Lifestyle",Bravo Network USA https://fl25.moveonjoy.com/BRAVO/index.m3u8
 
 #EXTINF:-1 tvg-id="BBC.America.HD.us2" tvg-name="BBC America" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bbc-america-us.png" tvg-language="en" group-title="International/Premium",BBC America
 http://23.237.104.106:8080/USA_BBC_AMERICA/index.m3u8
