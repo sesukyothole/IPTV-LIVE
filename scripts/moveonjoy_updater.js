@@ -1,6 +1,8 @@
 const fs = require('fs');
 const axios = require('axios');
-const m3uFilePath = 'PrimeVision/us.m3u';
+const path = require('path');
+
+const m3uFilePath = path.resolve(__dirname, '../PrimeVision/us.m3u');
 
 function extractSubdomain(url) {
   const match = url.match(/http:\/\/(fl\d+)\.moveonjoy\.ml/i);
@@ -13,64 +15,75 @@ function replaceSubdomain(url, newSub) {
 
 async function isStreamOnline(url) {
   try {
-    const testPromises = Array.from({ length: 3 }, () =>
-      axios.get(url, { timeout: 2000, responseType: 'arraybuffer' })
-    );
+    for (let i = 0; i < 3; i++) {
+      const res = await axios.get(url, {
+        timeout: 2000,
+        responseType: 'arraybuffer',
+      });
 
-    const results = await Promise.allSettled(testPromises);
-    const successCount = results.filter(r => r.status === 'fulfilled').length;
+      if (res.status === 200) return true;
+    }
+  } catch {}
 
-    return successCount >= 2;
-  } catch {
-    return false;
-  }
+  return false;
 }
 
 async function findWorkingSubdomain(url) {
-  const currentSub = extractSubdomain(url);
-  if (!currentSub) return null;
+  const current = extractSubdomain(url);
+  if (!current) return null;
 
-  const currentNum = parseInt(currentSub.replace('fl', ''), 10);
+  const currentNum = parseInt(current.replace('fl', ''), 10);
 
   for (let i = 1; i <= 3; i++) {
-    const candidateSub = `fl${String(currentNum + i).padStart(2, '0')}`;
-    const testUrl = replaceSubdomain(url, candidateSub);
+    const newNum = currentNum + i;
+    const newSub = `fl${String(newNum).padStart(2, '0')}`;
+    const newUrl = replaceSubdomain(url, newSub);
 
-    console.log(`🔄 Trying fallback: ${candidateSub} for ${url}`);
-    const online = await isStreamOnline(testUrl);
-
-    if (online) {
-      console.log(`✅ Found working stream: ${testUrl}`);
-      return testUrl;
+    console.log(`🔄 Testing fallback: ${newUrl}`);
+    if (await isStreamOnline(newUrl)) {
+      return newUrl;
     }
   }
+
   return null;
 }
 
 async function processPlaylist() {
-  const data = fs.readFileSync(m3uFilePath, 'utf8');
-  const lines = data.split('\n');
+  console.log(`📌 Loading playlist: ${m3uFilePath}`);
+
+  let content = fs.readFileSync(m3uFilePath, 'utf8');
+  const lines = content.split('\n');
+  let updated = false;
 
   for (let i = 0; i < lines.length; i++) {
-    const url = lines[i];
+    let url = lines[i];
 
-    // ✅ Only process URLs that contain moveonjoy.ml
     if (!url.includes("moveonjoy.ml")) continue;
 
     const online = await isStreamOnline(url);
-
     if (!online) {
       console.log(`❌ Offline: ${url}`);
-      const workingUrl = await findWorkingSubdomain(url);
-      if (workingUrl) lines[i] = workingUrl;
-      else console.warn(`⚠ No fallback found for: ${url}`);
+
+      const fallback = await findWorkingSubdomain(url);
+
+      if (fallback && fallback !== url) {
+        console.log(`✅ Replacing → ${fallback}`);
+        lines[i] = fallback;
+        updated = true;
+      } else {
+        console.log(`⚠ No change for: ${url}`);
+      }
     } else {
-      console.log(`✅ Online: ${url}`);
+      console.log(`✅ Still Online: ${url}`);
     }
   }
 
-  fs.writeFileSync(m3uFilePath, lines.join('\n'), 'utf8');
-  console.log("✅ Playlist update complete! Only MoveOnJoy streams modified.");
+  if (updated) {
+    fs.writeFileSync(m3uFilePath, lines.join('\n'), 'utf8');
+    console.log("✅ ✅ ✅ M3U playlist UPDATED!");
+  } else {
+    console.log("ℹ️ No changes were needed (playlist unchanged).");
+  }
 }
 
 processPlaylist();
