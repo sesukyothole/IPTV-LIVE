@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-MoveOnJoy Updater (Fast Balanced Mode)
+MoveOnJoy Updater (Fast Balanced + 3x stability checks)
 - Per-channel failover + auto-restore (Option A)
 - Fast checks (HEAD-first), parallel probing, caching
-- Put in scripts/moveonjoy_updater_fast.py
+- Before accepting any fallback, verify the candidate 3 times quickly
 Requires: requests
 """
 
@@ -37,6 +37,10 @@ LAST_UPDATE_FILE = Path(".moveonjoy_last_update")
 THREAD_WORKERS = 12         # concurrency for probing subdomains/paths
 HEAD_TIMEOUT = 3            # seconds for HEAD requests
 GET_TIMEOUT = 6             # seconds for GET requests (for small segment check)
+
+# Stability check: number of successive quick checks required for a candidate URL
+STABLE_TRIES = 3
+STABLE_DELAY = 0.7  # seconds between stability checks
 
 # treat these as "special" channels that we prefer to keep on their own working subdomain
 SPECIAL_CHANNEL_PATHS = {
@@ -93,8 +97,8 @@ def fast_check_url_m3u(url):
     """
     Fast balanced check:
     1) HEAD the m3u8; accept 200-399 and content-type containing 'mpegurl' (fast).
-    2) If HEAD ambiguous (e.g. 200 but no content-type), try light GET and check for segments.
-    Uses per-run cache.
+    2) If HEAD ambiguous, do a lightweight GET and check first lines for segments.
+    Caches results per-run.
     """
     if url in _cache:
         return _cache[url]
@@ -103,20 +107,19 @@ def fast_check_url_m3u(url):
     r = do_head(url)
     if r and 200 <= r.status_code < 400:
         ct = (r.headers.get("Content-Type") or "").lower()
-        if "mpegurl" in ct or "application/vnd.apple.mpegurl" in ct or "vnd.apple.mpegurl" in ct:
+        if "mpegurl" in ct or "application/vnd.apple.mpegurl" in ct:
             _cache[url] = True
             return True
-        # if content-type isn't clear, do a lightweight GET to inspect first lines
+        # ambiguous: do lightweight GET
         g = do_get(url, timeout=GET_TIMEOUT)
         if g and 200 <= g.status_code < 400:
             text = g.text or ""
-            # check for basic segment indicators quickly
             for L in text.splitlines():
                 L = L.strip()
                 if not L or L.startswith("#"):
                     continue
                 if L.endswith(".ts") or L.endswith(".m3u8"):
-                    # attempt first segment HEAD/GET quickly if it's absolute or relative
+                    # attempt first segment HEAD quickly if absolute or relative
                     if L.startswith("http"):
                         seg_url = L
                     else:
@@ -127,6 +130,23 @@ def fast_check_url_m3u(url):
                     return ok
     _cache[url] = False
     return False
+
+def ensure_stable(url, tries=STABLE_TRIES, delay=STABLE_DELAY):
+    """
+    Rapid stability check: call fast_check_url_m3u `tries` times with `delay` between.
+    If any attempt returns False, consider candidate unstable.
+    Uses per-run cache for speed, but still repeats checks to catch flapping.
+    """
+    # If cached True and recent, we still perform repeated checks to ensure stability
+    for attempt in range(1, tries + 1):
+        ok = fast_check_url_m3u(url)
+        if not ok:
+            log(f"Stability check failed for {url} on attempt {attempt}/{tries}")
+            return False
+        if attempt < tries:
+            time.sleep(delay)
+    log(f"Stability check passed for {url} ({tries}/{tries})")
+    return True
 
 # ---------- PLAYLIST HELPERS ----------
 def read_playlist_lines(path: Path):
@@ -163,7 +183,9 @@ def extract_current_subdomain_from_lines(lines):
 
 # ---------- FAST LIVENESS & SEARCH (parallel helpers) ----------
 def subdomain_alive_any_fast(lines, subdomain, limit=SAMPLE_LIMIT):
-    """Fast balanced: sample up to `limit` lines and HEAD-check their m3u8s; return True on first success."""
+    """
+    Fast balanced: sample up to `limit` lines and fast-check their m3u8s in parallel; return True on first success.
+    """
     checked = 0
     sample = []
     for idx, url, path in enumerate_lines_using_subdomain(lines, subdomain):
@@ -174,44 +196,51 @@ def subdomain_alive_any_fast(lines, subdomain, limit=SAMPLE_LIMIT):
     if not sample:
         return False
 
-    # run parallel fast checks
     with ThreadPoolExecutor(max_workers=min(len(sample), THREAD_WORKERS)) as ex:
         futures = {ex.submit(fast_check_url_m3u, u): u for u in sample}
         for fut in as_completed(futures):
             ok = fut.result()
-            url = futures[fut]
-            log = print  # avoid name clash
+            u = futures[fut]
             if ok:
-                print("[FAST] subdomain", subdomain, "alive via", url)
+                log("[FAST] subdomain", subdomain, "alive via", u)
                 return True
     return False
 
 def find_fallback_for_path_parallel(path, exclude_sub=None):
-    """Find first working flNN for a given path using parallel batches (keeps priority order)."""
-    # We'll probe in priority order but in small parallel batches for speed
+    """
+    Find first working flNN for a given path using parallel batches (keeps priority order).
+    After finding candidate, verify stability (ensure_stable). If unstable, continue search.
+    """
     batch_size = min(THREAD_WORKERS, 8)
     subs = [f"fl{n}" for n in SUB_RANGE if (exclude_sub is None or f"fl{n}" != exclude_sub)]
     for i in range(0, len(subs), batch_size):
         batch = subs[i:i+batch_size]
-        queries = []
         with ThreadPoolExecutor(max_workers=len(batch)) as ex:
-            for sub in batch:
-                url = f"https://{sub}.moveonjoy.com/{path}"
-                queries.append(ex.submit(fast_check_url_m3u, url))
-            # collect results - return first positive respecting priority
-            results = [f.result() for f in queries]
-            for sub, ok in zip(batch, results):
+            futs = {ex.submit(fast_check_url_m3u, f"https://{sub}.moveonjoy.com/{path}"): sub for sub in batch}
+            # gather results respecting batch order
+            for fut in as_completed(futs):
+                sub = futs[fut]
+                try:
+                    ok = fut.result()
+                except Exception:
+                    ok = False
                 if ok:
-                    return sub
+                    cand_url = f"https://{sub}.moveonjoy.com/{path}"
+                    log("Candidate found:", cand_url, " — verifying stability...")
+                    if ensure_stable(cand_url):
+                        log("Stable candidate accepted:", sub)
+                        return sub
+                    else:
+                        log("Candidate unstable, continuing search:", sub)
     return None
 
 def find_any_fallback_main_fast(lines, exclude_sub=None):
     """Find first subdomain where any channel is playable using parallel probing per subdomain (fast)."""
-    # We'll check subdomains in priority order, but probe each subdomain with a small sample set in parallel.
     for n in SUB_RANGE:
         sub = f"fl{n}"
         if exclude_sub and sub == exclude_sub:
             continue
+        log("Probing subdomain", sub)
         if subdomain_alive_any_fast(lines, sub, limit=SAMPLE_LIMIT):
             return sub
     return None
@@ -220,12 +249,10 @@ def find_any_fallback_main_fast(lines, exclude_sub=None):
 def per_channel_failover_fast(lines, current_main):
     new_lines = list(lines)
     changed = False
-    # collect paths on main
     main_entries = list(enumerate_lines_using_subdomain(lines, current_main))
     if not main_entries:
         return new_lines, False
 
-    # We will check each path's test_url on main using fast_check_url_m3u; for failing paths, find fallback in parallel batches
     to_fix = []
     for idx, full_url, path in main_entries:
         test_url = f"https://{current_main}.moveonjoy.com/{path}"
@@ -236,38 +263,40 @@ def per_channel_failover_fast(lines, current_main):
     if not to_fix:
         return new_lines, False
 
-    # For each path needing fix, try to find fallback (parallel per-path)
-    with ThreadPoolExecutor(max_workers=THREAD_WORKERS) as ex:
+    # For each path needing fix, find stable fallback in parallel
+    with ThreadPoolExecutor(max_workers=min(len(to_fix), THREAD_WORKERS)) as ex:
         fut_map = {ex.submit(find_fallback_for_path_parallel, path, current_main): (idx, path) for idx, path in to_fix}
         for fut in as_completed(fut_map):
             idx, path = fut_map[fut]
             fallback = fut.result()
             if fallback:
                 new_url = f"https://{fallback}.moveonjoy.com/{path}"
-                log("Switching path", path, "at line", idx, "to fallback", fallback)
+                log("Switching path", path, "at line", idx, "to stable fallback", fallback)
                 new_lines[idx] = re.sub(r"https://fl\d+\.moveonjoy\.com/[^\s]+", new_url, new_lines[idx])
                 changed = True
             else:
-                log("No fallback found for path", path)
+                log("No stable fallback found for path", path)
 
     return new_lines, changed
 
 def auto_restore_to_main_fast(lines, current_main):
     new_lines = list(lines)
     changed = False
-    # check all fl lines pointing to non-main; if main serves same path now, restore
-    tasks = []
+    # check all fl lines pointing to non-main; if main serves same path now and stable, restore
     with ThreadPoolExecutor(max_workers=THREAD_WORKERS) as ex:
         fut_map = {}
         for idx, url, path, sub in enumerate_all_fl_lines(lines):
             if sub == current_main:
                 continue
             main_test = f"https://{current_main}.moveonjoy.com/{path}"
-            fut = ex.submit(fast_check_url_m3u, main_test)
+            fut = ex.submit(ensure_stable, main_test, STABLE_TRIES, STABLE_DELAY)
             fut_map[fut] = (idx, path, main_test)
         for fut in as_completed(fut_map):
             idx, path, main_test = fut_map[fut]
-            ok = fut.result()
+            try:
+                ok = fut.result()
+            except Exception:
+                ok = False
             if ok:
                 log("Restoring", path, "to main", current_main)
                 new_lines[idx] = re.sub(r"https://fl\d+\.moveonjoy\.com/[^\s]+", main_test, new_lines[idx])
@@ -320,7 +349,7 @@ def git_commit_and_push_if_changed(path: Path, old_text: str, new_lines, cooldow
 
 # ---------- MAIN ----------
 def main():
-    log("MoveOnJoy updater FAST (balanced) starting")
+    log("MoveOnJoy updater FAST (balanced) starting + stability checks")
     log("Working dir:", Path(".").resolve())
 
     p = find_playlist()
@@ -340,13 +369,13 @@ def main():
     main_alive = subdomain_alive_any_fast(lines, current_main, limit=SAMPLE_LIMIT)
     if main_alive:
         log(f"Main {current_main} appears alive (sample check).")
-        # try auto-restore to main for channels currently on other subs
+        # try auto-restore to main for channels currently on other subs (ensure stable on main before restoring)
         restored_lines, restored_changed = auto_restore_to_main_fast(lines, current_main)
         if restored_changed:
             log("Restored some channels to main; committing (respecting cooldown).")
             git_commit_and_push_if_changed(p, old_text, restored_lines)
             return
-        # check per-channel on main and fix only failing ones
+        # check per-channel on main and fix only failing ones (with stable fallbacks)
         repaired_lines, repaired_changed = per_channel_failover_fast(lines, current_main)
         if repaired_changed:
             log("Per-channel fallbacks applied; committing (respecting cooldown).")
@@ -371,13 +400,12 @@ def main():
     log(f"Found fallback main: {fallback}. Migrating main channels where possible.")
     new_lines = list(lines)
     changed = False
-    # try to switch non-special paths to fallback if fallback serves them
+    # try to switch non-special paths to fallback if fallback serves them (fast parallel checks + stability)
     with ThreadPoolExecutor(max_workers=THREAD_WORKERS) as ex:
         fut_map = {}
         for idx, full_url, path, sub in enumerate_all_fl_lines(lines):
             if path in SPECIAL_CHANNEL_PATHS:
                 continue
-            # probe fallback path quickly in parallel
             fut = ex.submit(fast_check_url_m3u, f"https://{fallback}.moveonjoy.com/{path}")
             fut_map[fut] = (idx, path)
         for fut in as_completed(fut_map):
@@ -385,15 +413,19 @@ def main():
             ok = fut.result()
             if ok:
                 test_url = f"https://{fallback}.moveonjoy.com/{path}"
-                log("Switching path", path, "to fallback", fallback)
-                new_lines[idx] = re.sub(r"https://fl\d+\.moveonjoy\.com/[^\s]+", test_url, new_lines[idx])
-                changed = True
+                log("Verifying stability of fallback path:", test_url)
+                if ensure_stable(test_url, STABLE_TRIES, STABLE_DELAY):
+                    log("Switching path", path, "to fallback", fallback)
+                    new_lines[idx] = re.sub(r"https://fl\d+\.moveonjoy\.com/[^\s]+", test_url, new_lines[idx])
+                    changed = True
+                else:
+                    log("Fallback unstable for", path, "- skipping")
 
     if changed:
         log("Writing playlist updates switching main channels to fallback main.")
         git_commit_and_push_if_changed(p, old_text, new_lines)
     else:
-        log("Found fallback main but no matching paths found on it; no changes done.")
+        log("Found fallback main but no stable matching paths found on it; no changes done.")
 
 if __name__ == "__main__":
     main()
