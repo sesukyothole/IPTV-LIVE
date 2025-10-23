@@ -3,7 +3,7 @@ import subprocess
 import requests
 from datetime import datetime
 
-PLAYLIST_PATH = "gtvservices5/IPTV-LIVE/PrimeVision/us.m3u"
+PLAYLIST_PATH = "IPTV-LIVE/PrimeVision/us.m3u"
 
 SPECIAL_CHANNELS = {
     "DISNEY/index.m3u8",
