@@ -1,14 +1,12 @@
 {
-  "name": "moveonjoy-updater-full",
+  "name": "moveonjoy-updater",
   "version": "1.0.0",
-  "description": "MoveOnJoy intelligent updater (Node.js) - auto failover, auto-restore, ranking, dashboard",
-  "main": "scripts/moveonjoy_updater_full.js",
+  "description": "MoveOnJoy subdomain updater (Node.js) - fast per-channel failover",
+  "main": "scripts/moveonjoy_updater.js",
   "scripts": {
-    "start": "node scripts/moveonjoy_updater_full.js",
-    "dashboard": "node scripts/generate_dashboard.js"
+    "start": "node scripts/moveonjoy_updater.js"
   },
   "dependencies": {
-    "axios": "^1.4.0",
-    "fastq": "^1.10.1"
+    "axios": "^1.4.0"
   }
 }
