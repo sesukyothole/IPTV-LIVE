@@ -32,7 +32,7 @@ jobs:
           ls -la PrimeVision || true
 
       - name: Run updater
-        run: node scripts/moveonjoy_updater_full.js
+        run: node scripts/moveonjoy_updater.js
 
       - name: Deploy docs to GitHub Pages
         if: always()
