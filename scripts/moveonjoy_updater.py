@@ -11,6 +11,11 @@ SUBDOMAIN_RANGE = range(50, 2, -1)  # fl50 → fl3
 SPECIAL_CHANNELS = {
     "DISNEY/index.m3u8": "Disney Channel USA - East"
 }
+MAIN_CHANNEL_SAMPLES = [
+    "DISNEY/index.m3u8",
+    "ESPN_U/index.m3u8",
+    "HBO_2/index.m3u8"
+]
 RETRIES = 3
 RETRY_DELAY = 1  # seconds
 COOLDOWN_SECONDS = 3600  # 1 hour
@@ -18,6 +23,7 @@ COOLDOWN_SECONDS = 3600  # 1 hour
 # ----------------- HELPERS -----------------
 
 def check_url(url, retries=RETRIES):
+    """Check if a URL is online with retries."""
     for attempt in range(1, retries + 1):
         try:
             r = requests.get(url, timeout=5)
@@ -30,7 +36,18 @@ def check_url(url, retries=RETRIES):
         time.sleep(RETRY_DELAY)
     return False
 
+def is_subdomain_online(subdomain, sample_paths=MAIN_CHANNEL_SAMPLES, threshold=0.5):
+    """Check if a main subdomain is online by testing sample channels."""
+    online_count = 0
+    for path in sample_paths:
+        url = f"https://{subdomain}.moveonjoy.com/{path}"
+        if check_url(url):
+            online_count += 1
+    fraction_online = online_count / len(sample_paths)
+    return fraction_online >= threshold  # online if fraction >= threshold
+
 def find_working_subdomain_for_path(path):
+    """Find first working subdomain for a specific channel path."""
     for i in SUBDOMAIN_RANGE:
         subdomain = f"fl{i}"
         url = f"https://{subdomain}.moveonjoy.com/{path}"
@@ -39,6 +56,7 @@ def find_working_subdomain_for_path(path):
     return None
 
 def update_playlist_line(line, new_subdomain, path=None):
+    """Replace subdomain in a playlist line."""
     if path:
         pattern = rf"https://fl\d+\.moveonjoy\.com/{re.escape(path)}"
     else:
@@ -90,15 +108,14 @@ def main():
         print("❌ No MoveOnJoy domain found in playlist.")
         return
 
-    # Check if main subdomain is online (test root or first main channel)
+    # Check if main subdomain is online using sample channels
     print(f"🔍 Checking main subdomain {current_main}.moveonjoy.com...")
-    main_online = check_url(f"https://{current_main}.moveonjoy.com/")
-    if not main_online:
+    if not is_subdomain_online(current_main):
         print(f"❌ Main subdomain {current_main} offline. Searching alternatives...")
         new_main = None
         for i in SUBDOMAIN_RANGE:
             sub = f"fl{i}"
-            if check_url(f"https://{sub}.moveonjoy.com/"):
+            if is_subdomain_online(sub):
                 new_main = sub
                 print(f"✅ Found new main subdomain: {sub}")
                 break
@@ -112,7 +129,7 @@ def main():
         updated_line = line
         is_special = False
 
-        # Check special channels
+        # Special channels
         for path, name in SPECIAL_CHANNELS.items():
             if path in line:
                 is_special = True
@@ -128,7 +145,7 @@ def main():
                         print(f"❌ No working subdomain found for {name}. Leaving old URL.")
                 break
 
-        # Replace main subdomain for all other lines
+        # Main subdomain replacement
         if not is_special and current_main:
             new_line = update_playlist_line(updated_line, current_main)
             if new_line != updated_line:
@@ -145,7 +162,6 @@ def main():
         git_commit_and_push(M3U_PATH, f"Auto-update MoveOnJoy subdomains at {time.strftime('%Y-%m-%d %H:%M:%S')}")
     else:
         print("ℹ️ No changes needed in playlist.")
-
 
 if __name__ == "__main__":
     main()
