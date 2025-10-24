@@ -18,8 +18,7 @@ Open Kodi -> Go to settings -> Select "Addons"  -> Select "Install from Reposito
 How to set it up:
 Go to "Settings" -> Select "PVR & Live TV" -> Select "PVR client addons" -> Select "IPTV Simple Client" -> Click " Configure" -> Select "Migrated addon settings" (or create a new configuration) -> Select "Remote path (Internet address)" -> Click M3U playlist URL -> Type the playlist link -> Click Done
 
-For faster loading, set the settings mode to "Expert" 
-Under the configuration of IPTV Simple Client, scroll down until you find "Advanced" (this only works if you already set the settings mode to Expert) -> Select "Use inputstream.adaptive for m3u8 (HLS) streams" -> Click Done
+For faster loading, set the settings mode to "Expert". Under the configuration of IPTV Simple Client, scroll down until you find "Advanced" (this only works if you already set the settings mode to Expert) -> Select "Use inputstream.adaptive for m3u8 (HLS) streams" -> Click Done
 
 Playlist URLs
 
