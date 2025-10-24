@@ -19,7 +19,10 @@ How to set it up:
 Go to "Settings" -> Select "PVR & Live TV" -> Select "PVR client addons" -> Select "IPTV Simple Client" -> Click " Configure" -> Select "Migrated addon settings" (or create a new configuration) -> Select "Remote path (Internet address)" -> Click M3U playlist URL -> Type the playlist link -> Click Done
 
 For faster loading, set the settings mode to "Expert" 
+
 Scroll down until you find "Advanced" -> Select "Use inputstream.adaptive for M3U8 (HLS) streams" -> Click Done
+
+
 
 Playlist URLs
 
