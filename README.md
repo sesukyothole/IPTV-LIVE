@@ -5,10 +5,9 @@ Works on VLC, Kodi, Android TV, and IPTV apps.
 ✅ Updated regularly  
 ✅ Includes sports, movies, kids, and news channels  
 ✅ Open-source and free to use
-✅ Posters included
-✅ Age rating shows up on Kodi
-IPTV App that I recommend: 
-Kodi (with the IPTV Simple Client addon)
+✅ Program artworks included
+
+IPTV App that I recommend: Kodi (with the IPTV Simple Client addon)
 
 How to Install IPTV Simple Client:
 Open Kodi -> Go to settings -> Select "Addons"  -> Select "Install from Repository" -> Go to " PVR Clients" -> Scroll down until you find " IPTV Simple Client" -> Select the Addon -> Click Install
