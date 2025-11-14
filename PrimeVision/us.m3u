@@ -39,6 +39,9 @@ http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
 #EXTINF:-1 tvg-id="Cartoon.Network.HD.us2" tvg-name="Cartoon Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" tvg-language="en" group-title="Kids",Cartoon Network USA
 http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
 
+#EXTINF:-1 tvg-id="CBS.Streaming.SD.East.feed.us2" tvg-name="CBS USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cbs-logo-white-us.png" group-title="General",CBS USA
+https://fl1.moveonjoy.com/CBS_News/index.m3u8
+
 #EXTINF:-1 tvg-id="CNBC.HD.us2" tvg-name="CNBC USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cnbc-us.png" tvg-language="en" group-title="News",CNBC USA 
 https://fl31.moveonjoy.com/CNBC/index.m3u8
 
