@@ -132,6 +132,9 @@ http://192.168.1.71:9000/Videos/f5f0273afe493c335c465ee219875959/stream?static=t
 #EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 13 - How We Tried To Crash A Party
 http://192.168.1.71:9000/Videos/f0069347eca45f26653643011dacf046/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 14 - How We Handled An Unexpected Visitor
+https://str30.vidoza.net/vod/v2/nvl4en5djefeieno3xstxgxzmpz7xztcszonipvjdvfaftbaktnj42huwr3jekj2ea/v.mp4
+
 #EXTINF:1620 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title="Vampirina: Teenage Vampire Season 1",Episode 1 - First Year to Watch
 http://192.168.1.71:9000/Videos/93121f4600a6be004276a94d0ec0562c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
 
