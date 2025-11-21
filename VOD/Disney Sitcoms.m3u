@@ -94,46 +94,55 @@ http://192.168.1.71:9000/Videos/6d737c33ec6532e7bb4688fe5d6795e6/stream?static=t
 http://192.168.1.71:9000/Videos/6055a940a806983fcd4ea35acb78dec4/stream?static=true&api_key=4d7f183e806c4c0bb80abfd3d6f5a697
 
 #EXTINF:1620 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 1 - How It Started
-http://192.168.1.71:9000/Videos/9c212a97020b802a530229778f31c04d/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+https://f5.megacdn.co:2228/v3-hls-playback/69742313fd0acb427907adad73444e8a07c16733572e3e32d740921c523bdc81c3d4977b1419c1dc6d5bc90172c04c0d0738f0987d96cd506ad046c1b80755d58312df15d29c4756b670e95272194476ac17f992298e791dec3875eb93057daab664b52c672f7b0155b6a3c1b6fe17f75e4325edaebabbeaefc52fc1c22c9fcee3a214ebf83267bf9b9ce407ec8a5f7a7544ff41a323f9e6b014e0d45855c36fac7c148621f317b31d0ec710e938f522f24e06186fb70e7673e0add3b09a1fa72924baf7b0cec00b0828d345feb828bb/720/index.m3u8
 
 #EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 2 - How It Almost Ended
-http://192.168.1.71:9000/Videos/313c974f96308225e6bc3d488d5c355e/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+https://eu7.raffaellocdn.net:2223/v3-hls-playback/c6204a4dcab3c477115582e1d209357e6ea2813f7c0287f3deb364be1660b2959afcc7a7231574374c96fa567931aecf46d258cca79428d84eb67b913b34c480c8cf27489f1a661887ea28df3488da13b279d11db989bf7a73a2b92a7eb8f8dece7792ced927048124e7dcb815ccdfaf617ad8b5ed571c14fcb991ccd9c99f31ca5b887aaef773ccec8bdca44b746539973dce1de467d4f6ba0f33714c9309d43d9dbc7f8bc5b54a4151a7971a1a0a8c6745fd893096a3e99c607c87cc39c11c6303b638d10cb522a2df6c66bae8be37/720/index.m3u8
 
-#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 3 - How We Rocked Homecoming
-http://192.168.1.71:9000/Videos/059be602c14b145ef5cd13001091fbb2/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 3 - How We Rocked Homecoming
+https://f1.megacdn.co:2228/v3-hls-playback/c1433f9ae879d5d6ab48bf2f5417d9d9f25384d895829e24e4078350f2a9541b009d23700ef2ca5afe1228388024e794709846cb281b29f53bf2a6106b6dba0887e208b810594c5803b9fe25369189acccaca141f3bc1a902ce82c2a41bceeff10dca15319452bbfa45e3e40deda978a0c8886cced139aa4f85a5ee5d81e6c0d597b08b0022ffcff5ad27bc570ef978a333facfe9ab644e0e4c338f7eb58594122b8882956567e2bca68c47211c7373108c91258178214d2b5ffd6f94dc5916f7427083e7a5c95883f315548777d746a/720/index.m3u8
 
 #EXTINF:1260 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 4 - How We Got Crushed
-http://192.168.1.71:9000/Videos/2ad294cf6932cf00979330115b08d38c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+https://f5.megacdn.co:2228/v3-hls-playback/a6104f96747b6ab97e2d1cb870f2164cac986d2b68f719f1a72e69e56d7bb0b28780d4cd9a9f7e1afab3069e3946883d6df9dbe2dd003dd278b0323837cded261287340b8896e86822c04c9ff15abdedc56b50a2b0a518eaec16132c754995dad380e7721f66af6b667dc686172b8f20352aac766b0a58971fb70177c6e8e2ca1e6c256248db2292758b3e0eca85a9ed2c6346225fc31b508516d8ed8bc09610ce0645f4c8070e1cfe11d07f39268d4874db8ee788d03b16aa71fed32c3f784b2844c77664a6624a1297719533995f72/720/index.m3u8
 
 #EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 5 - How We Made a Tiny Mistake
-http://192.168.1.71:9000/Videos/4753fee580630102bfa2d9169958ed66/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+https://f5.megacdn.co:2228/v3-hls-playback/bcc3a82d9e9656f588e0761207d6a677fd3be2504302495ea6edb1e4fccd4a05b578489bb2181189a37fe413820ad2bf3d3a9c65a7593941f8580a69383b63e7d5a4cd4c2d1b09fad84dc843be0dae7ae6166a03c9a712f467084db80a924b7d3b3ddd760195f2aab64247d6068c0474bb35843e3f199ebcbddc5037001088af48e56d8234ba6f64126cf384554b86d10158f339f9c28fb43a571f1e231aff6f1f9f385c3a793d074a0269c30a5c7e92c4260067b2878e2ecadc6b05ce6fd0f3f0977b04622339240c40dac2e69d5c26/720/index.m3u8
 
 #EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 6 - How We Found Howie
-http://192.168.1.71:9000/Videos/be9f3e444b7f502ca5c29daabdfc183c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+https://f7.megacdn.co:2228/v3-hls-playback/0084cd008b3f7f3914474f9edff0955a01b20e7dfa9e899edfd1264da562fc75703816bbcb1ee8746fa57e38f7fcd88646e4272da40deebb68910a4e277b96eaf52c94d0106a9daa0ab580dba25ce37ca5ed5a45a92bd6e74c1d8213868fcd44a43e7e3f4bf7d99b6cb570b3f86064fe520e6040a7979163f57da47d148f3eccf43bca6b19f62d605106bd466e57d2d1bbec246cd8b72d35c8dd7a3586a75ffec0c54b5aff129ecbf9c4643e879bb70764f56133a4b1ba9a12bd1781a6661649b9c3e4fd28442b175cd356f08b035061/720/index.m3u8
 
 #EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 7 - How to (Not) Make a Music Video
-http://192.168.1.71:9000/Videos/bcd0d10fcc1df651feb14110fb98735a/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+https://cdn-tlrb1vs6yeporajd.edgeon-bandwidth.com/engine/hls2/01/15373/klb51izd0axw_,n,.urlset/index-v1-a1.m3u8?t=-bkmj0AdcxDWKYlAQoT9rThOuRf8Qdi0OOY2pLVHZww&s=1763709063&e=14400&f=76872430&node=vQNYzBgoOUWQaNyCrwxJhQY3K9HJDDAMOj7kOzOhD9s=&i=114.10&sp=2500&asn=4761&q=n&rq=URSwt4nQwdIKfpwj3JhP7uGILdTtdhQ5H8vHgBVc
 
 #EXTINF:1260 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 8 - How We Danced the Night Away
-http://192.168.1.71:9000/Videos/51ca6e6b25d29166a22d26e1bea85dfb/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+https://f11.megacdn.co:2228/v3-hls-playback/277b3698aa572329702ab6383c9b20d076f269b49ace67ac9fb6924df57a6abdf19eb34f3e2e7ea44c79969b66c2ecb6eb9ac00d2e16ad01e6e1eb9f05a42015a7cfe2929d179d10320628cd03ce822a80badfe405f63c10cdee0bc4ffbc5a1152d3cfbce8f634b7caeb0c01b256cddf17b9c74644cab2887fa02aa44b28404b94c62d16f62073d7cd02b6fd87d921b9e0b96d0ab678e8bcb381ae842732bb5a43f9983e565c69aec0bb34c06c5ba6fd17e1f42c5aa766e7fed01882843b0889a00781381068ed6eb1a42a146db95c03/720/index.m3u8
 
-#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 9 - How It All Came Out in the Wash
-http://192.168.1.71:9000/Videos/842e12109dad71e91553dac86ff334a9/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 9 - How It All Came Out in the Wash
+https://cdn-0cbr3b51khzohkjo.edgeon-bandwidth.com/engine/hls2/01/15373/s1peirefwwlf_,n,.urlset/index-v1-a1.m3u8?t=nK6xTpCFREYjD32DHcLIDV6_vasWmRWoOrxymRUAo7A&s=1763708760&e=14400&f=76872469&node=4WnAnj3vMN2qDo4kgT6YmD1YiMn8IgUfLiGJeVFpFdA=&i=114.10&sp=2500&asn=4761&q=n&rq=6ykU5oWMTWBlfOKKWFRgrZmRphJxs2wOVjaEtqhN
 
 #EXTINF:1320 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 10 - How Tulip Became a Shelly: A Halloween Nightmare
-http://192.168.1.71:9000/Videos/61d015dcaa22669bfa1ade7723a85b7b/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+https://cdn-kjhkd2xtdr8ud0rt.edgeon-bandwidth.com/engine/hls2/01/15424/w1o6pnw9yc6a_,n,.urlset/index-v1-a1.m3u8?t=wJYqTo1ca_VEIpCJHt7Vl-n0WQdC2z-v1hfikAfTc4I&s=1763708663&e=14400&f=77121992&node=Ds62J7V9p+3s1FdIEBu0ehh/X0eL5agNDKC5AOCzbIY=&i=114.10&sp=2500&asn=4761&q=n&rq=hk0Ux76uJ4fe8nwHGhdJHOLH1UDVLfEPNkHDfL8H
 
 #EXTINF:1380 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 11 - How We Learned To Love Our Haters
-http://192.168.1.71:9000/Videos/74ac9052c188d382b41c9736b2f6af20/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+https://cdn-6li7ojwnpwqec5ts.edgeon-bandwidth.com/engine/hls2/01/15374/mwuashc0islt_,n,.urlset/index-v1-a1.m3u8?t=Qabx1ywCX322-xRqQKeW3GhTWeh_9DJ495b3xGE6e5k&s=1763708581&e=14400&f=76872680&node=eyhOb/JxnYbP4ol38Hq2+4dDdtDXmLZYYZkzQIyLeU0=&i=114.10&sp=2500&asn=4761&q=n&rq=DmeLReIf2iPA5NgJMFZVMlUGPSVskVck2ARj7urU
 
 #EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 12 - How We Pulled A Song Out Of Our Pocket
-http://192.168.1.71:9000/Videos/f5f0273afe493c335c465ee219875959/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+https://cdn-upla4pcujrrkyrai.edgeon-bandwidth.com/engine/hls2/01/15373/423255lxpmlg_,n,.urlset/index-v1-a1.m3u8?t=bFZS2iIWA3zp-ORn73ebaebV8UWYFhBkB9oTMq-LFKk&s=1763708493&e=14400&f=76872679&node=jEH+LZZt+9avlxWinrVBlorAMPEplhqQtb/aHla+H2M=&i=114.10&sp=2500&asn=4761&q=n&rq=4hR29xtWTyx5Ak2duxC39a3wKW84mfBUPLRDtDLI
 
 #EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 13 - How We Tried To Crash A Party
-http://192.168.1.71:9000/Videos/f0069347eca45f26653643011dacf046/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
+https://cdn-p4vhugiomocmgeh3.edgeon-bandwidth.com/engine/hls2/01/15373/jbxhwgpsupmu_,n,.urlset/index-v1-a1.m3u8?t=h-HDF32S3YLexyNQ3h3xj4B5D5AnkUp6o2p1srrWwrY&s=1763708162&e=14400&f=76872684&node=b4MgftQUpOLAOh+X4oqhhtz3ReeNu3r16rsrI8ruKi8=&i=114.10&sp=2500&asn=4761&q=n&rq=FrIQ1orB1fSkJQhZ3zXTEkfAeBVKULBl7TumxErg
 
 #EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 14 - How We Handled An Unexpected Visitor
 https://str30.vidoza.net/vod/v2/nvl4en5djefeieno3xstxgxzmpz7xztcszonipvjdvfaftbaktnj42huwr3jekj2ea/v.mp4
+
+#EXTINF:1500 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 15 - How We Defeated A Jingle Bell Bully
+https://str37.vidoza.net/vod/v2/nvl4gmfdjefeieno3xstxwfwnfxxgxyvoub7rxapn2uutjiadikqjxo4lfqit4nkvu/v.mp4
+
+#EXTINF:1440 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 16 - How We (Sorta) Got Our First Big Break: Part 1
+https://str32.vidoza.net/vod/v2/nvl4gk5djefeieno3xstxxp4m6m2l6p25j2oyb3is45o4anvlt5jmfnbz27oqpk6sm/v.mp4
+
+#EXTINF:1560 tvg-logo="https://image.tmdb.org/t/p/original/oVyBCZ1dC05eQDAxNgNrddJSRdO.jpg" group-title="Electric Bloom Season 1",Episode 16 - How We (Sorta) Got Our First Big Break: Part 2
+https://str27.vidoza.net/vod/v2/nvl4infdjefeieno3xstxw74hxfmerudj7pbdhx7zzswydgzyc6lhq7k7wdvc6qyoa/v.mp4
 
 #EXTINF:1620 tvg-logo="https://image.tmdb.org/t/p/original/2o2jksVjFNOhs8NcDuUP6jhR1GP.jpg" group-title="Vampirina: Teenage Vampire Season 1",Episode 1 - First Year to Watch
 http://192.168.1.71:9000/Videos/93121f4600a6be004276a94d0ec0562c/stream?static=true&api_key=bb6f3f2b7b2644d0b91112e0ab05a2f1
