@@ -3,19 +3,19 @@ import aiohttp
 import re
 
 # ---- CONFIG ----
-M3U_FILE = "PrimeVision/us.m3u"   # <- Change if needed
+M3U_FILE = "PrimeVision/us.m3u"
 MAX_FL = 50
 TIMEOUT = 5
 
-# Matches https://flXX.moveonjoy.com/xxxx
+# Regex pattern for MoveOnJoy URLs
 URL_PATTERN = re.compile(r"(https?://fl)(\d+)(\.mov(e)?onjoy\.com/.*)", re.IGNORECASE)
 
 
 async def is_online(session, url):
     """
-    Accurate online/offline check:
-    - Uses GET (HEAD gives false positives)
-    - Validates the response contains #EXTM3U (required for real HLS streams)
+    Proper online/offline validation:
+    - GET request (HEAD is unreliable)
+    - Requires '#EXTM3U' which must exist in HLS playlists
     """
     try:
         async with session.get(url, timeout=TIMEOUT) as resp:
@@ -24,7 +24,6 @@ async def is_online(session, url):
 
             body = await resp.text()
 
-            # Real HLS playlist always contains "#EXTM3U"
             if "#EXTM3U" in body:
                 return True
 
@@ -32,6 +31,24 @@ async def is_online(session, url):
 
     except Exception:
         return False
+
+
+async def find_working_subdomain(session, channel_path):
+    """
+    Scan fl50 → fl1 until a working subdomain is found.
+    """
+    for fl in range(MAX_FL, 0, -1):
+        test_url = f"https://fl{fl}.moveonjoy.com{channel_path}"
+
+        print(f"   → Testing fl{fl} ... ", end="")
+
+        if await is_online(session, test_url):
+            print("✔ ONLINE")
+            return test_url
+
+        print("✘ offline")
+
+    return None
 
 
 async def fix_url(session, url):
@@ -42,28 +59,23 @@ async def fix_url(session, url):
 
     prefix, current_fl, suffix, _ = match.groups()
     current_fl = int(current_fl)
+    channel_path = suffix  # "/ACC_NETWORK/index.m3u8"
 
     print(f"\n🔍 Checking: {url}")
 
-    # Test original link first
+    # Check original flXX first
     if await is_online(session, url):
         print(f"   ✅ ONLINE: fl{current_fl} is working")
         return url
 
-    print(f"   ❌ OFFLINE: fl{current_fl} is down, scanning for alternatives...")
+    print(f"   ❌ OFFLINE: fl{current_fl} is down — scanning fl50 → fl1 ...")
 
-    # Try fl1 → fl50
-    for fl in range(1, MAX_FL + 1):
-        new_url = f"{prefix}{fl}{suffix}"
+    # Find replacement
+    working = await find_working_subdomain(session, channel_path)
 
-        print(f"   → Testing fl{fl} ... ", end="")
-
-        if await is_online(session, new_url):
-            print("✔ ONLINE")
-            print(f"   ⚡ REPLACED: fl{current_fl} → fl{fl}")
-            return new_url
-        else:
-            print("✘ offline")
+    if working:
+        print(f"   ⚡ REPLACED: fl{current_fl} → {working}")
+        return working
 
     print("   ❌ No working subdomain found — keeping original URL")
     return url
@@ -86,10 +98,9 @@ async def process_m3u():
             if stripped.startswith("http") and "moveonjoy.com" in stripped.lower():
                 tasks.append((index, fix_url(session, stripped)))
 
-        # Run all checks concurrently
         results = await asyncio.gather(*[task[1] for task in tasks])
 
-        # Apply replacements
+        # Write updated URLs back
         for (index, _), new_url in zip(tasks, results):
             if lines[index].strip() != new_url:
                 modified = True
@@ -100,7 +111,7 @@ async def process_m3u():
             f.writelines(lines)
         print(f"\n💾 Saved updates to: {M3U_FILE}")
     else:
-        print("\n✨ All MoveOnJoy streams are already online — no changes made")
+        print("\n✨ All MoveOnJoy streams already working — no updates needed")
 
     print("\n✅ Done!\n")
 
