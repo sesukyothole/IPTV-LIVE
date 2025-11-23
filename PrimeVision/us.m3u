@@ -12,6 +12,9 @@ https://3abn.bozztv.com/3abn1/PraiseHim/smil:PraiseHim.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="3ABN.Proclaim.Network.us2" tvg-name="3ABN Proclaim Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-proclaim-network-us.png" tvg-language="en" group-title="Religious",3ABN Proclaim Network USA
 https://3abn.bozztv.com/3abn2/Pro_live/smil:Pro_live.smil/playlist.m3u8
 
+#EXTINF:-1 tvg-id="3ABN.Latino.Network.us2" tvg-name="3ABN Latino Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-latino-network-us.png" tvg-language="en" group-title="Religious", 3ABN Latino Network
+https://3abn.bozztv.com/3abn2/Lat_live/smil:Lat_live.smil/playlist.m3u8
+
 #EXTINF:-1 tvg-id="ABC.News.Live.us2" tvg-name="ABC News USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/abc-news-us.png" tvg-language="en" group-title="News",ABC News USA
 https://livetv-fa.tubi.video/abc-news/index.m3u8
 
@@ -23,6 +26,21 @@ https://fl1.moveonjoy.com/AMC_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-id="Bravo.HD.us2" tvg-name="Bravo Network USA" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a4/Bravo_2005_blue_white.svg/revision/latest/scale-to-width-down/512?cb=20250725213050" tvg-language="en" group-title="Entertainment/Lifestyle",Bravo Network USA 
 https://fl1.moveonjoy.com/BRAVO/index.m3u8
+
+#EXTINF:-1 tvg-id="BET.HD.us2" tvg-name="BET USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-us.png" group-title="General", BET USA
+https://fl1.moveonjoy.com/BET_EAST/index.m3u8
+
+#EXTINF:-1 tvg-id="BET.GOSPEL.us2" tvg-name="BET Gospel USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-gospel-us.png" tvg-logo="General", BET Gospel USA
+https://fl1.moveonjoy.com/BET_GOSPEL/index.m3u8
+
+#EXTINF:-1 tvg-id="BET.Her.us2" tvg-name="BET Her USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-her-us.png" group-title="General", BET Her USA
+https://fl1.moveonjoy.com/BET_HER/index.m3u8
+
+#EXTINF:-1 tvg-id="BET.Jams.us2" tvg-name="BET Jams USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-jams-us.png" group-title="General", BET Jams USA
+https://fl1.moveonjoy.com/BET_Jams/index.m3u8
+
+#EXTINF:-1 tvg-id="BET.Soul.us2" tvg-name="BET Soul USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-soul-us.png" group-title="General", BET Soul USA
+https://fl1.moveonjoy.com/BET_SOUL/index.m3u8
 
 #EXRINF:-1 tvg-id="beIN.Sports.USA.HD.us2" tvg-name="beIn Sports USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bein-sports-us.png" group-title="Sports", beIn Sports USA
 http://fl1.moveonjoy.com/BEIN_SPORTS/index.m3u8
@@ -39,7 +57,7 @@ http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
 #EXTINF:-1 tvg-id="Boomerang.us2" tvg-name="Boomerang USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/boomerang-us.png" tvg-language="en" group-title="Kids",Boomerang USA
 http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
 
-#EXTINF:-1 tvg-id="Cartoon.Network.HD.us2" tvg-name="Cartoon Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" tvg-language="en" group-title="Kids",Cartoon Network USA
+#EXTINF:-1 tvg-id="Cartoon.Network.HD.us2" tvg-name="Cartoon Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cartoon-network-us.png" tvg-language="en" group-title="Kids",Cartoon Network group-titleup-title
 http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-id="CBS.Streaming.SD.East.feed.us2" tvg-name="CBS USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cbs-logo-white-us.png" tvg-language="en" group-title="General",CBS USA
