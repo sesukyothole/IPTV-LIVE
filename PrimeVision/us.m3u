@@ -9,10 +9,10 @@ https://3abn.bozztv.com/3abn2/Kids_live/smil:Kids_live.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="3ABN.Praise.Him.Music.us2" tvg-name="3ABN Praise Him Music Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-praise-him-music-network-us.png" tvg-language="en" group-title="Religious",3ABN Praise Him Music Network USA
 https://3abn.bozztv.com/3abn1/PraiseHim/smil:PraiseHim.smil/playlist.m3u8
 
-#EXTINF:-1 tvg-id="3ABN.Proclaim.Network.us2" tvg-name="3ABN Proclaim Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-proclaim-network-us.png" tvg-language="en" group-title="Religious",3ABN Proclaim Network USA
+#EXTINF:-1 tvg-id="3ABN.Proclaim.Network.us2" tvg-name="3ABN Proclaim Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-proclaim-network-us.png" tvg-language="en" group-title="Religious",3ABN Proclaim Network USA 
 https://3abn.bozztv.com/3abn2/Pro_live/smil:Pro_live.smil/playlist.m3u8
 
-#EXTINF:-1 tvg-id="3ABN.Latino.Network.us2" tvg-name="3ABN Latino Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-latino-network-us.png" tvg-language="en" group-title="Religious", 3ABN Latino Network
+#EXTINF:-1 tvg-id="3ABN.Latino.Network.us2" tvg-name="3ABN Latino Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/3abn-latino-network-us.png" tvg-language="en" group-title="Religious", 3ABN Latino Network USA
 https://3abn.bozztv.com/3abn2/Lat_live/smil:Lat_live.smil/playlist.m3u8
 
 #EXTINF:-1 tvg-id="ABC.News.Live.us2" tvg-name="ABC News USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/abc-news-us.png" tvg-language="en" group-title="News",ABC News USA
