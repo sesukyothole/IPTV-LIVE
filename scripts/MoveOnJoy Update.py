@@ -2,7 +2,7 @@ import asyncio
 import aiohttp
 import re
 
-M3U_FILE = "/path/to/your/playlist.m3u"  # Change this to your M3U file path
+M3U_FILE = "PrimeVision/us.m3u"  # Change this to your M3U file path
 MAX_FL = 50  # Maximum MoveOnJoy subdomain number
 TIMEOUT = 5  # Timeout for HTTP requests in seconds
 
