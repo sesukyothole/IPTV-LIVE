@@ -27,4 +27,4 @@ jobs:
 
       # Run the script
       - name: Run MoveOnJoy fixer
-        run: python scripts/MoveOnJoy Update.py
+        run: python scripts/MoveOnJoy_Update.py
