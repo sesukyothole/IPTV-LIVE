@@ -24,22 +24,22 @@ https://fl1.moveonjoy.com/ACC_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="AMC.HD.us2" tvg-name="AMC Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/amc-us.png" tvg-language="en" group-title="Movies",AMC Network USA
 https://fl1.moveonjoy.com/AMC_NETWORK/index.m3u8
 
-#EXTINF:-1 tvg-id="Bravo.HD.us2" tvg-name="Bravo Network USA" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a4/Bravo_2005_blue_white.svg/revision/latest/scale-to-width-down/512?cb=20250725213050" tvg-language="en" group-title="Entertainment/Lifestyle",Bravo Network USA 
+#EXTINF:-1 tvg-id="Bravo.HD.us2" tvg-name="Bravo Network USA" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a4/Bravo_2005_blue_white.svg/revision/latest/scale-to-width-down/512?cb=20250725213050" tvg-language="en" group-title="Entertainment/General",Bravo Network USA 
 https://fl1.moveonjoy.com/BRAVO/index.m3u8
 
-#EXTINF:-1 tvg-id="BET.HD.us2" tvg-name="BET USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-us.png" group-title="General", BET USA
+#EXTINF:-1 tvg-id="BET.HD.us2" tvg-name="BET USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-us.png" group-title="Entertainment/General", BET USA
 https://fl1.moveonjoy.com/BET_EAST/index.m3u8
 
-#EXTINF:-1 tvg-id="BET.GOSPEL.us2" tvg-name="BET Gospel USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-gospel-us.png" tvg-logo="General", BET Gospel USA
+#EXTINF:-1 tvg-id="BET.GOSPEL.us2" tvg-name="BET Gospel USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-gospel-us.png" tvg-logo="Entertainment/General", BET Gospel USA
 https://fl1.moveonjoy.com/BET_GOSPEL/index.m3u8
 
-#EXTINF:-1 tvg-id="BET.Her.us2" tvg-name="BET Her USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-her-us.png" group-title="General", BET Her USA
+#EXTINF:-1 tvg-id="BET.Her.us2" tvg-name="BET Her USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-her-us.png" group-title="Entertainment/General", BET Her USA
 https://fl1.moveonjoy.com/BET_HER/index.m3u8
 
 #EXTINF:-1 tvg-id="BET.Jams.us2" tvg-name="BET Jams USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-jams-us.png" group-title="Music", BET Jams USA
 https://fl1.moveonjoy.com/BET_Jams/index.m3u8
 
-#EXTINF:-1 tvg-id="BET.Soul.us2" tvg-name="BET Soul USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-soul-us.png" group-title="General", BET Soul USA
+#EXTINF:-1 tvg-id="BET.Soul.us2" tvg-name="BET Soul USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-soul-us.png" group-title="Entertainment/General", BET Soul USA
 https://fl1.moveonjoy.com/BET_SOUL/index.m3u8
 
 #EXTINF:-1 tvg-id="beIN.Sports.USA.HD.us2" tvg-name="beIN Sports USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bein-sports-us.png" group-title="Sports", beIN Sports USA
