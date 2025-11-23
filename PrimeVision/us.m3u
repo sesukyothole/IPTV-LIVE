@@ -102,6 +102,9 @@ http://23.237.104.106:8080/USA_FUSE/index.m3u8
 #EXTINF:-1 tvg-id="Fox.News.Channel.HD.us2" tvg-name="Fox News USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fox-news-us.png" group-title="News",Fox News USA  
 https://fl1.moveonjoy.com/FOX_NEWS_CHANNEL/index.m3u8
 
+#EXTINF:-1 tvg-id="FS2.Fox.Sports.2.HD.us2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fox-sports-2-us.png" group-title="Sports", Fox Sports 2 USA
+https://fl1.moveonjoy.com/FOX_SPORTS_2/index.m3u8
+
 #EXTINF:-1 tvg-id="Fox.Business.HD.us2" tvg-name="Fox Business USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fox-business-us.png" group-title="News",Fox Business USA
 https://fl1.moveonjoy.com/FOX_Business_Network/index.m3u8
 
