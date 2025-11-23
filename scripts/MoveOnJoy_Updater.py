@@ -4,7 +4,7 @@ import re
 
 # ---- CONFIG ----
 M3U_FILE = "PrimeVision/us.m3u"
-MAX_FL = 1000
+MAX_FL = 100
 TIMEOUT = 5
 
 # Regex pattern for MoveOnJoy URLs
@@ -35,7 +35,7 @@ async def is_online(session, url):
 
 async def find_working_subdomain(session, channel_path):
     """
-    Scan fl1000 → fl1 until a working subdomain is found.
+    Scan fl100 → fl1 until a working subdomain is found.
     """
     for fl in range(MAX_FL, 0, -1):
         test_url = f"https://fl{fl}.moveonjoy.com{channel_path}"
@@ -68,7 +68,7 @@ async def fix_url(session, url):
         print(f"   ✅ ONLINE: fl{current_fl} is working")
         return url
 
-    print(f"   ❌ OFFLINE: fl{current_fl} is down — scanning fl50 → fl1 ...")
+    print(f"   ❌ OFFLINE: fl{current_fl} is down — scanning fl100 → fl1 ...")
 
     # Find replacement
     working = await find_working_subdomain(session, channel_path)
