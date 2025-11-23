@@ -24,6 +24,9 @@ https://fl1.moveonjoy.com/AMC_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="Bravo.HD.us2" tvg-name="Bravo Network USA" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a4/Bravo_2005_blue_white.svg/revision/latest/scale-to-width-down/512?cb=20250725213050" tvg-language="en" group-title="Entertainment/Lifestyle",Bravo Network USA 
 https://fl7.moveonjoy.com/BRAVO/index.m3u8
 
+#EXRINF:-1 tvg-id="beIN.Sports.USA.HD.us2" tvg-name="beIn Sports USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bein-sports-us.png" group-title="Sports", beIn Sports USA
+http://fl1.moveonjoy.com/BEIN_SPORTS/index.m3u8
+
 #EXTINF:-1 tvg-id="BBC.America.HD.us2" tvg-name="BBC America" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bbc-america-us.png" tvg-language="en" group-title="International/Premium",BBC America
 http://23.237.104.106:8080/USA_BBC_AMERICA/index.m3u8
 
