@@ -1,4 +1,4 @@
-name: Fix MoveOnJoy Streams
+name: 📡 Fix MoveOnJoy Streams
 
 on:
   workflow_dispatch:
