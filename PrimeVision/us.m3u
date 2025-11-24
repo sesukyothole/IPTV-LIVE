@@ -102,6 +102,9 @@ http://23.237.104.106:8080/USA_FUSE/index.m3u8
 #EXTINF:-1 tvg-id="Fox.News.Channel.HD.us2" tvg-name="Fox News USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fox-news-us.png" group-title="News",Fox News USA  
 https://fl1.moveonjoy.com/FOX_NEWS_CHANNEL/index.m3u8
 
+#EXTINF:-1 tvg-id="FS1.Fox.Sports.1.HD.us2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fox-sports-1-us.png" group-title="Sports", Fox Sports 1 USA
+https://tvpass.org/live/FoxSports1/sd|Referer=https://tvpass.org
+
 #EXTINF:-1 tvg-id="FS2.Fox.Sports.2.HD.us2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/fox-sports-2-us.png" group-title="Sports", Fox Sports 2 USA
 https://fl1.moveonjoy.com/FOX_SPORTS_2/index.m3u8
 
@@ -140,6 +143,9 @@ https://fl1.moveonjoy.com/HBO_2/index.m3u8
 
 #EXTINF:-1 tvg-id="HBO.Comedy.HD.us2" tvg-name="HBO Comedy USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-comedy-us.png" tvg-language="en" group-title="Movies",HBO Comedy USA
 http://23.237.104.106:8080/USA_HBO_COMEDY/index.m3u8
+
+#EXTINF:-1 tvg-id="HBO.Signature.HD.us2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-drama-us.png" group-title="Movies", HBO Drama USA
+https://tvpass.org/live/HBOSignatureEast/sd|Referer=https://tvpass.org
 
 #EXTINF:-1 tvg-id="HBO.Zone.HD.us2" tvg-name="HBO Movies USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hbo-movies-us.png" tvg-language="en" group-title="Movies",HBO Movies USA
 http://23.237.104.106:8080/USA_HBO_ZONE/index.m3u8
