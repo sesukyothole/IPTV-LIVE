@@ -20,5 +20,5 @@ Go to "Settings" -> Select "PVR & Live TV" -> Select "PVR client addons" -> Sele
 
 For faster loading, set the settings mode to "Expert". Under the configuration of IPTV Simple Client, select "Migrated addon settings" -> Scroll down until you find "Advanced" (this only works if you already set the settings mode to Expert) -> Select "Use inputstream.adaptive for m3u8 (HLS) streams" -> Click Done
 
-Playlist URL
+Playlist URL:
 https://bit.ly/PrimeVisionUS
