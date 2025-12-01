@@ -1,5 +1,5 @@
 # IPTV-LIVE 🎬📺
-Free IPTV M3U playlists with live TV channels worldwide.  
+Free IPTV M3U playlists with US live TV channels.  
 Works on VLC, Kodi, Android TV, and IPTV apps.
 
 ✅ Updated regularly  
