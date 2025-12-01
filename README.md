@@ -20,12 +20,5 @@ Go to "Settings" -> Select "PVR & Live TV" -> Select "PVR client addons" -> Sele
 
 For faster loading, set the settings mode to "Expert". Under the configuration of IPTV Simple Client, select "Migrated addon settings" -> Scroll down until you find "Advanced" (this only works if you already set the settings mode to Expert) -> Select "Use inputstream.adaptive for m3u8 (HLS) streams" -> Click Done
 
-Playlist URLs
-
-United States: https://bit.ly/PrimeVisionUS
-
-United Kingdom: https://bit.ly/PrimeVisionUK
-
-Australia: https://bit.ly/PrimeVisionAU
-
-Tip: You can add multiple playlists in Kodi to merge the channels into one. All you need to do is to add the addon configurations specifically for the United Kingdom and/or Australian playlists and set what channel number will the playlists start at
+Playlist URL
+https://bit.ly/PrimeVisionUS
