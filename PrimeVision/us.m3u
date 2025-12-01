@@ -81,6 +81,9 @@ https://fl1.moveonjoy.com/Comedy_Central/index.m3u8
 #EXTINF:-1 tvg-id="Cinemax.HD.us2" tvg-name="Cinemax USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png" tvg-language="en" group-title="Movies",Cinemax USA 
 https://fl1.moveonjoy.com/CINEMAX/index.m3u8
 
+#EXTINF:-1 tvg-id="Cinemax.Hits.us2" tvg-name="Cinemax Hits USA" tvg-logo=" https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-hits-us.png" group-title="Movies",Cinemax Hits USA
+http://23.237.104.106:8080/USA_MOREMAX/index.m3u8
+
 #EXTINF:-1 tvg-id="Discovery.Channel.HD.us2" tvg-name="Discovery Channel USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/discovery-channel-hd-us.png" tvg-language="en" group-title="Documentary/Knowledge",Discovery Channel USA
 http://23.237.104.106:8080/USA_DISCOVERY/index.m3u8
 
