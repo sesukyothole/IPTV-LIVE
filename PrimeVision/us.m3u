@@ -55,7 +55,7 @@ http://23.237.104.106:8080/USA_BBC_AMERICA/index.m3u8
 https://fl1.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8
 
 #EXTINF:-1 tvg-id="Bloomberg.HD.us2" tvg-name="Bloomberg Television USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png" tvg-language="en",Bloomberg Television USA
-https://66e4bbba.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfQmxvb21iZXJnVFZQbHVzX0hMUw/playlist.m3u8
+http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
 
 #EXTINF:-1 tvg-id="Boomerang.us2" tvg-name="Boomerang USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/boomerang-hd-us.png" tvg-language="en" group-title="Kids",Boomerang USA
 http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
