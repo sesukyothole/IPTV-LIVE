@@ -1,6 +1,22 @@
 name: Auto-Rotate M3U Subdomains
 on:
-  workflow_dispatch:  # Manual trigger
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Rotation mode'
+        required: false
+        default: 'smart'
+        type: choice
+        options:
+        - smart
+        - sequential
+        - random
+        - force-fl1
+      quick:
+        description: 'Quick mode (faster)'
+        required: false
+        default: true
+        type: boolean
   schedule:
     # Run every 3 hours
     - cron: '0 */3 * * *'
@@ -8,7 +24,7 @@ on:
     branches: [ main, master ]
     paths:
       - 'PrimeVision/us.m3u'
-      - 'scripts/rotator.py'
+      - 'scripts/rotate.py'
 
 jobs:
   rotate-subdomains:
@@ -33,8 +49,25 @@ jobs:
     - name: Run rotator script
       id: rotate
       run: |
-        echo "🧠 Starting smart rotation with fallback..."
-        python scripts/rotate.py --quick --mode smart
+        echo "🔄 Starting rotation..."
+        
+        # Build command based on inputs
+        CMD="python scripts/rotate.py"
+        
+        if [ "${{ github.event.inputs.quick }}" = "true" ]; then
+          CMD="$CMD --quick"
+        fi
+        
+        if [ "${{ github.event.inputs.mode }}" = "force-fl1" ]; then
+          CMD="$CMD --force-fl1"
+          echo "🔧 FORCE FL1 MODE selected"
+        else
+          CMD="$CMD --mode ${{ github.event.inputs.mode || 'smart' }}"
+          echo "🔄 Mode: ${{ github.event.inputs.mode || 'smart' }}"
+        fi
+        
+        echo "Running: $CMD"
+        $CMD
         
         # Check if file was modified
         if git diff --quiet PrimeVision/us.m3u; then
@@ -55,11 +88,28 @@ jobs:
         echo "- **Trigger:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
         echo "- **File:** \`PrimeVision/us.m3u\`" >> $GITHUB_STEP_SUMMARY
         echo "- **Script:** \`scripts/rotator.py\`" >> $GITHUB_STEP_SUMMARY
+        
+        # Mode information
+        MODE="${{ github.event.inputs.mode || 'smart' }}"
+        if [ "$MODE" = "force-fl1" ]; then
+          echo "- **Mode:** 🔧 \`FORCE FL1\` (fl1 only)" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "- **Mode:** \`$MODE\`" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "- **Quick Mode:** ${{ github.event.inputs.quick || 'true' }}" >> $GITHUB_STEP_SUMMARY
         echo "- **Status:** \`${{ steps.rotate.outcome }}\`" >> $GITHUB_STEP_SUMMARY
         echo "- **Changes Made:** \`${{ steps.rotate.outputs.CHANGED }}\`" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 🛡️ Fallback Protection" >> $GITHUB_STEP_SUMMARY
-        echo "✅ Guaranteed fallback to fl1.moveonjoy.com if all other subdomains are offline" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "$MODE" = "force-fl1" ]; then
+          echo "### 🔧 Force FL1 Mode" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Used only \`fl1.moveonjoy.com\` for all streams" >> $GITHUB_STEP_SUMMARY
+          echo "⚡ Much faster (no subdomain scanning)" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "### 🛡️ Fallback Protection" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Guaranteed fallback to \`fl1.moveonjoy.com\`" >> $GITHUB_STEP_SUMMARY
+        fi
     
     - name: Commit and push changes
       if: steps.rotate.outputs.CHANGED == 'true'
@@ -67,8 +117,19 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add PrimeVision/us.m3u
-        git commit -m "🔄 Auto-rotate subdomains" \
-                  -m "Smart rotation with fl1 fallback" \
+        
+        # Custom commit message based on mode
+        MODE="${{ github.event.inputs.mode || 'smart' }}"
+        if [ "$MODE" = "force-fl1" ]; then
+          COMMIT_MSG="🔧 Force fl1 rotation"
+          COMMIT_BODY="Used only fl1.moveonjoy.com"
+        else
+          COMMIT_MSG="🔄 Auto-rotate subdomains"
+          COMMIT_BODY="Mode: $MODE"
+        fi
+        
+        git commit -m "$COMMIT_MSG" \
+                  -m "$COMMIT_BODY" \
                   -m "Automated by GitHub Actions" \
                   -m "Trigger: ${{ github.event_name }}"
         git push
