@@ -4,7 +4,7 @@ import re
 
 # ---- CONFIG ----
 M3U_FILE = "PrimeVision/us.m3u"
-MAX_FL = 50
+MAX_FL = 100
 TIMEOUT = 5
 
 # Regex pattern for MoveOnJoy URLs
