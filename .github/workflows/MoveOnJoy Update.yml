@@ -1,45 +1,124 @@
-name: 📡 Fix MoveOnJoy Streams
-
+name: Rotate M3U Subdomains
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Manual trigger
+  schedule:
+    # Run daily at 00:00 UTC
+    - cron: '0 0 * * *'
+    # Or more frequently (every 6 hours):
+    # - cron: '0 */6 * * *'
 
 jobs:
-  fix_streams:
+  rotate-subdomains:
     runs-on: ubuntu-latest
-
+    
     steps:
-      # Checkout the repository
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: true  # Needed to push changes
-          fetch-depth: 0             # Ensure full branch history for push
-
-      # Setup Python
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-
-      # Install dependencies
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install aiohttp
-
-      # Run the MoveOnJoy script
-      - name: Run MoveOnJoy fixer
-        run: python "scripts/MoveOnJoy_Updater.py"
-
-      # Show what changed for debugging
-      - name: Show changes
-        run: git --no-pager diff
-
-      # Commit and push changes if any
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add "PrimeVision/us.m3u"
-          git diff --cached --quiet || git commit -m "Update MoveOnJoy M3U streams"
-          git push origin HEAD
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install aiofiles
+    
+    - name: Create and run rotator script
+      run: |
+        cat > m3u_rotator.py << 'EOF'
+        #!/usr/bin/env python3
+        """
+        MoveOnJoy Subdomain Rotator for M3U Playlists
+        GitHub Actions Version
+        """
+        
+        import asyncio
+        import re
+        import aiofiles
+        import os
+        from pathlib import Path
+        
+        class M3USubdomainRotator:
+            def __init__(self, m3u_path: str, rotation_range: tuple = (1, 100)):
+                self.m3u_path = Path(m3u_path)
+                self.rotation_range = rotation_range
+                self.current_subdomain = rotation_range[0]
+                self.processed_lines = 0
+                self.changed_lines = 0
+            
+            def _get_next_subdomain(self):
+                subdomain = f"fl{self.current_subdomain}"
+                self.current_subdomain += 1
+                if self.current_subdomain > self.rotation_range[1]:
+                    self.current_subdomain = self.rotation_range[0]
+                return subdomain
+            
+            async def rotate_subdomains(self):
+                if not self.m3u_path.exists():
+                    print(f"❌ File not found: {self.m3u_path}")
+                    return False
+                
+                print(f"🎬 Starting M3U Subdomain Rotation")
+                print(f"📁 File: {self.m3u_path}")
+                print(f"🔄 Rotation Range: fl{self.rotation_range[0]} - fl{self.rotation_range[1]}")
+                
+                try:
+                    async with aiofiles.open(self.m3u_path, 'r', encoding='utf-8') as f:
+                        content = await f.read()
+                    
+                    lines = content.split('\n')
+                    processed_lines = []
+                    
+                    for line in lines:
+                        self.processed_lines += 1
+                        pattern = r'fl\d+\.moveonjoy\.com'
+                        matches = re.findall(pattern, line)
+                        
+                        if matches:
+                            self.changed_lines += 1
+                            for match in set(matches):
+                                old_subdomain = match
+                                new_subdomain = self._get_next_subdomain()
+                                line = line.replace(old_subdomain, f"{new_subdomain}.moveonjoy.com")
+                                print(f"🔄 Changed: {old_subdomain} → {new_subdomain}.moveonjoy.com")
+                        
+                        processed_lines.append(line)
+                    
+                    async with aiofiles.open(self.m3u_path, 'w', encoding='utf-8') as f:
+                        await f.write('\n'.join(processed_lines))
+                    
+                    print(f"✅ Rotation Complete!")
+                    print(f"📊 Summary:")
+                    print(f"   📝 Total lines processed: {self.processed_lines}")
+                    print(f"   🔄 Subdomains changed: {self.changed_lines}")
+                    print(f"   📍 Next rotation starts at: fl{self.current_subdomain}")
+                    
+                    return True
+                    
+                except Exception as e:
+                    print(f"❌ Error processing file: {e}")
+                    return False
+        
+        async def main():
+            rotator = M3USubdomainRotator("PrimeVision/us.m3u")
+            success = await rotator.rotate_subdomains()
+            if not success:
+                raise Exception("Rotation failed!")
+        
+        if __name__ == "__main__":
+            asyncio.run(main())
+        EOF
+        
+        python m3u_rotator.py
+    
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "🔀 Rotated MoveOnJoy subdomains" -m "Automated rotation: fl1-fl100" || echo "No changes to commit"
+        git push
