@@ -34,7 +34,7 @@ jobs:
       id: rotate
       run: |
         echo "🧠 Starting smart rotation with fallback..."
-        python scripts/rotator.py --quick --mode smart
+        python scripts/rotate.py --quick --mode smart
         
         # Check if file was modified
         if git diff --quiet PrimeVision/us.m3u; then
