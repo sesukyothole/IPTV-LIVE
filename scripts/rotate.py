@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 MoveOnJoy Subdomain Rotator with Smart Fallback
-Located at: scripts/rotator.py
+Located at: scripts/rotate.py
 Rotates through online fl1-fl100 subdomains, falls back to fl1 if all offline
 """
 
@@ -29,6 +29,7 @@ COLORS = {
     'BOLD': '\033[1m',
     'MAGENTA': '\033[35m',
     'ORANGE': '\033[33m',
+    'PURPLE': '\033[94m',
 }
 
 class ColorfulFormatter(logging.Formatter):
@@ -146,18 +147,33 @@ class SubdomainChecker:
             online.insert(0, "fl1")
         
         return online
+    
+    async def check_only_fl1(self) -> bool:
+        """Quick check if fl1 is online (for force-fl1 mode)"""
+        try:
+            url = "http://fl1.moveonjoy.com"
+            async with self.session.head(url, allow_redirects=True, ssl=False, timeout=2) as response:
+                return response.status in [200, 301, 302]
+        except:
+            return False
 
 class M3URotator:
     """Rotates MoveOnJoy subdomains with intelligent fallback"""
     
-    def __init__(self, m3u_path: str, online_subdomains: List[str]):
+    def __init__(self, m3u_path: str, online_subdomains: List[str], force_fl1: bool = False):
         self.m3u_path = Path(m3u_path)
+        self.force_fl1 = force_fl1
         
-        # Always include fl1
-        if not online_subdomains:
+        if force_fl1:
+            # Force fl1 only mode
             online_subdomains = ["fl1"]
-        elif "fl1" not in online_subdomains:
-            online_subdomains.insert(0, "fl1")
+            print(f"{COLORS['PURPLE']}🔧 FORCE FL1 MODE: Using only fl1.moveonjoy.com{COLORS['ENDC']}")
+        else:
+            # Normal mode: always include fl1
+            if not online_subdomains:
+                online_subdomains = ["fl1"]
+            elif "fl1" not in online_subdomains:
+                online_subdomains.insert(0, "fl1")
         
         self.online_subdomains = online_subdomains
         self.fallback_mode = len([sd for sd in online_subdomains if sd != "fl1"]) == 0
@@ -165,6 +181,7 @@ class M3URotator:
         self.processed_lines = 0
         self.changed_lines = 0
         self.fallback_count = 0
+        self.forced_fl1_count = 0 if force_fl1 else 0
         
         # Setup logging
         self.logger = logging.getLogger(__name__)
@@ -177,6 +194,10 @@ class M3URotator:
     
     def _get_next_subdomain(self, mode: str = 'smart') -> str:
         """Get next subdomain based on mode"""
+        if self.force_fl1:
+            self.forced_fl1_count += 1
+            return "fl1"
+        
         if self.fallback_mode or len(self.online_subdomains) == 1:
             self.fallback_count += 1
             return "fl1"
@@ -212,17 +233,31 @@ class M3URotator:
             self.logger.error(f"❌ File not found: {self.m3u_path}")
             return False
         
-        self.logger.info(f"{COLORS['HEADER']}{COLORS['BOLD']}🎬 Starting M3U Subdomain Rotation{COLORS['ENDC']}")
-        self.logger.info(f"📁 File: {self.m3u_path}")
-        self.logger.info(f"🌐 Online subdomains: {len(self.online_subdomains)}")
-        
-        if self.fallback_mode:
-            self.logger.info(f"{COLORS['ORANGE']}⚠️  FALLBACK MODE: Only fl1 available{COLORS['ENDC']}")
+        # Display mode header
+        if self.force_fl1:
+            header = "🔧 FORCE FL1 MODE"
+            color = COLORS['PURPLE']
+        elif self.fallback_mode:
+            header = "🆘 FALLBACK MODE"
+            color = COLORS['ORANGE']
         else:
-            self.logger.info(f"📋 Available: {', '.join(self.online_subdomains[:8])}..."
-                           f"{' and more' if len(self.online_subdomains) > 8 else ''}")
+            header = "🎬 NORMAL MODE"
+            color = COLORS['GREEN']
         
-        self.logger.info(f"🔄 Mode: {mode}")
+        self.logger.info(f"{COLORS['HEADER']}{COLORS['BOLD']}{header}{COLORS['ENDC']}")
+        self.logger.info(f"{color}📁 File: {self.m3u_path}{COLORS['ENDC']}")
+        
+        if self.force_fl1:
+            self.logger.info(f"{COLORS['PURPLE']}⚡ Using only: fl1.moveonjoy.com (forced){COLORS['ENDC']}")
+        else:
+            self.logger.info(f"{color}🌐 Online subdomains: {len(self.online_subdomains)}{COLORS['ENDC']}")
+            if not self.fallback_mode:
+                self.logger.info(f"{color}📋 Available: {', '.join(self.online_subdomains[:8])}..."
+                               f"{' and more' if len(self.online_subdomains) > 8 else ''}{COLORS['ENDC']}")
+        
+        if not self.force_fl1:
+            self.logger.info(f"{color}🔄 Rotation mode: {mode}{COLORS['ENDC']}")
+        
         self.logger.info(f"{COLORS['YELLOW']}⏳ Processing...{COLORS['ENDC']}")
         
         try:
@@ -245,11 +280,15 @@ class M3URotator:
                         new_subdomain = self._get_next_subdomain(mode)
                         line = line.replace(old_subdomain, f"{new_subdomain}.moveonjoy.com")
                         
-                        # Color-coded logging
-                        if new_subdomain == "fl1":
+                        # Color-coded logging based on mode
+                        if self.force_fl1:
+                            color = COLORS['PURPLE']
+                            icon = "🔧"
+                            status = "(forced fl1)"
+                        elif new_subdomain == "fl1":
                             color = COLORS['ORANGE']
                             icon = "🔄" if self.fallback_mode else "⚡"
-                            status = "(fallback)" if self.fallback_mode else ""
+                            status = "(fallback)" if self.fallback_mode else "(primary)"
                         else:
                             color = COLORS['GREEN']
                             icon = "🎯"
@@ -264,24 +303,36 @@ class M3URotator:
                 await f.write('\n'.join(processed_lines))
             
             # Summary
-            if self.fallback_mode:
+            if self.force_fl1:
+                status_emoji = "🔧"
+                status_color = COLORS['PURPLE']
+                status_text = "FORCE FL1 MODE"
+            elif self.fallback_mode:
                 status_emoji = "🆘"
                 status_color = COLORS['ORANGE']
+                status_text = "FALLBACK MODE"
             elif self.fallback_count > 0:
                 status_emoji = "⚠️"
                 status_color = COLORS['YELLOW']
+                status_text = "MIXED MODE"
             else:
                 status_emoji = "✅"
                 status_color = COLORS['GREEN']
+                status_text = "NORMAL MODE"
             
-            self.logger.info(f"{status_color}{COLORS['BOLD']}{status_emoji} Rotation Complete!{COLORS['ENDC']}")
+            self.logger.info(f"{status_color}{COLORS['BOLD']}{status_emoji} Rotation Complete! ({status_text}){COLORS['ENDC']}")
             self.logger.info(f"📊 Summary:")
             self.logger.info(f"   📝 Lines processed: {self.processed_lines}")
             self.logger.info(f"   🔄 Subdomains changed: {self.changed_lines}")
-            self.logger.info(f"   🌐 Online subdomains: {len(self.online_subdomains)}")
             
-            if self.fallback_count > 0:
-                self.logger.info(f"   🆘 fl1 fallbacks used: {self.fallback_count}")
+            if self.force_fl1:
+                self.logger.info(f"   🔧 Forced fl1 changes: {self.forced_fl1_count}")
+                self.logger.info(f"   ⚡ Using: fl1.moveonjoy.com only")
+            else:
+                self.logger.info(f"   🌐 Online subdomains: {len(self.online_subdomains)}")
+                
+                if self.fallback_count > 0:
+                    self.logger.info(f"   🆘 Fallback to fl1 used: {self.fallback_count} times")
             
             self.logger.info(f"{COLORS['GREEN']}✅ File saved: {self.m3u_path}{COLORS['ENDC']}")
             
@@ -292,36 +343,62 @@ class M3URotator:
             return False
 
 async def run_rotation(m3u_path: str = "PrimeVision/us.m3u", mode: str = 'smart', 
-                       quick_mode: bool = False) -> bool:
+                       quick_mode: bool = False, force_fl1: bool = False) -> bool:
     """Run the complete rotation process"""
     print(f"{COLORS['HEADER']}{COLORS['BOLD']}")
     print("╔══════════════════════════════════════════════════╗")
     print("║    🔄 M3U Subdomain Rotator (scripts/rotator.py) ║")
-    print("║    🛡️  Guaranteed fl1 fallback                    ║")
+    if force_fl1:
+        print("║    🔧 FORCE FL1 MODE (fl1 only)                 ║")
+    else:
+        print("║    🛡️  Guaranteed fl1 fallback                    ║")
     print("╚══════════════════════════════════════════════════╝")
     print(f"{COLORS['ENDC']}")
     
     try:
         start_time = time.time()
         
-        # Find online subdomains
-        timeout = 1 if quick_mode else 3
-        retries = 1 if quick_mode else 2
-        
-        async with SubdomainChecker(timeout=timeout, retries=retries) as checker:
-            online_subdomains = await checker.find_online_subdomains(1, 100)
+        if force_fl1:
+            # Force fl1 mode - skip scanning
+            print(f"{COLORS['PURPLE']}🔧 FORCE FL1 MODE: Skipping subdomain scan{COLORS['ENDC']}")
+            print(f"{COLORS['PURPLE']}⚡ Will use only: fl1.moveonjoy.com{COLORS['ENDC']}")
+            online_subdomains = ["fl1"]
+            
+            # Quick check if fl1 is reachable (just for info)
+            async with SubdomainChecker(timeout=2, retries=1) as checker:
+                fl1_online = await checker.check_only_fl1()
+                if fl1_online:
+                    print(f"{COLORS['GREEN']}✅ fl1.moveonjoy.com is reachable{COLORS['ENDC']}")
+                else:
+                    print(f"{COLORS['ORANGE']}⚠️  fl1.moveonjoy.com may be offline (but will be used anyway){COLORS['ENDC']}")
+        else:
+            # Normal mode - scan subdomains
+            timeout = 1 if quick_mode else 3
+            retries = 1 if quick_mode else 2
+            
+            async with SubdomainChecker(timeout=timeout, retries=retries) as checker:
+                online_subdomains = await checker.find_online_subdomains(1, 100)
         
         scan_time = time.time() - start_time
-        print(f"{COLORS['CYAN']}⏱️  Scan completed in {scan_time:.1f}s{COLORS['ENDC']}")
         
-        if len(online_subdomains) <= 1:
-            print(f"{COLORS['ORANGE']}⚠️  Only fl1 available - Fallback mode active{COLORS['ENDC']}")
-        else:
-            print(f"{COLORS['GREEN']}✅ Found {len(online_subdomains)} online subdomains{COLORS['ENDC']}")
+        if not force_fl1:
+            print(f"{COLORS['CYAN']}⏱️  Scan completed in {scan_time:.1f}s{COLORS['ENDC']}")
+            
+            if len(online_subdomains) <= 1:
+                print(f"{COLORS['ORANGE']}⚠️  Only fl1 available - Fallback mode active{COLORS['ENDC']}")
+            else:
+                print(f"{COLORS['GREEN']}✅ Found {len(online_subdomains)} online subdomains{COLORS['ENDC']}")
         
         # Rotate
-        rotator = M3URotator(m3u_path, online_subdomains)
-        success = await rotator.rotate(mode)
+        rotator = M3URotator(m3u_path, online_subdomains, force_fl1)
+        
+        # In force fl1 mode, mode is ignored (always uses fl1)
+        if force_fl1:
+            actual_mode = "fl1-only"
+        else:
+            actual_mode = mode
+            
+        success = await rotator.rotate(actual_mode if not force_fl1 else 'smart')
         
         total_time = time.time() - start_time
         print(f"{COLORS['CYAN']}⏱️  Total time: {total_time:.1f} seconds{COLORS['ENDC']}")
@@ -335,6 +412,41 @@ async def run_rotation(m3u_path: str = "PrimeVision/us.m3u", mode: str = 'smart'
         print(f"{COLORS['RED']}❌ Error: {e}{COLORS['ENDC']}")
         return False
 
+def interactive_menu():
+    """Interactive menu for non-command line usage"""
+    print(f"{COLORS['HEADER']}{COLORS['BOLD']}")
+    print("╔══════════════════════════════════════════════════╗")
+    print("║        🔄 INTERACTIVE MODE MENU                  ║")
+    print("╚══════════════════════════════════════════════════╝")
+    print(f"{COLORS['ENDC']}")
+    
+    print(f"{COLORS['CYAN']}Choose an option:{COLORS['ENDC']}")
+    print(f"  1️⃣  {COLORS['GREEN']}Smart rotation (recommended){COLORS['ENDC']}")
+    print(f"  2️⃣  {COLORS['BLUE']}Sequential rotation{COLORS['ENDC']}")
+    print(f"  3️⃣  {COLORS['MAGENTA']}Random rotation{COLORS['ENDC']}")
+    print(f"  4️⃣  {COLORS['PURPLE']}🔧 FORCE fl1 only{COLORS['ENDC']}")
+    print(f"  5️⃣  {COLORS['YELLOW']}Quick smart rotation{COLORS['ENDC']}")
+    print(f"  6️⃣  {COLORS['RED']}Exit{COLORS['ENDC']}")
+    
+    choice = input(f"\n{COLORS['CYAN']}Enter choice (1-6): {COLORS['ENDC']}")
+    
+    if choice == '1':
+        return 'smart', False, False
+    elif choice == '2':
+        return 'sequential', False, False
+    elif choice == '3':
+        return 'random', False, False
+    elif choice == '4':
+        return 'smart', False, True  # Force fl1
+    elif choice == '5':
+        return 'smart', True, False  # Quick mode
+    elif choice == '6':
+        print(f"{COLORS['CYAN']}👋 Goodbye!{COLORS['ENDC']}")
+        sys.exit(0)
+    else:
+        print(f"{COLORS['RED']}❌ Invalid choice!{COLORS['ENDC']}")
+        return interactive_menu()
+
 def main():
     """Main entry point for command line usage"""
     import argparse
@@ -344,11 +456,20 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  %(prog)s                    # Interactive mode
-  %(prog)s --quick            # Quick rotation (for automation)
-  %(prog)s --mode random      # Random rotation
-  %(prog)s --mode sequential  # Sequential rotation
-  %(prog)s --file custom.m3u  # Custom M3U file
+  %(prog)s                          # Interactive mode
+  %(prog)s --quick                  # Quick rotation
+  %(prog)s --mode random            # Random rotation
+  %(prog)s --force-fl1              # Force fl1 only
+  %(prog)s --file custom.m3u        # Custom M3U file
+  %(prog)s --force-fl1 --quick      # Quick force fl1
+  %(prog)s --force-fl1 --mode smart # Force fl1 (mode ignored)
+
+Force fl1 mode:
+  When --force-fl1 is used, the script will:
+  • Skip scanning other subdomains
+  • Use only fl1.moveonjoy.com
+  • Much faster (no network checks)
+  • Useful when fl1 is known to work
         """
     )
     
@@ -360,24 +481,6 @@ Examples:
                        help='Path to M3U file (default: PrimeVision/us.m3u)')
     parser.add_argument('--silent', action='store_true',
                        help='Minimal output (no colors/emojis)')
-    
-    args = parser.parse_args()
-    
-    # Configure logging
-    if args.silent:
-        logging.basicConfig(level=logging.WARNING, format='%(message)s')
-    else:
-        logging.basicConfig(level=logging.INFO)
-    
-    # Run rotation
-    success = asyncio.run(run_rotation(args.file, args.mode, args.quick))
-    
-    if success:
-        print(f"{COLORS['GREEN']}✨ Rotation completed successfully!{COLORS['ENDC']}")
-        sys.exit(0)
-    else:
-        print(f"{COLORS['RED']}💥 Rotation failed!{COLORS['ENDC']}")
-        sys.exit(1)
-
-if __name__ == "__main__":
-    main()
+    parser.add_argument('--force-fl1', action='store_true',
+                       help='Force use of fl1 only (skip scanning other subdomains)')
+    parser.add_argument('--interactive', ac
