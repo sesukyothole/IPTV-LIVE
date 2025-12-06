@@ -1,21 +1,22 @@
-name: Rotate M3U Subdomains
+name: Rotate M3U Subdomains with Online Check
 on:
-  workflow_dispatch:  # Manual trigger
+  workflow_dispatch:
   schedule:
-    # Run daily at 00:00 UTC
-    - cron: '0 0 * * *'
-    # Or more frequently (every 6 hours):
-    # - cron: '0 */6 * * *'
+    - cron: '0 */4 * * *'  # Every 4 hours
+  push:
+    branches: [ main ]
+    paths:
+      - 'PrimeVision/us.m3u'
+      - 'scripts/rotate.py'
 
 jobs:
-  rotate-subdomains:
+  rotate:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -25,100 +26,41 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install aiofiles
+        pip install aiofiles aiohttp
     
-    - name: Create and run rotator script
+    - name: Run subdomain rotator
+      id: rotate
       run: |
-        cat > m3u_rotator.py << 'EOF'
-        #!/usr/bin/env python3
-        """
-        MoveOnJoy Subdomain Rotator for M3U Playlists
-        GitHub Actions Version
-        """
+        echo "🌐 Starting online subdomain check..."
+        python scripts/rotate.py --quick
         
-        import asyncio
-        import re
-        import aiofiles
-        import os
-        from pathlib import Path
-        
-        class M3USubdomainRotator:
-            def __init__(self, m3u_path: str, rotation_range: tuple = (1, 100)):
-                self.m3u_path = Path(m3u_path)
-                self.rotation_range = rotation_range
-                self.current_subdomain = rotation_range[0]
-                self.processed_lines = 0
-                self.changed_lines = 0
-            
-            def _get_next_subdomain(self):
-                subdomain = f"fl{self.current_subdomain}"
-                self.current_subdomain += 1
-                if self.current_subdomain > self.rotation_range[1]:
-                    self.current_subdomain = self.rotation_range[0]
-                return subdomain
-            
-            async def rotate_subdomains(self):
-                if not self.m3u_path.exists():
-                    print(f"❌ File not found: {self.m3u_path}")
-                    return False
-                
-                print(f"🎬 Starting M3U Subdomain Rotation")
-                print(f"📁 File: {self.m3u_path}")
-                print(f"🔄 Rotation Range: fl{self.rotation_range[0]} - fl{self.rotation_range[1]}")
-                
-                try:
-                    async with aiofiles.open(self.m3u_path, 'r', encoding='utf-8') as f:
-                        content = await f.read()
-                    
-                    lines = content.split('\n')
-                    processed_lines = []
-                    
-                    for line in lines:
-                        self.processed_lines += 1
-                        pattern = r'fl\d+\.moveonjoy\.com'
-                        matches = re.findall(pattern, line)
-                        
-                        if matches:
-                            self.changed_lines += 1
-                            for match in set(matches):
-                                old_subdomain = match
-                                new_subdomain = self._get_next_subdomain()
-                                line = line.replace(old_subdomain, f"{new_subdomain}.moveonjoy.com")
-                                print(f"🔄 Changed: {old_subdomain} → {new_subdomain}.moveonjoy.com")
-                        
-                        processed_lines.append(line)
-                    
-                    async with aiofiles.open(self.m3u_path, 'w', encoding='utf-8') as f:
-                        await f.write('\n'.join(processed_lines))
-                    
-                    print(f"✅ Rotation Complete!")
-                    print(f"📊 Summary:")
-                    print(f"   📝 Total lines processed: {self.processed_lines}")
-                    print(f"   🔄 Subdomains changed: {self.changed_lines}")
-                    print(f"   📍 Next rotation starts at: fl{self.current_subdomain}")
-                    
-                    return True
-                    
-                except Exception as e:
-                    print(f"❌ Error processing file: {e}")
-                    return False
-        
-        async def main():
-            rotator = M3USubdomainRotator("PrimeVision/us.m3u")
-            success = await rotator.rotate_subdomains()
-            if not success:
-                raise Exception("Rotation failed!")
-        
-        if __name__ == "__main__":
-            asyncio.run(main())
-        EOF
-        
-        python m3u_rotator.py
+        # Check if file was modified
+        if git diff --quiet PrimeVision/us.m3u; then
+          echo "CHANGED=false" >> $GITHUB_OUTPUT
+          echo "No changes needed"
+        else
+          echo "CHANGED=true" >> $GITHUB_OUTPUT
+          echo "File was modified"
+        fi
+    
+    - name: Create summary
+      if: always()
+      run: |
+        echo "## 🔄 M3U Subdomain Rotation Report" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Date:** $(date)" >> $GITHUB_STEP_SUMMARY
+        echo "**File:** PrimeVision/us.m3u" >> $GITHUB_STEP_SUMMARY
+        echo "**Range Checked:** fl1-fl100" >> $GITHUB_STEP_SUMMARY
+        echo "**Status:** ${{ steps.rotate.outcome }}" >> $GITHUB_STEP_SUMMARY
+        echo "**Changes Made:** ${{ steps.rotate.outputs.CHANGED || 'unknown' }}" >> $GITHUB_STEP_SUMMARY
     
     - name: Commit and push changes
+      if: steps.rotate.outputs.CHANGED == 'true'
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add .
-        git commit -m "🔀 Rotated MoveOnJoy subdomains" -m "Automated rotation: fl1-fl100" || echo "No changes to commit"
+        git add PrimeVision/us.m3u
+        git commit -m "🔄 Updated MoveOnJoy subdomains" \
+                  -m "Rotated using online subdomains only" \
+                  -m "Automated by GitHub Actions"
         git push
