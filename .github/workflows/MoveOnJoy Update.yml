@@ -1,79 +1,74 @@
-name: Smart M3U Subdomain Rotation with Fallback
+name: Auto-Rotate M3U Subdomains
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Manual trigger
   schedule:
-    - cron: '0 */3 * * *'  # Every 3 hours
+    # Run every 3 hours
+    - cron: '0 */3 * * *'
   push:
-    branches: [ main ]
+    branches: [ main, master ]
     paths:
       - 'PrimeVision/us.m3u'
+      - 'scripts/rotator.py'
 
 jobs:
-  rotate:
+  rotate-subdomains:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     
-    - name: Set up Python
+    - name: Setup Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
     
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
         pip install aiofiles aiohttp
     
-    - name: Create and run smart rotator
+    - name: Run rotator script
       id: rotate
       run: |
         echo "🧠 Starting smart rotation with fallback..."
-        cat > smart_rotator.py << 'EOF'
-        #!/usr/bin/env python3
-        import asyncio
-        import sys
-        sys.path.insert(0, '.')
-        from scripts.smart_rotator import quick_rotate
-        asyncio.run(quick_rotate())
-        EOF
-        
-        python smart_rotator.py
+        python scripts/rotator.py --quick --mode smart
         
         # Check if file was modified
         if git diff --quiet PrimeVision/us.m3u; then
           echo "CHANGED=false" >> $GITHUB_OUTPUT
-          echo "🔄 No changes needed"
+          echo "No changes needed"
         else
           echo "CHANGED=true" >> $GITHUB_OUTPUT
-          echo "✅ File was updated"
+          echo "File was updated"
         fi
     
-    - name: Create smart summary
+    - name: Create rotation report
       if: always()
       run: |
-        echo "## 🧠 Smart M3U Rotation Report" >> $GITHUB_STEP_SUMMARY
+        echo "## 🔄 M3U Subdomain Rotation Report" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 🔄 Rotation Details" >> $GITHUB_STEP_SUMMARY
+        echo "### 📅 Run Details" >> $GITHUB_STEP_SUMMARY
         echo "- **Date:** $(date)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Trigger:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
         echo "- **File:** \`PrimeVision/us.m3u\`" >> $GITHUB_STEP_SUMMARY
-        echo "- **Strategy:** Smart rotation with fl1 fallback" >> $GITHUB_STEP_SUMMARY
+        echo "- **Script:** \`scripts/rotator.py\`" >> $GITHUB_STEP_SUMMARY
         echo "- **Status:** \`${{ steps.rotate.outcome }}\`" >> $GITHUB_STEP_SUMMARY
-        echo "- **Changes Made:** \`${{ steps.rotate.outputs.CHANGED || 'unknown' }}\`" >> $GITHUB_STEP_SUMMARY
+        echo "- **Changes Made:** \`${{ steps.rotate.outputs.CHANGED }}\`" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 🛡️ Fallback Guarantee" >> $GITHUB_STEP_SUMMARY
-        echo "This rotation always guarantees at least fl1 will be used if all other subdomains are offline." >> $GITHUB_STEP_SUMMARY
+        echo "### 🛡️ Fallback Protection" >> $GITHUB_STEP_SUMMARY
+        echo "✅ Guaranteed fallback to fl1.moveonjoy.com if all other subdomains are offline" >> $GITHUB_STEP_SUMMARY
     
     - name: Commit and push changes
       if: steps.rotate.outputs.CHANGED == 'true'
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
         git add PrimeVision/us.m3u
-        git commit -m "🧠 Smart rotation with fallback" \
-                  -m "Updated MoveOnJoy subdomains" \
-                  -m "Guaranteed fl1 fallback active" \
-                  -m "Automated by GitHub Actions"
+        git commit -m "🔄 Auto-rotate subdomains" \
+                  -m "Smart rotation with fl1 fallback" \
+                  -m "Automated by GitHub Actions" \
+                  -m "Trigger: ${{ github.event_name }}"
         git push
