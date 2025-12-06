@@ -73,7 +73,7 @@ https://fl1.moveonjoy.com/CBS_SPORTS_NETWORK/index.m3u8
 https://fl1.moveonjoy.com/CNBC/index.m3u8
 
 #EXTINF:-1 tvg-id="CNBC.World.us2" tvg-name="CNBC World USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cnbc-world-flat-us.png" tvg-language="en" group-title="News",CNBC World USA
-https://fl1.moveonjoy.com/CNBC_World/index.m3u8
+https://fl1.moveonjoy.com.moveonjoy.com/CNBC_World/index.m3u8
 
 #EXTINF:-1 tvg-id="Comedy.Central.HD.us2" tvg-name="Comedy Central USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/comedy-central-hd-us.png" tvg-language="en",Comedy Central USA 
 https://fl1.moveonjoy.com/Comedy_Central/index.m3u8
