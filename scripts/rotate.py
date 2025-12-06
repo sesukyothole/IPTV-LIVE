@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 MoveOnJoy Subdomain Rotator with Smart Fallback
-Located at: scripts/rotator.py
+Located at: scripts/rotate.py
 Rotates through online fl1-fl100 subdomains, falls back to fl1 if all offline
 """
 
