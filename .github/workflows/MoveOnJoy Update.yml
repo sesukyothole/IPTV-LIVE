@@ -1,135 +1,39 @@
-name: Auto-Rotate M3U Subdomains
+name: Fix MoveOnJoy Streams
+
 on:
   workflow_dispatch:
-    inputs:
-      mode:
-        description: 'Rotation mode'
-        required: false
-        default: 'smart'
-        type: choice
-        options:
-        - smart
-        - sequential
-        - random
-        - force-fl1
-      quick:
-        description: 'Quick mode (faster)'
-        required: false
-        default: true
-        type: boolean
-  schedule:
-    # Run every 3 hours
-    - cron: '0 */3 * * *'
-  push:
-    branches: [ main, master ]
-    paths:
-      - 'PrimeVision/us.m3u'
-      - 'scripts/rotate.py'
 
 jobs:
-  rotate-subdomains:
+  fix_streams:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-    
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
-    
-    - name: Install dependencies
-      run: |
-        pip install aiofiles aiohttp
-    
-    - name: Run rotator script
-      id: rotate
-      run: |
-        echo "🔄 Starting rotation..."
-        
-        # Build command based on inputs
-        CMD="python scripts/rotate.py"
-        
-        if [ "${{ github.event.inputs.quick }}" = "true" ]; then
-          CMD="$CMD --quick"
-        fi
-        
-        if [ "${{ github.event.inputs.mode }}" = "force-fl1" ]; then
-          CMD="$CMD --force-fl1"
-          echo "🔧 FORCE FL1 MODE selected"
-        else
-          CMD="$CMD --mode ${{ github.event.inputs.mode || 'smart' }}"
-          echo "🔄 Mode: ${{ github.event.inputs.mode || 'smart' }}"
-        fi
-        
-        echo "Running: $CMD"
-        $CMD
-        
-        # Check if file was modified
-        if git diff --quiet PrimeVision/us.m3u; then
-          echo "CHANGED=false" >> $GITHUB_OUTPUT
-          echo "No changes needed"
-        else
-          echo "CHANGED=true" >> $GITHUB_OUTPUT
-          echo "File was updated"
-        fi
-    
-    - name: Create rotation report
-      if: always()
-      run: |
-        echo "## 🔄 M3U Subdomain Rotation Report" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 📅 Run Details" >> $GITHUB_STEP_SUMMARY
-        echo "- **Date:** $(date)" >> $GITHUB_STEP_SUMMARY
-        echo "- **Trigger:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
-        echo "- **File:** \`PrimeVision/us.m3u\`" >> $GITHUB_STEP_SUMMARY
-        echo "- **Script:** \`scripts/rotator.py\`" >> $GITHUB_STEP_SUMMARY
-        
-        # Mode information
-        MODE="${{ github.event.inputs.mode || 'smart' }}"
-        if [ "$MODE" = "force-fl1" ]; then
-          echo "- **Mode:** 🔧 \`FORCE FL1\` (fl1 only)" >> $GITHUB_STEP_SUMMARY
-        else
-          echo "- **Mode:** \`$MODE\`" >> $GITHUB_STEP_SUMMARY
-        fi
-        
-        echo "- **Quick Mode:** ${{ github.event.inputs.quick || 'true' }}" >> $GITHUB_STEP_SUMMARY
-        echo "- **Status:** \`${{ steps.rotate.outcome }}\`" >> $GITHUB_STEP_SUMMARY
-        echo "- **Changes Made:** \`${{ steps.rotate.outputs.CHANGED }}\`" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        
-        if [ "$MODE" = "force-fl1" ]; then
-          echo "### 🔧 Force FL1 Mode" >> $GITHUB_STEP_SUMMARY
-          echo "✅ Used only \`fl1.moveonjoy.com\` for all streams" >> $GITHUB_STEP_SUMMARY
-          echo "⚡ Much faster (no subdomain scanning)" >> $GITHUB_STEP_SUMMARY
-        else
-          echo "### 🛡️ Fallback Protection" >> $GITHUB_STEP_SUMMARY
-          echo "✅ Guaranteed fallback to \`fl1.moveonjoy.com\`" >> $GITHUB_STEP_SUMMARY
-        fi
-    
-    - name: Commit and push changes
-      if: steps.rotate.outputs.CHANGED == 'true'
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add PrimeVision/us.m3u
-        
-        # Custom commit message based on mode
-        MODE="${{ github.event.inputs.mode || 'smart' }}"
-        if [ "$MODE" = "force-fl1" ]; then
-          COMMIT_MSG="🔧 Force fl1 rotation"
-          COMMIT_BODY="Used only fl1.moveonjoy.com"
-        else
-          COMMIT_MSG="🔄 Auto-rotate subdomains"
-          COMMIT_BODY="Mode: $MODE"
-        fi
-        
-        git commit -m "$COMMIT_MSG" \
-                  -m "$COMMIT_BODY" \
-                  -m "Automated by GitHub Actions" \
-                  -m "Trigger: ${{ github.event_name }}"
-        git push
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true
+          fetch-depth: 0   # Needed so push works
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install aiohttp
+
+      - name: Run MoveOnJoy fixer
+        run: python "scripts/rotate.py"
+
+      - name: Show changes
+        run: git --no-pager diff PrimeVision/us.m3u || true
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add "PrimeVision/us.m3u"
+          git diff --cached --quiet || git commit -m "Update PrimeVision MoveOnJoy streams"
+          git push origin HEAD
