@@ -73,7 +73,7 @@ https://fl1.moveonjoy.com/CBS_SPORTS_NETWORK/index.m3u8
 https://fl1.moveonjoy.com/CNBC/index.m3u8
 
 #EXTINF:-1 tvg-id="CNBC.World.us2" tvg-name="CNBC World USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cnbc-world-flat-us.png" tvg-language="en" group-title="News",CNBC World USA
-https://fl1.moveonjoy.com.moveonjoy.com/CNBC_World/index.m3u8
+https://fl1.moveonjoy.com/CNBC_World/index.m3u8
 
 #EXTINF:-1 tvg-id="Comedy.Central.HD.us2" tvg-name="Comedy Central USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/comedy-central-hd-us.png" tvg-language="en",Comedy Central USA 
 https://fl1.moveonjoy.com/Comedy_Central/index.m3u8
@@ -98,6 +98,12 @@ http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8
 
 #EXTINF:-1 tvg-id="E!.Entertainment.Television.HD.us2" tvg-name="E! Entertainment Television USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/e-entertainment-us.png" group-title="Movies", E! Entertainment Television USA
 http://23.237.104.106:8080/USA_E/index.m3u8
+
+#EXTINF:-1 tvg-id="ESPN.HD.us2" tvg-name="ESPN USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-us.png" group-title="Sports",ESPN USA
+https://tvpass.org/live/ESPN/sd
+
+#EXTINF:-1 tvg-id="ESPN2.HD.us2" tvg-name ="ESPN 2 USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-2-us.png" group-title="Sports",ESPN 2 USA
+https://tvpass.org/live/ESPN2/sd
 
 #EXTINF:-1 tvg-id="ESPNU.HD.us2" tvg-name="ESPN U USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-u-us.png" tvg-language="en" group-title="Sports",ESPN U USA
 https://fl1.moveonjoy.com/ESPN_U/index.m3u8
