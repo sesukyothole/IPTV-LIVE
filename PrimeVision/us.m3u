@@ -100,7 +100,7 @@ http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8
 http://23.237.104.106:8080/USA_E/index.m3u8
 
 #EXTINF:-1 tvg-id="ESPN.HD.us2" tvg-name="ESPN USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-us.png" group-title="Sports",ESPN USA
-https://tvpass.org/live/ESPN/sd|Referer=tvpass.org
+https://tvpass.org/live/ESPN/sd|Referer=https://tvpass.org
 
 #EXTINF:-1 tvg-id="ESPN2.HD.us2" tvg-name ="ESPN 2 USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/espn-2-us.png" group-title="Sports",ESPN 2 USA
 https://tvpass.org/live/ESPN2/sd|Referer=https://tvpass.org
