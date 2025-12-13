@@ -22,3 +22,5 @@ For faster loading, set the settings mode to "Expert". Under the configuration o
 
 Playlist URL:
 https://bit.ly/PrimeVisionUS
+EPG URL:
+https://bit.ly/EPGUS
