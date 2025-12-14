@@ -1,5 +1,44 @@
 #EXTM3U
 
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s345732/images/logod.png?t=638905397110000000" radio="true" group-title="Radio Stations",Apple Music 1
+https://itsliveradio.apple.com/3p-tune-in/tune_in/978194965/index-cmaf.m3u8?accessKey=1765729142_41DD4D5EF3BD46F077A4_4J0BIkbHpvy3X%2BwzQcEXerLmVF5nrJG3ywrguliRQAS%2FRNKfmmYFHj6awPjfgo6cDZOpUG1ps8%2Fkr6BpWoFTlFepTGfsWfcHEPyPEdXIiDw%3D
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s345724/images/logod.png?t=638977318920000000" radio="true" group-title="Radio Stations",Apple Music Holiday Hits
+https://itsliveradio.apple.com/3p-tune-in/tune_in/1498155548/index-cmaf.m3u8?accessKey=1765729607_146A3BBDB9E4C890BBFB_IGCJ5YDlDOuH%2BL0LNnJhPGHgT0Zw%2FfJjT44HGSBFxGRrPWBekJJRMmkh18oj5pWJ6ILO9pzmtvtkC3hhGJr39gdI1AceeM%2FTupIKCA%2B0uEc%3D
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s345726/images/logod.png?t=638905397610000000" radio="true" group-title="Radio Stations",Apple Music Club
+https://itsliveradio.apple.com/3p-tune-in/tune_in/1740613859/index-cmaf.m3u8?accessKey=1765729708_9E4691875D6E37846E05_2VpYPpUQLQ1g1FkHnqilQV4%2BhSKe96bBPA%2FfFhBgY3DDAMWl8eh3EFiVcjoIGyuLKR4WtswduXXku3sq6zSbF31XfHgOnL9V6j5jJlqr5k4%3D
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s345725/images/logod.png?t=638905397850000000" radio="true" group-title="Radio Stations",Apple Music Country
+https://itsliveradio.apple.com/3p-tune-in/tune_in/1498157166/index-cmaf.m3u8?accessKey=1765729831_D9F1578D890F8CB891E5_JqVydXZDoGBzv55LDnlSGdPF92GVGgDJWxhwAdlshhGDsOeb%2BclExDPDqTyUHyyk1FyGn28HxXyIwAkG%2F3yYj2FtIkFsZBfAnKBU91XgRLI%3D
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s345733/images/logod.png?t=638905397360000000" radio="true" group-title="Radio Stations",Apple Music Chill
+https://itsliveradio.apple.com/3p-tune-in/tune_in/1740614260/index-cmaf.m3u8?accessKey=1765729934_3131E80189C2B71C884C_BfXRS3EdpS1VHz7sLBGvS041kOw4lgC15Cg8NxsJGuUiHxm4Xe%2BAuqdQn6aR2%2BorgxegTB4wFu%2BLOtHTMHbl4xj1mZZkP%2FK%2FGSi3MH4D7PY%3D
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s24939/images/logod.png?t=639012947480000000" radio="true" group-title="Radio Stations",BBC Radio 1
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_one.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s24940/images/logod.png?t=639012947490000000" radio="true" group-title="Radio Stations",BBC Radio 2
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_two.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s24941/images/logod.png?t=639012947510000000" radio="true" group-title="Radio Stations",BBC Radio 3
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_three.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s25419/images/logod.png?t=639012947590000000" radio="true" group-title="Radio Stations",BBC Radio 4
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_fourfm.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s24943/images/logod.png?t=639012947520000000" radio="true" group-title="Radio Stations",BBC Radio 5 Live
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_five_live.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s20277/images/logod.png?t=639012947440000000" radio="true" group-title="Radio Stations",BBC Radio 1Xtra
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_1xtra.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s322318/images/logod.png?t=639012947750000000" radio="true" group-title="Radio Stations",BBC World Service Radio
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_world_service.m3u8
+
+#EXTINF:-1
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_6music.m3u8
+
 #EXTINF:-1 tvg-logo="https://www.vhv.rs/dpng/d/317-3170963_radio-disney-logo-png-png-download-radio-disney.png" radio="true" group-title="Radio Stations",Disney Radio
 https://15113.live.streamtheworld.com/SAM05AAC015.mp3
 
@@ -9,6 +48,9 @@ https://radio.garden/api/ara/content/listen/hYpXtjOZ/channel.mp3?1759659001165
 #EXTINF:-1 tvg-logo="https://w7.pngwing.com/pngs/488/342/png-transparent-jazz-fm-radio-station-digital-audio-broadcasting-internet-radio-jazz-electronics-logo-fm-broadcasting-thumbnail.png" radio="true" group-title="Radio Stations",24/7 Jazz Radio
 https://radio.garden/api/ara/content/listen/zG0u6xF1/channel.mp3?1759659189338
 
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s35972/images/logod.jpg?t=637927735270000000" radio="true" group-title="Radio Stations",Kuvo Jazz Radio
+https://kuvo-ice.streamguys1.com/kuvo-mp3-128
+
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Lofi_Girl_logo_2024.jpg/250px-Lofi_Girl_logo_2024.jpg" radio="true" group-title="Radio Stations",24/7 Lofi Radio
 https://radio.garden/api/ara/content/listen/6ZuArjAu/channel.mp3?1759659327552
 
@@ -17,6 +59,9 @@ https://radio.garden/api/ara/content/listen/ql2FiWgS/channel.mp3?1759659488709
 
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/tvos_radios/8tbqeypbfxra.jpg" radio="true" group-title="Radio Stations",24/7 Nature Radio
 https://radio.garden/api/ara/content/listen/RuRlznOl/channel.mp3?1759661102502
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s117268/images/logod.png?t=638779154820000000" radio="true" group-title="Radio Stations",NOVA Radio
+https://stream.audioxi.com/NOVA
 
 #EXTINF:-1 tvg-logo="https://www.shutterstock.com/image-vector/online-radio-icon-logo-design-260nw-485017039.jpg" radio="true" group-title="Radio Stations",24/7 Online Radio
 https://radio.garden/api/ara/content/listen/5yobjhX-/channel.mp3?1759661207537
