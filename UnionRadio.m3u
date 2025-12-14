@@ -1,30 +1,5 @@
 #EXTM3U
 
-#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s345732/images/logod.png?t=638905397110000000" radio="true" group-title="Radio Stations",Apple Music 1
-#KODIPROP:inputstream=inputstream.ffmpeg
-#KODIPROP:inputstream.ffmpeg-https-reconnect=true
-https://itsliveradio.apple.com/3p-tune-in/tune_in/978194965/index-cmaf.m3u8?accessKey=1765729142_41DD4D5EF3BD46F077A4_4J0BIkbHpvy3X%2BwzQcEXerLmVF5nrJG3ywrguliRQAS%2FRNKfmmYFHj6awPjfgo6cDZOpUG1ps8%2Fkr6BpWoFTlFepTGfsWfcHEPyPEdXIiDw%3D
-
-#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s345724/images/logod.png?t=638977318920000000" radio="true" group-title="Radio Stations",Apple Music Holiday Hits
-#KODIPROP:inputstream=inputstream.ffmpeg
-#KODIPROP:inputstream.ffmpeg-https-reconnect=true
-https://itsliveradio.apple.com/3p-tune-in/tune_in/1498155548/index-cmaf.m3u8?accessKey=1765729607_146A3BBDB9E4C890BBFB_IGCJ5YDlDOuH%2BL0LNnJhPGHgT0Zw%2FfJjT44HGSBFxGRrPWBekJJRMmkh18oj5pWJ6ILO9pzmtvtkC3hhGJr39gdI1AceeM%2FTupIKCA%2B0uEc%3D
-
-#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s345726/images/logod.png?t=638905397610000000" radio="true" group-title="Radio Stations",Apple Music Club
-#KODIPROP:inputstream=inputstream.ffmpeg
-#KODIPROP:inputstream.ffmpeg-https-reconnect=true
-https://itsliveradio.apple.com/3p-tune-in/tune_in/1740613859/index-cmaf.m3u8?accessKey=1765729708_9E4691875D6E37846E05_2VpYPpUQLQ1g1FkHnqilQV4%2BhSKe96bBPA%2FfFhBgY3DDAMWl8eh3EFiVcjoIGyuLKR4WtswduXXku3sq6zSbF31XfHgOnL9V6j5jJlqr5k4%3D
-
-#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s345725/images/logod.png?t=638905397850000000" radio="true" group-title="Radio Stations",Apple Music Country
-#KODIPROP:inputstream=inputstream.ffmpeg
-#KODIPROP:inputstream.ffmpeg-https-reconnect=true
-https://itsliveradio.apple.com/3p-tune-in/tune_in/1498157166/index-cmaf.m3u8?accessKey=1765729831_D9F1578D890F8CB891E5_JqVydXZDoGBzv55LDnlSGdPF92GVGgDJWxhwAdlshhGDsOeb%2BclExDPDqTyUHyyk1FyGn28HxXyIwAkG%2F3yYj2FtIkFsZBfAnKBU91XgRLI%3D
-
-#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s345733/images/logod.png?t=638905397360000000" radio="true" group-title="Radio Stations",Apple Music Chill
-#KODIPROP:inputstream=inputstream.ffmpeg
-#KODIPROP:inputstream.ffmpeg-https-reconnect=true
-https://itsliveradio.apple.com/3p-tune-in/tune_in/1740614260/index-cmaf.m3u8?accessKey=1765729934_3131E80189C2B71C884C_BfXRS3EdpS1VHz7sLBGvS041kOw4lgC15Cg8NxsJGuUiHxm4Xe%2BAuqdQn6aR2%2BorgxegTB4wFu%2BLOtHTMHbl4xj1mZZkP%2FK%2FGSi3MH4D7PY%3D
-
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s24939/images/logod.png?t=639012947480000000" radio="true" group-title="Radio Stations",BBC Radio 1
 https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_one.m3u8
 
@@ -49,14 +24,26 @@ https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/s
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s44491/images/logod.png?t=639012947900000000" radio="true" group-title="Radio Stations",BBC 6 Music Radio
 https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_6music.m3u8
 
-#EXTINF:-1 tvg-logo="https://www.vhv.rs/dpng/d/317-3170963_radio-disney-logo-png-png-download-radio-disney.png" radio="true" group-title="Radio Stations",Disney Radio
-https://15113.live.streamtheworld.com/SAM05AAC015.mp3
+#EXTINF:-1 tvg-logo="https://www.radio.net/300/tunedisneyradio.png?version=c54c4c427e845305b35422482d3ddb3e" radio="true" group-title="Radio Stations",Disney Radio
+https://streaming.servicioswebmx.com/8012/;?tunedisneyradio
+
+#EXTINF:-1 tvg-logo="https://www.radio.net/300/tunedisneyradio.png?version=c54c4c427e845305b35422482d3ddb3e" radio="true" group-title="Radio Stations",Disney Radio 2
+https://15113.live.streamtheworld.com/SAM05AAC015_SC
 
 #EXTINF:-1 tvg-logo="https://play-lh.googleusercontent.com/12VDksQlzV9q8xFpOn4TEA0C0nMy4VV2gsvmgbI7QLCxyumaLq9yzbbmreQQ9YcnVRY" radio="true" group-title="Radio Stations",24/7 Blues Radio
 https://radio.garden/api/ara/content/listen/hYpXtjOZ/channel.mp3?1759659001165
 
 #EXTINF:-1 tvg-logo="https://w7.pngwing.com/pngs/488/342/png-transparent-jazz-fm-radio-station-digital-audio-broadcasting-internet-radio-jazz-electronics-logo-fm-broadcasting-thumbnail.png" radio="true" group-title="Radio Stations",24/7 Jazz Radio
 https://radio.garden/api/ara/content/listen/zG0u6xF1/channel.mp3?1759659189338
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s166521/images/logod.png?t=638398103700000000" radio="true" group-title="Radio Stations",24/7 Jazz Radio 2
+https://tunein-live-b.cdnstream1.com/3877_128.mp3
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s132812/images/logod.png?t=638398103670000000" radio="true" group-title="Radio Stations",24/7 Sleep Radio
+https://tunein-live-b.cdnstream1.com/3981_128.mp3
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s142243/images/logod.png?t=638398103970000000" radio="true" group-title="Radio Stations",24/7 Spa Radio
+https://tunein-live-b.cdnstream1.com/4012_128.mp3
 
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s35972/images/logod.jpg?t=637927735270000000" radio="true" group-title="Radio Stations",Kuvo Jazz Radio
 https://kuvo-ice.streamguys1.com/kuvo-mp3-128
