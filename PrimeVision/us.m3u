@@ -273,11 +273,23 @@ https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/s
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s44491/images/logod.png?t=639012947900000000" radio="true" group-title="Radio Stations",BBC 6 Music Radio
 https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_6music.m3u8
 
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s84203/images/logod.jpg?t=639008622040000000" radio="true" group-title="Radio Stations",bigFM Radio
+https://audiotainment-sw.streamabc.net/atsw-bigfm-mp3-128-9761644?sABC=69401230%230%23s965o6219031so61qpnr0oqn7poq813p%23gharva&aw_0_1st.playerid=tunein&amsparams=playerid:tunein;skey:1765806640
+
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s263401/images/logod.jpg?t=639008629930000000" radio="true" group-title="Radio Stations",bigFM Charts Radio
 https://audiotainment-sw.streamabc.net/atsw-charts-mp3-128-7275109?sABC=694008n6%230%23s965o6219031so61qpnr0oqn7poq813p%23gharva&aw_0_1st.playerid=tunein&amsparams=playerid:tunein;skey:1765804198
 
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s299525/images/logod.jpg?t=639008635370000000" radio="true" group-title="Radio Stations",bigFM Sunset Lounge Radio
 https://audiotainment-sw.streamabc.net/atsw-lounge-mp3-128-1294994?sABC=6940084r%230%237p04712r812n324269361op6o4nq3p9s%23gharva&aw_0_1st.playerid=tunein&amsparams=playerid:tunein;skey:1765804110
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s263398/images/logod.jpg?t=639008626850000000" radio="true" group-title="Radio Stations",bigFM Hip-Hop Radio
+https://audiotainment-sw.streamabc.net/atsw-hiphop-mp3-128-9110581?sABC=6940110s%230%23s965o6219031so61qpnr0oqn7poq813p%23gharva&aw_0_1st.playerid=tunein&amsparams=playerid:tunein;skey:1765806351
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s263403/images/logod.jpg?t=639008631810000000" radio="true" group-title="Radio Stations",bigFM Housebeat Radio
+https://audiotainment-sw.streamabc.net/atsw-deeptechhouse-mp3-128-3635448?sABC=69401198%230%23s965o6219031so61qpnr0oqn7poq813p%23gharva&aw_0_1st.playerid=tunein&amsparams=playerid:tunein;skey:1765806488
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s263402/images/logod.jpg?t=639008630620000000" radio="true" group-title="Radio Stations",bigFM Dance Radio
+https://audiotainment-sw.streamabc.net/atsw-dance-mp3-128-1726899?sABC=69401297%230%23s965o6219031so61qpnr0oqn7poq813p%23gharva&aw_0_1st.playerid=tunein&amsparams=playerid:tunein;skey:1765806743
 
 #EXTINF:-1 tvg-logo="https://www.radio.net/300/tunedisneyradio.png?version=c54c4c427e845305b35422482d3ddb3e" radio="true" group-title="Radio Stations",Disney Radio
 https://streaming.servicioswebmx.com/8012/;?tunedisneyradio
