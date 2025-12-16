@@ -267,6 +267,9 @@ https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/s
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s20277/images/logod.png?t=639012947440000000" radio="true" group-title="Radio Stations",BBC Radio 1Xtra
 https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_1xtra.m3u8
 
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s6839/images/logod.png?t=639014028070000000" radio="true" group-title="Radio Stations",BBC Radio 4 Extra
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_four_extra.m3u8
+
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s322318/images/logod.png?t=639012947750000000" radio="true" group-title="Radio Stations",BBC World Service Radio
 https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_world_service.m3u8
 
@@ -290,6 +293,15 @@ https://audiotainment-sw.streamabc.net/atsw-deeptechhouse-mp3-128-3635448?sABC=6
 
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s263402/images/logod.jpg?t=639008630620000000" radio="true" group-title="Radio Stations",bigFM Dance Radio
 https://audiotainment-sw.streamabc.net/atsw-dance-mp3-128-1726899?sABC=69401297%230%23s965o6219031so61qpnr0oqn7poq813p%23gharva&aw_0_1st.playerid=tunein&amsparams=playerid:tunein;skey:1765806743
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s263399/images/logod.jpg?t=639008627950000000" radio="true" group-title="Radio Stations",bigFM Mashup Radio
+https://audiotainment-sw.streamabc.net/atsw-mashup-mp3-128-8671704?sABC=6940rrs8%230%23s965o6219031so61qpnr0oqn7poq813p%23gharva&aw_0_1st.playerid=tunein&amsparams=playerid:tunein;skey:1765863160
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s310295/images/logod.jpg?t=639008643660000000" radio="true" group-title="Radio Stations",bigFM Party Radio
+https://audiotainment-sw.streamabc.net/atsw-party-mp3-128-8398746?sABC=6940rs57%230%23s965o6219031so61qpnr0oqn7poq813p%23gharva&aw_0_1st.playerid=tunein&amsparams=playerid:tunein;skey:1765863255
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s310298/images/logod.jpg?t=639008647630000000" radio="true" group-title="Radio Stations",bigFM Sports & Workout Radio
+https://audiotainment-sw.streamabc.net/atsw-sports-mp3-128-4216612?sABC=6940rsp6%230%23s965o6219031so61qpnr0oqn7poq813p%23gharva&aw_0_1st.playerid=tunein&amsparams=playerid:tunein;skey:1765863366
 
 #EXTINF:-1 tvg-logo="https://www.radio.net/300/tunedisneyradio.png?version=c54c4c427e845305b35422482d3ddb3e" radio="true" group-title="Radio Stations",Disney Radio
 https://streaming.servicioswebmx.com/8012/;?tunedisneyradio
