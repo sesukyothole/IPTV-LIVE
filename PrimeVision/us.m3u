@@ -276,6 +276,27 @@ https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/s
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s44491/images/logod.png?t=639012947900000000" radio="true" group-title="Radio Stations",BBC 6 Music Radio
 https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_6music.m3u8
 
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s44182/images/logod.png?t=639014027790000000" radio="true" group-title="Radio Stations",BBC Radio Cymru
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_cymru.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s24944/images/logod.png?t=639014027470000000" radio="true" group-title="Radio Stations",BBC Radio Foyle
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_foyle.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s37553/images/logod.png?t=639014027770000000" radio="true" group-title="Radio Stations",BBC Radio Nan Gaidheal
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_nan_gaidheal.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s46680/images/logod.png?t=639014028040000000" radio="true" group-title="Radio Stations",BBC Radio Orkney
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_orkney.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s24945/images/logod.png?t=639014027490000000" radio="true" group-title="Radio Stations",BBC Radio Scotland
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_scotland_fm.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s24946/images/logod.png?t=639014027500000000" radio="true" group-title="Radio Stations",BBC Radio Ulster
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_ulster.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s24947/images/logod.png?t=639014027520000000" radio="true" group-title="Radio Stations",BBC Radio Wales
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_wales_fm.m3u8
+
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s84203/images/logod.jpg?t=639008622040000000" radio="true" group-title="Radio Stations",bigFM Radio
 https://audiotainment-sw.streamabc.net/atsw-bigfm-mp3-128-9761644?sABC=69401230%230%23s965o6219031so61qpnr0oqn7poq813p%23gharva&aw_0_1st.playerid=tunein&amsparams=playerid:tunein;skey:1765806640
 
