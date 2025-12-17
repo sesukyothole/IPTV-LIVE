@@ -90,6 +90,9 @@ https://streaming.servicioswebmx.com/8012/;?tunedisneyradio
 #EXTINF:-1 tvg-logo="https://www.radio.net/300/tunedisneyradio.png?version=c54c4c427e845305b35422482d3ddb3e" radio="true" group-title="Radio Stations",Disney Radio 2
 https://15113.live.streamtheworld.com/SAM05AAC015_SC
 
+#EXTINF:-1 tvg-logo="https://assets.laut.fm/1dc8596e69dbda78b226b8797e61d410?t=_120x120" radio="true" group-title="Radio Stations",Disney Power Radio
+https://disneypwoer.stream.laut.fm/disney_pwoer?ref=radiodns
+
 #EXTINF:-1 tvg-logo="https://play-lh.googleusercontent.com/12VDksQlzV9q8xFpOn4TEA0C0nMy4VV2gsvmgbI7QLCxyumaLq9yzbbmreQQ9YcnVRY" radio="true" group-title="Radio Stations",24/7 Blues Radio
 https://radio.garden/api/ara/content/listen/hYpXtjOZ/channel.mp3?1759659001165
 
@@ -116,6 +119,9 @@ https://radio.garden/api/ara/content/listen/RuRlznOl/channel.mp3?1759661102502
 
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s311666/images/logod.png?t=639015159720000000" radio="true" group-title="Radio Stations",Nickelodeon/Disney Radio
 https://nickelodeonanddisney.stream.laut.fm/nickelodeon_and_disney?ref=radiodns
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s318340/images/logod.png?t=639015160980000000" radio="true" group-title="Radio Stations",Nickelodeon/Disney Radio 2
+https://disnick.stream.laut.fm/disnick?ref=radiodns
 
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s117268/images/logod.png?t=638779154820000000" radio="true" group-title="Radio Stations",NOVA Radio
 https://stream.audioxi.com/NOVA
