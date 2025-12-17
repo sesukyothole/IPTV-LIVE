@@ -114,6 +114,9 @@ https://radio.garden/api/ara/content/listen/ql2FiWgS/channel.mp3?1759659488709
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/tvos_radios/8tbqeypbfxra.jpg" radio="true" group-title="Radio Stations",24/7 Nature Radio
 https://radio.garden/api/ara/content/listen/RuRlznOl/channel.mp3?1759661102502
 
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s311666/images/logod.png?t=639015159720000000" radio="true" group-title="Radio Stations",Nickelodeon/Disney Radio
+https://nickelodeonanddisney.stream.laut.fm/nickelodeon_and_disney?ref=radiodns
+
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s117268/images/logod.png?t=638779154820000000" radio="true" group-title="Radio Stations",NOVA Radio
 https://stream.audioxi.com/NOVA
 
