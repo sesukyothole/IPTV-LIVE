@@ -1,9 +1,12 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz"
 
+#EXTINF:-1 tvg-id="Comedy.Central.de" tvg-name="Comedy Central Deutschland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/germany/comedy-central-de.png" group-title="Lifestyle/Unterhaltung",Comedy Central Deutschland
+https://viamotionhsi.netplus.ch/live/eds/comedycentral/browser-HLS8/comedycentral.m3u8
+
 #EXTINF:-1 tvg-id="Disney.Channel.de" tvg-name="Disney Channel Deutschland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/germany/disney-channel-de.png" group-title="Kinder",Disney Channel Deutschland
 https://viamotionhsi.netplus.ch/live/eds/disneychannelde/browser-HLS8/disneychannelde.m3u8
 
-#EXTINF:-1 tvg-id="DELUXE.MUSIC.de" tvg-name="Deluxe Musik Deutschland" tvg-logo="https://i.imgur.com/E65GQN9.png" group-title="Musik",Deluxe Musik Deutschland
+#EXTINF:-1 tvg-id="DELUXE.MUSIC.de" tvg-name="Deluxe Music Deutschland" tvg-logo="https://i.imgur.com/E65GQN9.png" group-title="Musik",Deluxe Music Deutschland
 https://viamotionhsi.netplus.ch/live/eds/deluxemusic/browser-HLS8/deluxemusic.m3u8
 
 #EXTINF:-1 tvg-id="nick.de" tvg-name="Nickelodeon Deutschland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/germany/nick-de.png" group-title="Kinder", Nickelodeon Deutschland
