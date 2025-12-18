@@ -22,5 +22,6 @@ For faster loading, set the settings mode to "Expert". Under the configuration o
 
 Playlist URL:
 https://bit.ly/Primevision
+
 EPG URL:
 https://bit.ly/EPGUS
