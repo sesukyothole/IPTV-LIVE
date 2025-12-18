@@ -1,0 +1,4 @@
+#EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz"
+
+#EXTINF:-1 tvg-id="DELUXE.MUSIC.de" tvg-name="Deluxe Musik Deutschland" tvg-logo="https://i.imgur.com/E65GQN9.png" group-title="Musik",Deluxe Musik Deutschland
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/13456/13456_264_live.m3u8
