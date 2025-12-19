@@ -72,7 +72,10 @@ https://viamotionhsi.netplus.ch/live/eds/bbc3cbbc/browser-HLS8/bbc3cbbc.m3u8
 #EXTINF:-1 tvg-id="CBeebies.HD.uk" tvg-name="CBeebies UK" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/3f/CBeebies_%282023%29.svg/revision/latest?cb=20230315171456" group-title="Kids",CBeebies UK
 https://viamotionhsi.netplus.ch/live/eds/bbc4cbeebies/browser-HLS8/bbc4cbeebies.m3u8
 
-#EXTINF:-1 tvg-id="CBS.Streaming.SD.East.feed.us2" tvg-name="CBS USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/unite.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cbs-sports-network-us.png" tvg-language="en" group-title="Sports",CBS Sports Network USA
+#EXTINF:-1 tvg-id="CBS.Streaming.SD.East.feed.us2" tvg-name="CBS USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cbs-logo-white-us.png" tvg-language="en" group-title="Entertainment/General",CBS USA
+https://fl1.moveonjoy.com/CBS/index.m3u8
+
+#EXTINF:-1 tvg-id="CBS.Sports.Network.HD.us2" tvg-name="CBS Sports Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cbs-sports-network-us.png" tvg-language="en" group-title="Sports",CBS Sports Network USA
 https://fl1.moveonjoy.com/CBS_SPORTS_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-id="CNBC.HD.us2" tvg-name="CNBC USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cnbc-us.png" tvg-language="en" group-title="News",CNBC USA 
@@ -81,7 +84,7 @@ https://fl1.moveonjoy.com/CNBC/index.m3u8
 #EXTINF:-1 tvg-id="CNBC.World.us2" tvg-name="CNBC World USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cnbc-world-flat-us.png" tvg-language="en" group-title="News",CNBC World USA
 https://fl1.moveonjoy.com/CNBC_World/index.m3u8
 
-#EXTINF:-1 tvg-id="Comedy.Central.HD.us2" tvg-name="Comedy Central USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/comedy-central-hd-us.png" tvg-language="en",Comedy Central USA 
+#EXTINF:-1 tvg-id="Comedy.Central.HD.us2" tvg-name="Comedy Central USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/comedy-central-hd-us.png" tvg-language="en" group-title="Entertainment/General",Comedy Central USA 
 https://fl1.moveonjoy.com/Comedy_Central/index.m3u8
 
 #EXTINF:-1 tvg-id="Comedy.Central.de" tvg-name="Comedy Central Deutschland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/germany/comedy-central-de.png" group-title="Entertainment/General",Comedy Central Deutschland
