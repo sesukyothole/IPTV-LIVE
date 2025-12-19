@@ -216,4 +216,53 @@ https://fl1.moveonjoy.com/NICK_JR/index.m3u8
 #EXTINF:-1 tvg-id="Nicktoons.us2" tvg-name="Nicktoons USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-toons-us.png" tvg-language="en" group-title="Kids",Nicktoons USA 
 https://fl1.moveonjoy.com/NICKTOONS/index.m3u8
 
-#EXTINF:-1 tvg-id="Nick.Music.us2" tvg-name="NickMusic USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/cou
+#EXTINF:-1 tvg-id="Nick.Music.us2" tvg-name="NickMusic USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-music-us.png" tvg-language="en" group-title="Music",NickMusic USA 
+https://fl1.moveonjoy.com/NICK_MUSIC/index.m3u8
+
+#EXTINF:-1 tvg-id="Teen.Nick.us2" tvg-name="TeenNick USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/teen-nick-us.png" tvg-language="en" group-title="Kids",TeenNick USA
+https://tvpass.org/live/TeenNickEast/sd|Referer=https://tvpass.org/
+
+#EXTINF:-1 tvg-id="PBS.KIDS.HD.us2" tvg-name="PBS Kids USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/pbs-kids-dot-icon-us.png" tvg-language="en" group-title="Kids",PBS Kids USA
+https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est_2.m3u8
+
+#EXTINF:-1 tvg-id="TV.ONE.HD.us2" tvg-name="TV One USA" tvg-logo="https://www.vhv.rs/dpng/d/560-5607033_tv-one-us-channel-logo-hd-png-download.png" tvg-language="en" group-title="Entertainment/General",TV One USA
+https://fl1.moveonjoy.com/TV_ONE/index.m3u8
+
+#EXTINF:-1 tvg-id="Paramount.Network.HD.us2" tvg-name="Paramount Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/paramount-network-icon-hd-us.png" tvg-language="en" group-title="Entertainment/General",Paramount Network USA 
+https://fl1.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8
+
+#EXTINF:-1 tvg-id="POP.HD.us2" tvg-name="Pop TV USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/pop-us.png" group-title="Entertainment/General", Pop TV USA
+https://fl1.moveonjoy.com/Pop_TV/index.m3u8
+
+#EXTINF:-1 tvg-id="Showtime.Extreme.HD.us2" tvg-name="Showtime Extreme USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-extreme-us.png" tvg-language="en" group-title="Movies",Showtime Extreme USA
+https://fl1.moveonjoy.com/SHOWTIME_EXTREME/index.m3u8
+
+#EXTINF:-1 tvg-id="Showtime.Next.HD.us2" tvg-name="Showtime Next USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-next-us.png" tvg-language="en" group-title="Movies",Showtime Next USA 
+https://fl1.moveonjoy.com/SHOWTIME_NEXT/index.m3u8
+
+#EXTINF:-1 tvg-id="Showtime.2.HD.us2" tvg-name="Showtime 2 USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-2-us.png" tvg-language="en" group-title="Movies",Showtime 2 USA
+https://fl1.moveonjoy.com/SHOWTIME_2/index.m3u8
+
+#EXTINF:-1 tvg-id="Showtime.Women.HD.us2" tvg-name="Showtime Women USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/showtime-women-us.png" tvg-language="en" group-title="Movies",Showtime Women USA 
+https://fl1.moveonjoy.com/SHOWTIME_WOMEN/index.m3u8
+
+#EXTINF:-1 tvg-id="Starz.HD.us2" tvg-name="Starz USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-us.png" tvg-language="en" group-title="Movies",Starz USA
+http://23.237.104.106:8080/USA_STARZ/index.m3u8
+
+#EXTINF:-1 tvg-id="Starz.Cinema.HD.us2" tvg-name="Starz Cinema USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-cinema-us.png" tvg-language="en" group-title="Movies",Starz Cinema USA
+http://23.237.104.106:8080/USA_STARZ_CINEMA/index.m3u8
+
+#EXTINF:-1 tvg-id="Starz.Comedy.HD.us2" tvg-name="Starz Comedy USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-comedy-us.png" tvg-language="en" group-title="Movies",Starz Comedy USA
+http://23.237.104.106:8080/USA_STARZ_COMEDY/index.m3u8
+
+#EXTINF:-1 tvg-id="Starz.Encore.Action.HD.us2" tvg-name="Starz Encore Action USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-action-us.png" tvg-language="en" group-title="Movies",Starz Encore Action USA
+https://fl1.moveonjoy.com/STARZ_ENCORE_ACTION/index.m3u8
+
+#EXTINF:-1 tvg-id="Starz.Encore.Classic.us2" tvg-name="Starz Encore Classic USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-classic-us.png" tvg-language="en" group-title="Movies",Starz Encore Classic USA 
+https://fl1.moveonjoy.com/STARZ_ENCORE_CLASSIC/index.m3u8
+
+#EXTINF:-1 tvg-id="Starz.Encore.Westerns.SD.us2" tvg-name="Starz Encore Westerns USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-westerns-us.png" tvg-language="en" group-title="Movies",Starz Encore Westerns USA
+https://fl1.moveonjoy.com/STARZ_ENCORE_WESTERNS/index.m3u8
+
+#EXTINF:-1 tvg-id="Yes.Network.us2" tvg-name="Yes Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/yes-network-us.png" group-title="Sports",Yes Network USA
+https://fl1.moveonjoy.com/YES_NETWORK/index.m3u8
