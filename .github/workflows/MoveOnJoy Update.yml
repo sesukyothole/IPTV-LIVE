@@ -28,7 +28,7 @@ jobs:
         run: python "scripts/rotate.py"
 
       - name: Show changes
-        run: git --no-pager diff PrimeVision/us.m3u || true
+        run: git --no-pager diff PrimeVision.m3u || true
 
       - name: Commit and push changes
         run: |
