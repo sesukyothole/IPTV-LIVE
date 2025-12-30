@@ -67,7 +67,7 @@ http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
 http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8
 
 #EXTINF:-1 tvg-id="CBBC.HD.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/bbc-cbbc-uk.png" group-title="Kids",CBBC UK
-https://viamotionhsi.netplus.ch/live/eds/bbc3cbbc/browser-HLS8/bbc3cbbc.m3u
+https://viamotionhsi.netplus.ch/live/eds/bbc3cbbc/browser-HLS8/bbc3cbbc.m3u8
 
 #EXTINF:-1 tvg-id="CBeebies.id" tvg-name="CBeebies Indonesia" tvg-logo="https://static.wikia.nocookie.net/iepfanon/images/3/33/CBeebies_logo.png/revision/latest?cb=20240425113704" group-title="Kids",CBeebies Indonesia
 https://cdn4.skygo.mn/live/disk1/Cbeebies/HLSv3-FTA/Cbeebies.m3u8
