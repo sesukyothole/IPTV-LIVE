@@ -213,7 +213,7 @@ http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
 #EXTINF:-1 tvg-id="nick.de" tvg-name="Nickelodeon Deutschland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/germany/nick-de.png" group-title="Kids",Nickelodeon Deutschland
 https://viamotionhsi.netplus.ch/live/eds/comedycentralnick/browser-HLS8/comedycentralnick.m3u8
 
-#EXTINF:-1 tvg-id="NickelodeonHD.uk" tvg-name="Nickelodeon UK" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Nickelodeon_2023_logo_%28outline%29.svg/500px-Nickelodeon_2023_logo_%28outline%29.svg.png" group-title="Kids",Nickelodeon UK
+#EXTINF:-1 tvg-id="NickelodeonHD.uk" tvg-name="Nickelodeon UK" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Nickelodeon_2023_logo_%28outline%29.svg/512px-Nickelodeon_2023_logo_%28outline%29.svg.png?20250724045734" group-title="Kids",Nickelodeon UK
 https://a1xs.vip/1000051
 
 #EXTINF:-1 tvg-id="Nick.Jr.HD.us2" tvg-name="Nick Jr. USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-jr-us.png" tvg-language="en" group-title="Kids",Nick Jr. USA
