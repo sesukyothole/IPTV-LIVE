@@ -51,6 +51,42 @@ https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/s
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s44974/images/logod.png?t=639027636410000000" radio="true" group-title="Radio Stations",BBC Radio Kent
 https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_kent.m3u8
 
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s18213/images/logod.png?t=639027851360000000" radio="true" group-title="Radio Stations",BBC Radio Lancashire
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_lancashire.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s44898/images/logod.png?t=639027851990000000" radio="true" group-title="Radio Stations",BBC Radio Lincolnshire
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_lincolnshire.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s24849/images/logod.png?t=639027851500000000" radio="true" group-title="Radio Stations",BBC Radio London
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_london.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s18214/images/logod.png?t=639027851380000000" radio="true" group-title="Radio Stations",BBC Radio Manchester
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_manchester.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s18313/images/logod.png?t=639027851430000000" radio="true" group-title="Radio Stations",BBC Radio Merseyside
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_merseyside.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s18216/images/logod.png?t=639027851400000000" radio="true" group-title="Radio Stations",BBC Radio Nottingham
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_nottingham.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s18217/images/logod.png?t=639027851410000000" radio="true" group-title="Radio Stations",BBC Radio Oxford
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_oxford.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s44951/images/logod.png?t=639027852100000000" radio="true" group-title="Radio Stations",BBC Radio Solent
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_solent.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s44916/images/logod.png?t=639027852060000000" radio="true" group-title="Radio Stations",BBC Radio Somerset
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_somerset_sound.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s44919/images/logod.png?t=639027852070000000" radio="true" group-title="Radio Stations",BBC Radio Suffolk
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_suffolk.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s44973/images/logod.png?t=639027852120000000" radio="true" group-title="Radio Stations",BBC Radio Wiltshire
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_wiltshire.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s18677/images/logod.png?t=639027851450000000" radio="true" group-title="Radio Stations",BBC Radio WM
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_wm.m3u8
+
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s44182/images/logod.png?t=639014027790000000" radio="true" group-title="Radio Stations",BBC Radio Cymru
 https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_cymru.m3u8
 
@@ -134,9 +170,6 @@ https://tunein-live-b.cdnstream1.com/4012_128.mp3
 
 #EXTINF:-1 tvg-logo="https://cdn-profiles.tunein.com/s35972/images/logod.jpg?t=637927735270000000" radio="true" group-title="Radio Stations",Kuvo Jazz Radio
 https://kuvo-ice.streamguys1.com/kuvo-mp3-128
-
-#EXTINF:-1 tvg-logo="https://i.discogs.com/uiTirCkhLF-Pacaumds5bTzJ11slJh3ZUdEu-2PD73w/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9MLTEwNTU5/OTItMTYxMDk2OTQ3/OC0zMzIwLmpwZWc.jpeg" radio="true" group-title="Radio Stations",24/7 London Radio 
-https://radio.garden/api/ara/content/listen/ql2FiWgS/channel.mp3?1759659488709
 
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/tvos_radios/8tbqeypbfxra.jpg" radio="true" group-title="Radio Stations",24/7 Nature Radio
 https://radio.garden/api/ara/content/listen/RuRlznOl/channel.mp3?1759661102502
