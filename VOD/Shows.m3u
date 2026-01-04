@@ -1,4 +1,4 @@
 #EXTM3U
 
-#EXTINF:1620 group-title="Series" tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_face/x7UZVTEr26H5yCSVQoKTeBdvUvg.jpg" category="Series" type="series",Man Vs Baby S01E01
+#EXTINF:1620 type="series" category="Series" group-title="Series" tvg-name="Man Vs Baby S01E01" tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_face/x7UZVTEr26H5yCSVQoKTeBdvUvg.jpg",Man Vs Baby S01E01
 http://192.168.1.66:8096/Videos/6524/stream?static=true&api_key=07fd81f0e6f24162b4edbcea3ee3e8fe
