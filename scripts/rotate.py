@@ -3,7 +3,7 @@ import aiohttp
 import re
 
 # ---- CONFIG ----
-M3U_FILE = "PrimeVision.m3u"
+M3U_FILE = "PrimeVision/us.m3u"
 MAX_FL = 50
 TIMEOUT = 5
 
