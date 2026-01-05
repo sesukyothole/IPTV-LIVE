@@ -46,7 +46,7 @@ https://fl1.moveonjoy.com/BET_Jams/index.m3u8
 https://fl1.moveonjoy.com/BET_SOUL/index.m3u8
 
 #EXTINF:-1 tvg-id="beIN.Sports.USA.HD.us2" tvg-name="beIN Sports USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bein-sports-us.png" group-title="Sports", beIN Sports USA
-http://fl1.moveonjoy.com/BEIN_SPORTS/index.m3u8
+https://fl1.moveonjoy.com/BEIN_SPORTS/index.m3u8
 
 #EXTINF:-1 tvg-id="BBC.America.HD.us2" tvg-name="BBC America" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/bbc-america-hd-us.png" tvg-language="en" group-title="International/Premium",BBC America
 http://23.237.104.106:8080/USA_BBC_AMERICA/index.m3u8
