@@ -24,4 +24,4 @@ Playlist URL:
 https://rebrand.ly/Primevision
 
 EPG URL:
-https://bit.ly/EPGUS
+https://rebrand.ly/ALLEPGSOURCE
