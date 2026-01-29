@@ -87,7 +87,7 @@ https://fl1.moveonjoy.com/CNBC_World/index.m3u8
 #EXTINF:-1 tvg-id="Comedy.Central.HD.us2" tvg-name="Comedy Central USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/comedy-central-hd-us.png" tvg-language="en" group-title="Entertainment/General",Comedy Central USA 
 https://fl1.moveonjoy.com/Comedy_Central/index.m3u8
 
-#EXTINF:-1 tvg-id="Comedy.Central.de" tvg-name="Comedy Central Deutschland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/germany/comedy-central-de.png" group-title="Entertainment/General",Comedy Central Deutschland
+#EXTINF:-1 tvg-id="Comedy.Central.de" tvg-name="Comedy Central Germany" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/germany/comedy-central-de.png" group-title="Entertainment/General",Comedy Central Deutschland
 https://viamotionhsi.netplus.ch/live/eds/comedycentral/browser-HLS8/comedycentral.m3u8
 
 #EXTINF:-1 tvg-id="Cinemax.HD.us2" tvg-name="Cinemax USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-us.png" tvg-language="en" group-title="Movies",Cinemax USA 
@@ -96,7 +96,7 @@ https://fl1.moveonjoy.com/CINEMAX/index.m3u8
 #EXTINF:-1 tvg-id="Cinemax.Hits.us2" tvg-name="Cinemax Hits USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cinemax-hits-us.png" tvg-language="en" group-title="Movies",Cinemax Hits USA
 http://23.237.104.106:8080/USA_MOREMAX/index.m3u8
 
-#EXTINF:-1 tvg-id="DELUXE.MUSIC.de" tvg-name="Deluxe Music Deutschland" tvg-logo="https://i.imgur.com/E65GQN9.png" group-title="Music",Deluxe Music Deutschland
+#EXTINF:-1 tvg-id="DELUXE.MUSIC.de" tvg-name="Deluxe Music Germany" tvg-logo="https://i.imgur.com/E65GQN9.png" group-title="Music",Deluxe Music Deutschland
 https://viamotionhsi.netplus.ch/live/eds/deluxemusic/browser-HLS8/deluxemusic.m3u8
 
 #EXTINF:-1 tvg-id="Discovery.Channel.HD.us2" tvg-name="Discovery Channel USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/discovery-channel-hd-us.png" tvg-language="en" group-title="Documentary/Knowledge",Discovery Channel USA
@@ -105,7 +105,7 @@ http://23.237.104.106:8080/USA_DISCOVERY/index.m3u8
 #EXTINF:-1 tvg-id="Disney.Channel.HD.us2" tvg-name="Disney Channel USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/disney-channel-hd-us.png" tvg-language="en" group-title="Kids",Disney Channel USA
 https://fl1.moveonjoy.com/DISNEY/index.m3u8
 
-#EXTINF:-1 tvg-id="Disney.Channel.de" tvg-name="Disney Channel Deutschland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/germany/disney-channel-de.png" group-title="Kids",Disney Channel Deutschland
+#EXTINF:-1 tvg-id="Disney.Channel.de" tvg-name="Disney Channel Germany" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/germany/disney-channel-de.png" group-title="Kids",Disney Channel Deutschland
 https://viamotionhsi.netplus.ch/live/eds/disneychannelde/browser-HLS8/disneychannelde.m3u8
 
 #EXTINF:-1 tvg-id="Disney.Junior.HD.us2" tvg-name="Disney Junior USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/disney-jr-us.png" tvg-language="en" group-title="Kids",Disney Junior USA 
@@ -210,7 +210,7 @@ https://fl1.moveonjoy.com/EPIX_DRIVE_IN/index.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.HD.us2" tvg-name="Nickelodeon USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nickelodeon-us.png" tvg-language="en" group-title="Kids",Nickelodeon USA
 http://23.237.104.106:8080/USA_NICKELODEON/index.m3u8
 
-#EXTINF:-1 tvg-id="nick.de" tvg-name="Nickelodeon Deutschland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/germany/nick-de.png" group-title="Kids",Nickelodeon Deutschland
+#EXTINF:-1 tvg-id="nick.de" tvg-name="Nickelodeon Germany" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/germany/nick-de.png" group-title="Kids",Nickelodeon Deutschland
 https://viamotionhsi.netplus.ch/live/eds/comedycentralnick/browser-HLS8/comedycentralnick.m3u8
 
 #EXTINF:-1 tvg-id="NickelodeonHD.uk" tvg-name="Nickelodeon UK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/nickelodeon-uk.png" group-title="Kids",Nickelodeon UK
