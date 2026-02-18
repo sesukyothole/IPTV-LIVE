@@ -37,7 +37,7 @@ https://fl1.moveonjoy.com/BRAVO/index.m3u8
 https://fl1.moveonjoy.com/BET_EAST/index.m3u8
 
 #EXTINF:-1 tvg-id="BET.GOSPEL.us2" tvg-name="BET Gospel USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-gospel-us.png" group-title="Entertainment/General", BET Gospel USA
-https://fl2.moveonjoy.com/BET_GOSPEL/index.m3u8
+https://fl1.moveonjoy.com/BET_GOSPEL/index.m3u8
 
 #EXTINF:-1 tvg-id="BET.Her.us2" tvg-name="BET Her USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bet-her-us.png" group-title="Entertainment/General", BET Her USA
 https://fl1.moveonjoy.com/BET_HER/index.m3u8
@@ -55,7 +55,7 @@ https://fl1.moveonjoy.com/BEIN_SPORTS/index.m3u8
 http://23.237.104.106:8080/USA_BBC_AMERICA/index.m3u8
 
 #EXTINF:-1 tvg-id="BBC.News.(North.America).HD.us2" tvg-name="BBC World News USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/international/bbc-world-news-white-hz-int.png" tvg-language="en" group-title="News",BBC World News USA 
-https://fl2.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8
+https://fl1.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8
 
 #EXTINF:-1 tvg-id="Bloomberg.HD.us2" tvg-name="Bloomberg Television USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/bloomberg-television-us.png" tvg-language="en",Bloomberg Television USA
 https://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
@@ -73,7 +73,7 @@ https://viamotionhsi.netplus.ch/live/eds/bbc3cbbc/browser-HLS8/bbc3cbbc.m3u8
 https://viamotionhsi.netplus.ch/live/eds/bbc4cbeebies/browser-HLS8/bbc4cbeebies.m3u8
 
 #EXTINF:-1 tvg-id="CBS.Streaming.SD.East.feed.us2" tvg-name="CBS USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cbs-logo-white-us.png" tvg-language="en" group-title="Entertainment/General",CBS USA
-https://fl2.moveonjoy.com/CBS/index.m3u8
+https://fl1.moveonjoy.com/CBS/index.m3u8
 
 #EXTINF:-1 tvg-id="CBS.Sports.Network.HD.us2" tvg-name="CBS Sports Network USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/cbs-sports-network-us.png" tvg-language="en" group-title="Sports",CBS Sports Network USA
 https://fl1.moveonjoy.com/CBS_SPORTS_NETWORK/index.m3u8
@@ -85,7 +85,7 @@ https://fl1.moveonjoy.com/CNBC/index.m3u8
 https://fl1.moveonjoy.com/CNBC_World/index.m3u8
 
 #EXTINF:-1 tvg-id="Comedy.Central.HD.us2" tvg-name="Comedy Central USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hd/comedy-central-hd-us.png" tvg-language="en" group-title="Entertainment/General",Comedy Central USA 
-https://fl2.moveonjoy.com/Comedy_Central/index.m3u8
+https://fl1.moveonjoy.com/Comedy_Central/index.m3u8
 
 #EXTINF:-1 tvg-id="Comedy.Central.de" tvg-name="Comedy Central Germany" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/germany/comedy-central-de.png" group-title="Entertainment/General",Comedy Central Deutschland
 https://viamotionhsi.netplus.ch/live/eds/comedycentral/browser-HLS8/comedycentral.m3u8
@@ -160,10 +160,10 @@ https://fl1.moveonjoy.com/FYI/index.m3u8
 https://fl1.moveonjoy.com/FREE_FORM/index.m3u8
 
 #EXTINF:-1 tvg-id="Hallmark.Channel.HD.us2" tvg-name="Hallmark Channel USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-channel-us.png" tvg-language="en" group-title="Drama/Lifestyle",Hallmark Channel USA 
-https://fl2.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8
+https://fl1.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8
 
 #EXTINF:-1 tvg-id="Hallmark.Family.us2" tvg-name="Hallmark Family USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-family-us.png" tvg-language="en" group-title="Drama/Lifestyle",Hallmark Family USA 
-https://fl2.moveonjoy.com/HALLMARK_DRAMA/index.m3u8
+https://fl1.moveonjoy.com/HALLMARK_DRAMA/index.m3u8
 
 #EXTINF:-1 tvg-id="Hallmark.Mystery.HD.us2" tvg-name="Hallmark Mystery USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hallmark-mystery-us.png" tvg-language="en" group-title="Drama/Lifestyle",Hallmark Mystery USA 
 https://fl1.moveonjoy.com/HALLMARK_MOVIES_MYSTERIES/index.m3u8
@@ -220,7 +220,7 @@ https://a1xs.vip/1000051
 https://fl1.moveonjoy.com/NICK_JR/index.m3u8
 
 #EXTINF:-1 tvg-id="Nicktoons.us2" tvg-name="Nicktoons USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/nick-toons-us.png" tvg-language="en" group-title="Kids",Nicktoons USA 
-https://fl2.moveonjoy.com/NICKTOONS/index.m3u8
+https://fl1.moveonjoy.com/NICKTOONS/index.m3u8
 
 #EXTINF:-1 tvg-id="Nicktoons.uk" tvg-name="Nicktoons UK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/nick-toons-uk.png" group-title="Kids",Nicktoons UK
 https://a1xs.vip/100054
@@ -265,10 +265,10 @@ http://23.237.104.106:8080/USA_STARZ_CINEMA/index.m3u8
 http://23.237.104.106:8080/USA_STARZ_COMEDY/index.m3u8
 
 #EXTINF:-1 tvg-id="Starz.Encore.Action.HD.us2" tvg-name="Starz Encore Action USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-action-us.png" tvg-language="en" group-title="Movies",Starz Encore Action USA
-https://fl2.moveonjoy.com/STARZ_ENCORE_ACTION/index.m3u8
+https://fl1.moveonjoy.com/STARZ_ENCORE_ACTION/index.m3u8
 
 #EXTINF:-1 tvg-id="Starz.Encore.Classic.us2" tvg-name="Starz Encore Classic USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-classic-us.png" tvg-language="en" group-title="Movies",Starz Encore Classic USA 
-https://fl2.moveonjoy.com/STARZ_ENCORE_CLASSIC/index.m3u8
+https://fl1.moveonjoy.com/STARZ_ENCORE_CLASSIC/index.m3u8
 
 #EXTINF:-1 tvg-id="Starz.Encore.Westerns.SD.us2" tvg-name="Starz Encore Westerns USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/starz-encore-westerns-us.png" tvg-language="en" group-title="Movies",Starz Encore Westerns USA
 https://fl1.moveonjoy.com/STARZ_ENCORE_WESTERNS/index.m3u8
